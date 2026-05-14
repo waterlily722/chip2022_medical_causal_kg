@@ -1,0 +1,302 @@
+[
+  {
+    "id": "Q001",
+    "question": "宫腔操作后导致内膜变薄、粘连可能导致什么？",
+    "type": "direct_causal",
+    "gold_evidence": [
+      [
+        "宫腔操作后导致内膜变薄、粘连",
+        "causes",
+        "月经量少"
+      ]
+    ],
+    "gold_answer": "宫腔操作后导致内膜变薄、粘连可能导致月经量少。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q002",
+    "question": "月经量少可能由什么引起？",
+    "type": "reverse_causal",
+    "gold_evidence": [
+      [
+        "宫腔操作后导致内膜变薄、粘连",
+        "causes",
+        "月经量少"
+      ]
+    ],
+    "gold_answer": "月经量少可能由宫腔操作后导致内膜变薄、粘连引起。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q003",
+    "question": "40岁之前做人工流产可能导致什么？",
+    "type": "direct_causal",
+    "gold_evidence": [
+      [
+        "40岁之前做人工流产",
+        "causes",
+        "月经量少"
+      ]
+    ],
+    "gold_answer": "40岁之前做人工流产可能导致月经量少。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q004",
+    "question": "月经量少可能由什么引起？",
+    "type": "reverse_causal",
+    "gold_evidence": [
+      [
+        "40岁之前做人工流产",
+        "causes",
+        "月经量少"
+      ]
+    ],
+    "gold_answer": "月经量少可能由40岁之前做人工流产引起。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q005",
+    "question": "宫腔粘连可能导致什么？",
+    "type": "direct_causal",
+    "gold_evidence": [
+      [
+        "宫腔粘连",
+        "causes",
+        "月经量少"
+      ]
+    ],
+    "gold_answer": "宫腔粘连可能导致月经量少。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q006",
+    "question": "月经量少可能由什么引起？",
+    "type": "reverse_causal",
+    "gold_evidence": [
+      [
+        "宫腔粘连",
+        "causes",
+        "月经量少"
+      ]
+    ],
+    "gold_answer": "月经量少可能由宫腔粘连引起。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q007",
+    "question": "卵巢功能衰退可能导致什么？",
+    "type": "direct_causal",
+    "gold_evidence": [
+      [
+        "卵巢功能衰退",
+        "causes",
+        "月经量开始慢慢减少"
+      ]
+    ],
+    "gold_answer": "卵巢功能衰退可能导致月经量开始慢慢减少。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q008",
+    "question": "月经量开始慢慢减少可能由什么引起？",
+    "type": "reverse_causal",
+    "gold_evidence": [
+      [
+        "卵巢功能衰退",
+        "causes",
+        "月经量开始慢慢减少"
+      ]
+    ],
+    "gold_answer": "月经量开始慢慢减少可能由卵巢功能衰退引起。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q009",
+    "question": "消化系统器质性病变可能导致什么？",
+    "type": "direct_causal",
+    "gold_evidence": [
+      [
+        "消化系统器质性病变",
+        "causes",
+        "胃部出现针扎样的疼痛"
+      ]
+    ],
+    "gold_answer": "消化系统器质性病变可能导致胃部出现针扎样的疼痛。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q010",
+    "question": "胃部出现针扎样的疼痛可能由什么引起？",
+    "type": "reverse_causal",
+    "gold_evidence": [
+      [
+        "消化系统器质性病变",
+        "causes",
+        "胃部出现针扎样的疼痛"
+      ]
+    ],
+    "gold_answer": "胃部出现针扎样的疼痛可能由消化系统器质性病变引起。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q011",
+    "question": "高血压可能导致什么？",
+    "type": "direct_causal",
+    "gold_evidence": [
+      [
+        "高血压",
+        "causes",
+        "主动脉粥样硬化"
+      ]
+    ],
+    "gold_answer": "高血压可能导致主动脉粥样硬化。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q012",
+    "question": "主动脉粥样硬化可能由什么引起？",
+    "type": "reverse_causal",
+    "gold_evidence": [
+      [
+        "高血压",
+        "causes",
+        "主动脉粥样硬化"
+      ]
+    ],
+    "gold_answer": "主动脉粥样硬化可能由高血压引起。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q013",
+    "question": "主动脉粥样硬化可能导致什么？",
+    "type": "direct_causal",
+    "gold_evidence": [
+      [
+        "主动脉粥样硬化",
+        "causes",
+        "心肌梗死"
+      ]
+    ],
+    "gold_answer": "主动脉粥样硬化可能导致心肌梗死。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q014",
+    "question": "心肌梗死可能由什么引起？",
+    "type": "reverse_causal",
+    "gold_evidence": [
+      [
+        "主动脉粥样硬化",
+        "causes",
+        "心肌梗死"
+      ]
+    ],
+    "gold_answer": "心肌梗死可能由主动脉粥样硬化引起。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q015",
+    "question": "主动脉粥样硬化可能导致什么？",
+    "type": "direct_causal",
+    "gold_evidence": [
+      [
+        "主动脉粥样硬化",
+        "causes",
+        "脑卒中"
+      ]
+    ],
+    "gold_answer": "主动脉粥样硬化可能导致脑卒中。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q016",
+    "question": "脑卒中可能由什么引起？",
+    "type": "reverse_causal",
+    "gold_evidence": [
+      [
+        "主动脉粥样硬化",
+        "causes",
+        "脑卒中"
+      ]
+    ],
+    "gold_answer": "脑卒中可能由主动脉粥样硬化引起。",
+    "source": "kg_auto_generated"
+  },
+  {
+    "id": "Q017",
+    "question": "为什么高血压可能和心肌梗死有关？",
+    "type": "multi_hop_causal",
+    "gold_evidence": [
+      [
+        "高血压",
+        "causes",
+        "主动脉粥样硬化"
+      ],
+      [
+        "主动脉粥样硬化",
+        "causes",
+        "心肌梗死"
+      ]
+    ],
+    "gold_answer": "高血压可能通过主动脉粥样硬化间接关联心肌梗死。",
+    "source": "kg_path_generated"
+  },
+  {
+    "id": "Q018",
+    "question": "为什么主动脉粥样硬化可能和手指发麻或偏侧发麻有关？",
+    "type": "multi_hop_causal",
+    "gold_evidence": [
+      [
+        "主动脉粥样硬化",
+        "causes",
+        "脑卒中"
+      ],
+      [
+        "脑卒中",
+        "causes",
+        "手指发麻或偏侧发麻"
+      ]
+    ],
+    "gold_answer": "主动脉粥样硬化可能通过脑卒中间接关联手指发麻或偏侧发麻。",
+    "source": "kg_path_generated"
+  },
+  {
+    "id": "Q019",
+    "question": "为什么细菌或病毒入侵体内可能和急迫性尿失禁有关？",
+    "type": "multi_hop_causal",
+    "gold_evidence": [
+      [
+        "细菌或病毒入侵体内",
+        "causes",
+        "泌尿系感染"
+      ],
+      [
+        "泌尿系感染",
+        "causes",
+        "急迫性尿失禁"
+      ]
+    ],
+    "gold_answer": "细菌或病毒入侵体内可能通过泌尿系感染间接关联急迫性尿失禁。",
+    "source": "kg_path_generated"
+  },
+  {
+    "id": "Q020",
+    "question": "为什么局部抵抗力下降可能和急迫性尿失禁有关？",
+    "type": "multi_hop_causal",
+    "gold_evidence": [
+      [
+        "局部抵抗力下降",
+        "causes",
+        "泌尿系感染"
+      ],
+      [
+        "泌尿系感染",
+        "causes",
+        "急迫性尿失禁"
+      ]
+    ],
+    "gold_answer": "局部抵抗力下降可能通过泌尿系感染间接关联急迫性尿失禁。",
+    "source": "kg_path_generated"
+  }
+]

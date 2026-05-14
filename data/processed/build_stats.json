@@ -1,0 +1,17 @@
+{
+  "num_triples": 22470,
+  "num_entities": 9563,
+  "relation_counts": {
+    "causes": 7577,
+    "mentioned_in": 11176,
+    "condition_of": 659,
+    "event_cause": 659,
+    "event_effect": 659,
+    "has_condition": 659,
+    "is_a": 1081
+  },
+  "source_type_counts": {
+    "gold": 22470
+  },
+  "num_causal_events": 659
+}

@@ -1,0 +1,35 @@
+{
+  "note": "Exact-match metrics. Meaningful only if Qwen extraction was run on comparable train texts.",
+  "gold_count": 9212,
+  "pred_count": 0,
+  "tp": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "relation_wise": {
+    "causes": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "gold": 7499,
+      "pred": 0,
+      "tp": 0
+    },
+    "condition_of": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "gold": 659,
+      "pred": 0,
+      "tp": 0
+    },
+    "is_a": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "gold": 1054,
+      "pred": 0,
+      "tp": 0
+    }
+  }
+}

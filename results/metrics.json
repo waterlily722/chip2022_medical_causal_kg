@@ -1,0 +1,60 @@
+{
+  "graph_stats": {
+    "num_entities": 9563,
+    "num_triples": 22470,
+    "num_entity_types": 10,
+    "num_relation_types": 7,
+    "relation_counts": {
+      "causes": 7577,
+      "mentioned_in": 11176,
+      "condition_of": 659,
+      "event_cause": 659,
+      "event_effect": 659,
+      "has_condition": 659,
+      "is_a": 1081
+    },
+    "source_type_counts": {
+      "gold": 22470
+    }
+  },
+  "retrieval_eval": {
+    "num_questions": 20,
+    "retrieval_hit_rate": 1.0,
+    "evidence_nonempty_rate": 1.0
+  },
+  "extraction_eval": {
+    "note": "Exact-match metrics. Meaningful only if Qwen extraction was run on comparable train texts.",
+    "gold_count": 9212,
+    "pred_count": 0,
+    "tp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "relation_wise": {
+      "causes": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "gold": 7499,
+        "pred": 0,
+        "tp": 0
+      },
+      "condition_of": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "gold": 659,
+        "pred": 0,
+        "tp": 0
+      },
+      "is_a": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "gold": 1054,
+        "pred": 0,
+        "tp": 0
+      }
+    }
+  }
+}

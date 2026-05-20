@@ -57,10 +57,13 @@ HYPERNYM_RELATION = 3
 ALLOWED_ENTITY_TYPES = {
     "Disease",
     "Symptom",
+    "ClinicalSign",
     "PathologicalState",
     "RiskFactor",
     "TestResult",
-    "TreatmentOrOperation",
+    "ExamProcedure",
+    "Treatment",
+    "AnatomicalSite",
     "MedicalCategory",
     "CausalEvent",
     "Document",
@@ -69,6 +72,7 @@ ALLOWED_ENTITY_TYPES = {
 
 ALLOWED_RELATIONS = {
     "causes",
+    "risk_factor_for",
     "condition_of",
     "is_a",
     "symptom_of",
@@ -77,7 +81,16 @@ ALLOWED_RELATIONS = {
     "diagnosed_by",
 }
 
-CORE_RELATIONS = {"causes", "condition_of", "is_a", "symptom_of", "treated_by", "located_in", "diagnosed_by"}
+CORE_RELATIONS = {
+    "causes",
+    "risk_factor_for",
+    "condition_of",
+    "is_a",
+    "symptom_of",
+    "treated_by",
+    "located_in",
+    "diagnosed_by",
+}
 EVENT_RELATIONS = {"event_cause", "event_effect", "has_condition"}
 
 
@@ -171,8 +184,11 @@ def infer_entity_type(name: str, relation: Optional[str] = None, role: Optional[
     symptom_keywords = ["痛", "疼", "咳", "发热", "发烧", "呕吐", "恶心", "腹泻", "便血", "乏力", "瘙痒", "肿", "麻木", "头晕", "失眠", "耳鸣", "出血", "减少", "增多", "丧失", "偏瘫", "呼吸", "心跳"]
     pathology_keywords = ["硬化", "粘连", "衰退", "受压", "增高", "下降", "损害", "坏死", "水肿", "潴留", "破裂", "狭窄", "异常", "功能", "病变", "空洞", "梗阻"]
     risk_keywords = ["病毒", "细菌", "劳累", "饮水", "饮食", "肥胖", "过敏", "受凉", "外伤", "吸烟", "饮酒", "辛辣", "感染", "用力", "年龄", "抵抗力"]
-    test_keywords = ["检查", "检测", "化验", "激素", "血压", "眼压", "ct", "CT", "b超", "B超", "x光", "指标", "阳性", "阴性", "水平", "结果"]
-    treatment_keywords = ["治疗", "手术", "服用", "用药", "药", "注射", "放疗", "化疗", "接种", "人工流产", "激素治疗", "康复", "输注"]
+    test_keywords = ["激素", "血压", "眼压", "指标", "阳性", "阴性", "水平", "结果", "数值", "浓度"]
+    exam_keywords = ["检查", "检测", "化验", "影像", "内镜", "超声", "ct", "CT", "b超", "B超", "x光", "X光", "核磁", "MRI", "磁共振", "纤维镜", "结直肠镜"]
+    treatment_keywords = ["治疗", "手术", "服用", "用药", "药", "注射", "放疗", "化疗", "接种", "人工流产", "激素治疗", "康复", "输注", "止血", "输血", "营养"]
+    anatomical_keywords = ["脑", "心", "肺", "肝", "脾", "肾", "胃", "肠", "直肠", "结肠", "胰", "胆", "子宫", "卵巢", "前列腺", "乳房", "眼", "角膜", "瞳孔", "颅内", "腹部", "胸部", "皮肤", "口腔", "咽", "喉", "鼻", "四肢", "肢体"]
+    clinical_sign_keywords = ["意识", "心率", "呼吸", "血压", "瞳孔", "体征", "颅内压", "发绀", "水肿", "休克", "偏瘫", "麻木", "无力", "呼吸暂停", "呼吸急促", "心率减慢", "心率增快"]
     category_keywords = ["症状", "表现", "疾病", "病变", "类型", "类别", "现象", "部位"]
 
     # Relation-aware hints.
@@ -185,18 +201,24 @@ def infer_entity_type(name: str, relation: Optional[str] = None, role: Optional[
     if role == "condition" and any(k in n for k in ["如果", "情况下", "非常好", "早期", "晚期", "患者", "期间"]):
         return "TestResult" if any(k in n for k in test_keywords) else "Other"
 
+    if any(k in n for k in exam_keywords):
+        return "ExamProcedure"
     if any(k in n for k in treatment_keywords):
-        return "TreatmentOrOperation"
+        return "Treatment"
     if any(k in n for k in test_keywords):
         return "TestResult"
     if any(k in n for k in disease_keywords):
         return "Disease"
+    if any(k in n for k in clinical_sign_keywords):
+        return "ClinicalSign"
     if any(k in n for k in symptom_keywords):
         return "Symptom"
     if any(k in n for k in pathology_keywords):
         return "PathologicalState"
     if any(k in n for k in risk_keywords):
         return "RiskFactor"
+    if any(k in n for k in anatomical_keywords):
+        return "AnatomicalSite"
     if any(k in n for k in category_keywords):
         return "MedicalCategory"
     return "Other"
@@ -211,10 +233,13 @@ def normalize_entity_type(t: Any, name: str, relation: Optional[str] = None, rol
         "Finding": "Symptom",
         "ClinicalFinding": "Symptom",
         "Check": "TestResult",
-        "Drug": "TreatmentOrOperation",
-        "Treatment": "TreatmentOrOperation",
-        "Operation": "TreatmentOrOperation",
+        "Drug": "Treatment",
+        "Treatment": "Treatment",
+        "Operation": "Treatment",
         "Category": "MedicalCategory",
+        "Exam": "ExamProcedure",
+        "Procedure": "ExamProcedure",
+        "Anatomy": "AnatomicalSite",
     }
     t = aliases.get(t, t)
     if t in ALLOWED_ENTITY_TYPES:

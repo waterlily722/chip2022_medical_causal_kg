@@ -7,7 +7,7 @@
 本项目采用“人工标注种子图谱 + Qwen 无标签文本抽取扩展”的混合构建方式：
 
 - `train_0717.json`：使用人工标注 `relation_of_mention` 构建高质量 **Gold Seed KG**。
-- `unlabel.json`、`testA.json`、`testB.json`：调用 Qwen API 从原始医学文本中抽取 `causes`、`condition_of`、`is_a`、`symptom_of`、`treated_by`、`located_in`、`diagnosed_by` 关系，构建 **Qwen-extracted KG**。
+- `unlabel.json`、`testA.json`、`testB.json`：调用 Qwen API 从原始医学文本中抽取 `causes`、`risk_factor_for`、`condition_of`、`is_a`、`symptom_of`、`treated_by`、`located_in`、`diagnosed_by` 关系，构建 **Qwen-extracted KG**。
 - 最终融合两部分图谱，形成医疗因果事件知识图谱，并实现因果链推理、条件约束推理、上下位推理和 GraphRAG 增强问答。
 
 > 注意：本系统仅用于知识图谱课程实验和医学知识学习，不构成医疗诊断或用药建议。
@@ -33,7 +33,7 @@ CHIP2022 标注关系：
 | 2 | `condition_of` | 条件关系，条件修饰一条因果关系 |
 | 3 | `is_a` | 上下位关系，构图时统一为“下位概念 -> 上位概念” |
 
-当前抽取关系包括：`causes`、`condition_of`、`is_a`、`symptom_of`、`treated_by`、`located_in`、`diagnosed_by`。
+当前抽取关系包括：`causes`、`risk_factor_for`、`condition_of`、`is_a`、`symptom_of`、`treated_by`、`located_in`、`diagnosed_by`。
 
 实体类型来源说明：
 - **train 标签**：不包含实体类别，构图时使用规则推断实体类型。
@@ -46,13 +46,14 @@ CHIP2022 标注关系：
 ```text
 Disease
 Symptom
+ClinicalSign
 PathologicalState
 RiskFactor
 TestResult
-TreatmentOrOperation
+ExamProcedure
+Treatment
+AnatomicalSite
 MedicalCategory
-CausalEvent
-Document
 Other
 ```
 
@@ -60,6 +61,7 @@ Other
 
 ```text
 causes
+risk_factor_for
 condition_of
 is_a
 symptom_of

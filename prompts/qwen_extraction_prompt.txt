@@ -43,7 +43,7 @@ Disease, Symptom, PathologicalState, RiskFactor, TestResult, TreatmentOrOperatio
     "tail": "消化系统器质性病变",
     "tail_type": "MedicalCategory",
     "evidence": "常见于消化系统器质性病变，比如肠胃炎、胃溃疡",
-    "confidence": 0.90
+    "confidence": 0.93
   },
   {
     "relation": "condition_of",
@@ -54,7 +54,7 @@ Disease, Symptom, PathologicalState, RiskFactor, TestResult, TreatmentOrOperatio
     "effect": "月经量少",
     "effect_type": "Symptom",
     "evidence": "如果女性激素非常好说明还没有到围绝经状态，月经量少有可能是宫腔粘连造成的",
-    "confidence": 0.90
+    "confidence": 0.87
   }
 ]
 

@@ -9,39 +9,37 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 from pathlib import Path
 from typing import Any, Dict
-
-try:
-    from dotenv import load_dotenv
-except Exception:  # pragma: no cover
-    load_dotenv = None
 
 try:
     from openai import OpenAI
 except Exception:  # pragma: no cover
     OpenAI = None
 
+from config import load_qwen_settings
 from graph_retrieval import format_evidence, retrieve_evidence
 from reasoning import KGReasoner
 
 
 class QwenChatClient:
     def __init__(self) -> None:
-        if load_dotenv:
-            load_dotenv()
-        self.api_key = os.getenv("QWEN_API_KEY") or os.getenv("DASHSCOPE_API_KEY")
-        self.base_url = os.getenv("QWEN_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1")
-        self.model = os.getenv("QWEN_MODEL", "qwen-plus")
-        self.temperature = float(os.getenv("QWEN_TEMPERATURE", "0"))
-        self.max_tokens = int(os.getenv("QWEN_MAX_TOKENS", "2048"))
+        settings = load_qwen_settings()
+        status = "yes" if settings.configured else "no"
+        print(f"Qwen API key configured: {status} (config: {settings.config_path})")
+        self.api_key = settings.api_key
+        self.base_url = settings.base_url
+        self.model = settings.model
+        self.temperature = settings.temperature
+        self.max_tokens = settings.max_tokens
         self.enabled = bool(self.api_key and OpenAI)
         self.client = OpenAI(api_key=self.api_key, base_url=self.base_url) if self.enabled else None
 
     def chat(self, prompt: str) -> str:
         if not self.enabled or self.client is None:
-            raise RuntimeError("Qwen API is not configured. Set QWEN_API_KEY in .env or environment.")
+            raise RuntimeError(
+                "Qwen API is not configured. Set QWEN_API_KEY in .env."
+            )
         resp = self.client.chat.completions.create(
             model=self.model,
             messages=[

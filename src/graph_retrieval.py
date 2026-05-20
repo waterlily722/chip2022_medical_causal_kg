@@ -36,12 +36,12 @@ def retrieve_evidence(question: str, triples_path: str = "data/triples.csv", max
                     paths.append({"path": path, "edges": edges})
                     triples.extend(edges)
 
-    # Conditional events related to matched entities.
+    # Condition_of edges related to matched entities.
     for ent in matched:
-        events = r.condition_events(cause=ent) + r.condition_events(effect=ent) + r.condition_events(condition=ent)
-        for ev in events[:5]:
-            conditions.append(ev)
-            triples.extend(ev["causes"] + ev["effects"] + ev["conditions"])
+        for t in r.in_edges.get(ent, []):
+            if t["relation"] == "condition_of":
+                conditions.append(t)
+                triples.append(t)
 
     # Deduplicate triples.
     seen = set()
@@ -77,12 +77,9 @@ def format_evidence(evidence: Dict[str, Any]) -> str:
         for i, p in enumerate(evidence["paths"], 1):
             lines.append(f"{i}. {' --causes--> '.join(p['path'])}")
     if evidence.get("conditional_events"):
-        lines.append("\n[条件事件证据]")
+        lines.append("\n[条件证据]")
         for i, ev in enumerate(evidence["conditional_events"], 1):
-            cs = "、".join(t["tail"] for t in ev["causes"])
-            es = "、".join(t["tail"] for t in ev["effects"])
-            conds = "、".join(t["tail"] for t in ev["conditions"])
-            lines.append(f"{i}. Event={ev['event_id']}: condition={conds}; cause={cs}; effect={es}")
+            lines.append(f"{i}. {ev['head']} --{ev['relation']}--> {ev['tail']}")
     return "\n".join(lines) if lines else "知识图谱中没有检索到相关证据。"
 
 

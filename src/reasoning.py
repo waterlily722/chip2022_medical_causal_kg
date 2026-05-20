@@ -6,7 +6,7 @@ Supported reasoning:
 1. Direct causal reasoning: X -> ?
 2. Reverse causal reasoning: ? -> Y
 3. Multi-hop causal path reasoning: X -> ... -> Y
-4. Conditional event reasoning: condition_of / has_condition
+4. Condition reasoning: condition_of (condition -> cause)
 5. Hypernym reasoning: X is_a ?
 """
 from __future__ import annotations
@@ -97,44 +97,9 @@ class KGReasoner:
                 edges.append(candidates[0])
         return edges
 
-    def condition_events(self, cause: Optional[str] = None, effect: Optional[str] = None, condition: Optional[str] = None) -> List[Dict[str, Any]]:
-        """Find CausalEvent nodes matching optional cause/effect/condition."""
-        event_cause = defaultdict(list)
-        event_effect = defaultdict(list)
-        event_condition = defaultdict(list)
-        event_evidence = {}
-        for t in self.triples:
-            if t["relation"] == "event_cause":
-                event_cause[t["head"]].append(t)
-                event_evidence.setdefault(t["head"], t.get("evidence", ""))
-            elif t["relation"] == "event_effect":
-                event_effect[t["head"]].append(t)
-                event_evidence.setdefault(t["head"], t.get("evidence", ""))
-            elif t["relation"] == "has_condition":
-                event_condition[t["head"]].append(t)
-                event_evidence.setdefault(t["head"], t.get("evidence", ""))
-
-        results = []
-        for eid in set(event_cause) | set(event_effect) | set(event_condition):
-            causes = event_cause.get(eid, [])
-            effects = event_effect.get(eid, [])
-            conditions = event_condition.get(eid, [])
-            if cause and not any(t["tail"] == cause for t in causes):
-                continue
-            if effect and not any(t["tail"] == effect for t in effects):
-                continue
-            if condition and not any(t["tail"] == condition for t in conditions):
-                continue
-            results.append(
-                {
-                    "event_id": eid,
-                    "causes": causes,
-                    "effects": effects,
-                    "conditions": conditions,
-                    "evidence": event_evidence.get(eid, ""),
-                }
-            )
-        return results
+    def conditions_for_cause(self, cause: str, limit: int = 20) -> List[Dict[str, Any]]:
+        """Find condition_of edges where the tail is the given cause."""
+        return [t for t in self.in_edges.get(cause, []) if t["relation"] == "condition_of"][:limit]
 
     @staticmethod
     def triple_to_text(t: Dict[str, Any]) -> str:
@@ -160,22 +125,16 @@ class KGReasoner:
                             answer_lines.append(f"存在因果路径：{' --causes--> '.join(path)}")
                         return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
 
-        # Condition reasoning.
+        # Condition reasoning (condition_of: condition -> cause).
         if any(k in q for k in ["条件", "情况下", "修饰"]):
             cause = ents[0] if ents else None
-            effect = ents[1] if len(ents) > 1 else None
-            events = self.condition_events(cause=cause, effect=effect)
-            if not events and ents:
-                # Try entity as condition.
-                events = self.condition_events(condition=ents[0])
-            if events:
-                for ev in events[:5]:
-                    cs = "、".join(t["tail"] for t in ev["causes"])
-                    es = "、".join(t["tail"] for t in ev["effects"])
-                    conds = "、".join(t["tail"] for t in ev["conditions"])
-                    answer_lines.append(f"事件 {ev['event_id']}：在“{conds}”条件下，“{cs}”可能导致“{es}”。")
-                    evidence.extend(ev["causes"] + ev["effects"] + ev["conditions"])
-                return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
+            if cause:
+                cond_edges = self.conditions_for_cause(cause)
+                if cond_edges:
+                    conditions = "、".join(t["head"] for t in cond_edges[:10])
+                    answer_lines.append(f"可能的条件包括：{conditions}")
+                    evidence.extend(cond_edges)
+                    return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
 
         # Hypernym reasoning.
         if ents and any(k in q for k in ["属于", "类型", "哪类", "类别"]):

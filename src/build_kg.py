@@ -31,11 +31,6 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 try:
-    from dotenv import load_dotenv
-except Exception:  # pragma: no cover
-    load_dotenv = None
-
-try:
     from openai import OpenAI
 except Exception:  # pragma: no cover
     OpenAI = None
@@ -50,6 +45,8 @@ try:
     from pyvis.network import Network
 except Exception:  # pragma: no cover
     Network = None
+
+from config import load_qwen_settings
 
 
 # CHIP2022 relation ids in example_code.txt
@@ -74,13 +71,13 @@ ALLOWED_RELATIONS = {
     "causes",
     "condition_of",
     "is_a",
-    "event_cause",
-    "event_effect",
-    "has_condition",
-    "mentioned_in",
+    "symptom_of",
+    "treated_by",
+    "located_in",
+    "diagnosed_by",
 }
 
-CORE_RELATIONS = {"causes", "condition_of", "is_a"}
+CORE_RELATIONS = {"causes", "condition_of", "is_a", "symptom_of", "treated_by", "located_in", "diagnosed_by"}
 EVENT_RELATIONS = {"event_cause", "event_effect", "has_condition"}
 
 
@@ -289,8 +286,6 @@ def parse_gold_train(train_path: Path) -> Tuple[List[Triple], List[Dict[str, Any
                 ht = infer_entity_type(head, relation="causes", role="head")
                 tt = infer_entity_type(tail, relation="causes", role="tail")
                 add_triple(triples, Triple(head, ht, "causes", tail, tt, ev, doc_id, "train_0717", "gold", 1.0))
-                add_mentioned_in(triples, head, ht, doc_id, "train_0717", "gold")
-                add_mentioned_in(triples, tail, tt, doc_id, "train_0717", "gold")
 
             elif relation == "is_a":
                 # CHIP relation=3: head is hypernym, tail is hyponym.
@@ -300,8 +295,6 @@ def parse_gold_train(train_path: Path) -> Tuple[List[Triple], List[Dict[str, Any
                 ht = infer_entity_type(sub_concept, relation="is_a", role="head")
                 tt = infer_entity_type(super_concept, relation="is_a", role="tail")
                 add_triple(triples, Triple(sub_concept, ht, "is_a", super_concept, tt, ev, doc_id, "train_0717", "gold", 1.0))
-                add_mentioned_in(triples, sub_concept, ht, doc_id, "train_0717", "gold")
-                add_mentioned_in(triples, super_concept, tt, doc_id, "train_0717", "gold")
 
             elif relation == "condition_of":
                 condition = norm_text(head_obj.get("mention"))
@@ -316,21 +309,12 @@ def parse_gold_train(train_path: Path) -> Tuple[List[Triple], List[Dict[str, Any
                 cause_t = infer_entity_type(cause, relation="causes", role="head")
                 effect_t = infer_entity_type(effect, relation="causes", role="tail")
                 cond_t = infer_entity_type(condition, relation="condition_of", role="condition")
-                eid = event_id_for(cause, effect, condition, f"{doc_id}_{rel_idx}")
-
-                # Direct causal edge plus event structure.
+                # Direct causal edge plus condition->cause relation.
                 add_triple(triples, Triple(cause, cause_t, "causes", effect, effect_t, ev, doc_id, "train_0717", "gold", 1.0))
-                add_triple(triples, Triple(condition, cond_t, "condition_of", eid, "CausalEvent", ev, doc_id, "train_0717", "gold", 1.0))
-                add_triple(triples, Triple(eid, "CausalEvent", "event_cause", cause, cause_t, ev, doc_id, "train_0717", "gold", 1.0))
-                add_triple(triples, Triple(eid, "CausalEvent", "event_effect", effect, effect_t, ev, doc_id, "train_0717", "gold", 1.0))
-                add_triple(triples, Triple(eid, "CausalEvent", "has_condition", condition, cond_t, ev, doc_id, "train_0717", "gold", 1.0))
-                add_mentioned_in(triples, cause, cause_t, doc_id, "train_0717", "gold")
-                add_mentioned_in(triples, effect, effect_t, doc_id, "train_0717", "gold")
-                add_mentioned_in(triples, condition, cond_t, doc_id, "train_0717", "gold")
-                add_mentioned_in(triples, eid, "CausalEvent", doc_id, "train_0717", "gold")
+                add_triple(triples, Triple(condition, cond_t, "condition_of", cause, cause_t, ev, doc_id, "train_0717", "gold", 1.0))
                 causal_events.append(
                     {
-                        "event_id": eid,
+                        "event_id": f"{doc_id}_{rel_idx}",
                         "cause": cause,
                         "effect": effect,
                         "condition": condition,
@@ -368,13 +352,14 @@ def extract_json_array(text: str) -> List[Dict[str, Any]]:
 
 class QwenClient:
     def __init__(self) -> None:
-        if load_dotenv:
-            load_dotenv()
-        self.api_key = os.getenv("QWEN_API_KEY") or os.getenv("DASHSCOPE_API_KEY")
-        self.base_url = os.getenv("QWEN_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1")
-        self.model = os.getenv("QWEN_MODEL", "qwen-plus")
-        self.temperature = float(os.getenv("QWEN_TEMPERATURE", "0"))
-        self.max_tokens = int(os.getenv("QWEN_MAX_TOKENS", "2048"))
+        settings = load_qwen_settings()
+        status = "yes" if settings.configured else "no"
+        print(f"Qwen API key configured: {status} (config: {settings.config_path})")
+        self.api_key = settings.api_key
+        self.base_url = settings.base_url
+        self.model = settings.model
+        self.temperature = settings.temperature
+        self.max_tokens = settings.max_tokens
         self.enabled = bool(self.api_key and OpenAI)
         self.client = None
         if self.enabled:
@@ -382,7 +367,9 @@ class QwenClient:
 
     def chat(self, prompt: str) -> str:
         if not self.enabled or self.client is None:
-            raise RuntimeError("Qwen API is not configured. Set QWEN_API_KEY in .env or environment.")
+            raise RuntimeError(
+                "Qwen API is not configured. Set QWEN_API_KEY in .env."
+            )
         resp = self.client.chat.completions.create(
             model=self.model,
             messages=[
@@ -464,7 +451,7 @@ def clean_qwen_outputs(raw_outputs: List[Dict[str, Any]], min_confidence: float 
                 continue
             ev = norm_text(item.get("evidence")) or text[:160]
 
-            if relation in {"causes", "is_a"}:
+            if relation in {"causes", "is_a", "symptom_of", "treated_by", "located_in", "diagnosed_by"}:
                 head = norm_text(item.get("head"))
                 tail = norm_text(item.get("tail"))
                 if not head or not tail:
@@ -475,8 +462,6 @@ def clean_qwen_outputs(raw_outputs: List[Dict[str, Any]], min_confidence: float 
                 ht = normalize_entity_type(item.get("head_type"), head, relation, "head")
                 tt = normalize_entity_type(item.get("tail_type"), tail, relation, "tail")
                 add_triple(triples, Triple(head, ht, relation, tail, tt, ev, doc_id, source_file, "qwen", conf))
-                add_mentioned_in(triples, head, ht, doc_id, source_file, "qwen")
-                add_mentioned_in(triples, tail, tt, doc_id, source_file, "qwen")
 
             elif relation == "condition_of":
                 condition = norm_text(item.get("condition") or item.get("head"))
@@ -493,20 +478,11 @@ def clean_qwen_outputs(raw_outputs: List[Dict[str, Any]], min_confidence: float 
                 cond_t = normalize_entity_type(item.get("condition_type"), condition, relation, "condition")
                 cause_t = normalize_entity_type(item.get("cause_type"), cause, "causes", "head")
                 effect_t = normalize_entity_type(item.get("effect_type"), effect, "causes", "tail")
-                eid = event_id_for(cause, effect, condition, f"{doc_id}_{item_idx}")
-
                 add_triple(triples, Triple(cause, cause_t, "causes", effect, effect_t, ev, doc_id, source_file, "qwen", conf))
-                add_triple(triples, Triple(condition, cond_t, "condition_of", eid, "CausalEvent", ev, doc_id, source_file, "qwen", conf))
-                add_triple(triples, Triple(eid, "CausalEvent", "event_cause", cause, cause_t, ev, doc_id, source_file, "qwen", conf))
-                add_triple(triples, Triple(eid, "CausalEvent", "event_effect", effect, effect_t, ev, doc_id, source_file, "qwen", conf))
-                add_triple(triples, Triple(eid, "CausalEvent", "has_condition", condition, cond_t, ev, doc_id, source_file, "qwen", conf))
-                add_mentioned_in(triples, condition, cond_t, doc_id, source_file, "qwen")
-                add_mentioned_in(triples, cause, cause_t, doc_id, source_file, "qwen")
-                add_mentioned_in(triples, effect, effect_t, doc_id, source_file, "qwen")
-                add_mentioned_in(triples, eid, "CausalEvent", doc_id, source_file, "qwen")
+                add_triple(triples, Triple(condition, cond_t, "condition_of", cause, cause_t, ev, doc_id, source_file, "qwen", conf))
                 events.append(
                     {
-                        "event_id": eid,
+                        "event_id": f"{doc_id}_{item_idx}",
                         "cause": cause,
                         "effect": effect,
                         "condition": condition,

@@ -1,17 +1,18 @@
 {
-  "num_triples": 22470,
-  "num_entities": 9563,
+  "num_triples": 9565,
+  "num_entities": 8284,
   "relation_counts": {
-    "causes": 7577,
-    "mentioned_in": 11176,
-    "condition_of": 659,
-    "event_cause": 659,
-    "event_effect": 659,
-    "has_condition": 659,
-    "is_a": 1081
+    "causes": 7725,
+    "condition_of": 472,
+    "is_a": 1123,
+    "symptom_of": 109,
+    "treated_by": 98,
+    "diagnosed_by": 12,
+    "located_in": 26
   },
   "source_type_counts": {
-    "gold": 22470
+    "gold": 9126,
+    "qwen": 439
   },
-  "num_causal_events": 659
+  "num_causal_events": 664
 }

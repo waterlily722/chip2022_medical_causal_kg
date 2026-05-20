@@ -1,8 +1,8 @@
 relation,count,description
-mentioned_in,11176,实体或事件来自某篇文本
-causes,7577,原因导致结果
-is_a,1081,下位概念属于上位概念
-condition_of,659,条件修饰某个因果事件
-event_cause,659,因果事件的原因
-event_effect,659,因果事件的结果
-has_condition,659,因果事件的条件
+causes,7725,原因导致结果
+is_a,1123,下位概念属于上位概念
+condition_of,472,条件修饰某个因果事件
+symptom_of,109,
+treated_by,98,
+located_in,26,
+diagnosed_by,12,

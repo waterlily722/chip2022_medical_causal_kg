@@ -150,10 +150,8 @@ python src/build_kg.py --extract_qwen --max_qwen_docs 5 --sleep_seconds 0.2
 正式抽取：
 
 ```bash
-python src/build_kg.py --extract_qwen --qwen_files unlabel.json,testA.json,testB.json
+python src/build_kg.py --extract_qwen --qwen_files unlabel.json
 ```
-
-如果 API 调用成本较高，建议先只对 `unlabel.json` 的前 50—100 条做抽取演示。
 
 ### 5.3 运行知识推理
 
@@ -262,23 +260,9 @@ project/
 - `causes` / `condition_of` / `is_a` 分布
 - `CausalEvent` 数量
 
-### 实验 2：Qwen 抽取质量评估
+### 实验 2：Qwen 抽取
 
-可从 `train_0717.json` 抽样一部分文本，让 Qwen 抽取，再和 gold 标签比较。
-
-对比方法：
-
-- Rule baseline
-- Qwen zero-shot
-- Qwen few-shot
-- Qwen few-shot + schema check
-
-指标：
-
-- Precision
-- Recall
-- F1
-- relation-wise F1
+可从 `unlabel.json` 抽取构建知识图谱。
 
 ### 实验 3：推理评估
 
@@ -310,14 +294,13 @@ project/
 
 | 成员 | 任务 |
 |---|---|
-| A | 数据解析、Gold Seed KG 构建、Schema 设计 |
-| B | Qwen 抽取 Prompt、API 调用、抽取结果清洗 |
-| C | 推理模块、GraphRAG 检索模块 |
-| D | 实验评估、报告撰写、PPT 制作 |
+| A | 数据解析、Gold Seed KG 构建、实验评估、Schema 设计、报告撰写、PPT 制作 |
+| B | Schema 设计、Qwen 抽取 Prompt、API 调用、报告撰写、PPT 制作 |
+| C | 推理模块、抽取结果清洗、GraphRAG 检索模块、报告撰写、PPT 制作 |
 
 ## 9. 注意事项
 
 - `train_0717.json` 的人工标签直接构建 Gold Seed KG，是高质量种子图谱。
-- `unlabel.json/testA.json/testB.json` 通过 Qwen 抽取补充关系，体现信息抽取模块。
+- `unlabel.json` 通过 Qwen 抽取补充关系，体现信息抽取模块。
 - 医学回答必须带证据链，并说明不构成医疗建议。
 - Qwen 抽取结果需要人工抽样审核，报告中建议加入错误分析。

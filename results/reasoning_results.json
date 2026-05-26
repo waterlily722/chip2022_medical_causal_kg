@@ -1,0 +1,724 @@
+[
+  {
+    "id": "Q001",
+    "question": "急性扁桃体炎可能导致什么？",
+    "type": "direct_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "\"急性扁桃体炎\"可能导致：喉咙痛、咽口水疼痛、总是扁桃体发炎、舌头起疱、慢性扁桃体炎、喉咙疼、急性肾炎、急性喉炎",
+    "matched_entities": [
+      "急性扁桃体炎"
+    ],
+    "evidence_count": 7,
+    "has_evidence": true
+  },
+  {
+    "id": "Q002",
+    "question": "乳腺增生可能导致什么？",
+    "type": "direct_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "\"乳腺增生\"可能导致：女生胸里面的硬块疼、乳房疼痛、乳房包块形成、可以触摸到硬块,以及条索状改变、明显的压痛、肿胀、疼痛",
+    "matched_entities": [
+      "乳腺增生"
+    ],
+    "evidence_count": 7,
+    "has_evidence": true
+  },
+  {
+    "id": "Q003",
+    "question": "小脑脑干供血不足可能导致什么？",
+    "type": "direct_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "\"小脑脑干供血不足\"可能导致：头晕、恶心、呕吐、平衡障碍、共济失调",
+    "matched_entities": [
+      "小脑脑干供血不足"
+    ],
+    "evidence_count": 5,
+    "has_evidence": true
+  },
+  {
+    "id": "Q004",
+    "question": "血液外渗情况可能导致什么？",
+    "type": "direct_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "\"血液外渗情况\"可能导致：大腿淤青",
+    "matched_entities": [
+      "血液外渗情况"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q005",
+    "question": "下肢的血管病变可能导致什么？",
+    "type": "direct_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "\"下肢的血管病变\"可能导致：缺血、缺氧",
+    "matched_entities": [
+      "下肢的血管病变"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q006",
+    "question": "影响发音可能由什么引起？",
+    "type": "reverse_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "可能导致\"影响发音\"的因素包括：地包天",
+    "matched_entities": [
+      "影响发音"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q007",
+    "question": "皮肤瘙痒可能由什么引起？",
+    "type": "reverse_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "可能导致\"皮肤瘙痒\"的因素包括：细菌滋生、孕期总胆汁酸高",
+    "matched_entities": [
+      "皮肤瘙痒"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q008",
+    "question": "腹胀可能由什么引起？",
+    "type": "reverse_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "可能导致\"腹胀\"的因素包括：甲减、新生儿消化系统不好、胆管结石、肝胆方面的疾病、胃肠道方面的疾病、脾胃虚弱、消化不良、胃功能紊乱、胃肠蠕动慢、多囊肝",
+    "matched_entities": [
+      "腹胀"
+    ],
+    "evidence_count": 20,
+    "has_evidence": true
+  },
+  {
+    "id": "Q009",
+    "question": "咳嗽可能由什么引起？",
+    "type": "reverse_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "可能导致\"咳嗽\"的因素包括：器质性疾病、感冒、上呼吸道感染、急慢性支气管炎、肺炎、肺癌、支气管扩张、肺结核、慢阻肺、哮喘",
+    "matched_entities": [
+      "咳嗽"
+    ],
+    "evidence_count": 20,
+    "has_evidence": true
+  },
+  {
+    "id": "Q010",
+    "question": "尿液里面有少量的蛋白或者是少量的红血球可能由什么引起？",
+    "type": "reverse_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "可能导致\"尿液里面有少量的蛋白或者是少量的红血球\"的因素包括：前列腺炎",
+    "matched_entities": [
+      "尿液里面有少量的蛋白或者是少量的红血球"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q011",
+    "question": "为什么烟雾病可能和上位脑神经元受到压迫有关？",
+    "type": "multi_hop_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "存在因果路径：烟雾病 --causes--> 脑出血 --causes--> 上位脑神经元受到压迫",
+    "matched_entities": [
+      "上位脑神经元受到压迫",
+      "烟雾病"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q012",
+    "question": "为什么感染可能和癫痫有关？",
+    "type": "multi_hop_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "存在因果路径：感染 --causes--> 炎症 --causes--> 癫痫",
+    "matched_entities": [
+      "感染",
+      "癫痫"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q013",
+    "question": "为什么子宫内膜,由于过度的损伤可能和比较严重的痛经,随着月经来潮逐渐的加重有关？",
+    "type": "multi_hop_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "存在因果路径：子宫内膜,由于过度的损伤 --causes--> 子宫腺肌症 --causes--> 比较严重的痛经,随着月经来潮逐渐的加重",
+    "matched_entities": [
+      "比较严重的痛经,随着月经来潮逐渐的加重",
+      "子宫内膜,由于过度的损伤"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q014",
+    "question": "为什么腰部肌肉组织、深筋膜组织出现无菌性炎症可能和局部有气滞血瘀、经络阻塞有关？",
+    "type": "multi_hop_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "存在因果路径：腰部肌肉组织、深筋膜组织出现无菌性炎症 --causes--> 肌肉内气血运行不畅 --causes--> 局部有气滞血瘀、经络阻塞",
+    "matched_entities": [
+      "腰部肌肉组织、深筋膜组织出现无菌性炎症",
+      "局部有气滞血瘀、经络阻塞"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q015",
+    "question": "为什么功能性胃肠病可能和食欲不振有关？",
+    "type": "multi_hop_causal",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "存在因果路径：功能性胃肠病 --causes--> 消化不良 --causes--> 食欲不振",
+    "matched_entities": [
+      "功能性胃肠病",
+      "食欲不振"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q016",
+    "question": "在什么条件下支气管哮喘可能发生？",
+    "type": "condition_reasoning",
+    "tested_relations": [
+      "condition_of"
+    ],
+    "kg_answer": "可能的条件包括：婴幼儿、年长儿",
+    "matched_entities": [
+      "支气管哮喘"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q017",
+    "question": "在什么条件下紫癜性肾炎可能发生？",
+    "type": "condition_reasoning",
+    "tested_relations": [
+      "condition_of"
+    ],
+    "kg_answer": "可能的条件包括：出血性紫癜,伴有腹型紫癜、累及关节时",
+    "matched_entities": [
+      "紫癜性肾炎"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q018",
+    "question": "在什么条件下绑上收腹带可能发生？",
+    "type": "condition_reasoning",
+    "tested_relations": [
+      "condition_of"
+    ],
+    "kg_answer": "可能的条件包括：顺产的产妇产后褥汗较多",
+    "matched_entities": [
+      "绑上收腹带"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q019",
+    "question": "在什么条件下消化系统感染可能发生？",
+    "type": "condition_reasoning",
+    "tested_relations": [
+      "condition_of"
+    ],
+    "kg_answer": "可能的条件包括：孩子",
+    "matched_entities": [
+      "消化系统感染"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q020",
+    "question": "在什么条件下进食比较热的饮食可能发生？",
+    "type": "condition_reasoning",
+    "tested_relations": [
+      "condition_of"
+    ],
+    "kg_answer": "可能的条件包括：检查后1-2个小时",
+    "matched_entities": [
+      "进食比较热的饮食"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q021",
+    "question": "阴道出血属于什么类型？",
+    "type": "is_a",
+    "tested_relations": [
+      "is_a"
+    ],
+    "kg_answer": "阴道出血 属于：异常分泌物",
+    "matched_entities": [
+      "阴道出血"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q022",
+    "question": "化脓性关节炎属于什么类型？",
+    "type": "is_a",
+    "tested_relations": [
+      "is_a"
+    ],
+    "kg_answer": "化脓性关节炎 属于：肩关节周围炎",
+    "matched_entities": [
+      "化脓性关节炎"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q023",
+    "question": "颅内支架手术属于什么类型？",
+    "type": "is_a",
+    "tested_relations": [
+      "is_a"
+    ],
+    "kg_answer": "颅内支架手术 属于：脑梗支架手术",
+    "matched_entities": [
+      "颅内支架手术"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q024",
+    "question": "支气管扩张属于什么类型？",
+    "type": "is_a",
+    "tested_relations": [
+      "is_a"
+    ],
+    "kg_answer": "支气管扩张 属于：细菌感染的疾病、气流受限性疾病、结构性肺病",
+    "matched_entities": [
+      "支气管扩张"
+    ],
+    "evidence_count": 3,
+    "has_evidence": true
+  },
+  {
+    "id": "Q025",
+    "question": "细菌性感染属于什么类型？",
+    "type": "is_a",
+    "tested_relations": [
+      "is_a"
+    ],
+    "kg_answer": "细菌性感染 属于：有菌性的感染、感染性因素",
+    "matched_entities": [
+      "细菌性感染"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q026",
+    "question": "双硫仑反应有哪些症状？",
+    "type": "symptom_query",
+    "tested_relations": [
+      "symptom_of"
+    ],
+    "kg_answer": "“双硫仑反应”的症状包括：血压升高、心率升高、恶心、呕吐、呼吸抑制、面色潮红、恶心、呕吐、胸闷、呼吸困难",
+    "matched_entities": [
+      "双硫仑反应",
+      "症状"
+    ],
+    "evidence_count": 11,
+    "has_evidence": true
+  },
+  {
+    "id": "Q027",
+    "question": "消化道系统疾病有哪些症状？",
+    "type": "symptom_query",
+    "tested_relations": [
+      "symptom_of"
+    ],
+    "kg_answer": "“消化道系统疾病”的症状包括：腹泻",
+    "matched_entities": [
+      "消化道系统疾病",
+      "症状"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q028",
+    "question": "黄癣有哪些症状？",
+    "type": "symptom_query",
+    "tested_relations": [
+      "symptom_of"
+    ],
+    "kg_answer": "知识图谱中没有足够证据。",
+    "matched_entities": [
+      "症状",
+      "黄癣"
+    ],
+    "evidence_count": 0,
+    "has_evidence": false
+  },
+  {
+    "id": "Q029",
+    "question": "肾脏疾病有哪些症状？",
+    "type": "symptom_query",
+    "tested_relations": [
+      "symptom_of"
+    ],
+    "kg_answer": "“肾脏疾病”的症状包括：胆碱酯酶增高",
+    "matched_entities": [
+      "肾脏疾病",
+      "症状"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q030",
+    "question": "肿瘤吸收热有哪些症状？",
+    "type": "symptom_query",
+    "tested_relations": [
+      "symptom_of"
+    ],
+    "kg_answer": "“肿瘤吸收热”的症状包括：低热",
+    "matched_entities": [
+      "肿瘤吸收热",
+      "症状"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q031",
+    "question": "血钙的异常如何治疗？",
+    "type": "treatment_query",
+    "tested_relations": [
+      "treated_by"
+    ],
+    "kg_answer": "\"血钙的异常\"的治疗方式包括：正规诊治",
+    "matched_entities": [
+      "血钙的异常",
+      "治疗"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q032",
+    "question": "干眼症如何治疗？",
+    "type": "treatment_query",
+    "tested_relations": [
+      "treated_by"
+    ],
+    "kg_answer": "\"干眼症\"的治疗方式包括：人工泪液、避免长时间待在空调房里",
+    "matched_entities": [
+      "干眼症",
+      "治疗"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q033",
+    "question": "持续性勃起如何治疗？",
+    "type": "treatment_query",
+    "tested_relations": [
+      "treated_by"
+    ],
+    "kg_answer": "\"持续性勃起\"的治疗方式包括：肾上腺素",
+    "matched_entities": [
+      "持续性勃起",
+      "治疗"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q034",
+    "question": "丝状乳头红肿、发炎如何治疗？",
+    "type": "treatment_query",
+    "tested_relations": [
+      "treated_by"
+    ],
+    "kg_answer": "\"丝状乳头红肿、发炎\"的治疗方式包括：口服抗生素、头孢类的抗生素、热敷、碘甘油",
+    "matched_entities": [
+      "丝状乳头红肿、发炎",
+      "治疗"
+    ],
+    "evidence_count": 4,
+    "has_evidence": true
+  },
+  {
+    "id": "Q035",
+    "question": "呼吸衰竭如何治疗？",
+    "type": "treatment_query",
+    "tested_relations": [
+      "treated_by"
+    ],
+    "kg_answer": "\"呼吸衰竭\"的治疗方式包括：氧气支持、吸氧、呼吸机进行支持治疗",
+    "matched_entities": [
+      "呼吸衰竭",
+      "治疗"
+    ],
+    "evidence_count": 3,
+    "has_evidence": true
+  },
+  {
+    "id": "Q036",
+    "question": "肚脐眼疼发生在什么部位？",
+    "type": "location_query",
+    "tested_relations": [
+      "located_in"
+    ],
+    "kg_answer": "\"肚脐眼疼\"发生在：肚脐眼",
+    "matched_entities": [
+      "肚脐眼疼"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q037",
+    "question": "鼻前庭炎发生在什么部位？",
+    "type": "location_query",
+    "tested_relations": [
+      "located_in"
+    ],
+    "kg_answer": "\"鼻前庭炎\"发生在：鼻前庭",
+    "matched_entities": [
+      "鼻前庭炎"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q038",
+    "question": "鲨肝醇发生在什么部位？",
+    "type": "location_query",
+    "tested_relations": [
+      "located_in"
+    ],
+    "kg_answer": "\"鲨肝醇\"发生在：骨髓造血组织",
+    "matched_entities": [
+      "鲨肝醇"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q039",
+    "question": "智齿发生在什么部位？",
+    "type": "location_query",
+    "tested_relations": [
+      "located_in"
+    ],
+    "kg_answer": "\"智齿\"发生在：口腔",
+    "matched_entities": [
+      "智齿"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q040",
+    "question": "慢性前列腺炎发生在什么部位？",
+    "type": "location_query",
+    "tested_relations": [
+      "located_in"
+    ],
+    "kg_answer": "\"慢性前列腺炎\"发生在：泌尿生殖系、前列腺",
+    "matched_entities": [
+      "慢性前列腺炎"
+    ],
+    "evidence_count": 2,
+    "has_evidence": true
+  },
+  {
+    "id": "Q041",
+    "question": "胃食管反流如何诊断？",
+    "type": "diagnosis_query",
+    "tested_relations": [
+      "diagnosed_by"
+    ],
+    "kg_answer": "\"胃食管反流\"可通过以下方式诊断：胃镜",
+    "matched_entities": [
+      "胃食管反流"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q042",
+    "question": "前列腺炎如何诊断？",
+    "type": "diagnosis_query",
+    "tested_relations": [
+      "diagnosed_by"
+    ],
+    "kg_answer": "\"前列腺炎\"可通过以下方式诊断：尿常规、前列腺液常规、泌尿系统b超",
+    "matched_entities": [
+      "前列腺炎"
+    ],
+    "evidence_count": 3,
+    "has_evidence": true
+  },
+  {
+    "id": "Q043",
+    "question": "囊肿如何诊断？",
+    "type": "diagnosis_query",
+    "tested_relations": [
+      "diagnosed_by"
+    ],
+    "kg_answer": "\"囊肿\"可通过以下方式诊断：b超、磁共振、b超",
+    "matched_entities": [
+      "囊肿"
+    ],
+    "evidence_count": 3,
+    "has_evidence": true
+  },
+  {
+    "id": "Q044",
+    "question": "白带异常如何诊断？",
+    "type": "diagnosis_query",
+    "tested_relations": [
+      "diagnosed_by"
+    ],
+    "kg_answer": "\"白带异常\"可通过以下方式诊断：白带常规检查、宫颈细胞学检查、b超",
+    "matched_entities": [
+      "白带异常"
+    ],
+    "evidence_count": 3,
+    "has_evidence": true
+  },
+  {
+    "id": "Q045",
+    "question": "结核菌感染如何诊断？",
+    "type": "diagnosis_query",
+    "tested_relations": [
+      "diagnosed_by"
+    ],
+    "kg_answer": "\"结核菌感染\"可通过以下方式诊断：胸片、ppd实验、结核抗体",
+    "matched_entities": [
+      "结核菌感染"
+    ],
+    "evidence_count": 3,
+    "has_evidence": true
+  },
+  {
+    "id": "Q046",
+    "question": "图谱中有没有证据说明大便像果冻会导致慢性咽喉炎反复急性发作？",
+    "type": "negative_check",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "\"慢性咽喉炎反复急性发作\"可能导致：咽喉经常发炎",
+    "matched_entities": [
+      "慢性咽喉炎反复急性发作",
+      "大便像果冻"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  },
+  {
+    "id": "Q047",
+    "question": "图谱中有没有证据说明鼻部症状会导致双下肢无力？",
+    "type": "negative_check",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "知识图谱中没有足够证据。",
+    "matched_entities": [
+      "双下肢无力",
+      "鼻部症状"
+    ],
+    "evidence_count": 0,
+    "has_evidence": false
+  },
+  {
+    "id": "Q048",
+    "question": "图谱中有没有证据说明只能说几个简单的词汇会导致食管癌？",
+    "type": "negative_check",
+    "tested_relations": [
+      "causes"
+    ],
+    "kg_answer": "知识图谱中没有足够证据。",
+    "matched_entities": [
+      "只能说几个简单的词汇",
+      "食管癌"
+    ],
+    "evidence_count": 0,
+    "has_evidence": false
+  },
+  {
+    "id": "Q049",
+    "question": "肺源性心脏病有哪些症状？可能由什么引起？",
+    "type": "cross_relation",
+    "tested_relations": [
+      "symptom_of",
+      "causes"
+    ],
+    "kg_answer": "“肺源性心脏病”的症状包括：瓣膜关闭不全、心慌、胸闷",
+    "matched_entities": [
+      "肺源性心脏病",
+      "症状"
+    ],
+    "evidence_count": 3,
+    "has_evidence": true
+  },
+  {
+    "id": "Q050",
+    "question": "上呼吸道感染有哪些症状？可能由什么引起？",
+    "type": "cross_relation",
+    "tested_relations": [
+      "symptom_of",
+      "causes"
+    ],
+    "kg_answer": "“上呼吸道感染”的症状包括：发烧",
+    "matched_entities": [
+      "上呼吸道感染",
+      "症状"
+    ],
+    "evidence_count": 1,
+    "has_evidence": true
+  }
+]

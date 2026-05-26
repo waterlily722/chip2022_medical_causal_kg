@@ -1,302 +1,859 @@
 [
   {
     "id": "Q001",
-    "question": "宫腔操作后导致内膜变薄、粘连可能导致什么？",
+    "question": "急性扁桃体炎可能导致什么？",
     "type": "direct_causal",
     "gold_evidence": [
       [
-        "宫腔操作后导致内膜变薄、粘连",
+        "急性扁桃体炎",
         "causes",
-        "月经量少"
+        "急性肾炎"
       ]
     ],
-    "gold_answer": "宫腔操作后导致内膜变薄、粘连可能导致月经量少。",
-    "source": "kg_auto_generated"
+    "gold_answer": "急性扁桃体炎可能导致急性肾炎。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q002",
-    "question": "月经量少可能由什么引起？",
-    "type": "reverse_causal",
+    "question": "乳腺增生可能导致什么？",
+    "type": "direct_causal",
     "gold_evidence": [
       [
-        "宫腔操作后导致内膜变薄、粘连",
+        "乳腺增生",
         "causes",
-        "月经量少"
+        "乳房包块形成"
       ]
     ],
-    "gold_answer": "月经量少可能由宫腔操作后导致内膜变薄、粘连引起。",
-    "source": "kg_auto_generated"
+    "gold_answer": "乳腺增生可能导致乳房包块形成。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q003",
-    "question": "40岁之前做人工流产可能导致什么？",
+    "question": "小脑脑干供血不足可能导致什么？",
     "type": "direct_causal",
     "gold_evidence": [
       [
-        "40岁之前做人工流产",
+        "小脑脑干供血不足",
         "causes",
-        "月经量少"
+        "共济失调"
       ]
     ],
-    "gold_answer": "40岁之前做人工流产可能导致月经量少。",
-    "source": "kg_auto_generated"
+    "gold_answer": "小脑脑干供血不足可能导致共济失调。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q004",
-    "question": "月经量少可能由什么引起？",
-    "type": "reverse_causal",
+    "question": "血液外渗情况可能导致什么？",
+    "type": "direct_causal",
     "gold_evidence": [
       [
-        "40岁之前做人工流产",
+        "血液外渗情况",
         "causes",
-        "月经量少"
+        "大腿淤青"
       ]
     ],
-    "gold_answer": "月经量少可能由40岁之前做人工流产引起。",
-    "source": "kg_auto_generated"
+    "gold_answer": "血液外渗情况可能导致大腿淤青。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q005",
-    "question": "宫腔粘连可能导致什么？",
+    "question": "下肢的血管病变可能导致什么？",
     "type": "direct_causal",
     "gold_evidence": [
       [
-        "宫腔粘连",
+        "下肢的血管病变",
         "causes",
-        "月经量少"
+        "缺血"
       ]
     ],
-    "gold_answer": "宫腔粘连可能导致月经量少。",
-    "source": "kg_auto_generated"
+    "gold_answer": "下肢的血管病变可能导致缺血。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q006",
-    "question": "月经量少可能由什么引起？",
+    "question": "影响发音可能由什么引起？",
     "type": "reverse_causal",
     "gold_evidence": [
       [
-        "宫腔粘连",
+        "地包天",
         "causes",
-        "月经量少"
+        "影响发音"
       ]
     ],
-    "gold_answer": "月经量少可能由宫腔粘连引起。",
-    "source": "kg_auto_generated"
+    "gold_answer": "影响发音可能由地包天引起。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q007",
-    "question": "卵巢功能衰退可能导致什么？",
-    "type": "direct_causal",
+    "question": "皮肤瘙痒可能由什么引起？",
+    "type": "reverse_causal",
     "gold_evidence": [
       [
-        "卵巢功能衰退",
+        "细菌滋生",
         "causes",
-        "月经量开始慢慢减少"
+        "皮肤瘙痒"
       ]
     ],
-    "gold_answer": "卵巢功能衰退可能导致月经量开始慢慢减少。",
-    "source": "kg_auto_generated"
+    "gold_answer": "皮肤瘙痒可能由细菌滋生引起。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q008",
-    "question": "月经量开始慢慢减少可能由什么引起？",
+    "question": "腹胀可能由什么引起？",
     "type": "reverse_causal",
     "gold_evidence": [
       [
-        "卵巢功能衰退",
+        "胃肠道方面的疾病",
         "causes",
-        "月经量开始慢慢减少"
+        "腹胀"
       ]
     ],
-    "gold_answer": "月经量开始慢慢减少可能由卵巢功能衰退引起。",
-    "source": "kg_auto_generated"
+    "gold_answer": "腹胀可能由胃肠道方面的疾病引起。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q009",
-    "question": "消化系统器质性病变可能导致什么？",
-    "type": "direct_causal",
+    "question": "咳嗽可能由什么引起？",
+    "type": "reverse_causal",
     "gold_evidence": [
       [
-        "消化系统器质性病变",
+        "气道敏感性增高",
         "causes",
-        "胃部出现针扎样的疼痛"
+        "咳嗽"
       ]
     ],
-    "gold_answer": "消化系统器质性病变可能导致胃部出现针扎样的疼痛。",
-    "source": "kg_auto_generated"
+    "gold_answer": "咳嗽可能由气道敏感性增高引起。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q010",
-    "question": "胃部出现针扎样的疼痛可能由什么引起？",
+    "question": "尿液里面有少量的蛋白或者是少量的红血球可能由什么引起？",
     "type": "reverse_causal",
     "gold_evidence": [
       [
-        "消化系统器质性病变",
+        "前列腺炎",
         "causes",
-        "胃部出现针扎样的疼痛"
+        "尿液里面有少量的蛋白或者是少量的红血球"
       ]
     ],
-    "gold_answer": "胃部出现针扎样的疼痛可能由消化系统器质性病变引起。",
-    "source": "kg_auto_generated"
+    "gold_answer": "尿液里面有少量的蛋白或者是少量的红血球可能由前列腺炎引起。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q011",
-    "question": "高血压可能导致什么？",
-    "type": "direct_causal",
+    "question": "为什么烟雾病可能和上位脑神经元受到压迫有关？",
+    "type": "multi_hop_causal",
     "gold_evidence": [
       [
-        "高血压",
+        "烟雾病",
         "causes",
-        "主动脉粥样硬化"
+        "脑出血"
+      ],
+      [
+        "脑出血",
+        "causes",
+        "上位脑神经元受到压迫"
       ]
     ],
-    "gold_answer": "高血压可能导致主动脉粥样硬化。",
-    "source": "kg_auto_generated"
+    "gold_answer": "烟雾病可能通过脑出血间接关联上位脑神经元受到压迫。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q012",
-    "question": "主动脉粥样硬化可能由什么引起？",
-    "type": "reverse_causal",
+    "question": "为什么感染可能和癫痫有关？",
+    "type": "multi_hop_causal",
     "gold_evidence": [
       [
-        "高血压",
+        "感染",
         "causes",
-        "主动脉粥样硬化"
+        "炎症"
+      ],
+      [
+        "炎症",
+        "causes",
+        "癫痫"
       ]
     ],
-    "gold_answer": "主动脉粥样硬化可能由高血压引起。",
-    "source": "kg_auto_generated"
+    "gold_answer": "感染可能通过炎症间接关联癫痫。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q013",
-    "question": "主动脉粥样硬化可能导致什么？",
-    "type": "direct_causal",
+    "question": "为什么子宫内膜,由于过度的损伤可能和比较严重的痛经,随着月经来潮逐渐的加重有关？",
+    "type": "multi_hop_causal",
     "gold_evidence": [
       [
-        "主动脉粥样硬化",
+        "子宫内膜,由于过度的损伤",
         "causes",
-        "心肌梗死"
+        "子宫腺肌症"
+      ],
+      [
+        "子宫腺肌症",
+        "causes",
+        "比较严重的痛经,随着月经来潮逐渐的加重"
       ]
     ],
-    "gold_answer": "主动脉粥样硬化可能导致心肌梗死。",
-    "source": "kg_auto_generated"
+    "gold_answer": "子宫内膜,由于过度的损伤可能通过子宫腺肌症间接关联比较严重的痛经,随着月经来潮逐渐的加重。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q014",
-    "question": "心肌梗死可能由什么引起？",
-    "type": "reverse_causal",
+    "question": "为什么腰部肌肉组织、深筋膜组织出现无菌性炎症可能和局部有气滞血瘀、经络阻塞有关？",
+    "type": "multi_hop_causal",
     "gold_evidence": [
       [
-        "主动脉粥样硬化",
+        "腰部肌肉组织、深筋膜组织出现无菌性炎症",
         "causes",
-        "心肌梗死"
+        "肌肉内气血运行不畅"
+      ],
+      [
+        "肌肉内气血运行不畅",
+        "causes",
+        "局部有气滞血瘀、经络阻塞"
       ]
     ],
-    "gold_answer": "心肌梗死可能由主动脉粥样硬化引起。",
-    "source": "kg_auto_generated"
+    "gold_answer": "腰部肌肉组织、深筋膜组织出现无菌性炎症可能通过肌肉内气血运行不畅间接关联局部有气滞血瘀、经络阻塞。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q015",
-    "question": "主动脉粥样硬化可能导致什么？",
-    "type": "direct_causal",
+    "question": "为什么功能性胃肠病可能和食欲不振有关？",
+    "type": "multi_hop_causal",
     "gold_evidence": [
       [
-        "主动脉粥样硬化",
+        "功能性胃肠病",
         "causes",
-        "脑卒中"
+        "消化不良"
+      ],
+      [
+        "消化不良",
+        "causes",
+        "食欲不振"
       ]
     ],
-    "gold_answer": "主动脉粥样硬化可能导致脑卒中。",
-    "source": "kg_auto_generated"
+    "gold_answer": "功能性胃肠病可能通过消化不良间接关联食欲不振。",
+    "tested_relations": [
+      "causes"
+    ]
   },
   {
     "id": "Q016",
-    "question": "脑卒中可能由什么引起？",
-    "type": "reverse_causal",
+    "question": "在什么条件下支气管哮喘可能发生？",
+    "type": "condition_reasoning",
     "gold_evidence": [
       [
-        "主动脉粥样硬化",
-        "causes",
-        "脑卒中"
+        "婴幼儿",
+        "condition_of",
+        "支气管哮喘"
+      ],
+      [
+        "年长儿",
+        "condition_of",
+        "支气管哮喘"
       ]
     ],
-    "gold_answer": "脑卒中可能由主动脉粥样硬化引起。",
-    "source": "kg_auto_generated"
+    "gold_answer": "支气管哮喘的条件包括：婴幼儿、年长儿。",
+    "tested_relations": [
+      "condition_of"
+    ]
   },
   {
     "id": "Q017",
-    "question": "为什么高血压可能和心肌梗死有关？",
-    "type": "multi_hop_causal",
+    "question": "在什么条件下紫癜性肾炎可能发生？",
+    "type": "condition_reasoning",
     "gold_evidence": [
       [
-        "高血压",
-        "causes",
-        "主动脉粥样硬化"
+        "出血性紫癜,伴有腹型紫癜",
+        "condition_of",
+        "紫癜性肾炎"
       ],
       [
-        "主动脉粥样硬化",
-        "causes",
-        "心肌梗死"
+        "累及关节时",
+        "condition_of",
+        "紫癜性肾炎"
       ]
     ],
-    "gold_answer": "高血压可能通过主动脉粥样硬化间接关联心肌梗死。",
-    "source": "kg_path_generated"
+    "gold_answer": "紫癜性肾炎的条件包括：出血性紫癜,伴有腹型紫癜、累及关节时。",
+    "tested_relations": [
+      "condition_of"
+    ]
   },
   {
     "id": "Q018",
-    "question": "为什么主动脉粥样硬化可能和手指发麻或偏侧发麻有关？",
-    "type": "multi_hop_causal",
+    "question": "在什么条件下绑上收腹带可能发生？",
+    "type": "condition_reasoning",
     "gold_evidence": [
       [
-        "主动脉粥样硬化",
-        "causes",
-        "脑卒中"
-      ],
-      [
-        "脑卒中",
-        "causes",
-        "手指发麻或偏侧发麻"
+        "顺产的产妇产后褥汗较多",
+        "condition_of",
+        "绑上收腹带"
       ]
     ],
-    "gold_answer": "主动脉粥样硬化可能通过脑卒中间接关联手指发麻或偏侧发麻。",
-    "source": "kg_path_generated"
+    "gold_answer": "绑上收腹带的条件包括：顺产的产妇产后褥汗较多。",
+    "tested_relations": [
+      "condition_of"
+    ]
   },
   {
     "id": "Q019",
-    "question": "为什么细菌或病毒入侵体内可能和急迫性尿失禁有关？",
-    "type": "multi_hop_causal",
+    "question": "在什么条件下消化系统感染可能发生？",
+    "type": "condition_reasoning",
     "gold_evidence": [
       [
-        "细菌或病毒入侵体内",
-        "causes",
-        "泌尿系感染"
-      ],
-      [
-        "泌尿系感染",
-        "causes",
-        "急迫性尿失禁"
+        "孩子",
+        "condition_of",
+        "消化系统感染"
       ]
     ],
-    "gold_answer": "细菌或病毒入侵体内可能通过泌尿系感染间接关联急迫性尿失禁。",
-    "source": "kg_path_generated"
+    "gold_answer": "消化系统感染的条件包括：孩子。",
+    "tested_relations": [
+      "condition_of"
+    ]
   },
   {
     "id": "Q020",
-    "question": "为什么局部抵抗力下降可能和急迫性尿失禁有关？",
-    "type": "multi_hop_causal",
+    "question": "在什么条件下进食比较热的饮食可能发生？",
+    "type": "condition_reasoning",
     "gold_evidence": [
       [
-        "局部抵抗力下降",
-        "causes",
-        "泌尿系感染"
-      ],
-      [
-        "泌尿系感染",
-        "causes",
-        "急迫性尿失禁"
+        "检查后1-2个小时",
+        "condition_of",
+        "进食比较热的饮食"
       ]
     ],
-    "gold_answer": "局部抵抗力下降可能通过泌尿系感染间接关联急迫性尿失禁。",
-    "source": "kg_path_generated"
+    "gold_answer": "进食比较热的饮食的条件包括：检查后1-2个小时。",
+    "tested_relations": [
+      "condition_of"
+    ]
+  },
+  {
+    "id": "Q021",
+    "question": "阴道出血属于什么类型？",
+    "type": "is_a",
+    "gold_evidence": [
+      [
+        "阴道出血",
+        "is_a",
+        "异常分泌物"
+      ]
+    ],
+    "gold_answer": "阴道出血属于异常分泌物。",
+    "tested_relations": [
+      "is_a"
+    ]
+  },
+  {
+    "id": "Q022",
+    "question": "化脓性关节炎属于什么类型？",
+    "type": "is_a",
+    "gold_evidence": [
+      [
+        "化脓性关节炎",
+        "is_a",
+        "肩关节周围炎"
+      ]
+    ],
+    "gold_answer": "化脓性关节炎属于肩关节周围炎。",
+    "tested_relations": [
+      "is_a"
+    ]
+  },
+  {
+    "id": "Q023",
+    "question": "颅内支架手术属于什么类型？",
+    "type": "is_a",
+    "gold_evidence": [
+      [
+        "颅内支架手术",
+        "is_a",
+        "脑梗支架手术"
+      ]
+    ],
+    "gold_answer": "颅内支架手术属于脑梗支架手术。",
+    "tested_relations": [
+      "is_a"
+    ]
+  },
+  {
+    "id": "Q024",
+    "question": "支气管扩张属于什么类型？",
+    "type": "is_a",
+    "gold_evidence": [
+      [
+        "支气管扩张",
+        "is_a",
+        "细菌感染的疾病"
+      ]
+    ],
+    "gold_answer": "支气管扩张属于细菌感染的疾病。",
+    "tested_relations": [
+      "is_a"
+    ]
+  },
+  {
+    "id": "Q025",
+    "question": "细菌性感染属于什么类型？",
+    "type": "is_a",
+    "gold_evidence": [
+      [
+        "细菌性感染",
+        "is_a",
+        "有菌性的感染"
+      ]
+    ],
+    "gold_answer": "细菌性感染属于有菌性的感染。",
+    "tested_relations": [
+      "is_a"
+    ]
+  },
+  {
+    "id": "Q026",
+    "question": "双硫仑反应有哪些症状？",
+    "type": "symptom_query",
+    "gold_evidence": [
+      [
+        "血压升高",
+        "symptom_of",
+        "双硫仑反应"
+      ],
+      [
+        "心率升高",
+        "symptom_of",
+        "双硫仑反应"
+      ],
+      [
+        "恶心",
+        "symptom_of",
+        "双硫仑反应"
+      ],
+      [
+        "呕吐",
+        "symptom_of",
+        "双硫仑反应"
+      ]
+    ],
+    "gold_answer": "双硫仑反应的症状包括：血压升高、心率升高、恶心、呕吐。",
+    "tested_relations": [
+      "symptom_of"
+    ]
+  },
+  {
+    "id": "Q027",
+    "question": "消化道系统疾病有哪些症状？",
+    "type": "symptom_query",
+    "gold_evidence": [
+      [
+        "腹泻",
+        "symptom_of",
+        "消化道系统疾病"
+      ]
+    ],
+    "gold_answer": "消化道系统疾病的症状包括：腹泻。",
+    "tested_relations": [
+      "symptom_of"
+    ]
+  },
+  {
+    "id": "Q028",
+    "question": "黄癣有哪些症状？",
+    "type": "symptom_query",
+    "gold_evidence": [
+      [
+        "黄癣痂",
+        "symptom_of",
+        "黄癣"
+      ],
+      [
+        "鼠臭味",
+        "symptom_of",
+        "黄癣"
+      ]
+    ],
+    "gold_answer": "黄癣的症状包括：黄癣痂、鼠臭味。",
+    "tested_relations": [
+      "symptom_of"
+    ]
+  },
+  {
+    "id": "Q029",
+    "question": "肾脏疾病有哪些症状？",
+    "type": "symptom_query",
+    "gold_evidence": [
+      [
+        "胆碱酯酶增高",
+        "symptom_of",
+        "肾脏疾病"
+      ]
+    ],
+    "gold_answer": "肾脏疾病的症状包括：胆碱酯酶增高。",
+    "tested_relations": [
+      "symptom_of"
+    ]
+  },
+  {
+    "id": "Q030",
+    "question": "肿瘤吸收热有哪些症状？",
+    "type": "symptom_query",
+    "gold_evidence": [
+      [
+        "低热",
+        "symptom_of",
+        "肿瘤吸收热"
+      ]
+    ],
+    "gold_answer": "肿瘤吸收热的症状包括：低热。",
+    "tested_relations": [
+      "symptom_of"
+    ]
+  },
+  {
+    "id": "Q031",
+    "question": "血钙的异常如何治疗？",
+    "type": "treatment_query",
+    "gold_evidence": [
+      [
+        "血钙的异常",
+        "treated_by",
+        "正规诊治"
+      ]
+    ],
+    "gold_answer": "血钙的异常的治疗方式包括：正规诊治。",
+    "tested_relations": [
+      "treated_by"
+    ]
+  },
+  {
+    "id": "Q032",
+    "question": "干眼症如何治疗？",
+    "type": "treatment_query",
+    "gold_evidence": [
+      [
+        "干眼症",
+        "treated_by",
+        "人工泪液"
+      ],
+      [
+        "干眼症",
+        "treated_by",
+        "避免长时间待在空调房里"
+      ]
+    ],
+    "gold_answer": "干眼症的治疗方式包括：人工泪液、避免长时间待在空调房里。",
+    "tested_relations": [
+      "treated_by"
+    ]
+  },
+  {
+    "id": "Q033",
+    "question": "持续性勃起如何治疗？",
+    "type": "treatment_query",
+    "gold_evidence": [
+      [
+        "持续性勃起",
+        "treated_by",
+        "肾上腺素"
+      ]
+    ],
+    "gold_answer": "持续性勃起的治疗方式包括：肾上腺素。",
+    "tested_relations": [
+      "treated_by"
+    ]
+  },
+  {
+    "id": "Q034",
+    "question": "丝状乳头红肿、发炎如何治疗？",
+    "type": "treatment_query",
+    "gold_evidence": [
+      [
+        "丝状乳头红肿、发炎",
+        "treated_by",
+        "口服抗生素"
+      ],
+      [
+        "丝状乳头红肿、发炎",
+        "treated_by",
+        "头孢类的抗生素"
+      ],
+      [
+        "丝状乳头红肿、发炎",
+        "treated_by",
+        "热敷"
+      ],
+      [
+        "丝状乳头红肿、发炎",
+        "treated_by",
+        "碘甘油"
+      ]
+    ],
+    "gold_answer": "丝状乳头红肿、发炎的治疗方式包括：口服抗生素、头孢类的抗生素、热敷、碘甘油。",
+    "tested_relations": [
+      "treated_by"
+    ]
+  },
+  {
+    "id": "Q035",
+    "question": "呼吸衰竭如何治疗？",
+    "type": "treatment_query",
+    "gold_evidence": [
+      [
+        "呼吸衰竭",
+        "treated_by",
+        "氧气支持"
+      ],
+      [
+        "呼吸衰竭",
+        "treated_by",
+        "吸氧"
+      ],
+      [
+        "呼吸衰竭",
+        "treated_by",
+        "呼吸机进行支持治疗"
+      ]
+    ],
+    "gold_answer": "呼吸衰竭的治疗方式包括：氧气支持、吸氧、呼吸机进行支持治疗。",
+    "tested_relations": [
+      "treated_by"
+    ]
+  },
+  {
+    "id": "Q036",
+    "question": "肚脐眼疼发生在什么部位？",
+    "type": "location_query",
+    "gold_evidence": [
+      [
+        "肚脐眼疼",
+        "located_in",
+        "肚脐眼"
+      ]
+    ],
+    "gold_answer": "肚脐眼疼发生在肚脐眼。",
+    "tested_relations": [
+      "located_in"
+    ]
+  },
+  {
+    "id": "Q037",
+    "question": "鼻前庭炎发生在什么部位？",
+    "type": "location_query",
+    "gold_evidence": [
+      [
+        "鼻前庭炎",
+        "located_in",
+        "鼻前庭"
+      ]
+    ],
+    "gold_answer": "鼻前庭炎发生在鼻前庭。",
+    "tested_relations": [
+      "located_in"
+    ]
+  },
+  {
+    "id": "Q038",
+    "question": "鲨肝醇发生在什么部位？",
+    "type": "location_query",
+    "gold_evidence": [
+      [
+        "鲨肝醇",
+        "located_in",
+        "骨髓造血组织"
+      ]
+    ],
+    "gold_answer": "鲨肝醇发生在骨髓造血组织。",
+    "tested_relations": [
+      "located_in"
+    ]
+  },
+  {
+    "id": "Q039",
+    "question": "智齿发生在什么部位？",
+    "type": "location_query",
+    "gold_evidence": [
+      [
+        "智齿",
+        "located_in",
+        "口腔"
+      ]
+    ],
+    "gold_answer": "智齿发生在口腔。",
+    "tested_relations": [
+      "located_in"
+    ]
+  },
+  {
+    "id": "Q040",
+    "question": "慢性前列腺炎发生在什么部位？",
+    "type": "location_query",
+    "gold_evidence": [
+      [
+        "慢性前列腺炎",
+        "located_in",
+        "前列腺"
+      ]
+    ],
+    "gold_answer": "慢性前列腺炎发生在前列腺。",
+    "tested_relations": [
+      "located_in"
+    ]
+  },
+  {
+    "id": "Q041",
+    "question": "胃食管反流如何诊断？",
+    "type": "diagnosis_query",
+    "gold_evidence": [
+      [
+        "胃食管反流",
+        "diagnosed_by",
+        "胃镜"
+      ]
+    ],
+    "gold_answer": "胃食管反流可通过胃镜诊断。",
+    "tested_relations": [
+      "diagnosed_by"
+    ]
+  },
+  {
+    "id": "Q042",
+    "question": "前列腺炎如何诊断？",
+    "type": "diagnosis_query",
+    "gold_evidence": [
+      [
+        "前列腺炎",
+        "diagnosed_by",
+        "泌尿系统b超"
+      ]
+    ],
+    "gold_answer": "前列腺炎可通过泌尿系统b超诊断。",
+    "tested_relations": [
+      "diagnosed_by"
+    ]
+  },
+  {
+    "id": "Q043",
+    "question": "囊肿如何诊断？",
+    "type": "diagnosis_query",
+    "gold_evidence": [
+      [
+        "囊肿",
+        "diagnosed_by",
+        "b超"
+      ]
+    ],
+    "gold_answer": "囊肿可通过b超诊断。",
+    "tested_relations": [
+      "diagnosed_by"
+    ]
+  },
+  {
+    "id": "Q044",
+    "question": "白带异常如何诊断？",
+    "type": "diagnosis_query",
+    "gold_evidence": [
+      [
+        "白带异常",
+        "diagnosed_by",
+        "b超"
+      ]
+    ],
+    "gold_answer": "白带异常可通过b超诊断。",
+    "tested_relations": [
+      "diagnosed_by"
+    ]
+  },
+  {
+    "id": "Q045",
+    "question": "结核菌感染如何诊断？",
+    "type": "diagnosis_query",
+    "gold_evidence": [
+      [
+        "结核菌感染",
+        "diagnosed_by",
+        "结核抗体"
+      ]
+    ],
+    "gold_answer": "结核菌感染可通过结核抗体诊断。",
+    "tested_relations": [
+      "diagnosed_by"
+    ]
+  },
+  {
+    "id": "Q046",
+    "question": "图谱中有没有证据说明大便像果冻会导致慢性咽喉炎反复急性发作？",
+    "type": "negative_check",
+    "gold_evidence": [],
+    "gold_answer": "知识图谱中没有足够证据支持该关系。",
+    "tested_relations": [
+      "causes"
+    ]
+  },
+  {
+    "id": "Q047",
+    "question": "图谱中有没有证据说明鼻部症状会导致双下肢无力？",
+    "type": "negative_check",
+    "gold_evidence": [],
+    "gold_answer": "知识图谱中没有足够证据支持该关系。",
+    "tested_relations": [
+      "causes"
+    ]
+  },
+  {
+    "id": "Q048",
+    "question": "图谱中有没有证据说明只能说几个简单的词汇会导致食管癌？",
+    "type": "negative_check",
+    "gold_evidence": [],
+    "gold_answer": "知识图谱中没有足够证据支持该关系。",
+    "tested_relations": [
+      "causes"
+    ]
+  },
+  {
+    "id": "Q049",
+    "question": "肺源性心脏病有哪些症状？可能由什么引起？",
+    "type": "cross_relation",
+    "gold_evidence": [],
+    "gold_answer": "肺源性心脏病的症状包括：瓣膜关闭不全、心慌、胸闷。可能由肺气肿、慢性支气管炎引起。",
+    "tested_relations": [
+      "symptom_of",
+      "causes"
+    ]
+  },
+  {
+    "id": "Q050",
+    "question": "上呼吸道感染有哪些症状？可能由什么引起？",
+    "type": "cross_relation",
+    "gold_evidence": [],
+    "gold_answer": "上呼吸道感染的症状包括：发烧。可能由病毒主要通过患者的喷嚏或者含有病毒的飞沫经过空气传播,或经过污染的手和用具接触传播、上呼吸道的细菌或者病毒、病原体入侵引起。",
+    "tested_relations": [
+      "symptom_of",
+      "causes"
+    ]
   }
 ]

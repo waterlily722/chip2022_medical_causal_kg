@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>医疗因果事件知识图谱问答系统</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f5; }
+  .header { background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 20px 30px; text-align: center; }
+  .header h1 { font-size: 24px; margin-bottom: 5px; }
+  .header p { opacity: 0.8; font-size: 14px; }
+  .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; display: flex; gap: 20px; }
+  .left { flex: 1; }
+  .right { flex: 1; }
+  .card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .card h2 { font-size: 16px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #3498db; padding-bottom: 8px; }
+  .input-group { display: flex; gap: 10px; margin-bottom: 15px; }
+  .input-group input { flex: 1; padding: 10px 15px; border: 2px solid #ddd; border-radius: 6px; font-size: 14px; }
+  .input-group input:focus { border-color: #3498db; outline: none; }
+  .btn { padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; transition: background 0.2s; }
+  .btn-primary { background: #3498db; color: white; }
+  .btn-primary:hover { background: #2980b9; }
+  .btn-secondary { background: #2ecc71; color: white; }
+  .btn-secondary:hover { background: #27ae60; }
+  .examples { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+  .example-btn { padding: 6px 12px; background: #ecf0f1; border: 1px solid #bdc3c7; border-radius: 15px; font-size: 12px; cursor: pointer; }
+  .example-btn:hover { background: #d5dbdb; }
+  .result-box { background: #fafafa; border: 1px solid #eee; border-radius: 6px; padding: 15px; min-height: 100px; white-space: pre-wrap; font-size: 13px; line-height: 1.8; }
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+  .legend-item { display: flex; align-items: center; gap: 4px; font-size: 12px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .mode-tabs { display: flex; gap: 0; margin-bottom: 15px; }
+  .mode-tab { padding: 8px 16px; background: #ecf0f1; border: 1px solid #ddd; cursor: pointer; font-size: 13px; }
+  .mode-tab:first-child { border-radius: 6px 0 0 6px; }
+  .mode-tab:last-child { border-radius: 0 6px 6px 0; }
+  .mode-tab.active { background: #3498db; color: white; border-color: #3498db; }
+  .disclaimer { font-size: 11px; color: #7f8c8d; text-align: center; padding: 10px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>医疗因果事件知识图谱问答系统</h1>
+  <p>基于 CHIP2022 数据集 | GraphRAG 增强问答</p>
+</div>
+<div class="container">
+  <div class="left">
+    <div class="card">
+      <h2>输入问题</h2>
+      <div class="examples">
+        <button class="example-btn" onclick="setQuery('宫腔粘连可能导致什么？')">因果推理</button>
+        <button class="example-btn" onclick="setQuery('月经量少可能由什么引起？')">反向推理</button>
+        <button class="example-btn" onclick="setQuery('为什么高血压可能和心肌梗死有关？')">多跳推理</button>
+        <button class="example-btn" onclick="setQuery('在什么条件下支气管哮喘可能发生？')">条件推理</button>
+        <button class="example-btn" onclick="setQuery('双硫仑反应有哪些症状？')">症状查询</button>
+        <button class="example-btn" onclick="setQuery('肠癌如何诊断？')">诊断查询</button>
+        <button class="example-btn" onclick="setQuery('瘫痪如何治疗？')">治疗查询</button>
+        <button class="example-btn" onclick="setQuery('脑出血发生在什么部位？')">部位查询</button>
+      </div>
+      <div class="input-group">
+        <input type="text" id="question" placeholder="请输入医学知识问题..." onkeypress="if(event.key==='Enter')doQuery()">
+        <button class="btn btn-primary" onclick="doQuery()">提问</button>
+      </div>
+      <div class="mode-tabs">
+        <button class="mode-tab active" onclick="setMode(this,'kg_only')">KG-only</button>
+        <button class="mode-tab" onclick="setMode(this,'kg_augmented')">KG-augmented</button>
+        <button class="mode-tab" onclick="setMode(this,'llm_only')">LLM-only</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>回答结果</h2>
+      <div class="result-box" id="answer">点击上方示例或输入问题开始提问。</div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="card">
+      <h2>知识图谱可视化</h2>
+      <p style="font-size:13px;color:#666;margin-bottom:10px;">图谱包含 14,596 个实体、18,539 条三元组，覆盖 7 种关系类型。</p>
+      <iframe src="kg_visualization.html" width="100%" height="500" style="border:1px solid #ddd;border-radius:6px;"></iframe>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div>causes</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#9b59b6"></div>condition_of</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3498db"></div>is_a</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#2ecc71"></div>symptom_of</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#1abc9c"></div>treated_by</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f39c12"></div>located_in</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#34495e"></div>diagnosed_by</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>图谱统计</h2>
+      <table style="width:100%;font-size:13px;">
+        <tr><td>实体数量</td><td><b>14,596</b></td></tr>
+        <tr><td>三元组数量</td><td><b>18,539</b></td></tr>
+        <tr><td>实体类型</td><td><b>11 种</b></td></tr>
+        <tr><td>关系类型</td><td><b>7 种</b></td></tr>
+        <tr><td>Gold 三元组</td><td>9,126</td></tr>
+        <tr><td>Qwen 三元组</td><td>9,413</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="disclaimer">本系统仅用于医学知识学习和知识图谱课程实验，不构成医疗诊断或用药建议。</div>
+<script>
+var currentMode = "kg_only";
+function setQuery(q) { document.getElementById("question").value = q; }
+function setMode(el, mode) {
+  currentMode = mode;
+  document.querySelectorAll(".mode-tab").forEach(t => t.classList.remove("active"));
+  el.classList.add("active");
+}
+function doQuery() {
+  var q = document.getElementById("question").value.trim();
+  if (!q) return;
+  var box = document.getElementById("answer");
+  box.textContent = "正在查询中...";
+  // Call backend API
+  fetch("/query?q=" + encodeURIComponent(q) + "&mode=" + currentMode)
+    .then(r => r.json())
+    .then(data => { box.textContent = data.answer || JSON.stringify(data, null, 2); })
+    .catch(e => { box.textContent = "查询失败：" + e.message + "
+
+提示：请先启动后端服务 python src/qa_server.py"; });
+}
+</script>
+</body>
+</html>

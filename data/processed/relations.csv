@@ -1,8 +1,8 @@
 relation,count,description
-causes,7725,原因导致结果
-is_a,1123,下位概念属于上位概念
-condition_of,472,条件修饰某个因果事件
-symptom_of,109,
-treated_by,98,
-located_in,26,
-diagnosed_by,12,
+causes,10709,原因导致结果
+treated_by,2283,
+symptom_of,1970,
+is_a,1852,下位概念属于上位概念
+condition_of,584,条件修饰某个因果事件
+diagnosed_by,575,
+located_in,566,

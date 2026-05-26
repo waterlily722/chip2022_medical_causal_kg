@@ -98,18 +98,33 @@ class KGReasoner:
         return edges
 
     def conditions_for_cause(self, cause: str, limit: int = 20) -> List[Dict[str, Any]]:
-        """Find condition_of edges where the tail is the given cause."""
         return [t for t in self.in_edges.get(cause, []) if t["relation"] == "condition_of"][:limit]
+
+    def symptoms_of(self, disease: str, limit: int = 20) -> List[Dict[str, Any]]:
+        return [t for t in self.in_edges.get(disease, []) if t["relation"] == "symptom_of"][:limit]
+
+    def treatments_of(self, disease: str, limit: int = 20) -> List[Dict[str, Any]]:
+        return [t for t in self.out_edges.get(disease, []) if t["relation"] == "treated_by"][:limit]
+
+    def location_of(self, disease: str, limit: int = 20) -> List[Dict[str, Any]]:
+        return [t for t in self.out_edges.get(disease, []) if t["relation"] == "located_in"][:limit]
+
+    def diagnosis_of(self, disease: str, limit: int = 20) -> List[Dict[str, Any]]:
+        return [t for t in self.out_edges.get(disease, []) if t["relation"] == "diagnosed_by"][:limit]
 
     @staticmethod
     def triple_to_text(t: Dict[str, Any]) -> str:
         return f"{t['head']} --{t['relation']}--> {t['tail']}"
+
+    def _fmt(self, triples: List[Dict[str, Any]], key: str) -> str:
+        return "、".join(t[key] for t in triples[:10])
 
     def answer_query(self, query: str) -> Dict[str, Any]:
         ents = self.match_entities(query)
         answer_lines: List[str] = []
         evidence: List[Dict[str, Any]] = []
         q = query
+        ent = ents[0] if ents else None
 
         # Multi-hop: if at least two entities appear and the question asks why/relationship/indirect.
         if len(ents) >= 2 and any(k in q for k in ["为什么", "是否", "间接", "有关", "关系", "路径"]):
@@ -126,43 +141,73 @@ class KGReasoner:
                         return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
 
         # Condition reasoning (condition_of: condition -> cause).
-        if any(k in q for k in ["条件", "情况下", "修饰"]):
-            cause = ents[0] if ents else None
-            if cause:
-                cond_edges = self.conditions_for_cause(cause)
-                if cond_edges:
-                    conditions = "、".join(t["head"] for t in cond_edges[:10])
-                    answer_lines.append(f"可能的条件包括：{conditions}")
-                    evidence.extend(cond_edges)
-                    return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
+        if ent and any(k in q for k in ["条件", "情况下", "条件下"]):
+            cond_edges = self.conditions_for_cause(ent)
+            if cond_edges:
+                conditions = "、".join(t["head"] for t in cond_edges[:10])
+                answer_lines.append(f"可能的条件包括：{conditions}")
+                evidence.extend(cond_edges)
+                return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
 
         # Hypernym reasoning.
-        if ents and any(k in q for k in ["属于", "类型", "哪类", "类别"]):
-            h = self.hypernyms(ents[0])
+        if ent and any(k in q for k in ["属于", "类型", "哪类", "类别"]):
+            h = self.hypernyms(ent)
             if h:
                 evidence.extend(h)
-                answer_lines.append(f"{ents[0]} 属于：" + "、".join(t["tail"] for t in h[:10]))
+                answer_lines.append(f"{ent} 属于：" + "、".join(t["tail"] for t in h[:10]))
                 return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
-            hypo = self.hyponyms(ents[0])
+            hypo = self.hyponyms(ent)
             if hypo:
                 evidence.extend(hypo)
-                answer_lines.append(f"{ents[0]} 包括：" + "、".join(t["head"] for t in hypo[:10]))
+                answer_lines.append(f"{ent} 包括：" + "、".join(t["head"] for t in hypo[:10]))
+                return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
+
+        # Symptom reasoning.
+        if ent and any(k in q for k in ["症状", "表现", "体征"]):
+            s = self.symptoms_of(ent)
+            if s:
+                evidence.extend(s)
+                answer_lines.append(f'“{ent}”的症状包括：' + self._fmt(s, "head"))
+                return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
+
+        # Treatment reasoning.
+        if ent and any(k in q for k in ["治疗", "如何治疗", "怎么治", "用药", "干预"]):
+            t = self.treatments_of(ent)
+            if t:
+                evidence.extend(t)
+                answer_lines.append(f'"{ent}"的治疗方式包括：' + self._fmt(t, "tail"))
+                return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
+
+        # Location reasoning.
+        if ent and any(k in q for k in ["部位", "位置", "在哪", "发生"]):
+            loc = self.location_of(ent)
+            if loc:
+                evidence.extend(loc)
+                answer_lines.append(f'"{ent}"发生在：' + self._fmt(loc, "tail"))
+                return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
+
+        # Diagnosis reasoning.
+        if ent and any(k in q for k in ["诊断", "检查", "怎么确诊", "如何确诊"]):
+            d = self.diagnosis_of(ent)
+            if d:
+                evidence.extend(d)
+                answer_lines.append(f'"{ent}"可通过以下方式诊断：' + self._fmt(d, "tail"))
                 return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
 
         # Reverse causal.
-        if ents and any(k in q for k in ["由什么", "什么引起", "原因", "导致它", "造成"]):
-            c = self.direct_causes(ents[0])
+        if ent and any(k in q for k in ["由什么", "什么引起", "原因", "导致它", "造成"]):
+            c = self.direct_causes(ent)
             if c:
                 evidence.extend(c)
-                answer_lines.append(f"可能导致“{ents[0]}”的因素包括：" + "、".join(t["head"] for t in c[:10]))
+                answer_lines.append(f'可能导致"{ent}"的因素包括：' + "、".join(t["head"] for t in c[:10]))
                 return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
 
         # Direct causal.
-        if ents:
-            e = self.direct_effects(ents[0])
+        if ent:
+            e = self.direct_effects(ent)
             if e:
                 evidence.extend(e)
-                answer_lines.append(f"“{ents[0]}”可能导致：" + "、".join(t["tail"] for t in e[:10]))
+                answer_lines.append(f'"{ent}"可能导致：' + "、".join(t["tail"] for t in e[:10]))
                 return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
 
         return {"query": query, "matched_entities": ents, "answer": "知识图谱中没有足够证据。", "evidence": []}

@@ -1,59 +1,60 @@
 {
   "graph_stats": {
-    "num_entities": 9563,
-    "num_triples": 22470,
-    "num_entity_types": 10,
+    "num_entities": 14596,
+    "num_triples": 18539,
+    "num_entity_types": 11,
     "num_relation_types": 7,
     "relation_counts": {
-      "causes": 7577,
-      "mentioned_in": 11176,
-      "condition_of": 659,
-      "event_cause": 659,
-      "event_effect": 659,
-      "has_condition": 659,
-      "is_a": 1081
+      "causes": 10709,
+      "condition_of": 584,
+      "is_a": 1852,
+      "symptom_of": 1970,
+      "treated_by": 2283,
+      "located_in": 566,
+      "diagnosed_by": 575
     },
     "source_type_counts": {
-      "gold": 22470
+      "gold": 9126,
+      "qwen": 9413
     }
   },
   "retrieval_eval": {
-    "num_questions": 20,
+    "num_questions": 30,
     "retrieval_hit_rate": 1.0,
     "evidence_nonempty_rate": 1.0
   },
   "extraction_eval": {
     "note": "Exact-match metrics. Meaningful only if Qwen extraction was run on comparable train texts.",
-    "gold_count": 9212,
-    "pred_count": 0,
-    "tp": 0,
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1": 0.0,
+    "gold_count": 9021,
+    "pred_count": 4001,
+    "tp": 77,
+    "precision": 0.019245188702824295,
+    "recall": 0.008535639064405277,
+    "f1": 0.01182614037782215,
     "relation_wise": {
       "causes": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
+        "precision": 0.017628205128205128,
+        "recall": 0.0073343112414988665,
+        "f1": 0.010358790846595725,
         "gold": 7499,
-        "pred": 0,
-        "tp": 0
+        "pred": 3120,
+        "tp": 55
       },
       "condition_of": {
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
-        "gold": 659,
-        "pred": 0,
+        "gold": 468,
+        "pred": 116,
         "tp": 0
       },
       "is_a": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
+        "precision": 0.02875816993464052,
+        "recall": 0.020872865275142316,
+        "f1": 0.024189114898295772,
         "gold": 1054,
-        "pred": 0,
-        "tp": 0
+        "pred": 765,
+        "tp": 22
       }
     }
   }

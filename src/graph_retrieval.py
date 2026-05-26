@@ -21,11 +21,9 @@ def retrieve_evidence(question: str, triples_path: str = "data/triples.csv", max
     # One-hop evidence around matched entities.
     for ent in matched:
         for t in r.out_edges.get(ent, []):
-            if t["relation"] in {"causes", "is_a", "condition_of"}:
-                triples.append(t)
+            triples.append(t)
         for t in r.in_edges.get(ent, []):
-            if t["relation"] in {"causes", "is_a"}:
-                triples.append(t)
+            triples.append(t)
 
     # Multi-hop causal paths between matched entity pairs.
     for i, src in enumerate(matched):

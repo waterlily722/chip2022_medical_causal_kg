@@ -9182,6 +9182,7 @@ iga肾病,Disease,causes,"咽炎同步的血尿,并伴随有血压增高",TestRe
 排便习惯的改变,Symptom,symptom_of,肠癌,Disease,大部分的肠癌最主要的是排便习惯的改变,Doc_unlabel_0004,unlabel,qwen,0.95
 粪便性状的改变,Symptom,symptom_of,肠癌,Disease,大部分的肠癌最主要的是排便习惯的改变，排便的习惯和粪便性状的改变,Doc_unlabel_0004,unlabel,qwen,0.9
 便意,Symptom,symptom_of,直肠癌,Disease,大部分直肠癌患者，由于肿瘤刺激会出现便意的症状,Doc_unlabel_0004,unlabel,qwen,0.95
+高危人群,RiskFactor,risk_factor_for,肠癌,Disease,再加上如果是高危人群，应该考虑是肠癌的表现,Doc_unlabel_0004,unlabel,qwen,0.85
 肠癌,Disease,diagnosed_by,纤维结直肠镜,ExamProcedure,在必要的时候做纤维结直肠镜，明确诊断,Doc_unlabel_0004,unlabel,qwen,0.9
 脑出血20ml,Other,is_a,中等量的脑出血,MedicalCategory,脑出血20ml属于中等量的脑出血,Doc_unlabel_0005,unlabel,qwen,0.95
 脑出血,Disease,located_in,基底节区,AnatomicalSite,如果出血位于基底节区、丘脑等部位,Doc_unlabel_0005,unlabel,qwen,0.9
@@ -9249,6 +9250,7 @@ iga肾病,Disease,causes,"咽炎同步的血尿,并伴随有血压增高",TestRe
 肩周炎,Disease,treated_by,外敷活血化瘀、疏风止痛类药物,Treatment,通过局部按摩、热敷，以及外敷活血化瘀、疏风止痛类药物，可以缓解疼痛,Doc_unlabel_0009,unlabel,qwen,0.9
 x型腿,Symptom,is_a,生理现象,MedicalCategory,幼儿在一岁以内的x型腿和o型腿都属于生理现象,Doc_unlabel_0010,unlabel,qwen,0.95
 o型腿,Symptom,is_a,生理现象,MedicalCategory,幼儿在一岁以内的x型腿和o型腿都属于生理现象,Doc_unlabel_0010,unlabel,qwen,0.95
+缺少钙和维生素d的补充,RiskFactor,risk_factor_for,骨骼发育异常,PathologicalState,如果缺少钙和维生素d的补充，容易导致骨骼发育异常,Doc_unlabel_0010,unlabel,qwen,0.9
 o型腿,Symptom,treated_by,药物治疗,Treatment,矫正的方法包括多个方面，首先应该是药物治疗,Doc_unlabel_0010,unlabel,qwen,0.85
 x型腿,Symptom,treated_by,药物治疗,Treatment,矫正的方法包括多个方面，首先应该是药物治疗,Doc_unlabel_0010,unlabel,qwen,0.85
 o型腿,Symptom,treated_by,下肢的支具,Treatment,还可以采用下肢的支具进行治疗,Doc_unlabel_0010,unlabel,qwen,0.85
@@ -9271,6 +9273,9 @@ x型腿,Symptom,treated_by,下肢的支具,Treatment,还可以采用下肢的支
 局部组织的缺血坏死,PathologicalState,causes,局部缺损变大,Symptom,反复感染导致局部组织的缺血坏死，脱落之后形成局部缺损变大,Doc_unlabel_0012,unlabel,qwen,0.85
 耳背局部有感染,Disease,treated_by,局部反复的消毒、清创处理,Treatment,患者打完耳洞之后耳背局部有感染，反复感染导致局部组织的缺血坏死，脱落之后形成局部缺损变大，建议上医院做局部反复的消毒、清创处理,Doc_unlabel_0012,unlabel,qwen,0.9
 吸烟,RiskFactor,causes,肺炎,Disease,吸烟可导致各种肺炎概率增加,Doc_unlabel_0013,unlabel,qwen,0.95
+吸烟,RiskFactor,risk_factor_for,恶性肿瘤,PathologicalState,吸烟为多种恶性肿瘤诱发因素之一,Doc_unlabel_0013,unlabel,qwen,0.95
+吸烟,RiskFactor,risk_factor_for,肺癌,Disease,如肺癌、膀胱癌等，均与吸烟相关,Doc_unlabel_0013,unlabel,qwen,0.95
+吸烟,RiskFactor,risk_factor_for,膀胱癌,Disease,如肺癌、膀胱癌等，均与吸烟相关,Doc_unlabel_0013,unlabel,qwen,0.95
 移植肾排斥反应,Disease,treated_by,免疫抑制剂,Treatment,可预防移植肾排斥反应发生,Doc_unlabel_0013,unlabel,qwen,0.9
 免疫抑制剂,Treatment,causes,机体免疫力下降,PathologicalState,免疫抑制剂作用是降低机体免疫力,Doc_unlabel_0013,unlabel,qwen,0.95
 吸烟,RiskFactor,causes,感染性疾病,Disease,机体免疫力下降状态下吸烟，不但容易出现感染性疾病,Doc_unlabel_0013,unlabel,qwen,0.9
@@ -9505,6 +9510,7 @@ x型腿,Symptom,treated_by,下肢的支具,Treatment,还可以采用下肢的支
 螳螂嘴,Other,located_in,新生儿双侧颊部,AnatomicalSite,在新生儿双侧颊部各有一个脂肪垫,Doc_unlabel_0036,unlabel,qwen,0.9
 螳螂嘴,Other,is_a,脂肪垫,Other,在新生儿双侧颊部各有一个脂肪垫,Doc_unlabel_0036,unlabel,qwen,0.8
 黄疸,Symptom,symptom_of,新生儿黄疸,Disease,新生儿生理性黄疸足月儿生后2-3天出现黄疸,Doc_unlabel_0036,unlabel,qwen,0.85
+营养不良,RiskFactor,risk_factor_for,流产,Disease,营养不良很容易发生流产,Doc_unlabel_0037,unlabel,qwen,0.9
 食欲不振,Symptom,symptom_of,早孕反应,ClinicalSign,孕早期一部分孕妇会有明显的早孕反应，出现食欲不振,Doc_unlabel_0037,unlabel,qwen,0.9
 神经管畸形,Disease,treated_by,叶酸,Treatment,叶酸可预防神经管畸形,Doc_unlabel_0037,unlabel,qwen,0.9
 过于油腻的食物,Other,causes,消化不良,Symptom,避免吃过于油腻的食物，以免增加孕吐反应引起消化不良,Doc_unlabel_0037,unlabel,qwen,0.85
@@ -9524,6 +9530,11 @@ x型腿,Symptom,treated_by,下肢的支具,Treatment,还可以采用下肢的支
 肺转移,PathologicalState,causes,咳痰,Symptom,咳痰,Doc_unlabel_0038,unlabel,qwen,0.92
 肺转移,PathologicalState,causes,咯血,Symptom,咯血,Doc_unlabel_0038,unlabel,qwen,0.92
 肝癌,Disease,treated_by,减轻痛苦的药物,Treatment,对于晚期患者只能够应用一些减轻痛苦的药物,Doc_unlabel_0038,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,鼻腔鼻窦癌,Disease,应与以下几点相关：第一、吸烟,Doc_unlabel_0039,unlabel,qwen,0.9
+空气污染,RiskFactor,risk_factor_for,鼻腔鼻窦癌,Disease,应与以下几点相关：第二、空气污染,Doc_unlabel_0039,unlabel,qwen,0.9
+饮酒,RiskFactor,risk_factor_for,鼻腔鼻窦癌,Disease,应与以下几点相关：第三、饮酒,Doc_unlabel_0039,unlabel,qwen,0.9
+粉尘,RiskFactor,risk_factor_for,鼻腔鼻窦癌,Disease,鼻腔鼻窦癌与粉尘、pm2.5有直接关系,Doc_unlabel_0039,unlabel,qwen,0.9
+pm2.5,RiskFactor,risk_factor_for,鼻腔鼻窦癌,Disease,鼻腔鼻窦癌与粉尘、pm2.5有直接关系,Doc_unlabel_0039,unlabel,qwen,0.9
 炎性刺激,PathologicalState,causes,恶变,PathologicalState,因为癌症是长期的炎性刺激、细胞增生，炎症坏死、增生则容易发生恶变,Doc_unlabel_0039,unlabel,qwen,0.85
 细胞增生,PathologicalState,causes,恶变,PathologicalState,因为癌症是长期的炎性刺激、细胞增生，炎症坏死、增生则容易发生恶变,Doc_unlabel_0039,unlabel,qwen,0.85
 炎症坏死,PathologicalState,causes,恶变,PathologicalState,因为癌症是长期的炎性刺激、细胞增生，炎症坏死、增生则容易发生恶变,Doc_unlabel_0039,unlabel,qwen,0.85
@@ -9561,6 +9572,7 @@ x型腿,Symptom,treated_by,下肢的支具,Treatment,还可以采用下肢的支
 膀胱内的占位,PathologicalState,causes,膀胱功能性的容量减少,PathologicalState,通常见于膀胱内的占位,Doc_unlabel_0043,unlabel,qwen,0.9
 挛缩膀胱,PathologicalState,causes,膀胱功能性的容量减少,PathologicalState,通常见于...挛缩膀胱,Doc_unlabel_0043,unlabel,qwen,0.9
 尿频,Symptom,symptom_of,膀胱功能性的容量减少,PathologicalState,通常患者会出现尿频，尿每次量少,Doc_unlabel_0043,unlabel,qwen,0.92
+姿势不当,RiskFactor,risk_factor_for,驼背,Symptom,孩子驼背多数源自于姿势不当,Doc_unlabel_0044,unlabel,qwen,0.9
 姿势不当,RiskFactor,causes,胸椎过度后凸,PathologicalState,姿势不当引发的胸椎过度后凸,Doc_unlabel_0044,unlabel,qwen,0.9
 驼背,Symptom,treated_by,端正坐姿,Treatment,措施有：第一、端正坐姿,Doc_unlabel_0044,unlabel,qwen,0.85
 驼背,Symptom,treated_by,康复功能锻炼,Treatment,可通过一系列康复功能锻炼改善,Doc_unlabel_0044,unlabel,qwen,0.85
@@ -9570,6 +9582,7 @@ x型腿,Symptom,treated_by,下肢的支具,Treatment,还可以采用下肢的支
 驼背,Symptom,treated_by,避免睡过高的枕头,Treatment,避免睡过高的枕头,Doc_unlabel_0044,unlabel,qwen,0.85
 脊柱先天性发育畸形,PathologicalState,treated_by,支具矫形,Treatment,必要时需要配合支具矫形,Doc_unlabel_0044,unlabel,qwen,0.9
 脊柱先天性发育畸形,PathologicalState,treated_by,手术,Treatment,或者手术,Doc_unlabel_0044,unlabel,qwen,0.9
+日常不良生活习惯和学习习惯,RiskFactor,risk_factor_for,驼背,Symptom,与孩子日常不良生活习惯和学习习惯有关,Doc_unlabel_0044,unlabel,qwen,0.85
 胸椎过度后凸,PathologicalState,causes,驼背,Symptom,源自于姿势不当引发的胸椎过度后凸,Doc_unlabel_0044,unlabel,qwen,0.85
 呼吸衰竭,Disease,is_a,肺衰竭,Disease,老人肺衰竭一般包括呼吸衰竭和心力衰竭两种情况,Doc_unlabel_0045,unlabel,qwen,0.9
 心力衰竭,Disease,is_a,肺衰竭,Disease,老人肺衰竭一般包括呼吸衰竭和心力衰竭两种情况,Doc_unlabel_0045,unlabel,qwen,0.9
@@ -9633,6 +9646,12 @@ ii型呼吸衰竭,Disease,treated_by,家庭无创呼吸机治疗,Treatment,经�
 脆弱,Symptom,symptom_of,慢性酒精中毒,Disease,对生活没上进心表现非常脆弱和与世隔绝的感觉,Doc_unlabel_0049,unlabel,qwen,0.9
 与世隔绝的感觉,Symptom,symptom_of,慢性酒精中毒,Disease,对生活没上进心表现非常脆弱和与世隔绝的感觉,Doc_unlabel_0049,unlabel,qwen,0.9
 感染,PathologicalState,causes,格林巴利综合征,Disease,本病由感染所致,Doc_unlabel_0050,unlabel,qwen,0.95
+上呼吸道感染,Disease,risk_factor_for,格林巴利综合征,Disease,约半数患者发病前有上呼吸道感染或胃肠道感染病史,Doc_unlabel_0050,unlabel,qwen,0.9
+胃肠道感染,Disease,risk_factor_for,格林巴利综合征,Disease,约半数患者发病前有上呼吸道感染或胃肠道感染病史,Doc_unlabel_0050,unlabel,qwen,0.9
+劳累,RiskFactor,risk_factor_for,格林巴利综合征,Disease,劳累、受伤、受凉多是发病诱因,Doc_unlabel_0050,unlabel,qwen,0.88
+受伤,RiskFactor,risk_factor_for,格林巴利综合征,Disease,劳累、受伤、受凉多是发病诱因,Doc_unlabel_0050,unlabel,qwen,0.88
+受凉,RiskFactor,risk_factor_for,格林巴利综合征,Disease,劳累、受伤、受凉多是发病诱因,Doc_unlabel_0050,unlabel,qwen,0.88
+免疫力低下,RiskFactor,risk_factor_for,格林巴利综合征,Disease,一般多见于免疫力低下者,Doc_unlabel_0050,unlabel,qwen,0.85
 鼻塞,Symptom,symptom_of,格林巴利综合征,Disease,如果出现鼻塞、流涕、咽痛等上呼吸道感染的症状，一定要警惕格林巴利综合征,Doc_unlabel_0050,unlabel,qwen,0.92
 流涕,Symptom,symptom_of,格林巴利综合征,Disease,如果出现鼻塞、流涕、咽痛等上呼吸道感染的症状，一定要警惕格林巴利综合征,Doc_unlabel_0050,unlabel,qwen,0.92
 咽痛,Symptom,symptom_of,格林巴利综合征,Disease,如果出现鼻塞、流涕、咽痛等上呼吸道感染的症状，一定要警惕格林巴利综合征,Doc_unlabel_0050,unlabel,qwen,0.92
@@ -9699,6 +9718,9 @@ ii型呼吸衰竭,Disease,treated_by,家庭无创呼吸机治疗,Treatment,经�
 中暑,Disease,causes,细胞功能损伤,PathologicalState,从而使体温升高之后造成细胞功能损伤引起的一系列症状,Doc_unlabel_0056,unlabel,qwen,0.95
 体温过高,PathologicalState,causes,中暑,Disease,临床中暑就是由于各种原因造成的机体体温过高超过了体温调节中枢的调控范围,Doc_unlabel_0056,unlabel,qwen,0.92
 散热功能障碍,PathologicalState,causes,中暑,Disease,由于散热功能障碍会造成相应的中暑的情况发生,Doc_unlabel_0056,unlabel,qwen,0.94
+高温高热,RiskFactor,risk_factor_for,中暑,Disease,临床中暑的高危人群一般都是夏季或者从事高温高热的人群,Doc_unlabel_0056,unlabel,qwen,0.9
+夏季,RiskFactor,risk_factor_for,中暑,Disease,临床中暑的高危人群一般都是夏季,Doc_unlabel_0056,unlabel,qwen,0.88
+孕妇,RiskFactor,risk_factor_for,中暑,Disease,对于高危人群比如说孕妇,Doc_unlabel_0056,unlabel,qwen,0.91
 红斑,Symptom,symptom_of,红斑狼疮,Disease,红斑狼疮可表现为较明显的红斑,Doc_unlabel_0057,unlabel,qwen,0.95
 红斑狼疮,Disease,treated_by,口服中药,Treatment,内治法:如口服中药和中成药,Doc_unlabel_0057,unlabel,qwen,0.95
 红斑狼疮,Disease,treated_by,中成药,Treatment,内治法:如口服中药和中成药,Doc_unlabel_0057,unlabel,qwen,0.95
@@ -9775,6 +9797,7 @@ ii型呼吸衰竭,Disease,treated_by,家庭无创呼吸机治疗,Treatment,经�
 献400ml的血量,Other,causes,面色苍白,Symptom,如果一个人体重过轻，比如一个成年男性，体重在50kg左右，献400ml的血量，往往献出的血量就会超过自身血量的1/10，献血后就容易出现面色苍白、头晕、乏力等不适的症状,Doc_unlabel_0064,unlabel,qwen,0.9
 献400ml的血量,Other,causes,头晕,Symptom,如果一个人体重过轻，比如一个成年男性，体重在50kg左右，献400ml的血量，往往献出的血量就会超过自身血量的1/10，献血后就容易出现面色苍白、头晕、乏力等不适的症状,Doc_unlabel_0064,unlabel,qwen,0.9
 献400ml的血量,Other,causes,乏力,Symptom,如果一个人体重过轻，比如一个成年男性，体重在50kg左右，献400ml的血量，往往献出的血量就会超过自身血量的1/10，献血后就容易出现面色苍白、头晕、乏力等不适的症状,Doc_unlabel_0064,unlabel,qwen,0.9
+体重过轻,RiskFactor,risk_factor_for,面色苍白,Symptom,如果一个人体重过轻，比如一个成年男性，体重在50kg左右，献400ml的血量，往往献出的血量就会超过自身血量的1/10，献血后就容易出现面色苍白、头晕、乏力等不适的症状,Doc_unlabel_0064,unlabel,qwen,0.85
 头晕,Symptom,symptom_of,脑供血不足,Disease,早晨突然出现头晕，并且是一种天旋地转的感觉，最常见于脑供血不足,Doc_unlabel_0065,unlabel,qwen,0.95
 恶心,Symptom,symptom_of,脑供血不足,Disease,突发的头晕，病人往往出现恶心、呕吐、不能活动的表现,Doc_unlabel_0065,unlabel,qwen,0.9
 呕吐,Symptom,symptom_of,脑供血不足,Disease,突发的头晕，病人往往出现恶心、呕吐、不能活动的表现,Doc_unlabel_0065,unlabel,qwen,0.9
@@ -9797,8 +9820,12 @@ ii型呼吸衰竭,Disease,treated_by,家庭无创呼吸机治疗,Treatment,经�
 妊娠合并糖尿病,Disease,causes,胎儿发育畸形,PathologicalState,妊娠合并糖尿病容易引起胎儿宫内缺氧导致胎儿胎死宫内、胎儿发育畸形导致流产,Doc_unlabel_0067,unlabel,qwen,0.9
 胎儿发育畸形,PathologicalState,causes,流产,Disease,胎儿发育畸形导致流产,Doc_unlabel_0067,unlabel,qwen,0.95
 妊娠合并糖尿病,Disease,causes,孕妇心血管系统或心脏疾病,Disease,妊娠合并糖尿病容易引起胎儿宫内缺氧导致胎儿胎死宫内、胎儿发育畸形导致流产、容易引发孕妇心血管系统或心脏疾病,Doc_unlabel_0067,unlabel,qwen,0.95
+血糖>5.3mmol/l,TestResult,risk_factor_for,高危妊娠,MedicalCategory,"若妊娠23周前血糖>5.3mmol/l,需提前进行糖耐量检测，以排除妊娠合并糖尿病，提前做出诊断，作为高危妊娠监测",Doc_unlabel_0067,unlabel,qwen,0.85
 细菌,Other,causes,结膜炎,Disease,结膜炎是细菌或者是病毒引起的,Doc_unlabel_0068,unlabel,qwen,0.95
 病毒,Other,causes,结膜炎,Disease,结膜炎是细菌或者是病毒引起的,Doc_unlabel_0068,unlabel,qwen,0.95
+熬夜,RiskFactor,risk_factor_for,结膜炎,Disease,与熬夜、压力大、局部用眼不卫生有很大关系,Doc_unlabel_0068,unlabel,qwen,0.85
+压力大,RiskFactor,risk_factor_for,结膜炎,Disease,与熬夜、压力大、局部用眼不卫生有很大关系,Doc_unlabel_0068,unlabel,qwen,0.85
+局部用眼不卫生,RiskFactor,risk_factor_for,结膜炎,Disease,与熬夜、压力大、局部用眼不卫生有很大关系,Doc_unlabel_0068,unlabel,qwen,0.85
 眼红,Symptom,symptom_of,结膜炎,Disease,在临床当中表现为局部的眼红、异物感、流泪、怕光、晨起时结膜囊分泌物大量增多,Doc_unlabel_0068,unlabel,qwen,0.95
 异物感,Symptom,symptom_of,结膜炎,Disease,在临床当中表现为局部的眼红、异物感、流泪、怕光、晨起时结膜囊分泌物大量增多,Doc_unlabel_0068,unlabel,qwen,0.95
 流泪,Symptom,symptom_of,结膜炎,Disease,在临床当中表现为局部的眼红、异物感、流泪、怕光、晨起时结膜囊分泌物大量增多,Doc_unlabel_0068,unlabel,qwen,0.95
@@ -9854,6 +9881,12 @@ ii型呼吸衰竭,Disease,treated_by,家庭无创呼吸机治疗,Treatment,经�
 咳嗽、咳痰,Symptom,treated_by,肺力咳合剂,Treatment,比如盐酸氨溴索、氨溴特罗口服溶液、肺力咳合剂,Doc_unlabel_0074,unlabel,qwen,0.9
 咳嗽、咳痰,Symptom,treated_by,复方鲜竹沥液,Treatment,比如盐酸氨溴索、氨溴特罗口服溶液、肺力咳合剂或者复方鲜竹沥液,Doc_unlabel_0074,unlabel,qwen,0.9
 咳痰,Symptom,treated_by,雾化吸入盐酸氨溴索,Treatment,还可以使用雾化器雾化吸入盐酸氨溴索进行化痰的治疗,Doc_unlabel_0074,unlabel,qwen,0.9
+低体重儿,RiskFactor,risk_factor_for,支气管哮喘,Disease,婴幼儿期是低体重儿，或者反复发生上呼吸道感染，都会成为成年以后支气管哮喘发病的诱因,Doc_unlabel_0075,unlabel,qwen,0.92
+上呼吸道感染,Disease,risk_factor_for,支气管哮喘,Disease,反复发生上呼吸道感染，都会成为成年以后支气管哮喘发病的诱因,Doc_unlabel_0075,unlabel,qwen,0.92
+高敏体质,RiskFactor,risk_factor_for,支气管哮喘,Disease,敏感之后就容易合并支气管哮喘,Doc_unlabel_0075,unlabel,qwen,0.9
+男性吸烟,RiskFactor,risk_factor_for,支气管哮喘,Disease,男性吸烟，还有工作环境中粉尘颗粒较大如煤矿...都会对气道产生一定损伤，进而诱发支气管哮喘,Doc_unlabel_0075,unlabel,qwen,0.88
+装修行业,Other,risk_factor_for,支气管哮喘,Disease,从事装修行业等工种，都会对气道产生一定损伤，进而诱发支气管哮喘,Doc_unlabel_0075,unlabel,qwen,0.88
+尘螨,RiskFactor,risk_factor_for,支气管哮喘,Disease,尘螨、灰尘较多也可诱发,Doc_unlabel_0075,unlabel,qwen,0.9
 猫、狗毛发,RiskFactor,causes,支气管哮喘,Disease,这些毛发也可作为一种诱发原因，吸入以后导致支气管哮喘的发作,Doc_unlabel_0075,unlabel,qwen,0.93
 内源性支气管哮喘,Disease,is_a,支气管哮喘,Disease,这是内源性支气管哮喘,Doc_unlabel_0075,unlabel,qwen,0.95
 阴道炎,Disease,causes,外阴瘙痒,Symptom,可能是阴道炎引起的,Doc_unlabel_0076,unlabel,qwen,0.9
@@ -9919,6 +9952,7 @@ ii型呼吸衰竭,Disease,treated_by,家庭无创呼吸机治疗,Treatment,经�
 糖分多的水果,Other,causes,内热症状,Symptom,这些水果刺激咽黏膜，加重内热症状,Doc_unlabel_0081,unlabel,qwen,0.85
 内热过多,PathologicalState,treated_by,多吃水果,Treatment,对于内热过多...可以选择多吃水果以更好消除内热,Doc_unlabel_0081,unlabel,qwen,0.9
 口腔起泡,Symptom,treated_by,多吃水果,Treatment,对于内热过多和口腔起泡的患者，可以选择多吃水果,Doc_unlabel_0081,unlabel,qwen,0.9
+油炸、辛辣、刺激食物,RiskFactor,risk_factor_for,过度内热,PathologicalState,避免吃油炸、辛辣、刺激食物，以防止过度内热而加重症状,Doc_unlabel_0081,unlabel,qwen,0.85
 过度内热,PathologicalState,treated_by,多喝水,Treatment,还应该注意多喝水...以防止过度内热而加重症状,Doc_unlabel_0081,unlabel,qwen,0.85
 过度内热,PathologicalState,treated_by,多吃蔬菜,Treatment,还应该注意...多吃蔬菜...以防止过度内热而加重症状,Doc_unlabel_0081,unlabel,qwen,0.85
 过度内热,PathologicalState,treated_by,饮食清淡,Treatment,饮食应该清淡...以防止过度内热而加重症状,Doc_unlabel_0081,unlabel,qwen,0.85
@@ -9942,6 +9976,12 @@ ii型呼吸衰竭,Disease,treated_by,家庭无创呼吸机治疗,Treatment,经�
 鼻腔息肉,PathologicalState,located_in,鼻腔,AnatomicalSite,有鼻腔息肉等病变,Doc_unlabel_0083,unlabel,qwen,0.95
 单纯性肥胖症,Disease,is_a,非病理性肥胖,MedicalCategory,属于非病理性肥胖,Doc_unlabel_0084,unlabel,qwen,0.95
 腹部型肥胖,Disease,is_a,单纯性肥胖,Disease,单纯性肥胖又可以分为腹部型肥胖和臀部型肥胖两种,Doc_unlabel_0084,unlabel,qwen,0.95
+单纯性肥胖症,Disease,risk_factor_for,冠心病,Disease,也更容易发生冠心病、高血压、糖尿病、胆结石等疾病,Doc_unlabel_0084,unlabel,qwen,0.95
+单纯性肥胖症,Disease,risk_factor_for,高血压,Disease,也更容易发生冠心病、高血压、糖尿病、胆结石等疾病,Doc_unlabel_0084,unlabel,qwen,0.95
+单纯性肥胖症,Disease,risk_factor_for,糖尿病,Disease,也更容易发生冠心病、高血压、糖尿病、胆结石等疾病,Doc_unlabel_0084,unlabel,qwen,0.95
+单纯性肥胖症,Disease,risk_factor_for,胆结石,Disease,也更容易发生冠心病、高血压、糖尿病、胆结石等疾病,Doc_unlabel_0084,unlabel,qwen,0.95
+单纯性肥胖症,Disease,risk_factor_for,闭经,Symptom,女性还容易出现闭经、不育等现象,Doc_unlabel_0084,unlabel,qwen,0.95
+单纯性肥胖症,Disease,risk_factor_for,不育,Symptom,女性还容易出现闭经、不育等现象,Doc_unlabel_0084,unlabel,qwen,0.95
 遗传因素,RiskFactor,causes,单纯性肥胖症,Disease,造成单纯性肥胖的原因有以下几个:1.遗传因素,Doc_unlabel_0084,unlabel,qwen,0.95
 进食过多,RiskFactor,causes,单纯性肥胖症,Disease,造成单纯性肥胖的原因有以下几个:...5.进食过多,Doc_unlabel_0084,unlabel,qwen,0.95
 体力活动过少,RiskFactor,causes,单纯性肥胖症,Disease,造成单纯性肥胖的原因有以下几个:...4.体力活动过少,Doc_unlabel_0084,unlabel,qwen,0.95
@@ -9972,6 +10012,16 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 抽烟,RiskFactor,causes,慢性支气管炎,Disease,长期抽烟会造成慢性支气管炎、支气管扩张、慢性阻塞性肺部疾病,Doc_unlabel_0087,unlabel,qwen,0.95
 抽烟,RiskFactor,causes,支气管扩张,Disease,长期抽烟会造成慢性支气管炎、支气管扩张、慢性阻塞性肺部疾病,Doc_unlabel_0087,unlabel,qwen,0.95
 抽烟,RiskFactor,causes,慢性阻塞性肺部疾病,Disease,长期抽烟会造成慢性支气管炎、支气管扩张、慢性阻塞性肺部疾病,Doc_unlabel_0087,unlabel,qwen,0.95
+吸烟,RiskFactor,risk_factor_for,肺癌,Disease,吸烟者患肺癌的危险性是不吸烟患者的13倍,Doc_unlabel_0087,unlabel,qwen,0.95
+吸烟,RiskFactor,risk_factor_for,鳞状上皮细胞癌,Disease,特别是鳞状上皮细胞癌和小细胞未分化癌,Doc_unlabel_0087,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,小细胞未分化癌,Disease,特别是鳞状上皮细胞癌和小细胞未分化癌,Doc_unlabel_0087,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,唇癌,Disease,可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系,Doc_unlabel_0087,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,舌癌,Disease,可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系,Doc_unlabel_0087,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,口腔癌,Disease,可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系,Doc_unlabel_0087,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,食道癌,Disease,可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系,Doc_unlabel_0087,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,胃癌,Disease,可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系,Doc_unlabel_0087,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,结肠癌,Disease,可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系,Doc_unlabel_0087,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,冠心病,Disease,还会使冠心病的患病风险增加,Doc_unlabel_0087,unlabel,qwen,0.95
 胃溃疡,Disease,treated_by,复方尿囊素片,Treatment,它主要用来治疗胃溃疡、十二指肠球部溃疡以及慢性胃炎,Doc_unlabel_0088,unlabel,qwen,0.95
 十二指肠球部溃疡,Disease,treated_by,复方尿囊素片,Treatment,它主要用来治疗胃溃疡、十二指肠球部溃疡以及慢性胃炎,Doc_unlabel_0088,unlabel,qwen,0.95
 慢性胃炎,Disease,treated_by,复方尿囊素片,Treatment,它主要用来治疗胃溃疡、十二指肠球部溃疡以及慢性胃炎,Doc_unlabel_0088,unlabel,qwen,0.95
@@ -10003,6 +10053,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 细菌性感冒,Disease,diagnosed_by,痰培养,ExamProcedure,如不能鉴别时需到医院查血常规、pct或做痰培养找微生物进行更准确鉴别,Doc_unlabel_0089,unlabel,qwen,0.9
 生活方式,RiskFactor,causes,乳腺疾病,Disease,据医学资料分析，主要与生活方式、环境影响及饮食因素有关,Doc_unlabel_0090,unlabel,qwen,0.9
 遗传,RiskFactor,causes,乳腺疾病,Disease,与遗传、内分泌、病毒等也有关,Doc_unlabel_0090,unlabel,qwen,0.9
+乳腺疾病家族史,RiskFactor,risk_factor_for,乳腺疾病,Disease,有乳腺疾病家族史的发生率较无家族史的要高,Doc_unlabel_0090,unlabel,qwen,0.95
 工作压力增大,RiskFactor,causes,内分泌紊乱,PathologicalState,导致内分泌紊乱,Doc_unlabel_0090,unlabel,qwen,0.9
 内分泌紊乱,PathologicalState,causes,乳腺疾病,Disease,易引起乳腺疾病,Doc_unlabel_0090,unlabel,qwen,0.9
 乳腺小叶增生,Disease,is_a,乳腺疾病,MedicalCategory,一般常见的乳腺疾病包括乳腺小叶增生、乳腺囊性增生、纤维腺瘤、乳腺炎、导管内乳头状瘤、乳腺癌等,Doc_unlabel_0090,unlabel,qwen,0.95
@@ -10195,6 +10246,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 癫痫,Disease,diagnosed_by,脑电图,ExamProcedure,还要给患者定期的复查脑电图、大脑的磁共振等检查,Doc_unlabel_0106,unlabel,qwen,0.9
 癫痫,Disease,diagnosed_by,大脑的磁共振,ExamProcedure,还要给患者定期的复查脑电图、大脑的磁共振等检查,Doc_unlabel_0106,unlabel,qwen,0.9
 人流,Treatment,causes,子宫内膜损伤,PathologicalState,人流后，由于使用外科手术器械对宫腔的子宫内膜造成一定损伤,Doc_unlabel_0107,unlabel,qwen,0.95
+同房,Other,risk_factor_for,宫内感染,Disease,这样会增加宫内感染的风险,Doc_unlabel_0107,unlabel,qwen,0.9
 子宫内膜感染,PathologicalState,causes,淋漓出血,Symptom,导致没有完全修复好，还在创伤恢复期的子宫内膜遭到感染，导致淋漓出血,Doc_unlabel_0107,unlabel,qwen,0.9
 子宫内膜感染,PathologicalState,causes,炎症,PathologicalState,导致淋漓出血、炎症,Doc_unlabel_0107,unlabel,qwen,0.9
 子宫内膜损伤,PathologicalState,located_in,宫腔,AnatomicalSite,对宫腔的子宫内膜造成一定损伤,Doc_unlabel_0107,unlabel,qwen,0.9
@@ -10234,6 +10286,8 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 罗红霉素,Treatment,is_a,大环内酯类抗生素,MedicalCategory,罗红霉素属于大环内酯类抗生素,Doc_unlabel_0112,unlabel,qwen,0.95
 罗红霉素,Treatment,causes,胃肠道反应,Symptom,副作用就是可能会引起胃肠道反应,Doc_unlabel_0112,unlabel,qwen,0.95
 胃肠道反应,Symptom,causes,恶心、呕吐、腹痛,Symptom,导致恶心、呕吐、腹痛等不适的临床症状,Doc_unlabel_0112,unlabel,qwen,0.9
+空腹服用,RiskFactor,risk_factor_for,胃肠道反应,Symptom,空腹服用可能会导致出现胃肠道反应的机会更多,Doc_unlabel_0112,unlabel,qwen,0.85
+儿童,RiskFactor,risk_factor_for,胃肠道反应,Symptom,儿童相比成人服用胃肠道反应可能更大,Doc_unlabel_0112,unlabel,qwen,0.85
 罗红霉素服用的胃肠道症状,Symptom,treated_by,硫糖铝凝胶,Treatment,适当口服护胃的药物，比如硫糖铝凝胶...有助于减轻罗红霉素服用的胃肠道症状,Doc_unlabel_0112,unlabel,qwen,0.9
 罗红霉素服用的胃肠道症状,Symptom,treated_by,双歧杆菌,Treatment,或者补充益生菌双歧杆菌等等，有助于减轻罗红霉素服用的胃肠道症状,Doc_unlabel_0112,unlabel,qwen,0.9
 不典型增生,PathologicalState,is_a,良性,MedicalCategory,良性包括不典型增生,Doc_unlabel_0113,unlabel,qwen,0.9
@@ -10284,6 +10338,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 便秘,Disease,treated_by,体育活动,Treatment,患者也可以进行体育活动，如快走、跑步、太极拳等，都可帮助改善便秘,Doc_unlabel_0117,unlabel,qwen,0.9
 便秘,Disease,treated_by,高纤维食物,Treatment,日常生活中患者可以增加饮食中高纤维食物的含量，比如蔬菜、水果、菌菇类，适当多吃些坚果,Doc_unlabel_0117,unlabel,qwen,0.85
 便秘,Disease,treated_by,水,Treatment,平时也要多喝水，促进肠道蠕动，有助于保持规律的排便习惯,Doc_unlabel_0117,unlabel,qwen,0.85
+油炸食品,Other,risk_factor_for,便秘,Disease,而且过多的食用油炸食品，有可能还会加重便秘的情况,Doc_unlabel_0117,unlabel,qwen,0.8
 花生仁,Other,causes,肠道蠕动,Other,因为花生仁有助于肠道的蠕动,Doc_unlabel_0117,unlabel,qwen,0.85
 喝水过多,Other,causes,肾脏负担,Other,对于有肾脏疾病的人，可以先问医生一天能喝多少水，避免喝水过多给肾脏造成负担,Doc_unlabel_0117,unlabel,qwen,0.85
 肾脏疾病,Disease,condition_of,喝水过多,Other,对于有肾脏疾病的人，可以先问医生一天能喝多少水，避免喝水过多给肾脏造成负担,Doc_unlabel_0117,unlabel,qwen,0.85
@@ -10294,6 +10349,9 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 甲亢,Disease,causes,失眠,Disease,疾病因素比如神经衰弱、甲亢、冠心病、高血压病等,Doc_unlabel_0118,unlabel,qwen,0.9
 冠心病,Disease,causes,失眠,Disease,疾病因素比如神经衰弱、甲亢、冠心病、高血压病等,Doc_unlabel_0118,unlabel,qwen,0.9
 高血压病,Disease,causes,失眠,Disease,疾病因素比如神经衰弱、甲亢、冠心病、高血压病等,Doc_unlabel_0118,unlabel,qwen,0.9
+年龄,RiskFactor,risk_factor_for,失眠,Disease,年龄越大越容易失眠,Doc_unlabel_0118,unlabel,qwen,0.93
+夜尿增多,Symptom,risk_factor_for,失眠,Disease,老年人夜尿增多，睡眠浅更容易失眠,Doc_unlabel_0118,unlabel,qwen,0.88
+睡眠浅,Symptom,risk_factor_for,失眠,Disease,老年人夜尿增多，睡眠浅更容易失眠,Doc_unlabel_0118,unlabel,qwen,0.88
 睡前喝浓茶,RiskFactor,causes,失眠,Disease,不良的生活习惯比如睡前喝浓茶、抽烟、喝酒、饱餐等也会引起失眠,Doc_unlabel_0118,unlabel,qwen,0.91
 抽烟,RiskFactor,causes,失眠,Disease,不良的生活习惯比如睡前喝浓茶、抽烟、喝酒、饱餐等也会引起失眠,Doc_unlabel_0118,unlabel,qwen,0.91
 喝酒,RiskFactor,causes,失眠,Disease,不良的生活习惯比如睡前喝浓茶、抽烟、喝酒、饱餐等也会引起失眠,Doc_unlabel_0118,unlabel,qwen,0.91
@@ -10413,6 +10471,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 小关节错位,PathologicalState,treated_by,按摩治疗,Treatment,按摩可以起到...纠正小关节错位,Doc_unlabel_0128,unlabel,qwen,0.85
 雄激素,RiskFactor,causes,毛囊油脂分泌增加,PathologicalState,雄激素本身可以导致毛囊油脂分泌增加,Doc_unlabel_0130,unlabel,qwen,0.95
 局部的细菌繁殖,PathologicalState,causes,脂溢性脱发,Disease,局部的细菌繁殖也可以导致脂溢性脱发,Doc_unlabel_0130,unlabel,qwen,0.95
+遗传倾向,RiskFactor,risk_factor_for,雄激素相关的脱发,Disease,男性的脱发雄激素相关的脱发是有一定遗传倾向,Doc_unlabel_0130,unlabel,qwen,0.9
 男性雄激素相关的脱发,Disease,treated_by,药物,Treatment,男性雄激素相关的脱发是有药物可以治疗,Doc_unlabel_0130,unlabel,qwen,0.9
 脱发,Symptom,treated_by,植发,Treatment,一旦脱发比较严重，还可以局部进行植发,Doc_unlabel_0130,unlabel,qwen,0.85
 雄激素源性脱发,Disease,treated_by,皮肤科,MedicalCategory,治疗就诊在皮肤科完成,Doc_unlabel_0130,unlabel,qwen,0.85
@@ -10457,6 +10516,8 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 复发,PathologicalState,treated_by,靶向治疗,Treatment,药物治疗主要包括化疗和靶向治疗，用于肺癌晚期或复发病人的治疗,Doc_unlabel_0136,unlabel,qwen,0.85
 肺癌,Disease,diagnosed_by,tnm分期,ExamProcedure,并可进行tnm分期指导术和术后综合治疗,Doc_unlabel_0136,unlabel,qwen,0.8
 张口呼吸,ClinicalSign,causes,呼吸道干燥,Symptom,张口呼吸容易导致呼吸道干燥,Doc_unlabel_0137,unlabel,qwen,0.95
+抵抗能力不是很强,RiskFactor,risk_factor_for,扁桃体炎,Disease,宝宝本身的抵抗能力不是很强，所以是扁桃体炎的高发人群,Doc_unlabel_0138,unlabel,qwen,0.9
+季节交替变换,Other,risk_factor_for,扁桃体炎,Disease,尤其是在季节交替变换的时候，发病几率比较高,Doc_unlabel_0138,unlabel,qwen,0.85
 扁桃体炎,Disease,treated_by,开喉剑喷雾剂,Treatment,发病期间可以喷用开喉剑喷雾剂,Doc_unlabel_0138,unlabel,qwen,0.9
 扁桃体炎,Disease,treated_by,蒲地蓝消炎口服液,Treatment,口服蒲地蓝消炎口服液,Doc_unlabel_0138,unlabel,qwen,0.9
 扁桃体炎,Disease,treated_by,蓝芩口服液,Treatment,可以用蓝芩口服液代替,Doc_unlabel_0138,unlabel,qwen,0.85
@@ -10478,6 +10539,8 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 遗传,RiskFactor,causes,斑秃,Disease,斑秃的病因主要与遗传、自身免疫和精神因素有关,Doc_unlabel_0141,unlabel,qwen,0.95
 自身免疫,RiskFactor,causes,斑秃,Disease,斑秃的病因主要与遗传、自身免疫和精神因素有关,Doc_unlabel_0141,unlabel,qwen,0.95
 精神因素,RiskFactor,causes,斑秃,Disease,斑秃的病因主要与遗传、自身免疫和精神因素有关,Doc_unlabel_0141,unlabel,qwen,0.95
+精神紧张,RiskFactor,risk_factor_for,斑秃,Disease,大多发生于精神紧张、焦虑的人群,Doc_unlabel_0141,unlabel,qwen,0.9
+焦虑,RiskFactor,risk_factor_for,斑秃,Disease,大多发生于精神紧张、焦虑的人群,Doc_unlabel_0141,unlabel,qwen,0.9
 斑秃,Disease,treated_by,解除精神负担,Treatment,治疗上首先要解除精神负担,Doc_unlabel_0141,unlabel,qwen,0.95
 斑秃,Disease,treated_by,避免精神紧张,Treatment,治疗上首先要...避免精神紧张,Doc_unlabel_0141,unlabel,qwen,0.95
 斑秃,Disease,treated_by,维生素b6,Treatment,全身疗法可以口服维生素b6,Doc_unlabel_0141,unlabel,qwen,0.95
@@ -10656,8 +10719,14 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 颅内压增高,PathologicalState,treated_by,甘露醇,Treatment,最常用的是甘露醇,Doc_unlabel_0156,unlabel,qwen,0.9
 颅内压增高,PathologicalState,treated_by,手术方法,Treatment,严重时需要通过手术方法解除颅内高压,Doc_unlabel_0156,unlabel,qwen,0.9
 颅内高压症,Disease,located_in,脑子,AnatomicalSite,颅内高压症主要是说脑子里边内容物过多,Doc_unlabel_0156,unlabel,qwen,0.9
+高血压,Disease,risk_factor_for,大肠息肉术后出血,PathologicalState,有高血压、糖尿病等病变会导致出血的概率增加,Doc_unlabel_0157,unlabel,qwen,0.92
+糖尿病,Disease,risk_factor_for,大肠息肉术后出血,PathologicalState,有高血压、糖尿病等病变会导致出血的概率增加,Doc_unlabel_0157,unlabel,qwen,0.92
+抗凝药物,Treatment,risk_factor_for,大肠息肉术后出血,PathologicalState,抗凝药物会增加出血风险,Doc_unlabel_0157,unlabel,qwen,0.95
+透析,ExamProcedure,risk_factor_for,大肠息肉术后出血,PathologicalState,透析病人会使用抗凝剂，同样会导致出血增加,Doc_unlabel_0157,unlabel,qwen,0.88
+广基的息肉,Disease,risk_factor_for,大肠息肉术后出血,PathologicalState,广基的息肉切除术后创面会比较大，术后发生出血机会也会比较大,Doc_unlabel_0157,unlabel,qwen,0.9
 电凝过度,Other,causes,大肠息肉术后出血,PathologicalState,手术中发生电凝过度或者不足也会导致出血,Doc_unlabel_0157,unlabel,qwen,0.93
 电凝不足,Other,causes,大肠息肉术后出血,PathologicalState,手术中发生电凝过度或者不足也会导致出血,Doc_unlabel_0157,unlabel,qwen,0.93
+息肉蒂比较粗,ClinicalSign,risk_factor_for,大肠息肉术后出血,PathologicalState,比较大的息肉蒂比较粗，如果电凝不够，出血机会也会更大,Doc_unlabel_0157,unlabel,qwen,0.89
 芹菜,Other,is_a,绿叶蔬菜,MedicalCategory,其中包括芹菜、菠菜和橄榄菜,Doc_unlabel_0158,unlabel,qwen,0.95
 菠菜,Other,is_a,绿叶蔬菜,MedicalCategory,其中包括芹菜、菠菜和橄榄菜,Doc_unlabel_0158,unlabel,qwen,0.95
 橄榄菜,Other,is_a,绿叶蔬菜,MedicalCategory,其中包括芹菜、菠菜和橄榄菜,Doc_unlabel_0158,unlabel,qwen,0.95
@@ -10689,6 +10758,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 一型单纯疱疹病毒,Other,causes,疱疹性口炎,Disease,小孩子的口腔疱疹是由于一型单纯疱疹病毒，引起的疱疹性口炎,Doc_unlabel_0163,unlabel,qwen,0.95
 一型单纯疱疹病毒,Other,causes,口腔疱疹,Disease,小孩子的口腔疱疹是由于一型单纯疱疹病毒,Doc_unlabel_0163,unlabel,qwen,0.95
 单纯疱疹病毒的感染,Disease,causes,口腔的疱疹,Disease,导致了口腔的疱疹,Doc_unlabel_0163,unlabel,qwen,0.9
+抗体消失,Other,risk_factor_for,单纯疱疹病毒的感染,Disease,但是4-6个月时会消失...所以就会容易发生单纯疱疹病毒的感染,Doc_unlabel_0163,unlabel,qwen,0.85
 头疼,Symptom,symptom_of,疱疹病毒感染,Disease,感染之后就会出现头疼、发热以及不适的症状,Doc_unlabel_0163,unlabel,qwen,0.9
 发热,Symptom,symptom_of,疱疹病毒感染,Disease,感染之后就会出现头疼、发热以及不适的症状,Doc_unlabel_0163,unlabel,qwen,0.9
 咽喉的肿痛,Symptom,symptom_of,疱疹病毒感染,Disease,有的还会出现咽喉的肿痛,Doc_unlabel_0163,unlabel,qwen,0.9
@@ -10717,6 +10787,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 高甘油三酯血症,Disease,is_a,高脂血症,Disease,高脂血症一般分成...高甘油三酯血症,Doc_unlabel_0166,unlabel,qwen,0.95
 混合型高脂血症,Disease,is_a,高脂血症,Disease,或者是混合型高脂血症,Doc_unlabel_0166,unlabel,qwen,0.95
 高脂血症,Disease,diagnosed_by,血中胆固醇水平升高,TestResult,血中胆固醇水平升高提示机体发生了脂代谢异常，发生了高脂血症的一种,Doc_unlabel_0166,unlabel,qwen,0.9
+高脂血症,Disease,risk_factor_for,动脉粥样硬化,Disease,高脂血症发生时很容易导致动脉粥样硬化,Doc_unlabel_0166,unlabel,qwen,0.92
 高脂血症,Disease,causes,心脑血管疾病,Disease,引起心脑血管疾病,Doc_unlabel_0166,unlabel,qwen,0.9
 食入的脂类物质过多,RiskFactor,causes,血脂升高,ClinicalSign,产生的原因可能是食入的脂类物质过多...都可导致血脂升高,Doc_unlabel_0166,unlabel,qwen,0.9
 运动减少,RiskFactor,causes,血脂升高,ClinicalSign,运动减少...都可导致血脂升高,Doc_unlabel_0166,unlabel,qwen,0.9
@@ -10736,6 +10807,9 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 急性扁桃体炎,Disease,is_a,急性炎症,PathologicalState,比如急性扁桃体炎、急性咽炎、急性喉炎和急性会厌炎,Doc_unlabel_0168,unlabel,qwen,0.88
 嗓子特别疼,Symptom,symptom_of,急性炎症,PathologicalState,急性炎症的时候黏膜充血、肿胀，就会有嗓子特别疼或者吞咽的时候更明显的症状,Doc_unlabel_0168,unlabel,qwen,0.92
 急性炎症,PathologicalState,located_in,嗓子,AnatomicalSite,嗓子的急性炎症,Doc_unlabel_0168,unlabel,qwen,0.95
+急性喉炎,Disease,risk_factor_for,喉水肿,PathologicalState,对于急性喉炎，急性会厌炎的病人有存在喉水肿、呼吸道梗阻、窒息、呼吸困难等风险,Doc_unlabel_0168,unlabel,qwen,0.9
+急性喉炎,Disease,risk_factor_for,呼吸困难,Symptom,对于急性喉炎，急性会厌炎的病人有存在喉水肿、呼吸道梗阻、窒息、呼吸困难等风险,Doc_unlabel_0168,unlabel,qwen,0.9
+急性会厌炎,Disease,risk_factor_for,窒息,PathologicalState,对于急性喉炎，急性会厌炎的病人有存在喉水肿、呼吸道梗阻、窒息、呼吸困难等风险,Doc_unlabel_0168,unlabel,qwen,0.9
 胃食管反流,Disease,causes,反流性咽喉炎,Disease,还有一部分患者有胃食管反流，也会引起反流性咽喉炎,Doc_unlabel_0168,unlabel,qwen,0.93
 嗓子干,Symptom,symptom_of,反流性咽喉炎,Disease,也会有嗓子干，以及特别疼的症状,Doc_unlabel_0168,unlabel,qwen,0.9
 特别疼,Symptom,symptom_of,反流性咽喉炎,Disease,也会有嗓子干，以及特别疼的症状,Doc_unlabel_0168,unlabel,qwen,0.9
@@ -10783,6 +10857,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 阴囊皮肤急性过敏,Disease,causes,又红又痒,Symptom,阴囊皮肤急性过敏，可以表现为又红又痒,Doc_unlabel_0173,unlabel,qwen,0.95
 又红又痒,Symptom,symptom_of,阴囊皮肤急性过敏,Disease,阴囊皮肤急性过敏，可以表现为又红又痒,Doc_unlabel_0173,unlabel,qwen,0.95
 局部高于皮面皮疹,ClinicalSign,symptom_of,阴囊皮肤急性过敏,Disease,同时可见局部高于皮面皮疹,Doc_unlabel_0173,unlabel,qwen,0.9
+过敏原,RiskFactor,risk_factor_for,阴囊皮肤急性过敏,Disease,多与接触了过敏原等因素有关,Doc_unlabel_0173,unlabel,qwen,0.85
 阴囊皮肤急性过敏,Disease,diagnosed_by,过敏原的相关检测,ExamProcedure,需要进行过敏原的相关检测来进一步的确诊,Doc_unlabel_0173,unlabel,qwen,0.9
 细菌感染,PathologicalState,causes,阴囊皮肤蜂窝组织炎,Disease,它多为细菌感染所致,Doc_unlabel_0173,unlabel,qwen,0.95
 又红又痒,Symptom,symptom_of,阴囊皮肤蜂窝组织炎,Disease,出现阴囊皮肤蜂窝组织炎...可以出现又红又痒,Doc_unlabel_0173,unlabel,qwen,0.95
@@ -10856,6 +10931,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 感染,PathologicalState,causes,炎症,PathologicalState,术后发生了感染的情况，就会导致宫腔内膜还有输卵管有炎症,Doc_unlabel_0178,unlabel,qwen,0.95
 炎症,PathologicalState,located_in,宫腔内膜,AnatomicalSite,导致宫腔内膜还有输卵管有炎症,Doc_unlabel_0178,unlabel,qwen,0.95
 炎症,PathologicalState,located_in,输卵管,AnatomicalSite,导致宫腔内膜还有输卵管有炎症,Doc_unlabel_0178,unlabel,qwen,0.95
+感染,PathologicalState,risk_factor_for,不孕,Disease,术后发生了感染的情况，就会导致宫腔内膜还有输卵管有炎症，这些患者以后发生不孕的概率明显增加,Doc_unlabel_0178,unlabel,qwen,0.9
 重度牙周炎,Disease,causes,牙缝过大,Symptom,牙缝过大，是口腔中发生了重度牙周炎所导致的,Doc_unlabel_0179,unlabel,qwen,0.95
 重度牙周炎,Disease,located_in,口腔,AnatomicalSite,口腔中发生了重度牙周炎,Doc_unlabel_0179,unlabel,qwen,0.95
 骨量大于牙量,Other,causes,牙列排列稀疏,Symptom,如果骨量大于牙量，也会使牙列排列稀疏,Doc_unlabel_0179,unlabel,qwen,0.9
@@ -10910,6 +10986,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 股骨头骨折,Disease,treated_by,保守治疗,Treatment,严格按照医生的医嘱进行保守治疗,Doc_unlabel_0185,unlabel,qwen,0.9
 股骨头骨折,Disease,diagnosed_by,拍片复查,ExamProcedure,后期再定期拍片复查,Doc_unlabel_0185,unlabel,qwen,0.85
 股骨头骨折,Disease,located_in,股骨头,AnatomicalSite,股骨头骨折...该部位骨折,Doc_unlabel_0185,unlabel,qwen,0.95
+活动髋关节,RiskFactor,risk_factor_for,骨折不愈合,PathologicalState,否则有这些提前的动作，导致骨折不愈合或者股骨头坏死的风险更大,Doc_unlabel_0185,unlabel,qwen,0.85
 喝酒,RiskFactor,causes,股骨头坏死,Disease,这也是目前临床上导致股骨头坏死最常见的原因,Doc_unlabel_0185,unlabel,qwen,0.9
 使用激素类药物,Treatment,causes,股骨头坏死,Disease,这也是目前临床上导致股骨头坏死最常见的原因,Doc_unlabel_0185,unlabel,qwen,0.9
 动静脉瘘,Disease,treated_by,外科手术,Treatment,动静脉瘘和动静脉畸形可采取外科手术的办法,Doc_unlabel_0186,unlabel,qwen,0.95
@@ -10922,6 +10999,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 动静脉瘘,Disease,treated_by,介入,Treatment,开颅、介入及伽玛刀治疗，均可以用于治疗动静脉瘘,Doc_unlabel_0186,unlabel,qwen,0.95
 动静脉畸形,Disease,is_a,疾病,MedicalCategory,动静脉畸形与动静脉瘘是两种不同的疾病,Doc_unlabel_0186,unlabel,qwen,0.9
 动静脉瘘,Disease,is_a,疾病,MedicalCategory,动静脉畸形与动静脉瘘是两种不同的疾病,Doc_unlabel_0186,unlabel,qwen,0.9
+出血,Symptom,risk_factor_for,动静脉畸形,Disease,如果合并动静脉瘘的动静脉畸形，易发生出血等相关风险,Doc_unlabel_0186,unlabel,qwen,0.85
 癫痫,Symptom,symptom_of,动静脉畸形,Disease,引起相应的脑区缺血，出现癫痫等症状,Doc_unlabel_0186,unlabel,qwen,0.9
 脑区缺血,PathologicalState,symptom_of,动静脉畸形,Disease,引起相应的脑区缺血,Doc_unlabel_0186,unlabel,qwen,0.9
 短路,PathologicalState,causes,脑区缺血,PathologicalState,因短路可造成畸形团导致血液回流，引起相应的脑区缺血,Doc_unlabel_0186,unlabel,qwen,0.9
@@ -10933,6 +11011,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 熬夜,Other,causes,头发过多脱落,Symptom,比如焦虑、劳累、熬夜，都会造成头发过多脱落,Doc_unlabel_0187,unlabel,qwen,0.9
 药物,Treatment,causes,生长期脱发,Disease,生长期脱发寻找是药物或者激素原因,Doc_unlabel_0187,unlabel,qwen,0.88
 激素,RiskFactor,causes,生长期脱发,Disease,生长期脱发寻找是药物或者激素原因,Doc_unlabel_0187,unlabel,qwen,0.88
+遗传背景,RiskFactor,risk_factor_for,脱发,Disease,除了去除除因，还要寻找更深层次的背景，如遗传背景,Doc_unlabel_0187,unlabel,qwen,0.85
 脱发,Disease,treated_by,药物治疗,Treatment,所以生发最主要是寻找原因，去除诱因和药物治疗,Doc_unlabel_0187,unlabel,qwen,0.9
 子宫收缩不良,PathologicalState,causes,宫腔积血,PathologicalState,子宫收缩不良，可以造成宫腔积血,Doc_unlabel_0188,unlabel,qwen,0.95
 子宫收缩不良,PathologicalState,causes,流鲜血,Symptom,子宫收缩不良，可以造成宫腔积血、排除不畅，有可能流出来鲜血,Doc_unlabel_0188,unlabel,qwen,0.9
@@ -10978,6 +11057,7 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 抗磷脂综合征,Disease,causes,胚胎停育,Disease,比如抗磷脂综合征等等,Doc_unlabel_0191,unlabel,qwen,0.9
 没有胎心,ClinicalSign,symptom_of,胚胎停育,Disease,胎儿没有胎心，要考虑胚胎停育,Doc_unlabel_0191,unlabel,qwen,0.85
 胀痛,Symptom,symptom_of,回奶,Other,回奶初期乳房会有胀痛,Doc_unlabel_0192,unlabel,qwen,0.85
+回奶,Other,risk_factor_for,乳腺炎,Disease,及时关注回奶的状态以及乳房，以免引发乳腺炎,Doc_unlabel_0192,unlabel,qwen,0.82
 乳汁比较多,PathologicalState,treated_by,抑制乳汁分泌的食物,Treatment,乳汁比较多的女性可以选择在饮食上吃抑制乳汁分泌的食物,Doc_unlabel_0192,unlabel,qwen,0.9
 韭菜,Other,is_a,抑制乳汁分泌的食物,Treatment,例如韭菜、麦芽等,Doc_unlabel_0192,unlabel,qwen,0.95
 麦芽,Other,is_a,抑制乳汁分泌的食物,Treatment,例如韭菜、麦芽等,Doc_unlabel_0192,unlabel,qwen,0.95
@@ -11017,8 +11097,11 @@ bmi超过32,TestResult,condition_of,肥胖症,Disease,对于bmi超过32的人群
 肌瘤,Disease,diagnosed_by,触诊,ExamProcedure,比如通过触诊诊断肌瘤大,Doc_unlabel_0195,unlabel,qwen,0.91
 肌瘤,Disease,diagnosed_by,经腹超声,ExamProcedure,上述情况是主张做经腹超声进行检查肌瘤,Doc_unlabel_0195,unlabel,qwen,0.89
 肌瘤,Disease,diagnosed_by,阴道超声,ExamProcedure,建议做阴道超声的检查,Doc_unlabel_0195,unlabel,qwen,0.87
+高危型hpv感染,RiskFactor,risk_factor_for,宫颈癌,Disease,高危型hpv感染与女性的宫颈癌密切相关,Doc_unlabel_0196,unlabel,qwen,0.92
+低危型的hpv感染,RiskFactor,risk_factor_for,湿疣,Disease,低危型的hpv感染则与女性外阴、阴道以及肛门周围的湿疣关系较为密切,Doc_unlabel_0196,unlabel,qwen,0.9
 宫颈病变,PathologicalState,diagnosed_by,宫颈的tct检查,ExamProcedure,高危型的hpv要进行宫颈的tct检查，也就是宫颈的细胞学检查，来判断有无宫颈病变,Doc_unlabel_0196,unlabel,qwen,0.95
 宫颈病变,PathologicalState,diagnosed_by,活检,ExamProcedure,在可疑部位取活检进行切片检查,Doc_unlabel_0196,unlabel,qwen,0.88
+hpv16型,RiskFactor,risk_factor_for,宫颈癌,Disease,hpv16型和18型这两种与宫颈癌高度密切相关的病毒类型,Doc_unlabel_0196,unlabel,qwen,0.93
 湿疣,Disease,located_in,女性外阴、阴道以及肛门周围,AnatomicalSite,女性外阴、阴道以及肛门周围的湿疣,Doc_unlabel_0196,unlabel,qwen,0.95
 tct检查,ExamProcedure,is_a,宫颈的细胞学检查,ExamProcedure,宫颈的tct检查，也就是宫颈的细胞学检查,Doc_unlabel_0196,unlabel,qwen,0.96
 腺瘤,Disease,is_a,良性肿瘤,MedicalCategory,腺瘤是常见的一种良性肿瘤,Doc_unlabel_0197,unlabel,qwen,0.95
@@ -11047,6 +11130,11 @@ tct检查,ExamProcedure,is_a,宫颈的细胞学检查,ExamProcedure,宫颈的tct
 鼻中隔偏曲矫正,Treatment,causes,鼻中隔穿孔,Disease,鼻中隔偏曲矫正的后遗症包括:1、鼻中隔穿孔,Doc_unlabel_0199,unlabel,qwen,0.95
 鼻中隔偏曲矫正,Treatment,causes,鼻中隔血肿,Disease,鼻中隔偏曲矫正的后遗症包括:...2、鼻中隔血肿,Doc_unlabel_0199,unlabel,qwen,0.95
 鼻中隔偏曲矫正,Treatment,causes,鼻中隔脓肿,Disease,鼻中隔偏曲矫正的后遗症包括:...3、鼻中隔脓肿,Doc_unlabel_0199,unlabel,qwen,0.95
+术中医师经验不足,RiskFactor,risk_factor_for,鼻中隔穿孔,Disease,术中医师经验不足或患者鼻中隔黏膜炎症较重，黏膜薄时易形成,Doc_unlabel_0199,unlabel,qwen,0.9
+患者鼻中隔黏膜炎症较重,RiskFactor,risk_factor_for,鼻中隔穿孔,Disease,术中医师经验不足或患者鼻中隔黏膜炎症较重，黏膜薄时易形成,Doc_unlabel_0199,unlabel,qwen,0.9
+黏膜薄,RiskFactor,risk_factor_for,鼻中隔穿孔,Disease,术中医师经验不足或患者鼻中隔黏膜炎症较重，黏膜薄时易形成,Doc_unlabel_0199,unlabel,qwen,0.9
+两侧鼻腔黏膜没有压紧,RiskFactor,risk_factor_for,鼻中隔血肿,Disease,鼻中隔术后两侧鼻腔黏膜没有压紧，或凝血机制较差时易形成,Doc_unlabel_0199,unlabel,qwen,0.9
+凝血机制较差,RiskFactor,risk_factor_for,鼻中隔血肿,Disease,鼻中隔术后两侧鼻腔黏膜没有压紧，或凝血机制较差时易形成,Doc_unlabel_0199,unlabel,qwen,0.9
 鼻中隔穿孔,Disease,causes,呼吸时有吹哨声,Symptom,可导致患者呼吸时有吹哨声,Doc_unlabel_0199,unlabel,qwen,0.95
 细菌感染,PathologicalState,causes,鼻中隔脓肿,Disease,鼻中隔脓肿，是指鼻中隔血肿的基础上合并发生细菌感染,Doc_unlabel_0199,unlabel,qwen,0.9
 鼻中隔血肿,Disease,condition_of,细菌感染,PathologicalState,鼻中隔脓肿，是指鼻中隔血肿的基础上合并发生细菌感染,Doc_unlabel_0199,unlabel,qwen,0.9
@@ -11164,6 +11252,11 @@ tct检查,ExamProcedure,is_a,宫颈的细胞学检查,ExamProcedure,宫颈的tct
 腰椎管狭窄征,Disease,causes,腰痛,Symptom,腰肌劳损、腰椎管狭窄征、梨状肌综合征、腰椎间盘突出症等是引起反复腰痛的常见疾病,Doc_unlabel_0210,unlabel,qwen,0.95
 梨状肌综合征,Disease,causes,腰痛,Symptom,腰肌劳损、腰椎管狭窄征、梨状肌综合征、腰椎间盘突出症等是引起反复腰痛的常见疾病,Doc_unlabel_0210,unlabel,qwen,0.95
 腰椎间盘突出症,Disease,causes,腰痛,Symptom,腰肌劳损、腰椎管狭窄征、梨状肌综合征、腰椎间盘突出症等是引起反复腰痛的常见疾病,Doc_unlabel_0210,unlabel,qwen,0.95
+年龄增长,RiskFactor,risk_factor_for,反复腰痛,Symptom,随着年龄的增长和体质的减退，全身各个器官同步衰退，体质虚弱，就格外容易出现反复腰痛,Doc_unlabel_0210,unlabel,qwen,0.92
+体质虚弱,RiskFactor,risk_factor_for,反复腰痛,Symptom,加之随着年龄的增长和体质的减退，全身各个器官同步衰退，体质虚弱，就格外容易出现反复腰痛,Doc_unlabel_0210,unlabel,qwen,0.92
+久坐,RiskFactor,risk_factor_for,腰痛,Symptom,现代人久坐，缺乏锻炼，腰肌松弛对关节保护不力，腰部的脊椎骨活动度大，损伤的机会更多,Doc_unlabel_0210,unlabel,qwen,0.88
+缺乏锻炼,RiskFactor,risk_factor_for,腰痛,Symptom,现代人久坐，缺乏锻炼，腰肌松弛对关节保护不力，腰部的脊椎骨活动度大，损伤的机会更多,Doc_unlabel_0210,unlabel,qwen,0.88
+腰肌松弛,PathologicalState,risk_factor_for,腰痛,Symptom,现代人久坐，缺乏锻炼，腰肌松弛对关节保护不力，腰部的脊椎骨活动度大，损伤的机会更多,Doc_unlabel_0210,unlabel,qwen,0.88
 腰痛,Symptom,treated_by,艾灸,Treatment,在预防腰痛反复发作方面，除适当运动，减少久坐久站，保暖护腰等日常生活方式预防外，每天或隔天艾灸15-30分钟，可以减少复发,Doc_unlabel_0210,unlabel,qwen,0.9
 腰椎间盘突出,Disease,treated_by,悬钟,Treatment,若伴腰椎间盘突出者加悬钟,Doc_unlabel_0210,unlabel,qwen,0.93
 足部麻木,Symptom,treated_by,阳陵泉,Treatment,若伴足部麻木者加阳陵泉、内关,Doc_unlabel_0210,unlabel,qwen,0.93
@@ -11241,6 +11334,8 @@ tct检查,ExamProcedure,is_a,宫颈的细胞学检查,ExamProcedure,宫颈的tct
 晶体混浊,PathologicalState,causes,白内障,Disease,引起晶体混浊，引起白内障,Doc_unlabel_0218,unlabel,qwen,0.95
 辐射,RiskFactor,causes,白内障,Disease,长期辐射会诱发晶体混浊，引起白内障,Doc_unlabel_0218,unlabel,qwen,0.95
 辐射,RiskFactor,causes,晶体混浊,PathologicalState,长期辐射会诱发晶体混浊,Doc_unlabel_0218,unlabel,qwen,0.95
+皮肤病,Disease,risk_factor_for,白内障,Disease,比如皮肤病、糖尿病的人容易引起白内障,Doc_unlabel_0218,unlabel,qwen,0.9
+糖尿病,Disease,risk_factor_for,白内障,Disease,比如皮肤病、糖尿病的人容易引起白内障,Doc_unlabel_0218,unlabel,qwen,0.9
 特殊的药物,Treatment,causes,白内障,Disease,服用特殊的药物引起白内障,Doc_unlabel_0218,unlabel,qwen,0.95
 先兆流产,Disease,causes,阴道褐色分泌物,Symptom,如先兆流产、胚胎停止发育、异位妊娠时，均可出现阴道褐色分泌物,Doc_unlabel_0219,unlabel,qwen,0.95
 胚胎停止发育,Disease,causes,阴道褐色分泌物,Symptom,如先兆流产、胚胎停止发育、异位妊娠时，均可出现阴道褐色分泌物,Doc_unlabel_0219,unlabel,qwen,0.95
@@ -11294,10 +11389,17 @@ tct检查,ExamProcedure,is_a,宫颈的细胞学检查,ExamProcedure,宫颈的tct
 眨眼次数增多,Symptom,symptom_of,眼睑痉挛,Disease,导致患者出现眨眼次数增多,Doc_unlabel_0223,unlabel,qwen,0.92
 不自主闭眼,Symptom,symptom_of,眼睑痉挛,Disease,出现阵发性或者持续性的不自主闭眼,Doc_unlabel_0223,unlabel,qwen,0.92
 眼睑痉挛,Disease,causes,功能性失明,Symptom,症状严重者可造成功能性失明,Doc_unlabel_0223,unlabel,qwen,0.9
+经常熬夜,RiskFactor,risk_factor_for,眼睑痉挛,Disease,经常熬夜、精神紧张、压力大的年轻患者亦可发生,Doc_unlabel_0223,unlabel,qwen,0.85
+精神紧张,RiskFactor,risk_factor_for,眼睑痉挛,Disease,经常熬夜、精神紧张、压力大的年轻患者亦可发生,Doc_unlabel_0223,unlabel,qwen,0.85
+压力大,RiskFactor,risk_factor_for,眼睑痉挛,Disease,经常熬夜、精神紧张、压力大的年轻患者亦可发生,Doc_unlabel_0223,unlabel,qwen,0.85
+视疲劳,Symptom,risk_factor_for,眼睑痉挛,Disease,避免视疲劳，保持充足的睡眠，多食用营养丰富的食物，以预防眼睑痉挛,Doc_unlabel_0223,unlabel,qwen,0.88
 眼睑痉挛,Disease,treated_by,一般治疗,Treatment,对于眼睑痉挛的治疗，可分为一般治疗、药物治疗以及手术治疗,Doc_unlabel_0223,unlabel,qwen,0.95
 眼睑痉挛,Disease,treated_by,药物治疗,Treatment,对于眼睑痉挛的治疗，可分为一般治疗、药物治疗以及手术治疗,Doc_unlabel_0223,unlabel,qwen,0.95
 眼睑痉挛,Disease,treated_by,手术治疗,Treatment,对于眼睑痉挛的治疗，可分为一般治疗、药物治疗以及手术治疗,Doc_unlabel_0223,unlabel,qwen,0.95
 脑动脉粥样硬化,Disease,causes,小缺血灶,PathologicalState,是脑动脉粥样硬化的反应,Doc_unlabel_0224,unlabel,qwen,0.9
+高脂血症,RiskFactor,risk_factor_for,脑内小的缺血灶,PathologicalState,患者如果年龄>50岁有高脂血症、糖尿病和高血压的病史，检查颅脑核磁时多数可能会出现脑内小的缺血灶,Doc_unlabel_0224,unlabel,qwen,0.9
+糖尿病,RiskFactor,risk_factor_for,脑内小的缺血灶,PathologicalState,患者如果年龄>50岁有高脂血症、糖尿病和高血压的病史，检查颅脑核磁时多数可能会出现脑内小的缺血灶,Doc_unlabel_0224,unlabel,qwen,0.9
+高血压,RiskFactor,risk_factor_for,脑内小的缺血灶,PathologicalState,患者如果年龄>50岁有高脂血症、糖尿病和高血压的病史，检查颅脑核磁时多数可能会出现脑内小的缺血灶,Doc_unlabel_0224,unlabel,qwen,0.9
 脑内小的缺血灶,PathologicalState,diagnosed_by,颅脑核磁,ExamProcedure,检查颅脑核磁时多数可能会出现脑内小的缺血灶,Doc_unlabel_0224,unlabel,qwen,0.9
 小缺血灶,PathologicalState,is_a,脑梗塞前期的表现,MedicalCategory,小缺血灶不是脑梗塞是脑梗塞前期的表现,Doc_unlabel_0224,unlabel,qwen,0.85
 小缺血灶,PathologicalState,treated_by,阿司匹林,Treatment,必要时应用抗血小板聚集的药物，比如口服阿司匹林或者氯吡格雷,Doc_unlabel_0224,unlabel,qwen,0.85
@@ -11349,6 +11451,7 @@ tct检查,ExamProcedure,is_a,宫颈的细胞学检查,ExamProcedure,宫颈的tct
 根尖周炎,Disease,treated_by,消炎药,Treatment,必要时再辅助使用消炎药,Doc_unlabel_0228,unlabel,qwen,0.9
 牙龈肿胀,Symptom,symptom_of,智齿发炎,Disease,智齿发炎...大牙旁边的牙龈肿胀,Doc_unlabel_0228,unlabel,qwen,0.85
 疼痛,Symptom,symptom_of,根尖周炎,Disease,疼痛、肿胀就可以大部分的消失,Doc_unlabel_0228,unlabel,qwen,0.85
+吸烟,RiskFactor,risk_factor_for,老年慢性支气管炎,Disease,吸烟患者患病率比不吸烟患者高2-8倍,Doc_unlabel_0229,unlabel,qwen,0.95
 慢性支气管炎,Disease,causes,阻塞性肺疾病,Disease,慢性支气管炎患者如果出现阻塞性肺疾病,Doc_unlabel_0229,unlabel,qwen,0.85
 慢性支气管炎,Disease,causes,肺源性心脏病,Disease,慢性支气管炎患者如果出现阻塞性肺疾病甚至肺源性心脏病,Doc_unlabel_0229,unlabel,qwen,0.85
 反复呼吸道感染,Disease,treated_by,免疫调节剂,Treatment,反复呼吸道感染患者要进行规范治疗，必要时要使用免疫调节剂,Doc_unlabel_0229,unlabel,qwen,0.9
@@ -11432,6 +11535,7 @@ tct检查,ExamProcedure,is_a,宫颈的细胞学检查,ExamProcedure,宫颈的tct
 感染,PathologicalState,located_in,呼吸系统,AnatomicalSite,革兰氏阳性球菌和阴性杆菌造成的呼吸系统、消化系统、泌尿生殖系统、皮肤系统的感染,Doc_unlabel_0238,unlabel,qwen,0.85
 维生素c,Other,causes,草酸,Other,维生素c经过自然转化后能够生成草酸,Doc_unlabel_0239,unlabel,qwen,0.9
 维生素c,Other,causes,尿液草酸的排泄量,TestResult,服用维生素c或者摄入大量维生素c以后，尿液草酸的排泄量也会显著增加,Doc_unlabel_0239,unlabel,qwen,0.9
+维生素c,Other,risk_factor_for,草酸钙结晶,PathologicalState,服用维生素c或者摄入大量维生素c以后，尿液草酸的排泄量也会显著增加，形成草酸钙结晶的危险程度也会相应增加,Doc_unlabel_0239,unlabel,qwen,0.85
 草酸钙结石,Disease,is_a,结石,Disease,结石绝大多数是草酸钙结石,Doc_unlabel_0239,unlabel,qwen,0.9
 反复挖鼻孔、揉鼻子的行为,RiskFactor,causes,鼻腔黏膜糜烂,PathologicalState,部分患者也可能会因为反复挖鼻孔、揉鼻子的行为而导致,Doc_unlabel_0240,unlabel,qwen,0.95
 鼻腔黏膜糜烂,PathologicalState,located_in,鼻腔,AnatomicalSite,鼻腔黏膜糜烂的状况,Doc_unlabel_0240,unlabel,qwen,0.9
@@ -11477,6 +11581,8 @@ tct检查,ExamProcedure,is_a,宫颈的细胞学检查,ExamProcedure,宫颈的tct
 心功能不全,PathologicalState,treated_by,硝酸甘油,Treatment,常用的药物包括...硝酸甘油,Doc_unlabel_0244,unlabel,qwen,0.95
 心功能不全,PathologicalState,treated_by,硝普钠,Treatment,常用的药物包括...硝普钠,Doc_unlabel_0244,unlabel,qwen,0.95
 细菌、病毒等感染,RiskFactor,causes,肾炎,Disease,容易出现细菌、病毒等感染，从而诱发肾炎,Doc_unlabel_0245,unlabel,qwen,0.9
+免疫系统可能没有完全完备,PathologicalState,risk_factor_for,肾炎,Disease,年轻人的免疫系统可能没有完全完备，这时候容易出现细菌、病毒等感染，从而诱发肾炎,Doc_unlabel_0245,unlabel,qwen,0.85
+生活不规律,RiskFactor,risk_factor_for,肾脏的疾病,Disease,年轻人生活不规律，也有可能诱发肾脏的疾病,Doc_unlabel_0245,unlabel,qwen,0.9
 高盐、高脂、高嘌呤的饮食,RiskFactor,causes,肾病,Disease,导致一些高盐、高脂、高嘌呤的饮食摄入人体，这样也可能是得肾病的原因,Doc_unlabel_0245,unlabel,qwen,0.9
 肾炎综合征,Disease,is_a,肾病,Disease,肾病通常临床上把它分为肾炎综合征,Doc_unlabel_0245,unlabel,qwen,0.95
 肾病综合征,Disease,is_a,肾病,Disease,肾病通常临床上把它分为...肾病综合征,Doc_unlabel_0245,unlabel,qwen,0.95
@@ -11538,6 +11644,8 @@ hpv42阳性,TestResult,treated_by,调节人体的免疫系统,Treatment,同时�
 乏力,Symptom,treated_by,解毒治疗,Treatment,比如患者有严重的发热或者全身不适、出现乏力等，就要及时的去医院就诊，要进行解毒治疗,Doc_unlabel_0251,unlabel,qwen,0.9
 全身不适,Symptom,treated_by,解毒治疗,Treatment,比如患者有严重的发热或者全身不适、出现乏力等，就要及时的去医院就诊，要进行解毒治疗,Doc_unlabel_0251,unlabel,qwen,0.9
 hpv81型,Other,is_a,低危型的hpv病毒,MedicalCategory,hpv81型是低危型的hpv病毒,Doc_unlabel_0252,unlabel,qwen,0.95
+高危型的hpv病毒,RiskFactor,risk_factor_for,女性宫颈癌,Disease,高危型的hpv病毒与女性宫颈癌的发生有关,Doc_unlabel_0252,unlabel,qwen,0.92
+低危型的hpv病毒,RiskFactor,risk_factor_for,女性生殖道湿疣,Disease,低危型的hpv病毒与女性生殖道湿疣有关,Doc_unlabel_0252,unlabel,qwen,0.92
 hpv81型,Other,causes,女性生殖道的湿疣,Disease,要看是不是引起了女性生殖道的湿疣,Doc_unlabel_0252,unlabel,qwen,0.88
 尖锐湿疣,Disease,treated_by,物理治疗,Treatment,要给予物理治疗,Doc_unlabel_0252,unlabel,qwen,0.95
 尖锐湿疣,Disease,treated_by,激光,Treatment,常常使用的方法是激光,Doc_unlabel_0252,unlabel,qwen,0.95
@@ -11560,6 +11668,17 @@ hpv病毒感染,Disease,treated_by,锻炼身体、增强机体的抵抗力,Treat
 酒精,RiskFactor,causes,血尿酸增高,ClinicalSign,酒精能够减少尿酸的排泄，造成血尿酸增高,Doc_unlabel_0255,unlabel,qwen,0.95
 果糖,RiskFactor,causes,血尿酸的明显升高,ClinicalSign,果糖一个是造成体内的胰岛素抵抗，第二造成血尿酸的明显升高,Doc_unlabel_0255,unlabel,qwen,0.95
 果糖,RiskFactor,causes,胰岛素抵抗,PathologicalState,果糖一个是造成体内的胰岛素抵抗,Doc_unlabel_0255,unlabel,qwen,0.95
+果糖摄入,RiskFactor,risk_factor_for,高尿酸血症,Disease,果糖的摄入其实对高尿酸血症是非常不利的因素,Doc_unlabel_0255,unlabel,qwen,0.9
+多次足月分娩,RiskFactor,risk_factor_for,产后尿失禁,Disease,以下四种类型的产妇容易发生产后尿失禁:1、多次足月分娩,Doc_unlabel_0256,unlabel,qwen,0.9
+分娩巨大儿,RiskFactor,risk_factor_for,产后尿失禁,Disease,1、多次足月分娩，尤其是分娩巨大儿的产妇,Doc_unlabel_0256,unlabel,qwen,0.9
+阴道分娩,RiskFactor,risk_factor_for,产后尿失禁,Disease,2、阴道分娩，尤其是产程较长的产妇,Doc_unlabel_0256,unlabel,qwen,0.9
+产程较长,RiskFactor,risk_factor_for,产后尿失禁,Disease,2、阴道分娩，尤其是产程较长的产妇,Doc_unlabel_0256,unlabel,qwen,0.9
+阴道助产,RiskFactor,risk_factor_for,盆底肌肉损伤,PathologicalState,3、阴道助产、急产、药物引产的产妇，发生盆底肌肉损伤的几率较大,Doc_unlabel_0256,unlabel,qwen,0.9
+急产,RiskFactor,risk_factor_for,盆底肌肉损伤,PathologicalState,3、阴道助产、急产、药物引产的产妇，发生盆底肌肉损伤的几率较大,Doc_unlabel_0256,unlabel,qwen,0.9
+药物引产,RiskFactor,risk_factor_for,盆底肌肉损伤,PathologicalState,3、阴道助产、急产、药物引产的产妇，发生盆底肌肉损伤的几率较大,Doc_unlabel_0256,unlabel,qwen,0.9
+不喜欢运动,RiskFactor,risk_factor_for,产后尿失禁,Disease,4、不喜欢运动，全身肌肉力量薄弱，尤其是盆底肌力量较弱的产妇,Doc_unlabel_0256,unlabel,qwen,0.9
+全身肌肉力量薄弱,RiskFactor,risk_factor_for,产后尿失禁,Disease,4、不喜欢运动，全身肌肉力量薄弱，尤其是盆底肌力量较弱的产妇,Doc_unlabel_0256,unlabel,qwen,0.9
+盆底肌力量较弱,RiskFactor,risk_factor_for,产后尿失禁,Disease,4、不喜欢运动，全身肌肉力量薄弱，尤其是盆底肌力量较弱的产妇,Doc_unlabel_0256,unlabel,qwen,0.9
 盆底肌训练,Treatment,treated_by,产后尿失禁,Disease,尤其是盆底肌训练，可预防产后尿失禁,Doc_unlabel_0256,unlabel,qwen,0.9
 全身肌肉的训练,Treatment,treated_by,产后尿失禁,Disease,建议产妇从孕前开始进行全身肌肉的训练，尤其是盆底肌训练，可预防产后尿失禁,Doc_unlabel_0256,unlabel,qwen,0.9
 鼻炎,Disease,causes,鼻子不通气,Symptom,这些只是针对鼻炎，或者是感冒造成了鼻子不通气才有效果,Doc_unlabel_0257,unlabel,qwen,0.95
@@ -11623,6 +11742,9 @@ hpv病毒感染,Disease,treated_by,锻炼身体、增强机体的抵抗力,Treat
 下消化道出血,PathologicalState,is_a,消化道出血,PathologicalState,属于患者消化道出血的临床表现，包含上消化道出血和下消化道出血,Doc_unlabel_0262,unlabel,qwen,0.95
 偏头痛,Disease,is_a,原发性头痛,MedicalCategory,偏头痛是临床上比较常见的一种原发性头痛,Doc_unlabel_0263,unlabel,qwen,0.95
 女性左侧偏头痛,Disease,is_a,功能性的头痛,MedicalCategory,女性左侧偏头痛是属于功能性的头痛,Doc_unlabel_0263,unlabel,qwen,0.95
+巧克力、奶酪、油炸类的食物,RiskFactor,risk_factor_for,偏头痛,Disease,女生可能更爱吃一些巧克力、奶酪、油炸类的食物，会导致患者容易出现偏头痛的发作,Doc_unlabel_0263,unlabel,qwen,0.9
+精神压力较大,RiskFactor,risk_factor_for,偏头痛,Disease,患者精神压力较大，睡眠情况不足，会导致偏头痛的发作,Doc_unlabel_0263,unlabel,qwen,0.9
+睡眠情况不足,RiskFactor,risk_factor_for,偏头痛,Disease,患者精神压力较大，睡眠情况不足，会导致偏头痛的发作,Doc_unlabel_0263,unlabel,qwen,0.9
 内分泌失调,PathologicalState,causes,偏头痛,Disease,女性的内分泌引起的，女性容易出现内分泌失调，容易发生偏头痛的症状,Doc_unlabel_0263,unlabel,qwen,0.88
 重症肌无力,Disease,treated_by,胸腔镜外科治疗重症肌无力,Treatment,胸腔镜外科治疗重症肌无力,Doc_unlabel_0264,unlabel,qwen,0.95
 肺癌,Disease,treated_by,胸腔镜肺癌根治术,Treatment,胸腔镜肺癌根治术,Doc_unlabel_0264,unlabel,qwen,0.9
@@ -11674,6 +11796,9 @@ hpv病毒感染,Disease,treated_by,锻炼身体、增强机体的抵抗力,Treat
 变异性心绞痛,Disease,treated_by,复方丹参滴丸,Treatment,可以含服硝酸甘油、复方丹参滴丸、速效救心丸,Doc_unlabel_0268,unlabel,qwen,0.85
 变异性心绞痛,Disease,treated_by,速效救心丸,Treatment,可以含服硝酸甘油、复方丹参滴丸、速效救心丸,Doc_unlabel_0268,unlabel,qwen,0.85
 颌下淋巴结增大,PathologicalState,causes,疼痛,Symptom,右边的下巴下面出现疼痛，常见的就是颌下淋巴结增大所导致的,Doc_unlabel_0269,unlabel,qwen,0.9
+机体免疫力低下,RiskFactor,risk_factor_for,区域淋巴结反应性的增大,PathologicalState,也有一定的诱发因素，比如机体免疫力低下，牙龈炎、口腔或者是颌面部的感染，都容易出现区域淋巴结反应性的增大,Doc_unlabel_0269,unlabel,qwen,0.9
+牙龈炎,Disease,risk_factor_for,区域淋巴结反应性的增大,PathologicalState,也有一定的诱发因素，比如机体免疫力低下，牙龈炎、口腔或者是颌面部的感染，都容易出现区域淋巴结反应性的增大,Doc_unlabel_0269,unlabel,qwen,0.9
+口腔或者是颌面部的感染,Disease,risk_factor_for,区域淋巴结反应性的增大,PathologicalState,也有一定的诱发因素，比如机体免疫力低下，牙龈炎、口腔或者是颌面部的感染，都容易出现区域淋巴结反应性的增大,Doc_unlabel_0269,unlabel,qwen,0.9
 腮腺炎,Disease,causes,邻近的淋巴结增大,PathologicalState,以及发生于腮腺的疾病，像腮腺炎，腮腺的肿瘤，也可以表现邻近的淋巴结增大,Doc_unlabel_0269,unlabel,qwen,0.9
 腮腺的肿瘤,Disease,causes,邻近的淋巴结增大,PathologicalState,以及发生于腮腺的疾病，像腮腺炎，腮腺的肿瘤，也可以表现邻近的淋巴结增大,Doc_unlabel_0269,unlabel,qwen,0.9
 区域淋巴结反应性的增大,PathologicalState,diagnosed_by,血常规的化验,ExamProcedure,必要时也需要进一步结合血常规的化验，以及局部的彩色超声等相关检查,Doc_unlabel_0269,unlabel,qwen,0.85
@@ -11720,6 +11845,9 @@ hpv病毒感染,Disease,treated_by,锻炼身体、增强机体的抵抗力,Treat
 咳痰,Symptom,symptom_of,支气管哮喘,Disease,一直存在咳嗽、咳痰的症状,Doc_unlabel_0274,unlabel,qwen,0.85
 在家自行给药,RiskFactor,causes,呼吸堵塞,Symptom,容易导致呼吸堵塞,Doc_unlabel_0274,unlabel,qwen,0.9
 在家自行给药,RiskFactor,causes,肺炎,Disease,甚至会导致肺炎,Doc_unlabel_0274,unlabel,qwen,0.9
+轻微超重,RiskFactor,risk_factor_for,头痛,Symptom,有轻微超重现象的女性会比身体质量指数较低的女性患头痛的危险高35%,Doc_unlabel_0275,unlabel,qwen,0.9
+严重超重,RiskFactor,risk_factor_for,头痛,Symptom,严重超重者的患病率达到将近80%,Doc_unlabel_0275,unlabel,qwen,0.9
+个性特别、死板、保守或者容易过于着迷于某物,RiskFactor,risk_factor_for,头痛病,Disease,个性特别、死板、保守或者容易过于着迷于某物会使你有患上头痛病的可能,Doc_unlabel_0275,unlabel,qwen,0.85
 性生活,Other,causes,头痛,Symptom,约46%的头痛患者表示性生活会引发他们的头痛,Doc_unlabel_0275,unlabel,qwen,0.9
 用力过度,Other,causes,头痛,Symptom,通常情况下，这是由用力过度引发的头痛,Doc_unlabel_0275,unlabel,qwen,0.9
 从繁琐的工作中脱离出来的小假期,Other,causes,周末头痛,Disease,周末头痛或者放松型头痛会在你从繁琐的工作中脱离出来的小假期中发生,Doc_unlabel_0275,unlabel,qwen,0.85
@@ -11755,6 +11883,7 @@ hpv病毒感染,Disease,treated_by,锻炼身体、增强机体的抵抗力,Treat
 纤维环破裂,PathologicalState,causes,颈椎间盘膨出,PathologicalState,之所以会产生椎间盘膨出，是由于纤维环破裂之后,Doc_unlabel_0278,unlabel,qwen,0.95
 颈椎间盘膨出,PathologicalState,treated_by,腰椎三维电脑牵引,Treatment,常规使用保守治疗，如腰椎三维电脑牵引可以使椎间盘膨出得到改善,Doc_unlabel_0278,unlabel,qwen,0.9
 经常熬夜,RiskFactor,causes,免疫力低下,PathologicalState,经常熬夜会造成免疫力低下,Doc_unlabel_0279,unlabel,qwen,0.95
+经常熬夜,RiskFactor,risk_factor_for,感冒,Disease,经常熬夜会造成免疫力低下，容易感冒,Doc_unlabel_0279,unlabel,qwen,0.9
 剧烈的运动,RiskFactor,causes,软组织损伤,PathologicalState,这些剧烈的运动会导致腿部膝盖的部位发生软组织的损伤,Doc_unlabel_0280,unlabel,qwen,0.92
 软组织损伤,PathologicalState,causes,疼痛,Symptom,而诱发患者出现疼痛,Doc_unlabel_0280,unlabel,qwen,0.9
 软组织损伤,PathologicalState,located_in,腿部膝盖部位,AnatomicalSite,腿部膝盖的部位发生软组织的损伤,Doc_unlabel_0280,unlabel,qwen,0.9
@@ -11865,6 +11994,7 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 月经紊乱,Symptom,symptom_of,更年期,PathologicalState,因处于更年期而出现月经紊乱,Doc_unlabel_0291,unlabel,qwen,0.93
 长时间不来月经,Symptom,symptom_of,更年期,PathologicalState,因处于更年期而出现月经紊乱，长时间不来月经,Doc_unlabel_0291,unlabel,qwen,0.9
 怀孕,PathologicalState,treated_by,终止妊娠,Treatment,采取合适的方法终止妊娠,Doc_unlabel_0291,unlabel,qwen,0.88
+没有采取避孕措施,RiskFactor,risk_factor_for,意外怀孕,PathologicalState,如果性生活时没有采取避孕措施，就有意外怀孕的可能,Doc_unlabel_0291,unlabel,qwen,0.91
 肠胃功能紊乱,PathologicalState,causes,便秘症状,Symptom,肠胃功能紊乱是引起便秘症状的常见病因,Doc_unlabel_0292,unlabel,qwen,0.95
 消化道占位性病变,PathologicalState,causes,便秘症状,Symptom,消化道占位性病变引起的便秘症状,Doc_unlabel_0292,unlabel,qwen,0.95
 便秘症状,Symptom,treated_by,药物治疗,Treatment,便秘的症状可以通过药物治疗、手术治疗、预防治疗等方式进行对症处理,Doc_unlabel_0292,unlabel,qwen,0.9
@@ -11887,6 +12017,11 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 肝内钙化灶,Disease,is_a,良性疾病,MedicalCategory,肝内钙化灶属于一种良性疾病,Doc_unlabel_0294,unlabel,qwen,0.95
 肝内钙化灶,Disease,is_a,瘢痕,PathologicalState,属于原有病变愈合后的瘢痕,Doc_unlabel_0294,unlabel,qwen,0.95
 肝内钙化灶,Disease,is_a,钙化性组织,Other,这是一种钙化性组织,Doc_unlabel_0294,unlabel,qwen,0.95
+乙肝,RiskFactor,risk_factor_for,癌变,PathologicalState,癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等,Doc_unlabel_0294,unlabel,qwen,0.95
+丙肝,RiskFactor,risk_factor_for,癌变,PathologicalState,癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等,Doc_unlabel_0294,unlabel,qwen,0.95
+肝硬化,RiskFactor,risk_factor_for,癌变,PathologicalState,癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等,Doc_unlabel_0294,unlabel,qwen,0.95
+酒精肝,RiskFactor,risk_factor_for,癌变,PathologicalState,癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等,Doc_unlabel_0294,unlabel,qwen,0.95
+自身免疫性肝病,RiskFactor,risk_factor_for,癌变,PathologicalState,癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等,Doc_unlabel_0294,unlabel,qwen,0.95
 肝癌,Disease,diagnosed_by,肝胆彩超,ExamProcedure,有以上这些肝癌高危因素的患者，要定期复查肝胆彩超、甲胎蛋白以及肝功,Doc_unlabel_0294,unlabel,qwen,0.9
 肝癌,Disease,diagnosed_by,甲胎蛋白,TestResult,有以上这些肝癌高危因素的患者，要定期复查肝胆彩超、甲胎蛋白以及肝功,Doc_unlabel_0294,unlabel,qwen,0.9
 肝癌,Disease,diagnosed_by,肝功,ExamProcedure,有以上这些肝癌高危因素的患者，要定期复查肝胆彩超、甲胎蛋白以及肝功,Doc_unlabel_0294,unlabel,qwen,0.9
@@ -11902,6 +12037,7 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 痤疮,Disease,located_in,面部,AnatomicalSite,皮损主要好发于面部,Doc_unlabel_0296,unlabel,qwen,0.95
 痤疮,Disease,located_in,胸部,AnatomicalSite,其次为胸部,Doc_unlabel_0296,unlabel,qwen,0.95
 痤疮,Disease,located_in,背部,AnatomicalSite,其次为...背部,Doc_unlabel_0296,unlabel,qwen,0.95
+遗传,RiskFactor,risk_factor_for,痤疮,Disease,一、遗传，如果父母曾患痤疮或现患痤疮，其子女的患病概率会明显高,Doc_unlabel_0296,unlabel,qwen,0.9
 食管性疾病,Disease,causes,食管狭窄,PathologicalState,由于食管性疾病导致食管狭窄,Doc_unlabel_0297,unlabel,qwen,0.9
 胃幽门梗阻,PathologicalState,causes,梗阻,PathologicalState,由于胃幽门梗阻吃东西以后会导致不能进入肠道，导致食物聚积，会出现梗阻,Doc_unlabel_0297,unlabel,qwen,0.9
 胃癌,Disease,treated_by,管饲营养治疗,Treatment,胃癌管饲营养治疗最主要的问题是局部压迫感染,Doc_unlabel_0297,unlabel,qwen,0.9
@@ -11911,7 +12047,9 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 管饲营养治疗,Treatment,causes,局部压迫感染,PathologicalState,胃癌管饲营养治疗最主要的问题是局部压迫感染,Doc_unlabel_0297,unlabel,qwen,0.9
 鼻咽部口腔溃疡炎症,PathologicalState,located_in,鼻咽部,AnatomicalSite,导致鼻咽部口腔溃疡炎症,Doc_unlabel_0297,unlabel,qwen,0.85
 直肠癌,Disease,is_a,消化道恶性肿瘤,MedicalCategory,直肠癌是最常见的消化道恶性肿瘤之一,Doc_unlabel_0298,unlabel,qwen,0.95
+高脂饮食,RiskFactor,risk_factor_for,直肠癌,Disease,通常认为与高脂饮食有密切相关性,Doc_unlabel_0298,unlabel,qwen,0.9
 绒毛状管状腺瘤,PathologicalState,causes,直肠癌,Disease,直肠良性病变比如绒毛状管状腺瘤的恶变有关,Doc_unlabel_0298,unlabel,qwen,0.85
+家族易感性,RiskFactor,risk_factor_for,直肠癌,Disease,同时还具有一定的家族易感性,Doc_unlabel_0298,unlabel,qwen,0.9
 排便习惯和性状的改变,Symptom,symptom_of,直肠癌,Disease,直肠癌的早期临床表现是排便习惯和性状的改变,Doc_unlabel_0298,unlabel,qwen,0.9
 大便变细,Symptom,symptom_of,直肠癌,Disease,包括大便变细,Doc_unlabel_0298,unlabel,qwen,0.9
 腹泻,Symptom,symptom_of,直肠癌,Disease,腹泻,Doc_unlabel_0298,unlabel,qwen,0.9
@@ -11924,6 +12062,10 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 直肠癌,Disease,treated_by,乙状结肠造瘘,Treatment,无法切除时采用乙状结肠造瘘,Doc_unlabel_0298,unlabel,qwen,0.9
 男性脱发,Disease,is_a,脂溢性脱发,Disease,男性脱发又称为脂溢性脱发,Doc_unlabel_0299,unlabel,qwen,0.95
 男性脱发,Disease,is_a,秃顶,Disease,男性脱发又称为...或秃顶,Doc_unlabel_0299,unlabel,qwen,0.95
+脂溢性脱发,Disease,risk_factor_for,心血管疾病,Disease,是心血管疾病的危险因素,Doc_unlabel_0299,unlabel,qwen,0.95
+脂溢性脱发,Disease,risk_factor_for,高血压,Disease,脂溢性脱发还是高血压...的高发群体,Doc_unlabel_0299,unlabel,qwen,0.85
+脂溢性脱发,Disease,risk_factor_for,高血脂,Disease,脂溢性脱发还是...高血脂...的高发群体,Doc_unlabel_0299,unlabel,qwen,0.85
+脂溢性脱发,Disease,risk_factor_for,糖尿病,Disease,脂溢性脱发还是...糖尿病的高发群体,Doc_unlabel_0299,unlabel,qwen,0.85
 遗传和雄性激素,RiskFactor,causes,男性脱发,Disease,遗传和雄性激素共同作用是发病的主要原因,Doc_unlabel_0299,unlabel,qwen,0.95
 过劳及压力过大,RiskFactor,causes,脱发,Disease,过劳及压力过大引起精神紧张睡眠不足，是目前脱发的主要原因,Doc_unlabel_0299,unlabel,qwen,0.95
 生活没有规律,RiskFactor,causes,脱发,Disease,生活没有规律，可以提前激活早秃遗传基因引起脱发,Doc_unlabel_0299,unlabel,qwen,0.9
@@ -11946,6 +12088,7 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 意外妊娠,Disease,diagnosed_by,血、尿hcg,TestResult,检查血、尿hcg除外避孕失败而意外妊娠的可能,Doc_unlabel_0301,unlabel,qwen,0.85
 盆底肌松弛,PathologicalState,causes,遗尿现象,Symptom,是因为各种原因引起的盆底肌松弛，导致尿道周围肌群松弛、乏力所致,Doc_unlabel_0302,unlabel,qwen,0.95
 盆底肌松弛,PathologicalState,causes,尿道周围肌群松弛,PathologicalState,盆底肌松弛，导致尿道周围肌群松弛,Doc_unlabel_0302,unlabel,qwen,0.95
+中老年女性,RiskFactor,risk_factor_for,遗尿现象,Symptom,多见于中老年女性,Doc_unlabel_0302,unlabel,qwen,0.9
 遗尿现象,Symptom,treated_by,勤排尿,Treatment,轻症者勤排尿、盆底肌群训练，可适当缓解,Doc_unlabel_0302,unlabel,qwen,0.9
 遗尿现象,Symptom,treated_by,盆底肌群训练,Treatment,轻症者勤排尿、盆底肌群训练，可适当缓解,Doc_unlabel_0302,unlabel,qwen,0.9
 遗尿现象,Symptom,treated_by,手术矫正,Treatment,重症者需要手术矫正,Doc_unlabel_0302,unlabel,qwen,0.9
@@ -11956,6 +12099,7 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 咳嗽,Other,causes,遗尿现象,Symptom,严重者咳嗽、大笑，甚至走路时均有可能出现遗尿现象,Doc_unlabel_0302,unlabel,qwen,0.85
 大笑,Other,causes,遗尿现象,Symptom,严重者咳嗽、大笑，甚至走路时均有可能出现遗尿现象,Doc_unlabel_0302,unlabel,qwen,0.85
 走路,Other,causes,遗尿现象,Symptom,严重者咳嗽、大笑，甚至走路时均有可能出现遗尿现象,Doc_unlabel_0302,unlabel,qwen,0.85
+吃完饭之后又吃水果,Other,risk_factor_for,糖尿病,Disease,如果在吃完饭之后又吃水果，会进一步造成血糖过高，如果时间长，会造成发生糖尿病风险的增加,Doc_unlabel_0303,unlabel,qwen,0.9
 餐后吃水果,Other,causes,餐后血糖增高,PathologicalState,如果在餐后吃水果，会造成餐后血糖的进一步增高,Doc_unlabel_0303,unlabel,qwen,0.9
 血糖忽高忽低,PathologicalState,treated_by,在两餐之间吃水果,Treatment,在两餐之间吃水果最好...能够避免血糖忽高忽低,Doc_unlabel_0303,unlabel,qwen,0.85
 水果,Other,located_in,胃肠道,AnatomicalSite,容易造成水果在胃肠道蓄积,Doc_unlabel_0303,unlabel,qwen,0.9
@@ -12032,7 +12176,10 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 幽门螺杆菌感染,RiskFactor,causes,胃炎,Disease,幽门螺杆菌感染是胃炎或胃癌的主要致病因素,Doc_unlabel_0312,unlabel,qwen,0.9
 幽门螺杆菌感染,RiskFactor,causes,胃癌,Disease,幽门螺杆菌感染是胃炎或胃癌的主要致病因素,Doc_unlabel_0312,unlabel,qwen,0.9
 亚硝酸盐,Other,causes,胃黏膜损伤,PathologicalState,此类食物中含有的亚硝酸盐可损伤胃黏膜,Doc_unlabel_0312,unlabel,qwen,0.95
+亚硝酸盐,Other,risk_factor_for,胃炎,Disease,所以易发生胃炎,Doc_unlabel_0312,unlabel,qwen,0.9
 亚硝酸盐,Other,causes,胃癌,Disease,甚至引起胃癌,Doc_unlabel_0312,unlabel,qwen,0.9
+长时间口服阿司匹林,RiskFactor,risk_factor_for,慢性胃炎,Disease,长时间口服阿司匹林的人，是慢性胃炎的高危人群,Doc_unlabel_0312,unlabel,qwen,0.95
+长时间饮酒,RiskFactor,risk_factor_for,慢性胃炎,Disease,长时间饮酒也是慢性胃炎的危险因素,Doc_unlabel_0312,unlabel,qwen,0.95
 长时间饮酒,RiskFactor,causes,胃黏膜损伤,PathologicalState,因长时间饮酒之后会造成胃黏膜的损伤,Doc_unlabel_0312,unlabel,qwen,0.95
 长时间饮酒,RiskFactor,causes,浅表性胃炎,Disease,长期下去易导致浅表性胃炎,Doc_unlabel_0312,unlabel,qwen,0.9
 长时间饮酒,RiskFactor,causes,萎缩性胃炎,Disease,易导致浅表性胃炎、萎缩性胃炎,Doc_unlabel_0312,unlabel,qwen,0.9
@@ -12081,12 +12228,15 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 嗳气,Symptom,symptom_of,肝脾不和,PathologicalState,平时胸胁胀满、嗳气、食少，多于抑郁、恼怒或情绪紧张时发生腹泻，属于肝脾不和引起,Doc_unlabel_0313,unlabel,qwen,0.95
 食少,Symptom,symptom_of,肝脾不和,PathologicalState,平时胸胁胀满、嗳气、食少，多于抑郁、恼怒或情绪紧张时发生腹泻，属于肝脾不和引起,Doc_unlabel_0313,unlabel,qwen,0.95
 腹泻,Symptom,symptom_of,肝脾不和,PathologicalState,平时胸胁胀满、嗳气、食少，多于抑郁、恼怒或情绪紧张时发生腹泻，属于肝脾不和引起,Doc_unlabel_0313,unlabel,qwen,0.95
+抑郁、恼怒或情绪紧张,RiskFactor,risk_factor_for,肝脾不和,PathologicalState,多于抑郁、恼怒或情绪紧张时发生腹泻，属于肝脾不和引起,Doc_unlabel_0313,unlabel,qwen,0.95
 肝脾不和,PathologicalState,treated_by,痛泻宁颗粒,Treatment,可以给痛泻宁颗粒，属于肝脾不和引起,Doc_unlabel_0313,unlabel,qwen,0.95
 腱鞘发炎,Disease,causes,鞘膜积液,Disease,鞘膜积液主要是因为腱鞘发、炎性渗出、水肿导致鞘膜积液,Doc_unlabel_0314,unlabel,qwen,0.9
 炎性渗出,PathologicalState,causes,鞘膜积液,Disease,鞘膜积液主要是因为腱鞘发、炎性渗出、水肿导致鞘膜积液,Doc_unlabel_0314,unlabel,qwen,0.92
 水肿,PathologicalState,causes,鞘膜积液,Disease,鞘膜积液主要是因为腱鞘发、炎性渗出、水肿导致鞘膜积液,Doc_unlabel_0314,unlabel,qwen,0.92
 肿胀,Symptom,symptom_of,鞘膜积液,Disease,导致鞘膜积液，进而出现局部的肿胀和疼痛,Doc_unlabel_0314,unlabel,qwen,0.88
 关节活动受限,Symptom,symptom_of,鞘膜积液,Disease,导致上述情况的原因最常见的就是因为过度的劳累或者过多的精细活动，导致肌腱反复摩擦，进而出现无菌性炎症反应导致积液。临床中最常见的就是手指屈肌腱鞘和腕关节背伸的肌腱腱鞘发炎，导致局部的鞘膜积液。对于上述疾病首先应该注意休息，避免剧烈运动或者是精细活动，局部可以进行热敷疗法以促进血液循环，减轻炎症反应。必要时也可以将积液抽出，同时给予长效激素配合局麻药进行局部封闭疗法。,Doc_unlabel_0314,unlabel,qwen,0.85
+过度的劳累,RiskFactor,risk_factor_for,鞘膜积液,Disease,导致上述情况的原因最常见的就是因为过度的劳累,Doc_unlabel_0314,unlabel,qwen,0.9
+过多的精细活动,RiskFactor,risk_factor_for,鞘膜积液,Disease,导致上述情况的原因最常见的就是因为过度的劳累或者过多的精细活动,Doc_unlabel_0314,unlabel,qwen,0.9
 肌腱反复摩擦,RiskFactor,causes,无菌性炎症反应,PathologicalState,导致肌腱反复摩擦，进而出现无菌性炎症反应导致积液,Doc_unlabel_0314,unlabel,qwen,0.89
 无菌性炎症反应,PathologicalState,causes,鞘膜积液,Disease,进而出现无菌性炎症反应导致积液,Doc_unlabel_0314,unlabel,qwen,0.91
 手指屈肌腱鞘发炎,Disease,causes,鞘膜积液,Disease,临床中最常见的就是手指屈肌腱鞘和腕关节背伸的肌腱腱鞘发炎，导致局部的鞘膜积液,Doc_unlabel_0314,unlabel,qwen,0.93
@@ -12105,6 +12255,9 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 睡眠过多,Other,causes,精神状态差,Symptom,睡多了反而不好，主要有以下的害处:1、容易疲劳，精神状态差,Doc_unlabel_0316,unlabel,qwen,0.95
 睡眠过多,Other,causes,大脑缺氧,PathologicalState,大脑容易缺氧,Doc_unlabel_0316,unlabel,qwen,0.9
 睡眠过多,Other,causes,肥胖,Disease,久而久之就会引起肥胖,Doc_unlabel_0316,unlabel,qwen,0.95
+睡眠过多,Other,risk_factor_for,糖尿病,Disease,睡眠过多会引起很多的害处，如增加糖尿病、心脏病、肥胖症的风险等,Doc_unlabel_0316,unlabel,qwen,0.95
+睡眠过多,Other,risk_factor_for,心脏病,Disease,睡眠过多会引起很多的害处，如增加糖尿病、心脏病、肥胖症的风险等,Doc_unlabel_0316,unlabel,qwen,0.95
+睡眠过多,Other,risk_factor_for,肥胖症,Disease,睡眠过多会引起很多的害处，如增加糖尿病、心脏病、肥胖症的风险等,Doc_unlabel_0316,unlabel,qwen,0.95
 心功能下降,PathologicalState,causes,心慌,Symptom,心功能下降以后稍微运动之后就会出现心慌、气短的情况,Doc_unlabel_0316,unlabel,qwen,0.9
 稍微运动,Other,condition_of,心功能下降,PathologicalState,心功能下降以后稍微运动之后就会出现心慌、气短的情况,Doc_unlabel_0316,unlabel,qwen,0.9
 心功能下降,PathologicalState,causes,气短,Symptom,心功能下降以后稍微运动之后就会出现心慌、气短的情况,Doc_unlabel_0316,unlabel,qwen,0.9
@@ -12216,6 +12369,7 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 进食不洁的食物,RiskFactor,causes,腹泻,Symptom,否则可能会因为进食不洁的食物或者过多的食用葡萄，造成胃肠道的不舒服而引起腹胀或者腹泻,Doc_unlabel_0326,unlabel,qwen,0.9
 宫缩,ClinicalSign,causes,早产,Disease,严重的人甚至会诱发宫缩，造成早产、流产等不利的结局,Doc_unlabel_0326,unlabel,qwen,0.85
 宫缩,ClinicalSign,causes,流产,Disease,严重的人甚至会诱发宫缩，造成早产、流产等不利的结局,Doc_unlabel_0326,unlabel,qwen,0.85
+不注意防护,RiskFactor,risk_factor_for,角膜上皮灼伤,PathologicalState,如果进行电焊时不注意防护，有可能会被电焊烧灼到眼睛,Doc_unlabel_0327,unlabel,qwen,0.95
 电焊,Other,causes,角膜上皮灼伤,PathologicalState,电焊是一种紫外线光，对眼睛角膜上皮造成灼伤,Doc_unlabel_0327,unlabel,qwen,0.95
 眼部疼痛,Symptom,symptom_of,角膜上皮灼伤,PathologicalState,可能会出现眼部疼痛、流泪、畏光,Doc_unlabel_0327,unlabel,qwen,0.9
 流泪,Symptom,symptom_of,角膜上皮灼伤,PathologicalState,可能会出现眼部疼痛、流泪、畏光,Doc_unlabel_0327,unlabel,qwen,0.9
@@ -12318,6 +12472,7 @@ t波倒置,ClinicalSign,symptom_of,肥厚性梗阻型心肌病,Disease,肥厚性
 发热,Symptom,symptom_of,副睾炎,Disease,副睾炎多见于治疗不及时者，常突然感到副睾疼痛、肿大、压痛、发热,Doc_unlabel_0335,unlabel,qwen,0.95
 男性淋病,Disease,causes,副睾炎,Disease,男性淋病常可并发...副睾炎,Doc_unlabel_0335,unlabel,qwen,0.95
 男性淋病,Disease,causes,前列腺炎,Disease,男性淋病常可并发...前列腺炎,Doc_unlabel_0335,unlabel,qwen,0.95
+治疗不及时,RiskFactor,risk_factor_for,副睾炎,Disease,副睾炎多见于治疗不及时者,Doc_unlabel_0335,unlabel,qwen,0.95
 附睾管及输精管闭塞,PathologicalState,causes,不育,PathologicalState,若两侧附睾炎，常引起附睾管及输精管闭塞而导致不育,Doc_unlabel_0335,unlabel,qwen,0.95
 两侧附睾炎,PathologicalState,condition_of,附睾管及输精管闭塞,PathologicalState,若两侧附睾炎，常引起附睾管及输精管闭塞而导致不育,Doc_unlabel_0335,unlabel,qwen,0.95
 男性慢性淋病,Disease,treated_by,医院诊治,Treatment,当发现上述症状时，一定要及时的去医院诊治,Doc_unlabel_0335,unlabel,qwen,0.9
@@ -12477,6 +12632,7 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 节育器下移,PathologicalState,causes,少许出血,Symptom,节育器在下移的过程中，尤其是在接近宫颈的位置，会对于子宫内膜以及宫颈黏膜造成局部挤压，导致少许出血,Doc_unlabel_0355,unlabel,qwen,0.95
 节育器下移,PathologicalState,causes,阴道出血淋漓不尽,Symptom,而且有时也会引起阴道出血淋漓不尽,Doc_unlabel_0355,unlabel,qwen,0.95
 节育器下移,PathologicalState,causes,月经量明显增多,Symptom,或者月经量明显增多,Doc_unlabel_0355,unlabel,qwen,0.95
+节育器移位,PathologicalState,risk_factor_for,异位妊娠,Disease,另外，节育器移位还会增加异位妊娠的风险,Doc_unlabel_0355,unlabel,qwen,0.95
 节育器下移,PathologicalState,located_in,宫颈,AnatomicalSite,尤其是在接近宫颈的位置,Doc_unlabel_0355,unlabel,qwen,0.9
 节育器下移,PathologicalState,located_in,子宫内膜,AnatomicalSite,会对于子宫内膜以及宫颈黏膜造成局部挤压,Doc_unlabel_0355,unlabel,qwen,0.9
 阴道细菌繁殖,PathologicalState,causes,私处瘙痒,Symptom,经期的时候阴道细菌在血里繁殖特别快，而出现了阴道私处瘙痒的情况,Doc_unlabel_0356,unlabel,qwen,0.92
@@ -12614,6 +12770,7 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 睾丸扭转,Disease,diagnosed_by,检查,ExamProcedure,建议到医院检查来排除睾丸扭转,Doc_unlabel_0370,unlabel,qwen,0.9
 阴囊急性疼痛,Symptom,symptom_of,睾丸炎,Disease,睾丸扭转的疼痛与睾丸炎、附睾炎的疼痛类似,Doc_unlabel_0370,unlabel,qwen,0.85
 阴囊急性疼痛,Symptom,symptom_of,附睾炎,Disease,睾丸扭转的疼痛与睾丸炎、附睾炎的疼痛类似,Doc_unlabel_0370,unlabel,qwen,0.85
+时间拖延,Other,risk_factor_for,坏死,PathologicalState,一旦误诊以后时间拖延越久，睾丸缺血、坏死的概率越大,Doc_unlabel_0370,unlabel,qwen,0.88
 怀孕,PathologicalState,causes,月经不来,Symptom,怀孕造成的月经不来,Doc_unlabel_0371,unlabel,qwen,0.95
 无排卵,PathologicalState,causes,月经后推,Symptom,无排卵的情况下，月经一般都会后推,Doc_unlabel_0371,unlabel,qwen,0.95
 无排卵,PathologicalState,diagnosed_by,查女性的激素,ExamProcedure,要去查女性的激素，看看是不是因为这个月没有排卵,Doc_unlabel_0371,unlabel,qwen,0.9
@@ -12657,6 +12814,8 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 包茎,Disease,treated_by,包皮环切手术,Treatment,但是对于包茎的患者则建议进行包皮环切手术治疗,Doc_unlabel_0377,unlabel,qwen,0.95
 包茎,Disease,treated_by,包茎环切手术,Treatment,建议在学龄前进行包茎环切手术治疗,Doc_unlabel_0377,unlabel,qwen,0.95
 包茎,Disease,causes,勃起时疼痛,Symptom,对于成人如果出现包茎则可能会导致勃起时疼痛,Doc_unlabel_0377,unlabel,qwen,0.92
+包茎,Disease,risk_factor_for,包皮感染,Disease,增加包皮感染、阴茎癌发生的概率,Doc_unlabel_0377,unlabel,qwen,0.9
+包茎,Disease,risk_factor_for,阴茎癌,Disease,增加包皮感染、阴茎癌发生的概率,Doc_unlabel_0377,unlabel,qwen,0.9
 促甲状腺激素释放激素,Other,is_a,释放激素,MedicalCategory,下丘脑分泌的激素包括两大类，称为释放激素和抑制激素。主要包括以下几种，促甲状腺激素释放激素,Doc_unlabel_0378,unlabel,qwen,0.95
 生长激素抑制激素,Other,is_a,抑制激素,MedicalCategory,下丘脑分泌的激素包括两大类，称为释放激素和抑制激素。主要包括以下几种...生长激素抑制激素,Doc_unlabel_0378,unlabel,qwen,0.95
 鱼腥臭味,Symptom,symptom_of,细菌性阴道炎,Disease,临床特点为鱼腥臭味,Doc_unlabel_0379,unlabel,qwen,0.95
@@ -12731,6 +12890,7 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 糖尿病,Disease,causes,脑血管病变,PathologicalState,糖尿病容易导致脑血管病变,Doc_unlabel_0388,unlabel,qwen,0.95
 腔隙性脑梗塞,Disease,is_a,糖尿病中枢神经系统病变,MedicalCategory,在糖尿病中枢神经系统病变中，最常见的就是腔隙性脑梗塞,Doc_unlabel_0388,unlabel,qwen,0.9
 长期血糖增高,PathologicalState,causes,毛细血管网受到损伤,PathologicalState,长期血糖增高，使毛细血管网受到损伤,Doc_unlabel_0388,unlabel,qwen,0.92
+血管壁的通透性不好,PathologicalState,risk_factor_for,出血,Symptom,血管壁的通透性不好，容易发生出血,Doc_unlabel_0388,unlabel,qwen,0.88
 发生在脑组织的出血,PathologicalState,is_a,腔隙性脑梗塞,Disease,发生在脑组织的出血，就是发生腔隙性脑梗塞,Doc_unlabel_0388,unlabel,qwen,0.85
 糖尿病,Disease,treated_by,控制好血糖,Treatment,糖尿病患者要控制好血糖,Doc_unlabel_0388,unlabel,qwen,0.9
 糖尿病病史8-10年,Other,condition_of,糖尿病,Disease,糖尿病容易导致脑血管病变，是由于糖尿病时发生慢性并发症，多于糖尿病病史8-10年时发生,Doc_unlabel_0388,unlabel,qwen,0.85
@@ -12749,6 +12909,8 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 剥离面大量渗血,ClinicalSign,causes,局部血肿,PathologicalState,如果止血不佳，会导致剥离面大量渗血，严重时导致手术之后的局部血肿,Doc_unlabel_0390,unlabel,qwen,0.9
 疝囊,Other,is_a,人体腹膜,AnatomicalSite,疝囊本身是正常的人体腹膜,Doc_unlabel_0390,unlabel,qwen,0.95
 疝,Disease,treated_by,手术切除疝囊,Treatment,在疝的手术过程中医生会进行切除、部分切除疝囊,Doc_unlabel_0390,unlabel,qwen,0.85
+营养不良,Disease,risk_factor_for,体温过低,Symptom,像营养不良、贫血的患者，容易出现体温过低,Doc_unlabel_0391,unlabel,qwen,0.9
+贫血,Disease,risk_factor_for,体温过低,Symptom,像营养不良、贫血的患者，容易出现体温过低,Doc_unlabel_0391,unlabel,qwen,0.9
 产热量不足,PathologicalState,causes,体温偏低,Symptom,体内产热量太少，也就是产热量不足而引起体温偏低,Doc_unlabel_0391,unlabel,qwen,0.95
 脏器功能衰退,PathologicalState,causes,新陈代谢比较低,PathologicalState,老年人各个脏器功能衰退...也会导致新陈代谢比较低,Doc_unlabel_0391,unlabel,qwen,0.9
 新陈代谢降低,PathologicalState,causes,体温偏低,Symptom,导致新陈代谢降低，产热量减少，也会出现体温偏低,Doc_unlabel_0391,unlabel,qwen,0.85
@@ -12756,6 +12918,7 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 胃内巨大溃疡,Disease,causes,胃癌,Disease,胃癌发病与以下几种胃部疾病有关:1、胃内巨大溃疡:恶变率可达5%,Doc_unlabel_0393,unlabel,qwen,0.9
 慢性萎缩性胃炎,Disease,causes,胃癌,Disease,胃癌发病与以下几种胃部疾病有关:2、慢性萎缩性胃炎,Doc_unlabel_0393,unlabel,qwen,0.9
 胃大部切除术后残胃,PathologicalState,causes,残胃癌,Disease,3、胃大部切除术后残胃:又称为残胃癌，胃大部切除术后5年，残胃癌变率可达2%,Doc_unlabel_0393,unlabel,qwen,0.9
+胃腺瘤性息肉,Disease,risk_factor_for,胃癌,Disease,"4、胃腺瘤性息肉：癌变率可达10%-20%,且息肉超过2cm,癌变率明显升高",Doc_unlabel_0393,unlabel,qwen,0.92
 胃腺瘤性息肉,Disease,causes,癌变,PathologicalState,"且息肉超过2cm,癌变率明显升高",Doc_unlabel_0393,unlabel,qwen,0.88
 息肉超过2cm,ClinicalSign,condition_of,胃腺瘤性息肉,Disease,"且息肉超过2cm,癌变率明显升高",Doc_unlabel_0393,unlabel,qwen,0.88
 胃内巨大溃疡,Disease,located_in,胃,AnatomicalSite,胃内巨大溃疡,Doc_unlabel_0393,unlabel,qwen,0.95
@@ -13145,6 +13308,8 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 发烧,Symptom,treated_by,温水浴物理降温,Treatment,或者配合温水浴物理降温,Doc_unlabel_0429,unlabel,qwen,0.9
 发烧,Symptom,diagnosed_by,查体,ExamProcedure,通过系统的查体及化验血常规等检查，明确诊断,Doc_unlabel_0429,unlabel,qwen,0.9
 发烧,Symptom,diagnosed_by,血常规,ExamProcedure,通过系统的查体及化验血常规等检查，明确诊断,Doc_unlabel_0429,unlabel,qwen,0.9
+到过疫区,RiskFactor,risk_factor_for,新型冠状病毒肺炎,Disease,若有到过疫区或接触过确诊的患者，建议及时排除此病的可能性,Doc_unlabel_0429,unlabel,qwen,0.88
+接触过确诊的患者,RiskFactor,risk_factor_for,新型冠状病毒肺炎,Disease,若有到过疫区或接触过确诊的患者，建议及时排除此病的可能性,Doc_unlabel_0429,unlabel,qwen,0.88
 外源性补充雌激素,Treatment,causes,雌激素过高,TestResult,可能是外源性补充雌激素,Doc_unlabel_0430,unlabel,qwen,0.85
 肿瘤,Disease,causes,雌激素水平增多,TestResult,比如肿瘤等有可能会使雌激素水平增多,Doc_unlabel_0430,unlabel,qwen,0.9
 肿瘤,Disease,located_in,卵巢,AnatomicalSite,卵巢发生某些问题，比如肿瘤,Doc_unlabel_0430,unlabel,qwen,0.88
@@ -13311,6 +13476,9 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 睑板腺功能障碍,Disease,treated_by,热敷,Treatment,然后局部热敷,Doc_unlabel_0445,unlabel,qwen,0.95
 睑板腺功能障碍,Disease,treated_by,妥布霉素地塞米松眼膏,Treatment,睑缘要涂妥布霉素地塞米松眼膏,Doc_unlabel_0445,unlabel,qwen,0.95
 干眼症,Disease,treated_by,避免长时间待在空调房里,Treatment,3、避免长时间待在空调房里,Doc_unlabel_0445,unlabel,qwen,0.85
+不良的生活方式,RiskFactor,risk_factor_for,甘油三酯高,Disease,后天性因素即不良的生活方式造成,Doc_unlabel_0446,unlabel,qwen,0.9
+基因水平,RiskFactor,risk_factor_for,甘油三酯高,Disease,先天性因素即基因水平方面的,Doc_unlabel_0446,unlabel,qwen,0.9
+甘油三酯高,Disease,risk_factor_for,急性胰腺炎,Disease,有可能诱发急性胰腺炎的风险,Doc_unlabel_0446,unlabel,qwen,0.85
 甘油三酯高,Disease,treated_by,药物治疗,Treatment,只能够通过药物治疗,Doc_unlabel_0446,unlabel,qwen,0.95
 家族性高甘油三酯,Disease,treated_by,贝特类药物,Treatment,本身就属于家族性高甘油三酯的情况，这个时候就需要用药物治疗了，临床上主要用的是贝特类药物,Doc_unlabel_0446,unlabel,qwen,0.95
 高甘油三酯血症,Disease,is_a,家族性高脂血症,Disease,包括家族性高脂血症中的高甘油三酯血症,Doc_unlabel_0446,unlabel,qwen,0.9
@@ -13365,6 +13533,7 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 体内或者胃肠道内有大量的热,PathologicalState,located_in,胃肠道,AnatomicalSite,体内或者胃肠道内,Doc_unlabel_0451,unlabel,qwen,0.8
 高度近视,Disease,is_a,近视,Disease,近视度数超过600度就属于高度近视,Doc_unlabel_0452,unlabel,qwen,0.9
 单基因,Other,causes,高度近视,Disease,单基因导致的高度近视,Doc_unlabel_0452,unlabel,qwen,0.9
+父母双方有高度近视,Other,risk_factor_for,孩子近视,Disease,父母双方有高度近视的，那么孩子近视的可能性会增加,Doc_unlabel_0452,unlabel,qwen,0.85
 近视,Disease,treated_by,户外活动,Treatment,户外活动对近视有明确的预防作用，即每天两小时或者每周累计十小时的户外活动可以预防近视的发展,Doc_unlabel_0452,unlabel,qwen,0.8
 便血,Symptom,symptom_of,直肠癌,Disease,实际上直肠癌80%都会出现便血情况,Doc_unlabel_0453,unlabel,qwen,0.9
 腹泻,Symptom,symptom_of,直肠癌,Disease,腹泻发生持续的大便习惯改变...都是直肠癌部分症状的表现,Doc_unlabel_0453,unlabel,qwen,0.9
@@ -13410,6 +13579,7 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 高血压,Disease,diagnosed_by,多次监测血压,ExamProcedure,对于高血压的确诊，首先对于发现血压升高的患者，需要多次监测血压,Doc_unlabel_0457,unlabel,qwen,0.92
 高血压,Disease,diagnosed_by,24小时动态血压监测,ExamProcedure,或者进行24小时动态血压监测,Doc_unlabel_0457,unlabel,qwen,0.92
 血压升高,ClinicalSign,symptom_of,高血压,Disease,对于高血压的确诊，首先对于发现血压升高的患者,Doc_unlabel_0457,unlabel,qwen,0.88
+紧张,RiskFactor,risk_factor_for,白大衣高血压,Disease,避免因为紧张等因素而出现假现性高血压，或呈白大衣高血压的可能性,Doc_unlabel_0457,unlabel,qwen,0.85
 病变,PathologicalState,located_in,肾上腺,AnatomicalSite,肾上腺、肾动脉有无病变,Doc_unlabel_0457,unlabel,qwen,0.9
 病变,PathologicalState,located_in,肾动脉,AnatomicalSite,肾上腺、肾动脉有无病变,Doc_unlabel_0457,unlabel,qwen,0.9
 睡眠呼吸暂停,Disease,causes,继发性高血压,Disease,除外继发性血压升高，比如肾上腺、肾动脉有无病变，肾功能有无异常、有无睡眠呼吸暂停等,Doc_unlabel_0457,unlabel,qwen,0.87
@@ -13504,6 +13674,7 @@ graves病,Disease,diagnosed_by,促甲状腺素受体抗体(trab),TestResult,临�
 四环素沉积,PathologicalState,located_in,牙本质,AnatomicalSite,造成四环素沉积在牙本质当中,Doc_unlabel_0467,unlabel,qwen,0.95
 牙釉质发育不良,PathologicalState,causes,牙齿呈现黄色、黄褐色,Symptom,牙釉质发育不良造成牙齿呈现黄色、黄褐色,Doc_unlabel_0467,unlabel,qwen,0.95
 牙齿呈现黄色、黄褐色,Symptom,treated_by,蓝光照美白剂,Treatment,另外有一些人由于水的问题，牙釉质发育不良造成牙齿呈现黄色、黄褐色。所以最近一些年出现了一种美白牙齿的方法，用500nm波长的蓝光照美白剂...把颜色变浅,Doc_unlabel_0467,unlabel,qwen,0.85
+包茎,Disease,risk_factor_for,生殖系统的感染,Disease,包茎不卫生容易发生生殖系统的感染,Doc_unlabel_0468,unlabel,qwen,0.9
 包茎,Disease,treated_by,包皮环切术,Treatment,绝大多数男孩会选择在青春期以后进行包茎的包皮环切术,Doc_unlabel_0468,unlabel,qwen,0.9
 生殖系统的感染,Disease,located_in,生殖系统,AnatomicalSite,容易发生生殖系统的感染,Doc_unlabel_0468,unlabel,qwen,0.85
 包皮不能上翻,Symptom,symptom_of,包茎,Disease,如果经过练习包皮还是不能上翻，还是及早手术比较好，因为包茎,Doc_unlabel_0468,unlabel,qwen,0.85
@@ -13766,6 +13937,8 @@ tsh分泌瘤,Disease,causes,tsh升高,TestResult,tsh分泌瘤，当垂体的tsh�
 运动的不利,Symptom,symptom_of,小儿麻痹症,Disease,孩子四肢会出现运动的不利,Doc_unlabel_0495,unlabel,qwen,0.95
 小儿麻痹症,Disease,treated_by,脊髓灰质炎疫苗,Treatment,多数的国家通过服用脊髓灰质炎疫苗都能得到良好的防御,Doc_unlabel_0495,unlabel,qwen,0.95
 小儿麻痹症,Disease,treated_by,预防性的治疗,Treatment,对于小儿麻痹症重要的就是预防性的治疗,Doc_unlabel_0495,unlabel,qwen,0.95
+脊髓灰质炎疫苗服用的方法不当,RiskFactor,risk_factor_for,小儿脊髓灰质炎,Disease,可能脊髓灰质炎疫苗服用的方法不当...可以偶然出现小儿脊髓灰质炎的症状,Doc_unlabel_0495,unlabel,qwen,0.9
+运输过程中造成脊髓灰质炎疫苗的失效,RiskFactor,risk_factor_for,小儿脊髓灰质炎,Disease,或者是运输过程中造成脊髓灰质炎疫苗的失效，可以偶然出现小儿脊髓灰质炎的症状,Doc_unlabel_0495,unlabel,qwen,0.9
 小儿麻痹症,Disease,causes,永久性麻痹症的后遗症,PathologicalState,这个时候对孩子来说会造成永久性麻痹症的后遗症,Doc_unlabel_0495,unlabel,qwen,0.95
 微生物感染,RiskFactor,causes,角膜炎,Disease,微生物感染、外伤、酸碱烧伤、免疫性疾病均可导致角膜炎,Doc_unlabel_0496,unlabel,qwen,0.95
 外伤,RiskFactor,causes,角膜炎,Disease,微生物感染、外伤、酸碱烧伤、免疫性疾病均可导致角膜炎,Doc_unlabel_0496,unlabel,qwen,0.95
@@ -14017,6 +14190,7 @@ tsh分泌瘤,Disease,causes,tsh升高,TestResult,tsh分泌瘤，当垂体的tsh�
 疼痛,Symptom,treated_by,口服双氯芬酸钠,Treatment,如果存在疼痛可以口服布洛芬、双氯芬酸钠等,Doc_unlabel_0520,unlabel,qwen,0.95
 精索静脉曲张,Disease,treated_by,口服迈之灵片,Treatment,第四、可以针对精索静脉曲张，口服迈之灵片、地奥司明片等,Doc_unlabel_0520,unlabel,qwen,0.95
 精索静脉曲张,Disease,treated_by,精索静脉高位结扎术,Treatment,也可以进行精索静脉高位结扎术,Doc_unlabel_0520,unlabel,qwen,0.95
+青壮年男性,RiskFactor,risk_factor_for,精索静脉曲张,Disease,好发于青壮年男性,Doc_unlabel_0520,unlabel,qwen,0.9
 精索静脉曲张,Disease,located_in,左侧,AnatomicalSite,以左侧高发,Doc_unlabel_0520,unlabel,qwen,0.9
 内痔,Disease,is_a,痔疮,Disease,痔疮分为内痔、外痔、混合痔,Doc_unlabel_0521,unlabel,qwen,0.95
 外痔,Disease,is_a,痔疮,Disease,痔疮分为内痔、外痔、混合痔,Doc_unlabel_0521,unlabel,qwen,0.95
@@ -14109,6 +14283,7 @@ tsh分泌瘤,Disease,causes,tsh升高,TestResult,tsh分泌瘤，当垂体的tsh�
 产后体虚,Disease,treated_by,鸽子肉,Treatment,还能治疗产后体虚、血虚等症状,Doc_unlabel_0529,unlabel,qwen,0.9
 血虚,Disease,treated_by,鸽子肉,Treatment,还能治疗产后体虚、血虚等症状,Doc_unlabel_0529,unlabel,qwen,0.9
 吃太多鸽子肉,Other,causes,上火,Symptom,但是不建议吃太多，以防导致产妇发生上火的现象,Doc_unlabel_0529,unlabel,qwen,0.9
+酒精,RiskFactor,risk_factor_for,乳腺癌,Disease,酒精跟乳腺癌有一定关系。饮酒的人乳腺癌的发生明显升高,Doc_unlabel_0530,unlabel,qwen,0.95
 转氨酶升高,ClinicalSign,symptom_of,肝功能异常,PathologicalState,转氨酶升高提示肝功能异常,Doc_unlabel_0531,unlabel,qwen,0.9
 病毒性肝炎,Disease,causes,肝功能异常,PathologicalState,如果是由于病毒性肝炎导致的肝功能异常,Doc_unlabel_0531,unlabel,qwen,0.95
 乙肝,Disease,causes,病毒性肝炎,Disease,甲肝、乙肝、丙肝、戊肝都会导致病毒性肝炎,Doc_unlabel_0531,unlabel,qwen,0.95
@@ -14163,6 +14338,7 @@ tsh分泌瘤,Disease,causes,tsh升高,TestResult,tsh分泌瘤，当垂体的tsh�
 胃痉挛,PathologicalState,treated_by,缓解胃痉挛的药,MedicalCategory,缓解胃痉挛的药有颠茄片,Doc_unlabel_0536,unlabel,qwen,0.9
 手脚冰凉,Symptom,symptom_of,发高烧,Symptom,小孩发高烧的时候手脚冰凉是正常的临床表现,Doc_unlabel_0537,unlabel,qwen,0.92
 炎症反应,PathologicalState,causes,体温升高,Symptom,炎症反应的时候可以导致下丘脑调节体温升高,Doc_unlabel_0537,unlabel,qwen,0.88
+神经系统发育不完善,RiskFactor,risk_factor_for,功能紊乱,PathologicalState,婴幼儿由于神经系统发育不完善，在体温上升期负责血管收缩、舒张的神经容易出现相应的功能紊乱,Doc_unlabel_0537,unlabel,qwen,0.85
 功能紊乱,PathologicalState,causes,手脚冰凉,Symptom,负责血管收缩、舒张的神经容易出现相应的功能紊乱，导致四肢末梢的小血管处于痉挛、收缩的状态，就可以出现手脚冰凉,Doc_unlabel_0537,unlabel,qwen,0.89
 四肢末梢的小血管处于痉挛、收缩的状态,PathologicalState,causes,手脚冰凉,Symptom,导致四肢末梢的小血管处于痉挛、收缩的状态，就可以出现手脚冰凉,Doc_unlabel_0537,unlabel,qwen,0.9
 骨骼肌发生收缩,PathologicalState,causes,寒战,Symptom,在产热的过程中骨骼肌可以发生收缩，就是产热，温度要达到他的最高峰，所以有的孩子可以出现寒战,Doc_unlabel_0537,unlabel,qwen,0.91
@@ -14204,6 +14380,8 @@ tsh分泌瘤,Disease,causes,tsh升高,TestResult,tsh分泌瘤，当垂体的tsh�
 血压大于或等于140/90mmhg,TestResult,is_a,高血压,Disease,血压大于或等于140/90mmhg属于高血压,Doc_unlabel_0541,unlabel,qwen,0.95
 高血压,Disease,treated_by,降压药,Treatment,高血压患者要注意清淡饮食，多吃些蔬菜、水果，需要坚持服用降压药,Doc_unlabel_0541,unlabel,qwen,0.92
 高血压,Disease,treated_by,氨氯地平,Treatment,需要坚持服用降压药，尽量选用长效制剂，如氨氯地平,Doc_unlabel_0541,unlabel,qwen,0.9
+下台阶下不好,RiskFactor,risk_factor_for,脚扭伤,Disease,下台阶下不好，或者是雨天路滑都容易出现脚扭伤的问题,Doc_unlabel_0543,unlabel,qwen,0.9
+雨天路滑,RiskFactor,risk_factor_for,脚扭伤,Disease,下台阶下不好，或者是雨天路滑都容易出现脚扭伤的问题,Doc_unlabel_0543,unlabel,qwen,0.9
 踝关节的水肿,Symptom,symptom_of,脚扭伤,Disease,一旦出现脚扭伤，经常的症状就是踝关节的水肿和疼痛,Doc_unlabel_0543,unlabel,qwen,0.95
 疼痛,Symptom,symptom_of,脚扭伤,Disease,一旦出现脚扭伤，经常的症状就是踝关节的水肿和疼痛,Doc_unlabel_0543,unlabel,qwen,0.95
 局部肿胀,Symptom,symptom_of,骨折,Disease,如果发现局部肿胀很严重，我们还是要高度怀疑是不是有些小的骨折或者是骨裂,Doc_unlabel_0543,unlabel,qwen,0.85
@@ -14216,6 +14394,7 @@ tsh分泌瘤,Disease,causes,tsh升高,TestResult,tsh分泌瘤，当垂体的tsh�
 眼睛的疲劳,Symptom,causes,近视的症状,Symptom,都会导致眼睛的疲劳，时间过长就会形成近视的症状,Doc_unlabel_0544,unlabel,qwen,0.85
 先天性的因素,RiskFactor,causes,高度近视,Disease,近视也有先天性的因素影响，特别是高度近视的患者，先天性的因素是主要原因,Doc_unlabel_0544,unlabel,qwen,0.9
 近视的症状,Symptom,symptom_of,高度近视,Disease,有些高度近视患者在很小的年龄就出现近视的症状,Doc_unlabel_0544,unlabel,qwen,0.85
+遗传因素,RiskFactor,risk_factor_for,耳朵里面流水,Symptom,很可能是受到遗传因素的影响,Doc_unlabel_0545,unlabel,qwen,0.9
 油耳,Disease,causes,耳朵里面流水,Symptom,耳朵是油耳，经常会分泌渗出物,Doc_unlabel_0545,unlabel,qwen,0.85
 头部受到严重的损伤,RiskFactor,causes,颞骨骨折,Disease,导致颞骨骨折,Doc_unlabel_0545,unlabel,qwen,0.95
 颞骨骨折,Disease,causes,耳朵里面流水,Symptom,才会有耳朵里面流水的情况,Doc_unlabel_0545,unlabel,qwen,0.9
@@ -14235,9 +14414,11 @@ tsh分泌瘤,Disease,causes,tsh升高,TestResult,tsh分泌瘤，当垂体的tsh�
 结核病,Disease,diagnosed_by,结核菌素试验,ExamProcedure,结核菌素试验可以是阳性。如果阳性，就考虑还是有结核病,Doc_unlabel_0546,unlabel,qwen,0.9
 结核病,Disease,diagnosed_by,ppd试验,ExamProcedure,采取ppd...作为现在做结核菌素的标准。如果阳性，就考虑还是有结核病,Doc_unlabel_0546,unlabel,qwen,0.9
 ppd试验,ExamProcedure,is_a,结核菌素试验,ExamProcedure,作为现在做结核菌素的标准,Doc_unlabel_0546,unlabel,qwen,0.85
+基因,RiskFactor,risk_factor_for,狐臭,Disease,狐臭一般有家族聚集倾向，所以跟基因有关系,Doc_unlabel_0547,unlabel,qwen,0.9
 腋下小汗腺分泌旺盛,PathologicalState,causes,狐臭,Disease,其发病原因，主要跟腋下小汗腺分泌旺盛，以及大汗腺分泌过多有很大关系,Doc_unlabel_0547,unlabel,qwen,0.95
 大汗腺分泌过多,PathologicalState,causes,狐臭,Disease,其发病原因，主要跟腋下小汗腺分泌旺盛，以及大汗腺分泌过多有很大关系,Doc_unlabel_0547,unlabel,qwen,0.95
 细菌感染,PathologicalState,causes,狐臭,Disease,其中小汗腺分泌过多，常伴有腋下多汗，以及细菌感染,Doc_unlabel_0547,unlabel,qwen,0.85
+青春期体内激素水平,RiskFactor,risk_factor_for,大汗腺分泌过多,PathologicalState,腋下大汗腺分泌过多，主要跟青春期体内激素水平有关系,Doc_unlabel_0547,unlabel,qwen,0.9
 腋下多汗,Symptom,symptom_of,狐臭,Disease,其中小汗腺分泌过多，常伴有腋下多汗,Doc_unlabel_0547,unlabel,qwen,0.85
 剃光腋毛,Treatment,treated_by,狐臭,Disease,这时候可以剃光腋毛，涂抹抗生素的药膏缓解,Doc_unlabel_0547,unlabel,qwen,0.9
 抗生素药膏,Treatment,treated_by,狐臭,Disease,涂抹抗生素的药膏缓解,Doc_unlabel_0547,unlabel,qwen,0.9
@@ -14319,6 +14500,7 @@ ppd试验,ExamProcedure,is_a,结核菌素试验,ExamProcedure,作为现在做结
 心脏神经官能症,Disease,treated_by,参加户外运动,Treatment,适当的参加户外运动,Doc_unlabel_0553,unlabel,qwen,0.85
 前列腺结石,Disease,located_in,前列腺,AnatomicalSite,前列腺结石是在前列腺腺泡和腺管内形成的,Doc_unlabel_0554,unlabel,qwen,0.95
 前列腺结石,Disease,diagnosed_by,b超,ExamProcedure,只是在体检做b超的时候，发现前列腺里边有结石或者钙化,Doc_unlabel_0554,unlabel,qwen,0.95
+前列腺结石,Disease,risk_factor_for,前列腺炎,Disease,如果一旦有前列腺结石，病人出现前列腺炎的风险会增加,Doc_unlabel_0554,unlabel,qwen,0.92
 前列腺结石,Disease,causes,继发感染,Disease,只有前列腺结石出现并发症，比如继发感染,Doc_unlabel_0554,unlabel,qwen,0.9
 前列腺结石,Disease,causes,尿路梗阻,Disease,只有前列腺结石出现并发症，比如继发感染或者尿路梗阻时,Doc_unlabel_0554,unlabel,qwen,0.9
 前列腺结石,Disease,causes,前列腺导管堵塞,PathologicalState,前列腺结石会造成前列腺导管堵塞,Doc_unlabel_0554,unlabel,qwen,0.95
@@ -14352,6 +14534,7 @@ ppd试验,ExamProcedure,is_a,结核菌素试验,ExamProcedure,作为现在做结
 消瘦,Symptom,symptom_of,结核,Disease,结核加重时，呼吸道症状会加重，消瘦,Doc_unlabel_0557,unlabel,qwen,0.95
 食欲下降,Symptom,symptom_of,结核,Disease,结核加重时，呼吸道症状会加重，食欲下降,Doc_unlabel_0557,unlabel,qwen,0.95
 营养不良,RiskFactor,causes,贫血,Disease,以及营养不良引起贫血,Doc_unlabel_0557,unlabel,qwen,0.95
+免疫功能低下,RiskFactor,risk_factor_for,血行播散型结核,Disease,免疫功能低下患者结核菌还可以通过淋巴管侵入血管，引起血行播散型结核,Doc_unlabel_0557,unlabel,qwen,0.9
 血行播散型结核,Disease,causes,高热,Symptom,引起血行播散型结核，引起高热,Doc_unlabel_0557,unlabel,qwen,0.95
 血行播散型结核,Disease,causes,中毒症状,Symptom,引起血行播散型结核，引起高热和中毒症状,Doc_unlabel_0557,unlabel,qwen,0.95
 结核,Disease,located_in,肺部,AnatomicalSite,大量结核在早期肺部出现渗出,Doc_unlabel_0557,unlabel,qwen,0.95
@@ -14364,6 +14547,7 @@ ppd试验,ExamProcedure,is_a,结核菌素试验,ExamProcedure,作为现在做结
 重症结核,Disease,causes,大咯血,Symptom,重症结核会引起大咯血,Doc_unlabel_0557,unlabel,qwen,0.95
 重症结核,Disease,causes,肺心病,Disease,重症结核会引起...肺心病,Doc_unlabel_0557,unlabel,qwen,0.95
 重症结核,Disease,causes,呼吸衰竭,Disease,重症结核会引起...呼吸衰竭,Doc_unlabel_0557,unlabel,qwen,0.95
+小便量太少,Symptom,risk_factor_for,尿路结石,Disease,小便量太少不能充分稀释尿液当中的结晶，会导致结晶体析出增多，会增加患者出现尿路结石的风险,Doc_unlabel_0558,unlabel,qwen,0.9
 小便量太少,Symptom,causes,结晶体析出增多,PathologicalState,小便量太少不能充分稀释尿液当中的结晶，会导致结晶体析出增多,Doc_unlabel_0558,unlabel,qwen,0.9
 口腔,AnatomicalSite,causes,流口水,Symptom,宝宝的口腔比较浅、小，孩子的吞咽能力跟不上，所以就容易出现流口水,Doc_unlabel_0559,unlabel,qwen,0.9
 吞咽能力跟不上,Other,causes,流口水,Symptom,孩子的吞咽能力跟不上，所以就容易出现流口水,Doc_unlabel_0559,unlabel,qwen,0.88
@@ -14380,6 +14564,8 @@ ppd试验,ExamProcedure,is_a,结核菌素试验,ExamProcedure,作为现在做结
 盆腔的炎症,PathologicalState,located_in,盆腔,AnatomicalSite,盆腔的炎症,Doc_unlabel_0560,unlabel,qwen,0.9
 急性乙型脑炎,Disease,is_a,病毒性脑炎,Disease,如果是急性乙型脑炎，这是一种病毒性脑炎,Doc_unlabel_0561,unlabel,qwen,0.95
 脑膜炎双球菌感染,PathologicalState,causes,流行性脑脊髓膜炎,Disease,流行性脑脊髓膜炎，是因为脑膜炎双球菌感染,Doc_unlabel_0561,unlabel,qwen,0.95
+血压突然升高,RiskFactor,risk_factor_for,再次出血,PathologicalState,如果血压突然升高或剧烈活动，还有再次出血的风险,Doc_unlabel_0562,unlabel,qwen,0.9
+剧烈活动,RiskFactor,risk_factor_for,再次出血,PathologicalState,如果血压突然升高或剧烈活动，还有再次出血的风险,Doc_unlabel_0562,unlabel,qwen,0.9
 脑出血,Disease,is_a,危险疾病,MedicalCategory,因为脑出血是一种很危险疾病,Doc_unlabel_0562,unlabel,qwen,0.95
 老年痴呆,Disease,causes,吃饭的功能障碍,Symptom,老年痴呆的患者到晚期出现吃饭的功能障碍，不一定是不想吃饭，而是因为痴呆到一定程度,Doc_unlabel_0563,unlabel,qwen,0.95
 没有饿的感觉,Symptom,symptom_of,老年痴呆,Disease,老年痴呆的患者到了晚期的时候没有饿的感觉了,Doc_unlabel_0563,unlabel,qwen,0.95
@@ -14566,6 +14752,7 @@ ppd试验,ExamProcedure,is_a,结核菌素试验,ExamProcedure,作为现在做结
 艾滋病,Disease,is_a,自身免疫系统的疾病,MedicalCategory,艾滋病作为自身免疫系统的疾病,Doc_unlabel_0580,unlabel,qwen,0.95
 榴莲,Treatment,treated_by,疲劳,Symptom,吃榴莲会使抵抗力增加，也会使免疫力增加，还可以消除疲劳的感觉,Doc_unlabel_0581,unlabel,qwen,0.9
 榴莲,Treatment,causes,抵抗力增加,ClinicalSign,吃榴莲会使抵抗力增加,Doc_unlabel_0581,unlabel,qwen,0.9
+从冰箱里拿出的榴莲,RiskFactor,risk_factor_for,痛经,Disease,从冰箱里拿出的榴莲不要马上在月经期吃，这样太寒凉，以免引起血管收缩而造成痛经的可能,Doc_unlabel_0581,unlabel,qwen,0.85
 血管收缩,PathologicalState,causes,痛经,Disease,引起血管收缩而造成痛经的可能,Doc_unlabel_0581,unlabel,qwen,0.85
 抵抗力下降,ClinicalSign,causes,疲劳,Symptom,在月经期间身体的抵抗力会下降，免疫力也会下降，会有疲劳的感觉,Doc_unlabel_0581,unlabel,qwen,0.88
 月经期间,Other,condition_of,抵抗力下降,ClinicalSign,在月经期间身体的抵抗力会下降，免疫力也会下降，会有疲劳的感觉,Doc_unlabel_0581,unlabel,qwen,0.88
@@ -14715,6 +14902,7 @@ ppd试验,ExamProcedure,is_a,结核菌素试验,ExamProcedure,作为现在做结
 脑供血不足,PathologicalState,causes,头晕,Symptom,继而出现脑供血不足，从而导致头晕症状,Doc_unlabel_0597,unlabel,qwen,0.95
 颈椎骨疾病,Disease,causes,头晕,Symptom,颈椎骨疾病也是造成头晕的一大原因,Doc_unlabel_0597,unlabel,qwen,0.95
 高血压,Disease,causes,头晕,Symptom,造成深蹲后头晕、想吐的原因有多种，例如体位性低血压、高血压,Doc_unlabel_0597,unlabel,qwen,0.95
+高血压,Disease,risk_factor_for,蹲下头晕,Symptom,高血压患者也容易发生蹲下头晕的症状,Doc_unlabel_0597,unlabel,qwen,0.9
 颈椎病,Disease,causes,头晕,Symptom,造成深蹲后头晕、想吐的原因有多种，例如...颈椎病,Doc_unlabel_0597,unlabel,qwen,0.95
 颅脑病变,Disease,causes,头晕,Symptom,造成深蹲后头晕、想吐的原因有多种，例如...颅脑病变等,Doc_unlabel_0597,unlabel,qwen,0.95
 短暂性低血压,Disease,causes,头晕,Symptom,容易发生短暂性低血压的症状，从而引发头晕,Doc_unlabel_0597,unlabel,qwen,0.95
@@ -14748,6 +14936,7 @@ afp、ca125、ca199、he4等明显高于正常,TestResult,symptom_of,恶性,Path
 扁平疣,Disease,located_in,脸,AnatomicalSite,会在脸上、手背上和脖子上越长越多,Doc_unlabel_0600,unlabel,qwen,0.9
 扁平疣,Disease,located_in,手背,AnatomicalSite,会在脸上、手背上和脖子上越长越多,Doc_unlabel_0600,unlabel,qwen,0.9
 扁平疣,Disease,diagnosed_by,检查,ExamProcedure,及时到医院做检查明确病因,Doc_unlabel_0600,unlabel,qwen,0.85
+免疫力低下,RiskFactor,risk_factor_for,扁平疣,Disease,是由于免疫力低下的人乳头瘤病毒感染所导致的,Doc_unlabel_0600,unlabel,qwen,0.88
 维生素e软胶囊,Treatment,is_a,脂溶性药物,MedicalCategory,维生素e软胶囊大多数属于脂溶性药物,Doc_unlabel_0601,unlabel,qwen,0.95
 内分泌失衡,PathologicalState,treated_by,维生素e,Treatment,起到调节内分泌失衡的作用,Doc_unlabel_0601,unlabel,qwen,0.9
 更年期症状,Symptom,treated_by,维生素e,Treatment,缓解更年期症状,Doc_unlabel_0601,unlabel,qwen,0.9
@@ -14881,6 +15070,7 @@ afp、ca125、ca199、he4等明显高于正常,TestResult,symptom_of,恶性,Path
 外伤,Other,causes,面部表皮层遭到破坏,PathologicalState,外伤导致面部表皮层遭到破坏,Doc_unlabel_0617,unlabel,qwen,0.95
 脸上擦破了皮,Symptom,located_in,面部,AnatomicalSite,脸上擦破了皮，应该指的就是外伤导致面部表皮层遭到破坏,Doc_unlabel_0617,unlabel,qwen,0.9
 皮损破了,PathologicalState,treated_by,外用抗生素的药膏,Treatment,当皮损破了以后，局部只要是能够及时外用抗生素的药膏...就会好的快,Doc_unlabel_0617,unlabel,qwen,0.9
+感染,PathologicalState,risk_factor_for,瘢痕,PathologicalState,如果没有感染...愈合以后就一定不会留有瘢痕的,Doc_unlabel_0617,unlabel,qwen,0.85
 创伤愈合,Other,causes,不留瘢痕,PathologicalState,如果仅仅是表皮层遭到破坏，创伤愈合以后肯定是不留瘢痕的,Doc_unlabel_0617,unlabel,qwen,0.88
 仅仅是表皮层遭到破坏,PathologicalState,condition_of,创伤愈合,Other,如果仅仅是表皮层遭到破坏，创伤愈合以后肯定是不留瘢痕的,Doc_unlabel_0617,unlabel,qwen,0.88
 肝病,Disease,causes,低蛋白,PathologicalState,病人存在肝病和肾病，引起低蛋白,Doc_unlabel_0618,unlabel,qwen,0.95
@@ -14969,6 +15159,9 @@ afp、ca125、ca199、he4等明显高于正常,TestResult,symptom_of,恶性,Path
 面肌痉挛,Disease,located_in,面部的肌肉,AnatomicalSite,面肌痉挛即为面部的肌肉的痉挛,Doc_unlabel_0627,unlabel,qwen,0.95
 面肌痉挛,Disease,located_in,颜面部,AnatomicalSite,可能会影响到整个颜面部,Doc_unlabel_0627,unlabel,qwen,0.9
 面肌痉挛,Disease,located_in,颈部,AnatomicalSite,严重的话可以影响到颈部,Doc_unlabel_0627,unlabel,qwen,0.9
+女性,Other,risk_factor_for,面肌痉挛,Disease,临床上女性较男性多发,Doc_unlabel_0627,unlabel,qwen,0.85
+年轻人,Other,risk_factor_for,面肌痉挛,Disease,若为先天性发病，好发于年轻人,Doc_unlabel_0627,unlabel,qwen,0.85
+中青年,Other,risk_factor_for,面肌痉挛,Disease,若为后天性发病，则好发于中青年,Doc_unlabel_0627,unlabel,qwen,0.85
 面肌痉挛,Disease,is_a,痉挛,PathologicalState,面肌痉挛即为面部的肌肉的痉挛,Doc_unlabel_0627,unlabel,qwen,0.9
 溃疡性结肠炎,Disease,is_a,自身免疫性肠病,Disease,自身免疫性肠病，比如溃疡性结肠炎,Doc_unlabel_0628,unlabel,qwen,0.95
 克罗恩肠病,Disease,is_a,自身免疫性肠病,Disease,自身免疫性肠病，比如溃疡性结肠炎或者是克罗恩肠病,Doc_unlabel_0628,unlabel,qwen,0.95
@@ -15003,6 +15196,7 @@ afp、ca125、ca199、he4等明显高于正常,TestResult,symptom_of,恶性,Path
 良性病变,PathologicalState,is_a,良性肿瘤,Disease,最常见的是良性病变，也可以称作是良性肿瘤,Doc_unlabel_0630,unlabel,qwen,0.9
 结节,PathologicalState,located_in,实质性脏器,AnatomicalSite,结节可以发生于人体的各个实质性脏器,Doc_unlabel_0630,unlabel,qwen,0.95
 结节,PathologicalState,located_in,甲状腺,AnatomicalSite,结节可以发生于人体的各个实质性脏器，最常见的有甲状腺,Doc_unlabel_0630,unlabel,qwen,0.9
+短期内逐渐增大的结节,PathologicalState,risk_factor_for,恶变,PathologicalState,而对于短期内逐渐增大的结节就有恶变的倾向,Doc_unlabel_0630,unlabel,qwen,0.85
 不规则的结节,PathologicalState,symptom_of,恶性,Disease,甲状腺的不规则的结节或者比较有疼痛的表现，影像学可以发现有砂粒样的钙化或者周围的供养血管特别明显，这种情况下考虑是恶性的可能性非常大,Doc_unlabel_0630,unlabel,qwen,0.88
 疼痛,Symptom,symptom_of,恶性,Disease,甲状腺的不规则的结节或者比较有疼痛的表现，影像学可以发现有砂粒样的钙化或者周围的供养血管特别明显，这种情况下考虑是恶性的可能性非常大,Doc_unlabel_0630,unlabel,qwen,0.88
 砂粒样的钙化,ClinicalSign,symptom_of,恶性,Disease,影像学可以发现有砂粒样的钙化或者周围的供养血管特别明显，这种情况下考虑是恶性的可能性非常大,Doc_unlabel_0630,unlabel,qwen,0.88
@@ -15118,6 +15312,10 @@ cls,Disease,is_a,毛细血管高渗透性,PathologicalState,cls是一种突发�
 紧张性头痛,Disease,located_in,头部,AnatomicalSite,会表现为头的双侧或者是整个头部有一种不舒服的感觉,Doc_unlabel_0643,unlabel,qwen,0.95
 紧张性头痛,Disease,treated_by,中医针灸,Treatment,可以通过中医针灸、头部按摩的方式帮助患者减轻疼痛,Doc_unlabel_0643,unlabel,qwen,0.95
 紧张性头痛,Disease,treated_by,头部按摩,Treatment,可以通过中医针灸、头部按摩的方式帮助患者减轻疼痛,Doc_unlabel_0643,unlabel,qwen,0.95
+过早的同房,RiskFactor,risk_factor_for,异常出血,Symptom,过早的同房会造成子宫内膜的兴奋，会产生一定的破溃，引起异常出血的几率发生,Doc_unlabel_0644,unlabel,qwen,0.9
+过早的同房,RiskFactor,risk_factor_for,盆腔炎症,Disease,容易造成盆腔炎症和子宫内膜的炎症发生,Doc_unlabel_0644,unlabel,qwen,0.9
+过早的同房,RiskFactor,risk_factor_for,子宫内膜的炎症,Disease,容易造成盆腔炎症和子宫内膜的炎症发生,Doc_unlabel_0644,unlabel,qwen,0.9
+过早的同房,RiskFactor,risk_factor_for,月经产生变化,Symptom,甚至会影响当月的月经产生变化,Doc_unlabel_0644,unlabel,qwen,0.85
 频繁的人工流产,RiskFactor,causes,内膜偏薄,PathologicalState,如果频繁的人工流产失，会造成内膜偏薄,Doc_unlabel_0644,unlabel,qwen,0.9
 频繁的人工流产,RiskFactor,causes,宫腔粘连,PathologicalState,引起宫腔粘连,Doc_unlabel_0644,unlabel,qwen,0.9
 头晕,Symptom,symptom_of,高血压危象,Disease,还会伴有头晕、头痛、恶心、呕吐、四肢无力、胸闷、气短等表现，即可诊断为高血压危象,Doc_unlabel_0645,unlabel,qwen,0.95
@@ -15339,6 +15537,7 @@ iii期或者iv期的重度内痔,Disease,is_a,内痔,Disease,如果是iii期或�
 原发性的髋臼发育不良,PathologicalState,causes,先天性髋关节脱位,Disease,有许多理论阐述先天性髋关节脱位的原因，如...原发性的髋臼发育不良,Doc_unlabel_0666,unlabel,qwen,0.9
 遗传因素,RiskFactor,causes,先天性髋关节脱位,Disease,有许多理论阐述先天性髋关节脱位的原因，如...和遗传因素等,Doc_unlabel_0666,unlabel,qwen,0.9
 异常的屈髋的机械应力,RiskFactor,causes,股骨头的后脱位,Disease,臀位产时有异常的屈髋的机械应力，可以导致股骨头的后脱位,Doc_unlabel_0666,unlabel,qwen,0.95
+雌激素分泌增多,RiskFactor,risk_factor_for,股骨头脱位,Disease,妊娠后期的母亲雌激素分泌增多...所以在新生儿期比较容易发生的就是股骨头脱位,Doc_unlabel_0666,unlabel,qwen,0.9
 活动的幅度过大,RiskFactor,causes,髋关节脱位,Disease,但是要是活动的幅度过大，就会造成髋关节脱位,Doc_unlabel_0666,unlabel,qwen,0.95
 化疗,Treatment,causes,周身乏力,Symptom,经过化疗的病人往往身体状态比较差，可以出现周身乏力、食欲不振等症状,Doc_unlabel_0667,unlabel,qwen,0.95
 化疗,Treatment,causes,食欲不振,Symptom,经过化疗的病人往往身体状态比较差，可以出现周身乏力、食欲不振等症状,Doc_unlabel_0667,unlabel,qwen,0.95
@@ -15462,6 +15661,8 @@ igg,TestResult,symptom_of,肾小球损伤,PathologicalState,若尿中出现igg�
 体内雌孕激素水平大幅度下降,Other,causes,心悸,Symptom,由于体内雌孕激素水平大幅度下降而导致...心悸,Doc_unlabel_0680,unlabel,qwen,0.93
 体内雌孕激素水平大幅度下降,Other,causes,失眠,Symptom,由于体内雌孕激素水平大幅度下降而导致...失眠,Doc_unlabel_0680,unlabel,qwen,0.93
 体内雌孕激素水平大幅度下降,Other,causes,脾气比较暴躁,Symptom,由于体内雌孕激素水平大幅度下降而导致...脾气比较暴躁,Doc_unlabel_0680,unlabel,qwen,0.93
+体内激素改变,Other,risk_factor_for,心脑血管疾病,Disease,体内激素改变，可能会造成潜在的远期不良影响，如女性心血管变化，会增加心脑血管疾病发生的可能,Doc_unlabel_0680,unlabel,qwen,0.9
+女性心血管变化,PathologicalState,risk_factor_for,心脑血管疾病,Disease,如女性心血管变化，会增加心脑血管疾病发生的可能,Doc_unlabel_0680,unlabel,qwen,0.9
 骨质疏松,Disease,causes,腰骶部酸痛,Symptom,也会由于骨质疏松而造成腰骶部酸痛,Doc_unlabel_0680,unlabel,qwen,0.94
 女性雌孕激素水平下降,Other,causes,血脂异常,Disease,还会出现血脂异常，这些情况下均为围绝经期时，女性雌孕激素水平下降造成,Doc_unlabel_0680,unlabel,qwen,0.91
 围绝经期,Disease,condition_of,女性雌孕激素水平下降,Other,还会出现血脂异常，这些情况下均为围绝经期时，女性雌孕激素水平下降造成,Doc_unlabel_0680,unlabel,qwen,0.91
@@ -15476,6 +15677,8 @@ igg,TestResult,symptom_of,肾小球损伤,PathologicalState,若尿中出现igg�
 糖类摄入过多,RiskFactor,causes,尿酸水平难以控制,ClinicalSign,导致尿酸水平也难以控制,Doc_unlabel_0681,unlabel,qwen,0.9
 高尿酸血症,Disease,treated_by,限制高嘌呤的食物,Treatment,对于高尿酸血症，在饮食上主要是要限制高嘌呤的食物,Doc_unlabel_0681,unlabel,qwen,0.9
 高尿酸血症,Disease,treated_by,减少糖分的摄入,Treatment,所以高尿酸血症的患者一定要减少糖分的摄入,Doc_unlabel_0681,unlabel,qwen,0.9
+超重和肥胖,RiskFactor,risk_factor_for,糖代谢异常,PathologicalState,如果患者是超重和肥胖的体型，也容易合并糖代谢异常,Doc_unlabel_0681,unlabel,qwen,0.85
+超重和肥胖,RiskFactor,risk_factor_for,糖尿病,Disease,甚至容易合并有糖尿病的存在,Doc_unlabel_0681,unlabel,qwen,0.85
 关节附近受到重大暴力,RiskFactor,causes,骨折合并脱位,PathologicalState,骨折合并脱位通常都是关节附近受到重大暴力形成,Doc_unlabel_0682,unlabel,qwen,0.95
 肱骨近端骨折合并肩关节脱位,PathologicalState,is_a,骨折合并脱位,PathologicalState,最常见的是肱骨近端骨折合并肩关节脱位,Doc_unlabel_0682,unlabel,qwen,0.95
 孟氏骨折,Disease,is_a,骨折合并脱位,PathologicalState,或者肘关节的孟氏骨折、腕关节的盖氏骨折，都是这种情况,Doc_unlabel_0682,unlabel,qwen,0.95
@@ -15495,13 +15698,19 @@ igg,TestResult,symptom_of,肾小球损伤,PathologicalState,若尿中出现igg�
 消化性溃疡病,Disease,condition_of,过甜的蜂蜜水,Treatment,造成...消化性溃疡病患者，夜间腹部不适...等症状加重,Doc_unlabel_0684,unlabel,qwen,0.95
 过甜的蜂蜜水,Treatment,causes,夜间腹部不适,Symptom,造成...消化性溃疡病患者，夜间腹部不适...等症状加重,Doc_unlabel_0684,unlabel,qwen,0.95
 宫内妊娠,PathologicalState,diagnosed_by,超声检查,ExamProcedure,妊娠囊通过超声检查可以确定宫内妊娠,Doc_unlabel_0685,unlabel,qwen,0.9
+妊娠囊过小,RiskFactor,risk_factor_for,漏吸,ClinicalSign,如果妊娠囊过小，也就是在妊娠6周之内做人工流产，由于妊娠囊过小，可能在手术当中出现漏吸的情况,Doc_unlabel_0685,unlabel,qwen,0.85
+妊娠囊过大,RiskFactor,risk_factor_for,感染,PathologicalState,如果超过8周做人工流产，这个时候由于妊娠囊过大、手术时间长、出血多，术后恢复得慢，感染的情况就有可能增加,Doc_unlabel_0685,unlabel,qwen,0.85
 感染,PathologicalState,treated_by,口服抗生素,Treatment,建议患者口服抗生素预防感染,Doc_unlabel_0685,unlabel,qwen,0.8
+乳汁淤积,PathologicalState,risk_factor_for,浆细胞性乳腺炎,Disease,长时间的乳汁淤积，会比较容易形成此病,Doc_unlabel_0686,unlabel,qwen,0.9
 穿紧身上衣或者戴比较紧的胸罩,RiskFactor,causes,乳头内陷,Symptom,穿紧身上衣或者戴比较紧的胸罩。因为这样会长时间压迫乳头，使乳头内陷,Doc_unlabel_0686,unlabel,qwen,0.9
 乳头内陷,Symptom,treated_by,乳头复位,Treatment,如果发现青春发育期小女生有乳头内陷，应该及时把乳头进行复位,Doc_unlabel_0686,unlabel,qwen,0.85
 不愿意母乳喂养,RiskFactor,causes,乳汁淤积,PathologicalState,不愿意母乳喂养，出现局部有乳汁排放，但是无法正常排出情况，使得乳汁淤积,Doc_unlabel_0686,unlabel,qwen,0.85
 支气管炎,Disease,is_a,气道黏膜炎症,PathologicalState,支气管炎主要是由于生物或者非生物因素所导致的气道黏膜炎症,Doc_unlabel_0687,unlabel,qwen,0.95
 细菌,Other,causes,支气管炎,Disease,生物因素有细菌、病毒、支原体、衣原体等...导致的气道黏膜炎症,Doc_unlabel_0687,unlabel,qwen,0.9
 病毒,Other,causes,支气管炎,Disease,生物因素有细菌、病毒、支原体、衣原体等...导致的气道黏膜炎症,Doc_unlabel_0687,unlabel,qwen,0.9
+冷空气,RiskFactor,risk_factor_for,支气管炎,Disease,非生物因素主要是物理、化学等刺激，比如冷空气、粉尘、刺激性气体等,Doc_unlabel_0687,unlabel,qwen,0.85
+粉尘,RiskFactor,risk_factor_for,支气管炎,Disease,非生物因素主要是物理、化学等刺激，比如冷空气、粉尘、刺激性气体等,Doc_unlabel_0687,unlabel,qwen,0.85
+刺激性气体,RiskFactor,risk_factor_for,支气管炎,Disease,非生物因素主要是物理、化学等刺激，比如冷空气、粉尘、刺激性气体等,Doc_unlabel_0687,unlabel,qwen,0.85
 感染,PathologicalState,treated_by,抗生素,Treatment,如果存在感染，可选用合适的抗生素进行治疗,Doc_unlabel_0687,unlabel,qwen,0.92
 支气管炎,Disease,treated_by,口服药物,Treatment,如果没有感染，一般给予止咳、化痰、平喘等对症治疗的口服药物就可以,Doc_unlabel_0687,unlabel,qwen,0.9
 严重的心肺基础疾病,Disease,treated_by,输液治疗,Treatment,患有严重的心肺基础疾病，可考虑进行输液治疗,Doc_unlabel_0687,unlabel,qwen,0.88
@@ -15584,6 +15793,7 @@ st-t改变,ClinicalSign,symptom_of,先天性心脏病,Disease,st-t改变常见�
 脸型不是特别理想或者协调,Symptom,treated_by,正畸,Treatment,决定是通过手术还是通过正畸来进行面部外形的调整,Doc_unlabel_0695,unlabel,qwen,0.85
 脸型不是特别理想或者协调,Symptom,diagnosed_by,拍摄上下颌骨的片子,ExamProcedure,通过拍摄上下颌骨的片子测定以后，综合评价来决定,Doc_unlabel_0695,unlabel,qwen,0.85
 过度油腻,RiskFactor,causes,消化不良,Symptom,避免过度油腻引起消化不良的现象,Doc_unlabel_0696,unlabel,qwen,0.95
+盆浴,Treatment,risk_factor_for,逆行感染,PathologicalState,只能洗淋浴而不能盆浴，避免增加逆行感染的机会,Doc_unlabel_0696,unlabel,qwen,0.9
 保持良好心态、充足睡眠,Treatment,causes,内分泌环境恢复,PathologicalState,保持良好心态、充足睡眠：是内分泌环境恢复的根本,Doc_unlabel_0696,unlabel,qwen,0.9
 生殖道感染性疾病,Disease,located_in,生殖道,AnatomicalSite,避免生殖道感染性疾病发生,Doc_unlabel_0696,unlabel,qwen,0.85
 适当运动,Treatment,causes,子宫恢复,PathologicalState,也可促进恶露排出、子宫恢复,Doc_unlabel_0696,unlabel,qwen,0.9
@@ -15629,6 +15839,8 @@ st-t改变,ClinicalSign,symptom_of,先天性心脏病,Disease,st-t改变常见�
 粟粒样癌性结节,PathologicalState,diagnosed_by,影像检查,ExamProcedure,通过影像检查可发现胸膜、腹膜上有大量粟粒样癌性结节,Doc_unlabel_0701,unlabel,qwen,0.93
 粟粒样癌性结节,PathologicalState,located_in,胸膜,AnatomicalSite,胸膜、腹膜上有大量粟粒样癌性结节,Doc_unlabel_0701,unlabel,qwen,0.95
 粟粒样癌性结节,PathologicalState,located_in,腹膜,AnatomicalSite,胸膜、腹膜上有大量粟粒样癌性结节,Doc_unlabel_0701,unlabel,qwen,0.95
+盐分摄入过多,RiskFactor,risk_factor_for,高血压,Disease,如果盐分摄入过多，孕期发生高血压等疾病的风险增高,Doc_unlabel_0702,unlabel,qwen,0.95
+亚硝酸盐,Other,risk_factor_for,癌症,Disease,亚硝酸盐对人体有害，有致癌的风险,Doc_unlabel_0702,unlabel,qwen,0.92
 妊娠反应,PathologicalState,causes,胃口比较差,Symptom,受到妊娠反应的影响，尤其是在孕早期常常胃口比较差,Doc_unlabel_0702,unlabel,qwen,0.9
 酸笋,Other,is_a,腌制食品,Other,酸笋本身是一种腌制食品,Doc_unlabel_0702,unlabel,qwen,0.95
 肛裂,Disease,causes,大便出血,Symptom,或者是肛裂痔疮导致的出血,Doc_unlabel_0703,unlabel,qwen,0.85
@@ -15649,6 +15861,7 @@ st-t改变,ClinicalSign,symptom_of,先天性心脏病,Disease,st-t改变常见�
 严重的打哈欠,Symptom,symptom_of,脑缺氧,PathologicalState,但是严重的打哈欠考虑有脑缺氧的情况,Doc_unlabel_0705,unlabel,qwen,0.85
 人困乏,PathologicalState,causes,哈欠不断,Symptom,人困乏时往往哈欠不断,Doc_unlabel_0705,unlabel,qwen,0.8
 大脑已经疲乏,PathologicalState,located_in,大脑,AnatomicalSite,提醒人体大脑已经疲乏,Doc_unlabel_0705,unlabel,qwen,0.85
+肥胖,RiskFactor,risk_factor_for,打鼾,Symptom,肥胖：患者体重超标>20%为临床较危险致病因素,Doc_unlabel_0706,unlabel,qwen,0.95
 气道狭窄,PathologicalState,causes,打鼾,Symptom,打鼾为患者睡眠过程中因气道狭窄,Doc_unlabel_0706,unlabel,qwen,0.95
 上呼吸道结构异常,PathologicalState,causes,打鼾,Symptom,上呼吸道结构异常：如先天性小下颌、下颌后缩、小儿腺样体肥大、扁桃体肥大、鼻甲肥厚、舌体胖大、悬雍垂肥大、软腭下垂均可导致打鼾症状,Doc_unlabel_0706,unlabel,qwen,0.95
 先天性小下颌,PathologicalState,causes,打鼾,Symptom,上呼吸道结构异常：如先天性小下颌、下颌后缩、小儿腺样体肥大、扁桃体肥大、鼻甲肥厚、舌体胖大、悬雍垂肥大、软腭下垂均可导致打鼾症状,Doc_unlabel_0706,unlabel,qwen,0.95
@@ -15682,6 +15895,10 @@ st-t改变,ClinicalSign,symptom_of,先天性心脏病,Disease,st-t改变常见�
 慢性咽炎,Disease,treated_by,药物治疗,Treatment,实在不能缓解的可通过药物治疗、雾化治疗,Doc_unlabel_0708,unlabel,qwen,0.95
 慢性咽炎,Disease,treated_by,雾化治疗,Treatment,实在不能缓解的可通过药物治疗、雾化治疗,Doc_unlabel_0708,unlabel,qwen,0.95
 左边心脏部位隐隐作痛,Symptom,located_in,心脏,AnatomicalSite,左边心脏部位隐隐作痛,Doc_unlabel_0709,unlabel,qwen,0.95
+高血压,RiskFactor,risk_factor_for,心血管病,MedicalCategory,心血管病的危险因素，比如高血压,Doc_unlabel_0709,unlabel,qwen,0.95
+糖尿病,RiskFactor,risk_factor_for,心血管病,MedicalCategory,高血压、糖尿病,Doc_unlabel_0709,unlabel,qwen,0.95
+血脂异常,RiskFactor,risk_factor_for,心血管病,MedicalCategory,糖尿病、血脂异常,Doc_unlabel_0709,unlabel,qwen,0.95
+吸烟,RiskFactor,risk_factor_for,心血管病,MedicalCategory,血脂异常、吸烟等,Doc_unlabel_0709,unlabel,qwen,0.95
 左边心脏部位隐隐作痛,Symptom,symptom_of,冠心病,Disease,需要高度警惕是不是冠心病、心绞痛的发作,Doc_unlabel_0709,unlabel,qwen,0.85
 左边心脏部位隐隐作痛,Symptom,symptom_of,心绞痛,Disease,需要高度警惕是不是冠心病、心绞痛的发作,Doc_unlabel_0709,unlabel,qwen,0.85
 冠脉血管狭窄,PathologicalState,diagnosed_by,冠脉ct,ExamProcedure,必要时可以做冠脉ct，明确冠脉血管有没有狭窄,Doc_unlabel_0709,unlabel,qwen,0.95
@@ -15789,12 +16006,23 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 氯气中毒,Disease,causes,多梦,Symptom,患者会存有失眠、多梦,Doc_unlabel_0720,unlabel,qwen,0.95
 氯气中毒,Disease,causes,健忘,Symptom,患者会存有失眠、多梦、健忘,Doc_unlabel_0720,unlabel,qwen,0.95
 氯气中毒,Disease,causes,植物神经系统功能紊乱,PathologicalState,患者会存有失眠、多梦、健忘、植物神经系统功能紊乱,Doc_unlabel_0720,unlabel,qwen,0.95
+年龄,RiskFactor,risk_factor_for,高血压,Disease,高血压的高危因素主要包括:1、年龄，尤其是60岁以上的患者，就存在高危因素,Doc_unlabel_0722,unlabel,qwen,0.95
+高血压家族史,RiskFactor,risk_factor_for,高血压,Disease,2、有高血压家族史的患者，尤其是父母有高血压的患者,Doc_unlabel_0722,unlabel,qwen,0.95
+吸烟,RiskFactor,risk_factor_for,高血压,Disease,3、吸烟的患者,Doc_unlabel_0722,unlabel,qwen,0.95
+肥胖,RiskFactor,risk_factor_for,高血压,Disease,4、肥胖或者体重超重的患者,Doc_unlabel_0722,unlabel,qwen,0.95
+糖尿病,RiskFactor,risk_factor_for,高血压,Disease,5、经常饮酒有糖尿病的患者，还有高盐饮食的患者，缺乏体育锻炼。这些都是高血压的高危因素,Doc_unlabel_0722,unlabel,qwen,0.95
+高盐饮食,RiskFactor,risk_factor_for,高血压,Disease,5、经常饮酒有糖尿病的患者，还有高盐饮食的患者，缺乏体育锻炼。这些都是高血压的高危因素,Doc_unlabel_0722,unlabel,qwen,0.95
+缺乏体育锻炼,RiskFactor,risk_factor_for,高血压,Disease,5、经常饮酒有糖尿病的患者，还有高盐饮食的患者，缺乏体育锻炼。这些都是高血压的高危因素,Doc_unlabel_0722,unlabel,qwen,0.95
 高血压,Disease,treated_by,降血压的药物,Treatment,在治疗高血压的时候，除了应用降血压的药物以外,Doc_unlabel_0722,unlabel,qwen,0.95
 高血压,Disease,treated_by,控制体重,Treatment,还要治疗这些高危因素，例如控制体重,Doc_unlabel_0722,unlabel,qwen,0.95
 高血压,Disease,treated_by,减少钠盐的摄入,Treatment,例如控制体重、减少钠盐的摄入,Doc_unlabel_0722,unlabel,qwen,0.95
 高血压,Disease,treated_by,增加运动,Treatment,减少钠盐的摄入、增加运动,Doc_unlabel_0722,unlabel,qwen,0.95
 高血压,Disease,treated_by,戒烟限酒,Treatment,增加运动、戒烟限酒,Doc_unlabel_0722,unlabel,qwen,0.95
 高血压,Disease,diagnosed_by,血压的数值,TestResult,高血压的诊断除了依据血压的数值,Doc_unlabel_0722,unlabel,qwen,0.95
+高血压,RiskFactor,risk_factor_for,急性脑卒中,Disease,如果病人也合并有高血压、糖尿病、年龄较大、高脂血症等危险因素，这时突然发生的手部麻木，也要警惕有无急性脑卒中的情况,Doc_unlabel_0723,unlabel,qwen,0.95
+糖尿病,RiskFactor,risk_factor_for,急性脑卒中,Disease,如果病人也合并有高血压、糖尿病、年龄较大、高脂血症等危险因素，这时突然发生的手部麻木，也要警惕有无急性脑卒中的情况,Doc_unlabel_0723,unlabel,qwen,0.95
+高脂血症,RiskFactor,risk_factor_for,急性脑卒中,Disease,如果病人也合并有高血压、糖尿病、年龄较大、高脂血症等危险因素，这时突然发生的手部麻木，也要警惕有无急性脑卒中的情况,Doc_unlabel_0723,unlabel,qwen,0.95
+年龄较大,RiskFactor,risk_factor_for,急性脑卒中,Disease,如果病人也合并有高血压、糖尿病、年龄较大、高脂血症等危险因素，这时突然发生的手部麻木，也要警惕有无急性脑卒中的情况,Doc_unlabel_0723,unlabel,qwen,0.95
 大脑皮层出现小的梗塞,PathologicalState,causes,感觉异常症状,Symptom,大脑皮层出现小的梗塞，患者可出现相应的感觉异常症状,Doc_unlabel_0723,unlabel,qwen,0.95
 颈椎病,Disease,causes,颈部酸痛,Symptom,颈椎病可有颈部酸痛,Doc_unlabel_0723,unlabel,qwen,0.95
 颈椎病,Disease,causes,放射性疼痛,Symptom,同时导致从颈部向下的放射性疼痛、麻木的症状,Doc_unlabel_0723,unlabel,qwen,0.95
@@ -15890,6 +16118,7 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 鼻前庭炎,Disease,treated_by,头孢呋辛酯片,Treatment,常用的是头孢呋辛酯片或者头孢地尼分散片,Doc_unlabel_0732,unlabel,qwen,0.95
 鼻前庭炎,Disease,treated_by,头孢地尼分散片,Treatment,常用的是头孢呋辛酯片或者头孢地尼分散片,Doc_unlabel_0732,unlabel,qwen,0.95
 鼻前庭炎,Disease,located_in,鼻前庭,AnatomicalSite,患者鼻前庭的黏膜、充血、水肿发炎的情况,Doc_unlabel_0732,unlabel,qwen,0.9
+吸烟,RiskFactor,risk_factor_for,肺气肿,Disease,吸烟不仅和肺癌相关，它和肺气肿的发病率也是正相关的,Doc_unlabel_0733,unlabel,qwen,0.9
 有毒的气体,RiskFactor,causes,肺气肿,Disease,在工厂吸入有毒的气体，以及在环境不好的空气内吸入刺激性的气体，也可以导致肺气肿,Doc_unlabel_0733,unlabel,qwen,0.95
 刺激性的气体,RiskFactor,causes,肺气肿,Disease,在工厂吸入有毒的气体，以及在环境不好的空气内吸入刺激性的气体，也可以导致肺气肿,Doc_unlabel_0733,unlabel,qwen,0.95
 上呼吸道感染,Disease,causes,肺气肿,Disease,上呼吸道感染没有得到及时治疗，造成迁延的炎症反应，后期发展成肺气肿,Doc_unlabel_0733,unlabel,qwen,0.85
@@ -15897,6 +16126,7 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 迁延的炎症反应,PathologicalState,causes,肺气肿,Disease,造成迁延的炎症反应，后期发展成肺气肿,Doc_unlabel_0733,unlabel,qwen,0.9
 社会经济地位,RiskFactor,causes,肺气肿,Disease,还有社会经济地位，和人的心情相关，也会导致肺气肿的发生,Doc_unlabel_0733,unlabel,qwen,0.9
 心情,RiskFactor,causes,肺气肿,Disease,还有社会经济地位，和人的心情相关，也会导致肺气肿的发生,Doc_unlabel_0733,unlabel,qwen,0.9
+遗传,RiskFactor,risk_factor_for,肺气肿,Disease,肺气肿的形成主要是两个方面的因素：第一个方面是宿主的因素，宿主因素主要考虑遗传,Doc_unlabel_0733,unlabel,qwen,0.85
 心肌梗死,Disease,causes,乳头肌功能失调,PathologicalState,心肌梗死并发症包括乳头肌功能失调或断裂,Doc_unlabel_0734,unlabel,qwen,0.92
 心肌梗死,Disease,causes,室壁瘤,Disease,心肌梗死并发症包括...室壁瘤,Doc_unlabel_0734,unlabel,qwen,0.92
 心肌梗死,Disease,causes,心肌梗死后综合症,Disease,心肌梗死并发症包括...心肌梗死后综合症,Doc_unlabel_0734,unlabel,qwen,0.92
@@ -15918,6 +16148,8 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 性伴侣的不理解，言语上的刺激,RiskFactor,causes,性功能障碍,PathologicalState,很容易导致男性出现自卑感、情绪焦虑、低落，出现性功能的障碍表现,Doc_unlabel_0735,unlabel,qwen,0.88
 性功能障碍,PathologicalState,treated_by,体育锻炼,Treatment,积极参加体育锻炼，改善身体健康程度，强壮体质，这样性功能可以得到非常好的保持,Doc_unlabel_0735,unlabel,qwen,0.85
 眼睛结石,Disease,is_a,球结膜组织变性疾病,MedicalCategory,眼睛结石不是一种真正的石头，是临床上比较常见的球结膜组织变性疾病,Doc_unlabel_0736,unlabel,qwen,0.95
+慢性结膜炎,Disease,risk_factor_for,结膜结石,Disease,好发于慢性结膜炎,Doc_unlabel_0736,unlabel,qwen,0.9
+沙眼,Disease,risk_factor_for,结膜结石,Disease,好发于...沙眼,Doc_unlabel_0736,unlabel,qwen,0.9
 结膜结石,Disease,located_in,睑结膜,AnatomicalSite,主要是位于睑结膜,Doc_unlabel_0736,unlabel,qwen,0.95
 结膜结石,Disease,located_in,穹隆部结膜,AnatomicalSite,结膜结石是位于睑结膜和穹隆部结膜下方,Doc_unlabel_0736,unlabel,qwen,0.95
 异物感,Symptom,symptom_of,结膜结石,Disease,结石如果突出睑结膜表面，产生异物感,Doc_unlabel_0736,unlabel,qwen,0.85
@@ -15972,6 +16204,7 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 外阴痒,Symptom,symptom_of,湿疹,Disease,常见的是外阴的炎症、湿疹、白斑，都表现为外阴痒,Doc_unlabel_0740,unlabel,qwen,0.9
 外阴痒,Symptom,symptom_of,白斑,Disease,常见的是外阴的炎症、湿疹、白斑，都表现为外阴痒,Doc_unlabel_0740,unlabel,qwen,0.9
 外阴白斑,Disease,is_a,外阴营养不良,PathologicalState,外阴白斑即外阴营养不良,Doc_unlabel_0740,unlabel,qwen,0.95
+外阴白斑,Disease,risk_factor_for,外阴癌,Disease,外阴白斑是外阴癌的高发人群,Doc_unlabel_0740,unlabel,qwen,0.85
 外阴白斑,Disease,diagnosed_by,活检,ExamProcedure,如果痒感强烈，需要去医院就诊和活检,Doc_unlabel_0740,unlabel,qwen,0.8
 霉菌性阴道炎,Disease,causes,外阴痒,Symptom,另外合并的阴道炎症，如霉菌性阴道炎，也会引起严重的外阴痒,Doc_unlabel_0740,unlabel,qwen,0.9
 霉菌性阴道炎,Disease,treated_by,阴道放药,Treatment,需要阴道放药甚至口服药物,Doc_unlabel_0740,unlabel,qwen,0.9
@@ -16170,6 +16403,7 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 甲硝唑,Treatment,causes,双硫仑反应,PathologicalState,还有甲硝唑、酮康唑、呋喃唑酮等药物在使用期间也不可以饮酒，也有可能引起双硫仑反应,Doc_unlabel_0756,unlabel,qwen,0.95
 酮康唑,Treatment,causes,双硫仑反应,PathologicalState,还有甲硝唑、酮康唑、呋喃唑酮等药物在使用期间也不可以饮酒，也有可能引起双硫仑反应,Doc_unlabel_0756,unlabel,qwen,0.95
 呋喃唑酮,Treatment,causes,双硫仑反应,PathologicalState,还有甲硝唑、酮康唑、呋喃唑酮等药物在使用期间也不可以饮酒，也有可能引起双硫仑反应,Doc_unlabel_0756,unlabel,qwen,0.95
+喝酒,RiskFactor,risk_factor_for,双硫仑反应,PathologicalState,在使用头孢菌素类的药物前后7-10天喝酒，都有可能导致出现双硫仑反应,Doc_unlabel_0756,unlabel,qwen,0.9
 面色潮红,Symptom,symptom_of,双硫仑反应,PathologicalState,比较轻的症状是面色潮红、恶心、呕吐等表现，严重的甚至会出现胸闷、呼吸困难以及过敏性休克等症状,Doc_unlabel_0756,unlabel,qwen,0.92
 恶心,Symptom,symptom_of,双硫仑反应,PathologicalState,比较轻的症状是面色潮红、恶心、呕吐等表现，严重的甚至会出现胸闷、呼吸困难以及过敏性休克等症状,Doc_unlabel_0756,unlabel,qwen,0.92
 呕吐,Symptom,symptom_of,双硫仑反应,PathologicalState,比较轻的症状是面色潮红、恶心、呕吐等表现，严重的甚至会出现胸闷、呼吸困难以及过敏性休克等症状,Doc_unlabel_0756,unlabel,qwen,0.92
@@ -16297,7 +16531,11 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 严重缺血,PathologicalState,causes,心律失常,Disease,严重缺血引起的心律失常,Doc_unlabel_0769,unlabel,qwen,0.95
 心肌病,Disease,causes,心律失常,Disease,心肌病引起的心律失常,Doc_unlabel_0769,unlabel,qwen,0.95
 心肌缺血,PathologicalState,treated_by,饮食的控制,Treatment,饮食的控制主要以控制心功能、改善心肌缺血为主,Doc_unlabel_0769,unlabel,qwen,0.9
+高盐饮食,RiskFactor,risk_factor_for,心律失常,Disease,避免高盐、高脂、高糖的饮食...避免过于咸的饮食，因为会加重心脏负担，造成心律失常的进一步恶化,Doc_unlabel_0769,unlabel,qwen,0.9
 血热,PathologicalState,causes,经期提前,Disease,原因是血热,Doc_unlabel_0770,unlabel,qwen,0.95
+素体阳气旺盛,RiskFactor,risk_factor_for,月经提前,Disease,当女性素体阳气旺盛，或者喜食辛辣、补品，都可能导致脉内之血燥动不安，血热妄行，表现为月经提前,Doc_unlabel_0770,unlabel,qwen,0.9
+喜食辛辣,RiskFactor,risk_factor_for,月经提前,Disease,当女性素体阳气旺盛，或者喜食辛辣、补品，都可能导致脉内之血燥动不安，血热妄行，表现为月经提前,Doc_unlabel_0770,unlabel,qwen,0.9
+补品,RiskFactor,risk_factor_for,月经提前,Disease,当女性素体阳气旺盛，或者喜食辛辣、补品，都可能导致脉内之血燥动不安，血热妄行，表现为月经提前,Doc_unlabel_0770,unlabel,qwen,0.9
 色泽鲜红,Symptom,symptom_of,月经提前,Disease,表现为月经提前，色泽鲜红,Doc_unlabel_0770,unlabel,qwen,0.95
 量多,Symptom,symptom_of,月经提前,Disease,量可能多或者正常,Doc_unlabel_0770,unlabel,qwen,0.9
 月经量少,Symptom,symptom_of,月经提前,Disease,月经提前但月经量少,Doc_unlabel_0770,unlabel,qwen,0.95
@@ -16331,6 +16569,9 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 发热,Symptom,symptom_of,肠癌,Disease,部分患者会出现发热,Doc_unlabel_0773,unlabel,qwen,0.95
 消瘦,Symptom,symptom_of,肠癌,Disease,部分患者会出现...消瘦,Doc_unlabel_0773,unlabel,qwen,0.95
 肠梗阻,PathologicalState,symptom_of,肠癌,Disease,表现为...肠梗阻,Doc_unlabel_0773,unlabel,qwen,0.9
+家族性腺瘤性息肉,RiskFactor,risk_factor_for,肠癌,Disease,特别是具有肠癌高发因素的患者，如家族性腺瘤性息肉,Doc_unlabel_0773,unlabel,qwen,0.95
+非息肉性家族遗传疾病,RiskFactor,risk_factor_for,肠癌,Disease,特别是具有肠癌高发因素的患者，如...非息肉性家族遗传疾病,Doc_unlabel_0773,unlabel,qwen,0.95
+慢性肠炎,RiskFactor,risk_factor_for,肠癌,Disease,特别是具有肠癌高发因素的患者，以及慢性肠炎患者,Doc_unlabel_0773,unlabel,qwen,0.95
 肠癌,Disease,diagnosed_by,肠镜,ExamProcedure,不可等到症状出现后再进行检查...建议2年复查1次肠镜,Doc_unlabel_0773,unlabel,qwen,0.9
 肠癌,Disease,diagnosed_by,肿瘤学指标,TestResult,每年体检复查肿瘤学指标,Doc_unlabel_0773,unlabel,qwen,0.9
 息肉,Disease,treated_by,摘除,Treatment,发现息肉要早期摘除,Doc_unlabel_0773,unlabel,qwen,0.95
@@ -16521,6 +16762,7 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 月经过多,Symptom,causes,继发性贫血,PathologicalState,月经过多造成的继发性贫血,Doc_unlabel_0790,unlabel,qwen,0.95
 继发性贫血,PathologicalState,treated_by,红糖水,Treatment,红糖里面还有一些微量元素...对于子宫肌瘤导致月经过多造成的继发性贫血，是有一定的好处,Doc_unlabel_0790,unlabel,qwen,0.85
 红糖水,Treatment,causes,血糖增高,Symptom,避免影响血糖导致血糖增高,Doc_unlabel_0790,unlabel,qwen,0.9
+豆制品,Other,risk_factor_for,子宫肌瘤,Disease,如果吃太多可能会导致肌瘤生长比较快,Doc_unlabel_0790,unlabel,qwen,0.88
 继发性贫血,PathologicalState,treated_by,大枣,Treatment,大枣、阿胶之类的补血食物，来补充铁元素,Doc_unlabel_0790,unlabel,qwen,0.85
 继发性贫血,PathologicalState,treated_by,阿胶,Treatment,大枣、阿胶之类的补血食物，来补充铁元素,Doc_unlabel_0790,unlabel,qwen,0.85
 恶心,Symptom,symptom_of,新冠肺炎,Disease,部分新冠肺炎患者可以出现恶心、呕吐的症状,Doc_unlabel_0791,unlabel,qwen,0.95
@@ -16539,6 +16781,8 @@ b超下输卵管通液检查,ExamProcedure,is_a,输卵管通液,ExamProcedure,�
 新冠肺炎,Disease,diagnosed_by,胸部影像,ExamProcedure,特别是要做核酸的检查，结合胸部影像才能除外或者确诊是否感染新冠肺炎,Doc_unlabel_0791,unlabel,qwen,0.95
 新冠肺炎,Disease,causes,炎症反应,PathologicalState,新冠肺炎感染后常常先表现为肺部的炎症反应,Doc_unlabel_0791,unlabel,qwen,0.9
 炎症反应,PathologicalState,located_in,肺部,AnatomicalSite,肺部的炎症反应,Doc_unlabel_0791,unlabel,qwen,0.95
+高危地区,RiskFactor,risk_factor_for,新冠肺炎,Disease,比如是否去过高危地区,Doc_unlabel_0791,unlabel,qwen,0.85
+聚集性发病,RiskFactor,risk_factor_for,新冠肺炎,Disease,周围有没有聚集性发病,Doc_unlabel_0791,unlabel,qwen,0.85
 病毒感染,Disease,causes,疣,Disease,病毒感染引起的疣,Doc_unlabel_0792,unlabel,qwen,0.95
 疣,Disease,treated_by,咪喹莫特乳膏,Treatment,选择外用咪喹莫特乳膏治疗,Doc_unlabel_0792,unlabel,qwen,0.95
 疣,Disease,treated_by,激光,Treatment,就需要通过激光治疗,Doc_unlabel_0792,unlabel,qwen,0.95
@@ -16566,6 +16810,7 @@ ct检查,ExamProcedure,causes,不能发现脑组织坏死,TestResult,是因为�
 关节疼痛,Symptom,symptom_of,骨关节炎,Disease,待疾病发展到晚期时关节疼痛严重,Doc_unlabel_0794,unlabel,qwen,0.92
 关节畸形,ClinicalSign,symptom_of,骨关节炎,Disease,待疾病发展到晚期时关节疼痛严重，关节畸形，功能受限,Doc_unlabel_0794,unlabel,qwen,0.92
 功能受限,Symptom,symptom_of,骨关节炎,Disease,待疾病发展到晚期时关节疼痛严重，关节畸形，功能受限,Doc_unlabel_0794,unlabel,qwen,0.92
+年龄增大,RiskFactor,risk_factor_for,骨关节炎,Disease,年龄增大只是增加了oa发生危险,Doc_unlabel_0794,unlabel,qwen,0.9
 继发性oa,Disease,is_a,骨关节炎,Disease,"一些与创伤、先天畸形、感染、代谢及神经性疾病有关的oa,称为继发性oa",Doc_unlabel_0794,unlabel,qwen,0.88
 ca199明显升高,TestResult,symptom_of,消化道肿瘤,MedicalCategory,ca199明显升高提示消化道肿瘤,Doc_unlabel_0795,unlabel,qwen,0.95
 胰腺癌,Disease,is_a,消化道肿瘤,MedicalCategory,如胰腺癌、结肠直肠癌、胃癌等,Doc_unlabel_0795,unlabel,qwen,0.95
@@ -16617,6 +16862,8 @@ ca199轻度升高,TestResult,symptom_of,肿瘤,Disease,ca199轻度升高可以�
 静脉回流严重受限,PathologicalState,causes,水肿加重,Symptom,就会导致水肿加重,Doc_unlabel_0798,unlabel,qwen,0.95
 静脉回流严重受限,PathologicalState,treated_by,包皮切口扩大,Treatment,行包皮切口扩大使回流变得通畅,Doc_unlabel_0798,unlabel,qwen,0.9
 性格缺陷,RiskFactor,causes,抑郁障碍,Disease,抑郁障碍的发病原因包括:1、与性格有关:抑郁症患者大多存在性格缺陷,Doc_unlabel_0799,unlabel,qwen,0.9
+成长过程中遇到较多创伤,RiskFactor,risk_factor_for,抑郁发作,PathologicalState,成长过程中遇到较多创伤、或遇到创伤时没有很好的排解方式、或小时候受到心理或身体的虐待、忽视等，可导致抑郁发作几率远高于普通人群,Doc_unlabel_0799,unlabel,qwen,0.9
+小时候受到心理或身体的虐待、忽视,RiskFactor,risk_factor_for,抑郁发作,PathologicalState,成长过程中遇到较多创伤、或遇到创伤时没有很好的排解方式、或小时候受到心理或身体的虐待、忽视等，可导致抑郁发作几率远高于普通人群,Doc_unlabel_0799,unlabel,qwen,0.9
 摄入的食物,Other,causes,胃肠胀气,Symptom,胃肠胀气通常是由摄入的食物引起,Doc_unlabel_0800,unlabel,qwen,0.95
 腹胀,Symptom,symptom_of,阑尾炎,Disease,阑尾炎、胆囊炎、胰腺炎、急性胃肠炎等也会出现腹胀症状,Doc_unlabel_0800,unlabel,qwen,0.95
 腹胀,Symptom,symptom_of,胆囊炎,Disease,阑尾炎、胆囊炎、胰腺炎、急性胃肠炎等也会出现腹胀症状,Doc_unlabel_0800,unlabel,qwen,0.95
@@ -16655,6 +16902,8 @@ ca199轻度升高,TestResult,symptom_of,肿瘤,Disease,ca199轻度升高可以�
 泌乳素,Other,causes,抑制排卵,PathologicalState,哺乳期虽然泌乳素抑制卵巢功能、抑制排卵,Doc_unlabel_0803,unlabel,qwen,0.95
 子宫较大,ClinicalSign,causes,上环容易位置异常甚至脱落,PathologicalState,一般顺产之后哺乳期不宜上环，因为这时子宫较大，上环容易位置异常甚至脱落,Doc_unlabel_0803,unlabel,qwen,0.88
 顺产之后哺乳期,Other,condition_of,子宫较大,ClinicalSign,一般顺产之后哺乳期不宜上环，因为这时子宫较大，上环容易位置异常甚至脱落,Doc_unlabel_0803,unlabel,qwen,0.88
+子宫较大,ClinicalSign,risk_factor_for,位置异常,PathologicalState,因为这时子宫较大，上环容易位置异常甚至脱落,Doc_unlabel_0803,unlabel,qwen,0.85
+哺乳期,Other,risk_factor_for,偶发排卵,ClinicalSign,但也有偶发排卵的可能,Doc_unlabel_0803,unlabel,qwen,0.8
 智齿,AnatomicalSite,causes,邻牙的损害,PathologicalState,智齿萌出的位置和方向不正确，而且有可能会引起邻牙的损害,Doc_unlabel_0804,unlabel,qwen,0.9
 智齿,AnatomicalSite,treated_by,拔除,Treatment,智齿牙根靠近神经可以拔除,Doc_unlabel_0804,unlabel,qwen,0.9
 粗暴的力量,Other,causes,神经的损伤,PathologicalState,如果使用过大的力量，也就是粗暴的力量，可以造成神经的损伤,Doc_unlabel_0804,unlabel,qwen,0.95
@@ -16669,6 +16918,7 @@ ca199轻度升高,TestResult,symptom_of,肿瘤,Disease,ca199轻度升高可以�
 胶囊内镜排不出,Other,treated_by,抗炎治疗,Treatment,几天的抗炎治疗以后，炎症控制好了以后，胶囊也能够自然的排出来,Doc_unlabel_0805,unlabel,qwen,0.9
 胶囊内镜排不出,Other,treated_by,推进式的小肠镜,ExamProcedure,建议做推进式的小肠镜，从口侧进镜把胶囊取出来,Doc_unlabel_0805,unlabel,qwen,0.93
 胶囊内镜排不出,Other,treated_by,剖腹探查,Treatment,推进式小肠镜仍然取不出来的时候，可以考虑做剖腹探查，把胶囊取出来,Doc_unlabel_0805,unlabel,qwen,0.93
+年龄增加,RiskFactor,risk_factor_for,皮肤松弛下垂,PathologicalState,随着年龄增加很多人皮肤松弛下垂,Doc_unlabel_0806,unlabel,qwen,0.9
 皮肤松弛下垂,PathologicalState,causes,黑眼圈,Symptom,皮肤松弛下垂，伴有下眼睑皮肤内、皮肤下面支持结构薄弱、眶隔脂肪膨出，都会加剧眼部黑眼圈的表现,Doc_unlabel_0806,unlabel,qwen,0.9
 皮肤下面支持结构薄弱,PathologicalState,causes,黑眼圈,Symptom,皮肤下面支持结构薄弱、眶隔脂肪膨出，都会加剧眼部黑眼圈的表现,Doc_unlabel_0806,unlabel,qwen,0.9
 眶隔脂肪膨出,PathologicalState,causes,黑眼圈,Symptom,眶隔脂肪膨出，都会加剧眼部黑眼圈的表现,Doc_unlabel_0806,unlabel,qwen,0.9
@@ -16696,6 +16946,7 @@ ca199轻度升高,TestResult,symptom_of,肿瘤,Disease,ca199轻度升高可以�
 免疫缺陷病,Disease,diagnosed_by,体检,ExamProcedure,诊断主要依据病史、体检和相应辅助检查,Doc_unlabel_0808,unlabel,qwen,0.9
 免疫缺陷病,Disease,diagnosed_by,辅助检查,ExamProcedure,诊断主要依据病史、体检和相应辅助检查,Doc_unlabel_0808,unlabel,qwen,0.9
 劳损,PathologicalState,causes,小腿总是酸痛,Symptom,小腿总是酸痛，是由于小腿部位经常处于劳损、疲劳状态，并且伴有受凉，就会导致局部产生比较多的乳酸以及炎症等代谢产物,Doc_unlabel_0809,unlabel,qwen,0.9
+受凉,RiskFactor,risk_factor_for,小腿总是酸痛,Symptom,小腿总是酸痛，是由于小腿部位经常处于劳损、疲劳状态，并且伴有受凉，就会导致局部产生比较多的乳酸以及炎症等代谢产物,Doc_unlabel_0809,unlabel,qwen,0.9
 小腿总是酸痛,Symptom,located_in,小腿,AnatomicalSite,小腿总是酸痛,Doc_unlabel_0809,unlabel,qwen,0.95
 小腿总是酸痛,Symptom,treated_by,暖水袋热敷,Treatment,出现这种情况应当保持小腿部位肌肉的放松，避免过度的疲劳，并且要增加局部暖水袋热敷,Doc_unlabel_0809,unlabel,qwen,0.9
 炎症,PathologicalState,causes,痛的症状,Symptom,炎症代谢产物对末梢神经产生刺激出现痛的症状,Doc_unlabel_0809,unlabel,qwen,0.85
@@ -16779,6 +17030,7 @@ ca199轻度升高,TestResult,symptom_of,肿瘤,Disease,ca199轻度升高可以�
 痔疮,Disease,treated_by,马应龙痔疮膏,Treatment,局部用药包括太宁栓塞、肛门外用马应龙痔疮膏等等,Doc_unlabel_0817,unlabel,qwen,0.88
 iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔疮的严重程度已经达到iii期或者iv期，在临床上称之为晚期的痔疮,Doc_unlabel_0817,unlabel,qwen,0.9
 驼背,Disease,treated_by,背肌锻炼,Treatment,改善驼背最有效的方法是背肌锻炼,Doc_unlabel_0818,unlabel,qwen,0.95
+年龄增大,RiskFactor,risk_factor_for,驼背,Disease,随着年龄增大，逐渐出现驼背症状,Doc_unlabel_0818,unlabel,qwen,0.92
 驼背,Disease,treated_by,平板支撑,Treatment,有些动作，如平板支撑、小燕飞等都可以很好缓解驼背发展趋势,Doc_unlabel_0818,unlabel,qwen,0.93
 驼背,Disease,treated_by,小燕飞,Treatment,有些动作，如平板支撑、小燕飞等都可以很好缓解驼背发展趋势,Doc_unlabel_0818,unlabel,qwen,0.93
 驼背,Disease,treated_by,辅助支具,Treatment,需要通过辅助支具来帮助改善驼背畸形,Doc_unlabel_0818,unlabel,qwen,0.94
@@ -16910,6 +17162,10 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 癫痫,Disease,treated_by,乙琥胺,Treatment,可以根据癫痫种类的不同选择服用卡马西平、奥卡西平、苯妥英钠、丙戊酸钠、乙琥胺、苯巴比妥等药物,Doc_unlabel_0828,unlabel,qwen,0.95
 癫痫,Disease,treated_by,苯巴比妥,Treatment,可以根据癫痫种类的不同选择服用卡马西平、奥卡西平、苯妥英钠、丙戊酸钠、乙琥胺、苯巴比妥等药物,Doc_unlabel_0828,unlabel,qwen,0.95
 癫痫,Disease,treated_by,手术治疗,Treatment,如果癫痫症状逐渐加重或者反复的发作，也可以手术治疗,Doc_unlabel_0828,unlabel,qwen,0.9
+饮酒,RiskFactor,risk_factor_for,癫痫,Disease,很多有因素都有诱发癫痫的可能性...避免饮酒,Doc_unlabel_0828,unlabel,qwen,0.9
+熬夜,RiskFactor,risk_factor_for,癫痫,Disease,不要过于剧烈的运动也不要熬夜,Doc_unlabel_0828,unlabel,qwen,0.9
+剧烈运动,RiskFactor,risk_factor_for,癫痫,Disease,不要过于剧烈的运动也不要熬夜,Doc_unlabel_0828,unlabel,qwen,0.9
+冷、热刺激,RiskFactor,risk_factor_for,癫痫,Disease,避免过度冷、热刺激,Doc_unlabel_0828,unlabel,qwen,0.9
 癫痫发作,Symptom,causes,呼吸道窒息,Symptom,癫痫发作的时候呼吸道窒息有可能影响生命,Doc_unlabel_0828,unlabel,qwen,0.85
 过度劳累,RiskFactor,causes,胳膊肘窝疼,Symptom,过度劳累，长时间劳作或者抱小孩导致胳膊肌肉疲劳，出现胳膊肘窝疼,Doc_unlabel_0829,unlabel,qwen,0.92
 胳膊肘窝疼,Symptom,treated_by,按摩,Treatment,需要进行按摩、热敷，缓解疲劳,Doc_unlabel_0829,unlabel,qwen,0.9
@@ -16969,6 +17225,7 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 胎儿的长大,Other,causes,血压升高,ClinicalSign,随着胎儿的长大，随着孕期越往后发展，其实血压是会逐渐升高的,Doc_unlabel_0833,unlabel,qwen,0.85
 取卵,Treatment,causes,月经来潮的时间发生变化,Symptom,因为取卵的刺激，可能导致月经来潮的时间发生变化,Doc_unlabel_0834,unlabel,qwen,0.9
 月经来潮的时间超过1周,Symptom,diagnosed_by,检查,ExamProcedure,如果超过1周，需要到正规医院妇产科做相应的检查,Doc_unlabel_0834,unlabel,qwen,0.9
+女性,RiskFactor,risk_factor_for,甲状腺腺瘤,Disease,甲状腺腺瘤是普外科的常见病，尤其好发于女性,Doc_unlabel_0835,unlabel,qwen,0.9
 甲状腺腺瘤,Disease,located_in,颈部,AnatomicalSite,临床表现是在颈部一般会触到结节,Doc_unlabel_0835,unlabel,qwen,0.9
 甲状腺腺瘤,Disease,is_a,普外科的常见病,MedicalCategory,甲状腺腺瘤是普外科的常见病,Doc_unlabel_0835,unlabel,qwen,0.95
 局部的胀疼,Symptom,symptom_of,甲状腺结节,Disease,当甲状腺结节逐渐增大，有可能会带来局部的胀疼,Doc_unlabel_0835,unlabel,qwen,0.9
@@ -16981,11 +17238,13 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 多汗,Symptom,symptom_of,甲状腺功能亢进,Disease,会导致甲状腺功能亢进的症状...同时还会容易多汗,Doc_unlabel_0835,unlabel,qwen,0.9
 消瘦,Symptom,symptom_of,甲状腺功能亢进,Disease,会导致甲状腺功能亢进的症状...同时还会容易...消瘦,Doc_unlabel_0835,unlabel,qwen,0.9
 乏力,Symptom,symptom_of,甲状腺功能亢进,Disease,会导致甲状腺功能亢进的症状...同时还会容易...乏力,Doc_unlabel_0835,unlabel,qwen,0.9
+心情不好,Other,risk_factor_for,血压,ClinicalSign,心情不好血压肯定会受影响,Doc_unlabel_0836,unlabel,qwen,0.85
 过度悲伤,Other,causes,人体交感神经活性增加,PathologicalState,过度悲伤、过度兴奋都会导致人体交感神经活性增加,Doc_unlabel_0836,unlabel,qwen,0.9
 过度兴奋,Other,causes,人体交感神经活性增加,PathologicalState,过度悲伤、过度兴奋都会导致人体交感神经活性增加,Doc_unlabel_0836,unlabel,qwen,0.9
 人体交感神经活性增加,PathologicalState,causes,血压,ClinicalSign,过度悲伤、过度兴奋都会导致人体交感神经活性增加，血压会随之波动,Doc_unlabel_0836,unlabel,qwen,0.88
 血压高出正常范围,PathologicalState,treated_by,药物,Treatment,如果血压高出正常范围，要吃药物把血压控制好,Doc_unlabel_0836,unlabel,qwen,0.9
 汗疱疹,Disease,is_a,湿疹,Disease,"汗疱疹在临床当中,其实是一种特殊类型的湿疹",Doc_unlabel_0837,unlabel,qwen,0.95
+夏季天气炎热潮湿,RiskFactor,risk_factor_for,汗疱疹,Disease,往往是在夏季天气炎热潮湿的时候容易出现,Doc_unlabel_0837,unlabel,qwen,0.9
 乳腺癌,Disease,treated_by,放疗,Treatment,在接受手术以后放疗是乳腺癌非常重要的治疗手段,Doc_unlabel_0838,unlabel,qwen,0.95
 放疗,Treatment,causes,放射性皮炎,PathologicalState,放疗期间早期有放射性皮炎,Doc_unlabel_0838,unlabel,qwen,0.95
 发红,Symptom,symptom_of,放疗,Treatment,放疗区域会出现局部的发红、发肿，甚至有些红斑，这是放疗的早期皮肤反应,Doc_unlabel_0838,unlabel,qwen,0.95
@@ -17217,10 +17476,14 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 房间隔缺损,Disease,causes,一过性水肿,Symptom,因为房间隔缺损或者室间隔缺损周围有传导束通过，术后可能发生一过性水肿,Doc_unlabel_0858,unlabel,qwen,0.88
 室间隔缺损,Disease,causes,一过性水肿,Symptom,因为房间隔缺损或者室间隔缺损周围有传导束通过，术后可能发生一过性水肿,Doc_unlabel_0858,unlabel,qwen,0.88
 一过性水肿,Symptom,treated_by,减轻水肿药物,Treatment,术后可能发生一过性水肿...术后需要用减轻水肿药物,Doc_unlabel_0858,unlabel,qwen,0.92
+BRCA基因突变,RiskFactor,risk_factor_for,卵巢癌,Disease,基因检测提示brca基因的突变,Doc_unlabel_0859,unlabel,qwen,0.9
+家族里直系亲属有结直肠癌、乳腺癌，或卵巢癌高发,RiskFactor,risk_factor_for,卵巢癌,Disease,预防高危因素，如家族里直系亲属有结直肠癌、乳腺癌，或卵巢癌高发,Doc_unlabel_0859,unlabel,qwen,0.9
+遗传,RiskFactor,risk_factor_for,卵巢癌,Disease,卵巢癌的发病原因，有一部分是跟遗传相关的,Doc_unlabel_0859,unlabel,qwen,0.85
 卵巢癌,Disease,diagnosed_by,阴道彩超,ExamProcedure,临床上阴道彩超的检查，还有肿瘤标志物的检查，可早期发现一部分病例,Doc_unlabel_0859,unlabel,qwen,0.9
 卵巢癌,Disease,diagnosed_by,肿瘤标志物检查,ExamProcedure,临床上阴道彩超的检查，还有肿瘤标志物的检查，可早期发现一部分病例,Doc_unlabel_0859,unlabel,qwen,0.9
 卵巢癌,Disease,treated_by,口服避孕药,Treatment,口服避孕药可以降低卵巢癌的发生,Doc_unlabel_0859,unlabel,qwen,0.9
 卵巢癌,Disease,treated_by,预防性切除,Treatment,建议行卵巢癌的预防性切除,Doc_unlabel_0859,unlabel,qwen,0.9
+高胆固醇、高脂饮食,RiskFactor,risk_factor_for,卵巢癌,Disease,避免高胆固醇、高脂饮食，保持精神愉快，可以预防卵巢癌的发生,Doc_unlabel_0859,unlabel,qwen,0.85
 脑梗认知障碍,Disease,is_a,血管性痴呆,Disease,脑梗认知障碍考虑是血管性痴呆的一种表现,Doc_unlabel_0860,unlabel,qwen,0.9
 脑梗,Disease,causes,脑萎缩,PathologicalState,由于脑梗的反复发作，病人的脑萎缩比较明显,Doc_unlabel_0860,unlabel,qwen,0.95
 脑梗,Disease,causes,认知障碍,Symptom,由于脑梗的反复发作，病人的脑萎缩比较明显，病人可出现认知障碍,Doc_unlabel_0860,unlabel,qwen,0.9
@@ -17287,6 +17550,7 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 强直性脊柱炎,Disease,is_a,自身免疫性疾病,MedicalCategory,强直性脊柱炎为一种具有一定遗传性的自身免疫性疾病,Doc_unlabel_0865,unlabel,qwen,0.95
 强直性脊柱炎,Disease,diagnosed_by,骶髂关节影像学检查,ExamProcedure,若怀疑有强直性脊柱炎，可经以下检查发现:1、骶髂关节影像学检查,Doc_unlabel_0865,unlabel,qwen,0.95
 强直性脊柱炎,Disease,diagnosed_by,基因检测,ExamProcedure,2、基因检测,Doc_unlabel_0865,unlabel,qwen,0.95
+hla-b27基因,TestResult,risk_factor_for,强直性脊柱炎,Disease,即hla-b27基因，若存在此基因则具有发病可能,Doc_unlabel_0865,unlabel,qwen,0.9
 强直性脊柱炎,Disease,diagnosed_by,炎症介质检测,ExamProcedure,3、炎症介质检测,Doc_unlabel_0865,unlabel,qwen,0.95
 强直性脊柱炎,Disease,diagnosed_by,血沉,TestResult,如血沉,Doc_unlabel_0865,unlabel,qwen,0.95
 强直性脊柱炎,Disease,diagnosed_by,c反应蛋白,TestResult,c反应蛋白,Doc_unlabel_0865,unlabel,qwen,0.95
@@ -17463,6 +17727,7 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 反酸,Symptom,symptom_of,胃食管反流,Disease,反流到食管引起的症状，主要是反酸,Doc_unlabel_0882,unlabel,qwen,0.9
 烧心,Symptom,symptom_of,胃食管反流,Disease,反流到食管引起的症状，主要是...烧心,Doc_unlabel_0882,unlabel,qwen,0.9
 哮喘,Symptom,symptom_of,胃食管反流,Disease,引起慢性咳嗽、晕厥、哮喘、喉痉挛等等气道的症状,Doc_unlabel_0882,unlabel,qwen,0.85
+卵巢囊肿,Disease,risk_factor_for,蒂扭转,PathologicalState,卵巢囊肿同床的时候容易发生两个并发症，一个是蒂扭转,Doc_unlabel_0883,unlabel,qwen,0.95
 卵巢肿瘤,Disease,causes,蒂扭转,PathologicalState,这是卵巢肿瘤常见的并发症，大约10%的卵巢肿瘤发生蒂扭转,Doc_unlabel_0883,unlabel,qwen,0.95
 蒂扭转,PathologicalState,causes,缺血坏死,PathologicalState,发生了扭转，这时候肿物就缺血坏死,Doc_unlabel_0883,unlabel,qwen,0.95
 蒂扭转,PathologicalState,causes,继发感染,PathologicalState,引起继发感染,Doc_unlabel_0883,unlabel,qwen,0.95
@@ -17474,6 +17739,10 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 囊肿,Disease,located_in,盆腔,AnatomicalSite,b超发现盆腔里有实心的、大约直径在5-6cm的囊肿,Doc_unlabel_0883,unlabel,qwen,0.95
 囊肿,Disease,treated_by,积极治疗,Treatment,如果b超发现盆腔里有实心的、大约直径在5-6cm的囊肿，应该积极治疗,Doc_unlabel_0883,unlabel,qwen,0.95
 囊肿,Disease,treated_by,手术治疗,Treatment,有手术适应证的话，应该积极的手术治疗,Doc_unlabel_0883,unlabel,qwen,0.95
+性生活,Other,risk_factor_for,破裂,PathologicalState,进行性生活...囊肿可能会出现破裂,Doc_unlabel_0883,unlabel,qwen,0.9
+腹部受压,Other,risk_factor_for,破裂,PathologicalState,腹部受压...囊肿可能会出现破裂,Doc_unlabel_0883,unlabel,qwen,0.9
+分娩,Other,risk_factor_for,破裂,PathologicalState,分娩...囊肿可能会出现破裂,Doc_unlabel_0883,unlabel,qwen,0.9
+妇科检查,ExamProcedure,risk_factor_for,破裂,PathologicalState,过力的妇科检查...囊肿可能会出现破裂,Doc_unlabel_0883,unlabel,qwen,0.9
 老年性黄斑变性,Disease,is_a,老年人眼睛黄斑病变,MedicalCategory,老年人眼睛黄斑病变，最常见的是老年性黄斑变性,Doc_unlabel_0884,unlabel,qwen,0.95
 萎缩性的老年黄斑变性,Disease,is_a,老年性黄斑变性,Disease,可分为两种类型：1、萎缩性的老年黄斑变性,Doc_unlabel_0884,unlabel,qwen,0.95
 视网膜色素上皮层的萎缩,PathologicalState,symptom_of,萎缩性的老年黄斑变性,Disease,萎缩性的老年黄斑变性，通常表现为视网膜色素上皮层的萎缩,Doc_unlabel_0884,unlabel,qwen,0.9
@@ -17487,6 +17756,7 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 渗出性的老年黄斑变性,Disease,treated_by,玻璃体腔注射抗新生血管生长因子的药物,Treatment,常给予玻璃体腔注射抗新生血管生长因子的药物,Doc_unlabel_0884,unlabel,qwen,0.9
 激素变化,PathologicalState,causes,妊娠期肝内胆汁淤积症,Disease,由于激素变化，容易引起妊娠期肝内胆汁淤积症,Doc_unlabel_0885,unlabel,qwen,0.95
 激素变化,PathologicalState,causes,总胆汁酸增高,ClinicalSign,由于激素变化，容易引起...总胆汁酸增高,Doc_unlabel_0885,unlabel,qwen,0.95
+饮食不当,RiskFactor,risk_factor_for,体内胆汁酸高,ClinicalSign,再加上饮食不当，容易加重肝、脏方面的疾病，就会出现体内胆汁酸高,Doc_unlabel_0885,unlabel,qwen,0.9
 饮食不当,RiskFactor,causes,体内胆汁酸高,ClinicalSign,怀孕后身体抵抗力低下，再加上饮食不当，容易加重肝、脏方面的疾病，就会出现体内胆汁酸高,Doc_unlabel_0885,unlabel,qwen,0.88
 怀孕后身体抵抗力低下,PathologicalState,condition_of,饮食不当,RiskFactor,怀孕后身体抵抗力低下，再加上饮食不当，容易加重肝、脏方面的疾病，就会出现体内胆汁酸高,Doc_unlabel_0885,unlabel,qwen,0.88
 孕期总胆汁酸高,ClinicalSign,causes,皮肤瘙痒,Symptom,孕期总胆汁酸高，还会引起皮肤瘙痒等,Doc_unlabel_0885,unlabel,qwen,0.95
@@ -17496,8 +17766,11 @@ iii期或者iv期,MedicalCategory,is_a,晚期的痔疮,MedicalCategory,说明痔
 妊娠期间出现总胆汁酸高,ClinicalSign,treated_by,熊去氧胆酸片,Treatment,需要在医生指导下，合理使用药物，比如可以用熊去氧胆酸片,Doc_unlabel_0885,unlabel,qwen,0.9
 妊娠期间出现总胆汁酸高,ClinicalSign,treated_by,地塞米松,Treatment,比如可以用...地塞米松等药物治疗,Doc_unlabel_0885,unlabel,qwen,0.9
 总胆汁酸高,ClinicalSign,diagnosed_by,检查,ExamProcedure,不管是哪种原因，引起的这种情况，都需要去医院进行检查,Doc_unlabel_0885,unlabel,qwen,0.85
+叶酸缺乏,RiskFactor,risk_factor_for,神经管畸形,Disease,如果在妊娠早期出现了叶酸缺乏的现象，可增加胎儿发生神经管畸形及早产的危险,Doc_unlabel_0886,unlabel,qwen,0.95
+叶酸缺乏,RiskFactor,risk_factor_for,早产,Disease,如果在妊娠早期出现了叶酸缺乏的现象，可增加胎儿发生神经管畸形及早产的危险,Doc_unlabel_0886,unlabel,qwen,0.95
 神经管缺陷病,Disease,treated_by,口服叶酸,Treatment,对于有过神经管缺陷病患者的话，孕前口服叶酸要增大剂量,Doc_unlabel_0886,unlabel,qwen,0.9
 叶酸缺乏,PathologicalState,treated_by,补充叶酸,Treatment,所以一定要及时的补充叶酸,Doc_unlabel_0886,unlabel,qwen,0.9
+长时间玩手机,RiskFactor,risk_factor_for,胎儿畸形,PathologicalState,如果长时间地玩手机，特别在怀孕前3个月时，会对胎儿造成影响，增高胎儿畸形率,Doc_unlabel_0887,unlabel,qwen,0.9
 长时间玩手机,RiskFactor,causes,眼睛干涩,Symptom,长时间的手机会对孕妇身体有影响，导致眼睛干涩、视力下降,Doc_unlabel_0887,unlabel,qwen,0.95
 长时间玩手机,RiskFactor,causes,视力下降,Symptom,长时间的手机会对孕妇身体有影响，导致眼睛干涩、视力下降,Doc_unlabel_0887,unlabel,qwen,0.95
 手机,Other,is_a,辐射源,Other,手机属于辐射源的一种,Doc_unlabel_0887,unlabel,qwen,0.95
@@ -17909,6 +18182,7 @@ t波倒置,ClinicalSign,symptom_of,心绞痛,Disease,也有少数患者仅表现
 雌激素升高,PathologicalState,causes,蜘蛛痣,ClinicalSign,雌激素会稍微升高，会导致出现蜘蛛痣,Doc_unlabel_0926,unlabel,qwen,0.9
 蜘蛛痣,ClinicalSign,symptom_of,肝硬化失代偿期,Disease,蜘蛛痔是说明肝硬化失代偿期出现激素水平代谢异常的一个征象,Doc_unlabel_0926,unlabel,qwen,0.92
 蜘蛛痣,ClinicalSign,located_in,颈前、前胸部,AnatomicalSite,蜘蛛痣主要指颈前、前胸部出现红色放射状像蜘蛛样的小血管网,Doc_unlabel_0926,unlabel,qwen,0.95
+高危性行为史,RiskFactor,risk_factor_for,淋病,Disease,淋病的患者往往都具有高危性行为史,Doc_unlabel_0927,unlabel,qwen,0.9
 尿频,Symptom,symptom_of,淋病,Disease,像尿频、尿急、尿痛、尿道口有明显脓性分泌物,Doc_unlabel_0927,unlabel,qwen,0.9
 尿急,Symptom,symptom_of,淋病,Disease,像尿频、尿急、尿痛、尿道口有明显脓性分泌物,Doc_unlabel_0927,unlabel,qwen,0.9
 尿痛,Symptom,symptom_of,淋病,Disease,像尿频、尿急、尿痛、尿道口有明显脓性分泌物,Doc_unlabel_0927,unlabel,qwen,0.9
@@ -17968,6 +18242,15 @@ e抗原的编码基因突变,PathologicalState,causes,e抗原不能够合成,Pat
 宫颈出血,Symptom,treated_by,治疗,Treatment,再根据病因相应治疗,Doc_unlabel_0934,unlabel,qwen,0.85
 炎症,PathologicalState,located_in,阴道,AnatomicalSite,在阴道或宫颈有炎症时,Doc_unlabel_0934,unlabel,qwen,0.95
 炎症,PathologicalState,located_in,宫颈,AnatomicalSite,在阴道或宫颈有炎症时,Doc_unlabel_0934,unlabel,qwen,0.95
+初潮年龄早,RiskFactor,risk_factor_for,乳腺癌,Disease,初潮年龄越早，出现乳腺癌的风险越高,Doc_unlabel_0935,unlabel,qwen,0.95
+绝经年龄晚,RiskFactor,risk_factor_for,乳腺癌,Disease,如果绝经年龄越晚，患乳腺癌的概率可能会增加,Doc_unlabel_0935,unlabel,qwen,0.95
+激素替代疗法,Treatment,risk_factor_for,乳腺癌,Disease,与激素替代疗法有关，如患者为延缓衰老，会采取激素补充，其对乳腺癌发生有一定危险,Doc_unlabel_0935,unlabel,qwen,0.95
+直系亲属乳腺癌病史,RiskFactor,risk_factor_for,乳腺癌,Disease,母亲辈或直系亲属辈女性有乳腺癌病史，其后代女性出现乳腺癌的概率会增加,Doc_unlabel_0935,unlabel,qwen,0.95
+营养过剩,RiskFactor,risk_factor_for,乳腺癌,Disease,其它因素，如营养过剩、肥胖等，近年来小女孩出现肥胖、性早熟较多，出现乳腺癌的概率会增加,Doc_unlabel_0935,unlabel,qwen,0.95
+肥胖,RiskFactor,risk_factor_for,乳腺癌,Disease,其它因素，如营养过剩、肥胖等，近年来小女孩出现肥胖、性早熟较多，出现乳腺癌的概率会增加,Doc_unlabel_0935,unlabel,qwen,0.95
+性早熟,RiskFactor,risk_factor_for,乳腺癌,Disease,近年来小女孩出现肥胖、性早熟较多，出现乳腺癌的概率会增加,Doc_unlabel_0935,unlabel,qwen,0.95
+环境压力,RiskFactor,risk_factor_for,乳腺癌,Disease,由于环境压力、心理因素，一定程度上会增加乳腺癌的发生概率,Doc_unlabel_0935,unlabel,qwen,0.95
+心理因素,RiskFactor,risk_factor_for,乳腺癌,Disease,由于环境压力、心理因素，一定程度上会增加乳腺癌的发生概率,Doc_unlabel_0935,unlabel,qwen,0.95
 呕血,Symptom,symptom_of,胃肠道出血,Disease,呕血是胃肠道出血的急性症状,Doc_unlabel_0936,unlabel,qwen,0.95
 便血,Symptom,symptom_of,胃肠道出血,Disease,胃肠道出血有以下症状:1、便血,Doc_unlabel_0936,unlabel,qwen,0.95
 黑便,Symptom,symptom_of,胃肠道出血,Disease,胃肠道出血有以下症状:1、便血、呕血、黑便,Doc_unlabel_0936,unlabel,qwen,0.95
@@ -18001,6 +18284,7 @@ e抗原的编码基因突变,PathologicalState,causes,e抗原不能够合成,Pat
 癫痫,Disease,treated_by,药物,Treatment,一般80%的癫痫完全可以用药物控制住,Doc_unlabel_0939,unlabel,qwen,0.9
 大发作,Symptom,treated_by,苯妥英钠,Treatment,大发作时选择的药物是苯妥英钠,Doc_unlabel_0939,unlabel,qwen,0.95
 局灶性运动性发作,Symptom,treated_by,丙戊酸钠,Treatment,局灶性运动性发作给予患者口服丙戊酸钠,Doc_unlabel_0939,unlabel,qwen,0.95
+饮酒,RiskFactor,risk_factor_for,癫痫发作,Symptom,饮酒会加重癫痫发作的频繁,Doc_unlabel_0939,unlabel,qwen,0.85
 饮酒,RiskFactor,causes,癫痫的持续状态,PathologicalState,诱发癫痫的持续状态,Doc_unlabel_0939,unlabel,qwen,0.9
 心理过度紧张、焦虑,Other,causes,内分泌失调,PathologicalState,如果在备孕期间，心理过度紧张、焦虑，可能导致内分泌失调,Doc_unlabel_0940,unlabel,qwen,0.88
 备孕期间,Other,condition_of,心理过度紧张、焦虑,Other,如果在备孕期间，心理过度紧张、焦虑，可能导致内分泌失调,Doc_unlabel_0940,unlabel,qwen,0.88
@@ -18095,6 +18379,9 @@ e抗原的编码基因突变,PathologicalState,causes,e抗原不能够合成,Pat
 社会交往沟通障碍,Symptom,symptom_of,孤独症,Disease,孤独症在医学上主要有两大体现:一类为社会交往沟通障碍,Doc_unlabel_0953,unlabel,qwen,0.95
 行为刻板,Symptom,symptom_of,孤独症,Disease,孤独症在医学上主要有两大体现:...第二类为行为刻板,Doc_unlabel_0953,unlabel,qwen,0.95
 兴趣狭窄,Symptom,symptom_of,孤独症,Disease,孤独症在医学上主要有两大体现:...第二类为...兴趣狭窄,Doc_unlabel_0953,unlabel,qwen,0.95
+抽烟,RiskFactor,risk_factor_for,拔牙创出血,Symptom,过早的抽烟有可能会使相应的口腔形成明确的负压环境，从而造成拔牙创压力增大，出现血凝块松脱和拔牙创出血的风险加大,Doc_unlabel_0954,unlabel,qwen,0.9
+抽烟,RiskFactor,risk_factor_for,血凝块松脱,Symptom,过早的抽烟有可能会使相应的口腔形成明确的负压环境，从而造成拔牙创压力增大，出现血凝块松脱和拔牙创出血的风险加大,Doc_unlabel_0954,unlabel,qwen,0.9
+长期抽烟,RiskFactor,risk_factor_for,牙周炎,Disease,长期抽烟会对患者的牙周造成较大的影响，引起牙周炎的高发,Doc_unlabel_0954,unlabel,qwen,0.9
 普通感冒,Disease,is_a,急性上呼吸道感染,Disease,普通感冒其实叫急性上呼吸道感染,Doc_unlabel_0955,unlabel,qwen,0.95
 咳嗽,Symptom,symptom_of,急性上呼吸道感染,Disease,急性感染的病人往往伴随早期咳嗽,Doc_unlabel_0955,unlabel,qwen,0.9
 黏膜充血、肿胀、刺激,PathologicalState,causes,干咳,Symptom,因为黏膜充血、肿胀、刺激，会出现干咳,Doc_unlabel_0955,unlabel,qwen,0.92
@@ -18346,6 +18633,8 @@ hpv,Other,causes,宫颈癌,Disease,hpv引起的宫颈癌,Doc_unlabel_0956,unlabe
 心功能不全,Disease,treated_by,单硝酸异山梨酯,Treatment,常用的药物包括西地兰、地高辛、呋塞米、螺内酯、硝酸甘油、硝普钠、单硝酸异山梨酯等等,Doc_unlabel_0978,unlabel,qwen,0.9
 基因对钙代谢障碍,PathologicalState,causes,结石,Disease,即基因对钙代谢障碍是造成得结石的最主要病因,Doc_unlabel_0979,unlabel,qwen,0.95
 结石体质,PathologicalState,causes,结石,Disease,结石的最主要原因是结石体质，即基因对钙代谢障碍是造成得结石的最主要病因,Doc_unlabel_0979,unlabel,qwen,0.95
+含钙食物摄入比较多,RiskFactor,risk_factor_for,结石,Disease,饮食方面对含钙食物摄入比较多，比如豆制品、奶制品、水的问题，只是加重得结石的可能性,Doc_unlabel_0979,unlabel,qwen,0.9
+对钙处理能力比较低,RiskFactor,risk_factor_for,结石,Disease,只是结石体质的病人对钙处理能力比较低，再加上不控制饮食，相对比其他人容易得结石,Doc_unlabel_0979,unlabel,qwen,0.9
 慢性尿道炎,Disease,causes,尿余沥,Symptom,比如慢性尿道炎、尿道狭窄、前列腺增生、神经源性膀胱或者泌尿系感染等都可以导致这种症状,Doc_unlabel_0981,unlabel,qwen,0.95
 尿道狭窄,Disease,causes,尿余沥,Symptom,比如慢性尿道炎、尿道狭窄、前列腺增生、神经源性膀胱或者泌尿系感染等都可以导致这种症状,Doc_unlabel_0981,unlabel,qwen,0.95
 前列腺增生,Disease,causes,尿余沥,Symptom,比如慢性尿道炎、尿道狭窄、前列腺增生、神经源性膀胱或者泌尿系感染等都可以导致这种症状,Doc_unlabel_0981,unlabel,qwen,0.95
@@ -18369,6 +18658,7 @@ hpv,Other,causes,宫颈癌,Disease,hpv引起的宫颈癌,Doc_unlabel_0956,unlabe
 小脑萎缩,Disease,treated_by,步态的训练,Treatment,帮助病人进行步态的训练,Doc_unlabel_0983,unlabel,qwen,0.9
 小脑萎缩,Disease,treated_by,康复,Treatment,通过康复来训练语言功能、吞咽功能,Doc_unlabel_0983,unlabel,qwen,0.9
 小脑萎缩,Disease,treated_by,对症治疗,Treatment,小脑萎缩目前的治疗主要是一个综合方面的对症治疗,Doc_unlabel_0983,unlabel,qwen,0.95
+危险因素,RiskFactor,risk_factor_for,脑血管疾病,Disease,减少一些脑血管疾病的危险因素,Doc_unlabel_0983,unlabel,qwen,0.85
 上火,Disease,causes,发热,Symptom,上火之后出现了感冒的症状，例如发热,Doc_unlabel_0984,unlabel,qwen,0.9
 上火,Disease,causes,头痛,Symptom,例如发热、头痛、咽喉肿痛,Doc_unlabel_0984,unlabel,qwen,0.9
 上火,Disease,causes,咽喉肿痛,Symptom,例如发热、头痛、咽喉肿痛,Doc_unlabel_0984,unlabel,qwen,0.9
@@ -18396,6 +18686,7 @@ hpv,Other,causes,宫颈癌,Disease,hpv引起的宫颈癌,Doc_unlabel_0956,unlabe
 卵巢癌变,Disease,causes,卵巢癌抗原增高,TestResult,卵巢癌抗原增高最常见的原因有卵巢癌变,Doc_unlabel_0985,unlabel,qwen,0.9
 卵巢癌,Disease,causes,卵巢癌抗原偏高,TestResult,如果女性患有卵巢癌进行卵巢抗原检查时，会出现抗原偏高的情况,Doc_unlabel_0985,unlabel,qwen,0.9
 内分泌失调,PathologicalState,causes,卵巢抗癌增高,TestResult,女性内分泌失调时，也会出现卵巢抗癌增高的情况,Doc_unlabel_0985,unlabel,qwen,0.9
+生活不规律,RiskFactor,risk_factor_for,卵巢癌抗原偏高,TestResult,如果女性平时生活不规、经常熬夜、生活环境的改变、饮食不规律等，容易导致卵巢癌抗原偏高,Doc_unlabel_0985,unlabel,qwen,0.85
 卵巢癌,Disease,is_a,卵巢恶性肿瘤,MedicalCategory,卵巢癌属于卵巢恶性肿瘤,Doc_unlabel_0985,unlabel,qwen,0.95
 卵巢癌,Disease,is_a,高恶性生殖器肿瘤,MedicalCategory,卵巢癌属于高恶性生殖器肿瘤,Doc_unlabel_0985,unlabel,qwen,0.95
 卵巢癌,Disease,treated_by,手术,Treatment,一旦确诊需要尽快通过手术进行切除,Doc_unlabel_0985,unlabel,qwen,0.9
@@ -18429,6 +18720,11 @@ hpv,Other,causes,宫颈癌,Disease,hpv引起的宫颈癌,Doc_unlabel_0956,unlabe
 双侧颈动脉粥样硬化斑块形成,Disease,diagnosed_by,彩超,ExamProcedure,双侧颈动脉粥样硬化斑块形成应进行影像学方面的检查，如彩超、血管造影,Doc_unlabel_0989,unlabel,qwen,0.95
 双侧颈动脉粥样硬化斑块形成,Disease,diagnosed_by,血管造影,ExamProcedure,双侧颈动脉粥样硬化斑块形成应进行影像学方面的检查，如彩超、血管造影,Doc_unlabel_0989,unlabel,qwen,0.95
 双侧颈动脉粥样硬化斑块形成,Disease,located_in,颈动脉,AnatomicalSite,双侧颈动脉粥样硬化斑块形成,Doc_unlabel_0989,unlabel,qwen,0.9
+高血压,RiskFactor,risk_factor_for,动脉硬化,Disease,引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等,Doc_unlabel_0989,unlabel,qwen,0.92
+高血脂,RiskFactor,risk_factor_for,动脉硬化,Disease,引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等,Doc_unlabel_0989,unlabel,qwen,0.92
+高血糖,RiskFactor,risk_factor_for,动脉硬化,Disease,引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等,Doc_unlabel_0989,unlabel,qwen,0.92
+肥胖,RiskFactor,risk_factor_for,动脉硬化,Disease,引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等,Doc_unlabel_0989,unlabel,qwen,0.92
+吸烟,RiskFactor,risk_factor_for,动脉硬化,Disease,引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等,Doc_unlabel_0989,unlabel,qwen,0.92
 狭窄,PathologicalState,treated_by,手术,Treatment,如果已经发生了狭窄和闭塞，则需要进行手术或介入的方式,Doc_unlabel_0989,unlabel,qwen,0.9
 狭窄,PathologicalState,treated_by,介入,Treatment,如果已经发生了狭窄和闭塞，则需要进行手术或介入的方式,Doc_unlabel_0989,unlabel,qwen,0.9
 闭塞,PathologicalState,treated_by,手术,Treatment,如果已经发生了狭窄和闭塞，则需要进行手术或介入的方式,Doc_unlabel_0989,unlabel,qwen,0.9

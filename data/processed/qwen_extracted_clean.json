@@ -684,6 +684,18 @@
     "confidence": 0.95
   },
   {
+    "head": "高危人群",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肠癌",
+    "tail_type": "Disease",
+    "evidence": "再加上如果是高危人群，应该考虑是肠癌的表现",
+    "source_doc_id": "Doc_unlabel_0004",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "肠癌",
     "head_type": "Disease",
     "relation": "diagnosed_by",
@@ -1500,6 +1512,18 @@
     "confidence": 0.95
   },
   {
+    "head": "缺少钙和维生素d的补充",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "骨骼发育异常",
+    "tail_type": "PathologicalState",
+    "evidence": "如果缺少钙和维生素d的补充，容易导致骨骼发育异常",
+    "source_doc_id": "Doc_unlabel_0010",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "o型腿",
     "head_type": "Symptom",
     "relation": "treated_by",
@@ -1758,6 +1782,42 @@
     "tail": "肺炎",
     "tail_type": "Disease",
     "evidence": "吸烟可导致各种肺炎概率增加",
+    "source_doc_id": "Doc_unlabel_0013",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "恶性肿瘤",
+    "tail_type": "PathologicalState",
+    "evidence": "吸烟为多种恶性肿瘤诱发因素之一",
+    "source_doc_id": "Doc_unlabel_0013",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肺癌",
+    "tail_type": "Disease",
+    "evidence": "如肺癌、膀胱癌等，均与吸烟相关",
+    "source_doc_id": "Doc_unlabel_0013",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "膀胱癌",
+    "tail_type": "Disease",
+    "evidence": "如肺癌、膀胱癌等，均与吸烟相关",
     "source_doc_id": "Doc_unlabel_0013",
     "source_file": "unlabel",
     "source_type": "qwen",
@@ -4584,6 +4644,18 @@
     "confidence": 0.85
   },
   {
+    "head": "营养不良",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "流产",
+    "tail_type": "Disease",
+    "evidence": "营养不良很容易发生流产",
+    "source_doc_id": "Doc_unlabel_0037",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "食欲不振",
     "head_type": "Symptom",
     "relation": "symptom_of",
@@ -4807,6 +4879,66 @@
     "tail_type": "Treatment",
     "evidence": "对于晚期患者只能够应用一些减轻痛苦的药物",
     "source_doc_id": "Doc_unlabel_0038",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻腔鼻窦癌",
+    "tail_type": "Disease",
+    "evidence": "应与以下几点相关：第一、吸烟",
+    "source_doc_id": "Doc_unlabel_0039",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "空气污染",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻腔鼻窦癌",
+    "tail_type": "Disease",
+    "evidence": "应与以下几点相关：第二、空气污染",
+    "source_doc_id": "Doc_unlabel_0039",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "饮酒",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻腔鼻窦癌",
+    "tail_type": "Disease",
+    "evidence": "应与以下几点相关：第三、饮酒",
+    "source_doc_id": "Doc_unlabel_0039",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "粉尘",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻腔鼻窦癌",
+    "tail_type": "Disease",
+    "evidence": "鼻腔鼻窦癌与粉尘、pm2.5有直接关系",
+    "source_doc_id": "Doc_unlabel_0039",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "pm2.5",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻腔鼻窦癌",
+    "tail_type": "Disease",
+    "evidence": "鼻腔鼻窦癌与粉尘、pm2.5有直接关系",
+    "source_doc_id": "Doc_unlabel_0039",
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
@@ -5258,6 +5390,18 @@
   {
     "head": "姿势不当",
     "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "驼背",
+    "tail_type": "Symptom",
+    "evidence": "孩子驼背多数源自于姿势不当",
+    "source_doc_id": "Doc_unlabel_0044",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "姿势不当",
+    "head_type": "RiskFactor",
     "relation": "causes",
     "tail": "胸椎过度后凸",
     "tail_type": "PathologicalState",
@@ -5362,6 +5506,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "日常不良生活习惯和学习习惯",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "驼背",
+    "tail_type": "Symptom",
+    "evidence": "与孩子日常不良生活习惯和学习习惯有关",
+    "source_doc_id": "Doc_unlabel_0044",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "胸椎过度后凸",
@@ -6118,6 +6274,78 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "上呼吸道感染",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "格林巴利综合征",
+    "tail_type": "Disease",
+    "evidence": "约半数患者发病前有上呼吸道感染或胃肠道感染病史",
+    "source_doc_id": "Doc_unlabel_0050",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "胃肠道感染",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "格林巴利综合征",
+    "tail_type": "Disease",
+    "evidence": "约半数患者发病前有上呼吸道感染或胃肠道感染病史",
+    "source_doc_id": "Doc_unlabel_0050",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "劳累",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "格林巴利综合征",
+    "tail_type": "Disease",
+    "evidence": "劳累、受伤、受凉多是发病诱因",
+    "source_doc_id": "Doc_unlabel_0050",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "受伤",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "格林巴利综合征",
+    "tail_type": "Disease",
+    "evidence": "劳累、受伤、受凉多是发病诱因",
+    "source_doc_id": "Doc_unlabel_0050",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "受凉",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "格林巴利综合征",
+    "tail_type": "Disease",
+    "evidence": "劳累、受伤、受凉多是发病诱因",
+    "source_doc_id": "Doc_unlabel_0050",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "免疫力低下",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "格林巴利综合征",
+    "tail_type": "Disease",
+    "evidence": "一般多见于免疫力低下者",
+    "source_doc_id": "Doc_unlabel_0050",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "鼻塞",
@@ -6910,6 +7138,42 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.94
+  },
+  {
+    "head": "高温高热",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "中暑",
+    "tail_type": "Disease",
+    "evidence": "临床中暑的高危人群一般都是夏季或者从事高温高热的人群",
+    "source_doc_id": "Doc_unlabel_0056",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "夏季",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "中暑",
+    "tail_type": "Disease",
+    "evidence": "临床中暑的高危人群一般都是夏季",
+    "source_doc_id": "Doc_unlabel_0056",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "孕妇",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "中暑",
+    "tail_type": "Disease",
+    "evidence": "对于高危人群比如说孕妇",
+    "source_doc_id": "Doc_unlabel_0056",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.91
   },
   {
     "head": "红斑",
@@ -7824,6 +8088,18 @@
     "confidence": 0.9
   },
   {
+    "head": "体重过轻",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "面色苍白",
+    "tail_type": "Symptom",
+    "evidence": "如果一个人体重过轻，比如一个成年男性，体重在50kg左右，献400ml的血量，往往献出的血量就会超过自身血量的1/10，献血后就容易出现面色苍白、头晕、乏力等不适的症状",
+    "source_doc_id": "Doc_unlabel_0064",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "头晕",
     "head_type": "Symptom",
     "relation": "symptom_of",
@@ -8088,6 +8364,18 @@
     "confidence": 0.95
   },
   {
+    "head": "血糖>5.3mmol/l",
+    "head_type": "TestResult",
+    "relation": "risk_factor_for",
+    "tail": "高危妊娠",
+    "tail_type": "MedicalCategory",
+    "evidence": "若妊娠23周前血糖>5.3mmol/l,需提前进行糖耐量检测，以排除妊娠合并糖尿病，提前做出诊断，作为高危妊娠监测",
+    "source_doc_id": "Doc_unlabel_0067",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "细菌",
     "head_type": "Other",
     "relation": "causes",
@@ -8110,6 +8398,42 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "熬夜",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "结膜炎",
+    "tail_type": "Disease",
+    "evidence": "与熬夜、压力大、局部用眼不卫生有很大关系",
+    "source_doc_id": "Doc_unlabel_0068",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "压力大",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "结膜炎",
+    "tail_type": "Disease",
+    "evidence": "与熬夜、压力大、局部用眼不卫生有很大关系",
+    "source_doc_id": "Doc_unlabel_0068",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "局部用眼不卫生",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "结膜炎",
+    "tail_type": "Disease",
+    "evidence": "与熬夜、压力大、局部用眼不卫生有很大关系",
+    "source_doc_id": "Doc_unlabel_0068",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "眼红",
@@ -8767,6 +9091,78 @@
     "tail_type": "Treatment",
     "evidence": "还可以使用雾化器雾化吸入盐酸氨溴索进行化痰的治疗",
     "source_doc_id": "Doc_unlabel_0074",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "低体重儿",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "支气管哮喘",
+    "tail_type": "Disease",
+    "evidence": "婴幼儿期是低体重儿，或者反复发生上呼吸道感染，都会成为成年以后支气管哮喘发病的诱因",
+    "source_doc_id": "Doc_unlabel_0075",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "上呼吸道感染",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "支气管哮喘",
+    "tail_type": "Disease",
+    "evidence": "反复发生上呼吸道感染，都会成为成年以后支气管哮喘发病的诱因",
+    "source_doc_id": "Doc_unlabel_0075",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "高敏体质",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "支气管哮喘",
+    "tail_type": "Disease",
+    "evidence": "敏感之后就容易合并支气管哮喘",
+    "source_doc_id": "Doc_unlabel_0075",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "男性吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "支气管哮喘",
+    "tail_type": "Disease",
+    "evidence": "男性吸烟，还有工作环境中粉尘颗粒较大如煤矿...都会对气道产生一定损伤，进而诱发支气管哮喘",
+    "source_doc_id": "Doc_unlabel_0075",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "装修行业",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "支气管哮喘",
+    "tail_type": "Disease",
+    "evidence": "从事装修行业等工种，都会对气道产生一定损伤，进而诱发支气管哮喘",
+    "source_doc_id": "Doc_unlabel_0075",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "尘螨",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "支气管哮喘",
+    "tail_type": "Disease",
+    "evidence": "尘螨、灰尘较多也可诱发",
+    "source_doc_id": "Doc_unlabel_0075",
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
@@ -9552,6 +9948,18 @@
     "confidence": 0.9
   },
   {
+    "head": "油炸、辛辣、刺激食物",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "过度内热",
+    "tail_type": "PathologicalState",
+    "evidence": "避免吃油炸、辛辣、刺激食物，以防止过度内热而加重症状",
+    "source_doc_id": "Doc_unlabel_0081",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "过度内热",
     "head_type": "PathologicalState",
     "relation": "treated_by",
@@ -9822,6 +10230,78 @@
     "tail": "单纯性肥胖",
     "tail_type": "Disease",
     "evidence": "单纯性肥胖又可以分为腹部型肥胖和臀部型肥胖两种",
+    "source_doc_id": "Doc_unlabel_0084",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "单纯性肥胖症",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "冠心病",
+    "tail_type": "Disease",
+    "evidence": "也更容易发生冠心病、高血压、糖尿病、胆结石等疾病",
+    "source_doc_id": "Doc_unlabel_0084",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "单纯性肥胖症",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "也更容易发生冠心病、高血压、糖尿病、胆结石等疾病",
+    "source_doc_id": "Doc_unlabel_0084",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "单纯性肥胖症",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "糖尿病",
+    "tail_type": "Disease",
+    "evidence": "也更容易发生冠心病、高血压、糖尿病、胆结石等疾病",
+    "source_doc_id": "Doc_unlabel_0084",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "单纯性肥胖症",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "胆结石",
+    "tail_type": "Disease",
+    "evidence": "也更容易发生冠心病、高血压、糖尿病、胆结石等疾病",
+    "source_doc_id": "Doc_unlabel_0084",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "单纯性肥胖症",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "闭经",
+    "tail_type": "Symptom",
+    "evidence": "女性还容易出现闭经、不育等现象",
+    "source_doc_id": "Doc_unlabel_0084",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "单纯性肥胖症",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "不育",
+    "tail_type": "Symptom",
+    "evidence": "女性还容易出现闭经、不育等现象",
     "source_doc_id": "Doc_unlabel_0084",
     "source_file": "unlabel",
     "source_type": "qwen",
@@ -10182,6 +10662,126 @@
     "tail": "慢性阻塞性肺部疾病",
     "tail_type": "Disease",
     "evidence": "长期抽烟会造成慢性支气管炎、支气管扩张、慢性阻塞性肺部疾病",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肺癌",
+    "tail_type": "Disease",
+    "evidence": "吸烟者患肺癌的危险性是不吸烟患者的13倍",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鳞状上皮细胞癌",
+    "tail_type": "Disease",
+    "evidence": "特别是鳞状上皮细胞癌和小细胞未分化癌",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "小细胞未分化癌",
+    "tail_type": "Disease",
+    "evidence": "特别是鳞状上皮细胞癌和小细胞未分化癌",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "唇癌",
+    "tail_type": "Disease",
+    "evidence": "可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "舌癌",
+    "tail_type": "Disease",
+    "evidence": "可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "口腔癌",
+    "tail_type": "Disease",
+    "evidence": "可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "食道癌",
+    "tail_type": "Disease",
+    "evidence": "可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "胃癌",
+    "tail_type": "Disease",
+    "evidence": "可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "结肠癌",
+    "tail_type": "Disease",
+    "evidence": "可以和唇癌、舌癌、口腔癌、食道癌、胃癌、结肠癌的发病率都有一定的关系",
+    "source_doc_id": "Doc_unlabel_0087",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "冠心病",
+    "tail_type": "Disease",
+    "evidence": "还会使冠心病的患病风险增加",
     "source_doc_id": "Doc_unlabel_0087",
     "source_file": "unlabel",
     "source_type": "qwen",
@@ -10558,6 +11158,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "乳腺疾病家族史",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺疾病",
+    "tail_type": "Disease",
+    "evidence": "有乳腺疾病家族史的发生率较无家族史的要高",
+    "source_doc_id": "Doc_unlabel_0090",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
   },
   {
     "head": "工作压力增大",
@@ -12864,6 +13476,18 @@
     "confidence": 0.95
   },
   {
+    "head": "同房",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "宫内感染",
+    "tail_type": "Disease",
+    "evidence": "这样会增加宫内感染的风险",
+    "source_doc_id": "Doc_unlabel_0107",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "子宫内膜感染",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -13330,6 +13954,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "空腹服用",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "胃肠道反应",
+    "tail_type": "Symptom",
+    "evidence": "空腹服用可能会导致出现胃肠道反应的机会更多",
+    "source_doc_id": "Doc_unlabel_0112",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "儿童",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "胃肠道反应",
+    "tail_type": "Symptom",
+    "evidence": "儿童相比成人服用胃肠道反应可能更大",
+    "source_doc_id": "Doc_unlabel_0112",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "罗红霉素服用的胃肠道症状",
@@ -13932,6 +14580,18 @@
     "confidence": 0.85
   },
   {
+    "head": "油炸食品",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "便秘",
+    "tail_type": "Disease",
+    "evidence": "而且过多的食用油炸食品，有可能还会加重便秘的情况",
+    "source_doc_id": "Doc_unlabel_0117",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.8
+  },
+  {
     "head": "花生仁",
     "head_type": "Other",
     "relation": "causes",
@@ -14050,6 +14710,42 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "年龄",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "失眠",
+    "tail_type": "Disease",
+    "evidence": "年龄越大越容易失眠",
+    "source_doc_id": "Doc_unlabel_0118",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.93
+  },
+  {
+    "head": "夜尿增多",
+    "head_type": "Symptom",
+    "relation": "risk_factor_for",
+    "tail": "失眠",
+    "tail_type": "Disease",
+    "evidence": "老年人夜尿增多，睡眠浅更容易失眠",
+    "source_doc_id": "Doc_unlabel_0118",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "睡眠浅",
+    "head_type": "Symptom",
+    "relation": "risk_factor_for",
+    "tail": "失眠",
+    "tail_type": "Disease",
+    "evidence": "老年人夜尿增多，睡眠浅更容易失眠",
+    "source_doc_id": "Doc_unlabel_0118",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
   },
   {
     "head": "睡前喝浓茶",
@@ -15480,6 +16176,18 @@
     "confidence": 0.95
   },
   {
+    "head": "遗传倾向",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "雄激素相关的脱发",
+    "tail_type": "Disease",
+    "evidence": "男性的脱发雄激素相关的脱发是有一定遗传倾向",
+    "source_doc_id": "Doc_unlabel_0130",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "男性雄激素相关的脱发",
     "head_type": "Disease",
     "relation": "treated_by",
@@ -16008,6 +16716,30 @@
     "confidence": 0.95
   },
   {
+    "head": "抵抗能力不是很强",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "扁桃体炎",
+    "tail_type": "Disease",
+    "evidence": "宝宝本身的抵抗能力不是很强，所以是扁桃体炎的高发人群",
+    "source_doc_id": "Doc_unlabel_0138",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "季节交替变换",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "扁桃体炎",
+    "tail_type": "Disease",
+    "evidence": "尤其是在季节交替变换的时候，发病几率比较高",
+    "source_doc_id": "Doc_unlabel_0138",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "扁桃体炎",
     "head_type": "Disease",
     "relation": "treated_by",
@@ -16258,6 +16990,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "精神紧张",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "斑秃",
+    "tail_type": "Disease",
+    "evidence": "大多发生于精神紧张、焦虑的人群",
+    "source_doc_id": "Doc_unlabel_0141",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "焦虑",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "斑秃",
+    "tail_type": "Disease",
+    "evidence": "大多发生于精神紧张、焦虑的人群",
+    "source_doc_id": "Doc_unlabel_0141",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "斑秃",
@@ -18408,6 +19164,66 @@
     "confidence": 0.9
   },
   {
+    "head": "高血压",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "大肠息肉术后出血",
+    "tail_type": "PathologicalState",
+    "evidence": "有高血压、糖尿病等病变会导致出血的概率增加",
+    "source_doc_id": "Doc_unlabel_0157",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "糖尿病",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "大肠息肉术后出血",
+    "tail_type": "PathologicalState",
+    "evidence": "有高血压、糖尿病等病变会导致出血的概率增加",
+    "source_doc_id": "Doc_unlabel_0157",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "抗凝药物",
+    "head_type": "Treatment",
+    "relation": "risk_factor_for",
+    "tail": "大肠息肉术后出血",
+    "tail_type": "PathologicalState",
+    "evidence": "抗凝药物会增加出血风险",
+    "source_doc_id": "Doc_unlabel_0157",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "透析",
+    "head_type": "ExamProcedure",
+    "relation": "risk_factor_for",
+    "tail": "大肠息肉术后出血",
+    "tail_type": "PathologicalState",
+    "evidence": "透析病人会使用抗凝剂，同样会导致出血增加",
+    "source_doc_id": "Doc_unlabel_0157",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "广基的息肉",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "大肠息肉术后出血",
+    "tail_type": "PathologicalState",
+    "evidence": "广基的息肉切除术后创面会比较大，术后发生出血机会也会比较大",
+    "source_doc_id": "Doc_unlabel_0157",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "电凝过度",
     "head_type": "Other",
     "relation": "causes",
@@ -18430,6 +19246,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.93
+  },
+  {
+    "head": "息肉蒂比较粗",
+    "head_type": "ClinicalSign",
+    "relation": "risk_factor_for",
+    "tail": "大肠息肉术后出血",
+    "tail_type": "PathologicalState",
+    "evidence": "比较大的息肉蒂比较粗，如果电凝不够，出血机会也会更大",
+    "source_doc_id": "Doc_unlabel_0157",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.89
   },
   {
     "head": "芹菜",
@@ -18804,6 +19632,18 @@
     "confidence": 0.9
   },
   {
+    "head": "抗体消失",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "单纯疱疹病毒的感染",
+    "tail_type": "Disease",
+    "evidence": "但是4-6个月时会消失...所以就会容易发生单纯疱疹病毒的感染",
+    "source_doc_id": "Doc_unlabel_0163",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "头疼",
     "head_type": "Symptom",
     "relation": "symptom_of",
@@ -19142,6 +19982,18 @@
   {
     "head": "高脂血症",
     "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "动脉粥样硬化",
+    "tail_type": "Disease",
+    "evidence": "高脂血症发生时很容易导致动脉粥样硬化",
+    "source_doc_id": "Doc_unlabel_0166",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "高脂血症",
+    "head_type": "Disease",
     "relation": "causes",
     "tail": "心脑血管疾病",
     "tail_type": "Disease",
@@ -19366,6 +20218,42 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "急性喉炎",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "喉水肿",
+    "tail_type": "PathologicalState",
+    "evidence": "对于急性喉炎，急性会厌炎的病人有存在喉水肿、呼吸道梗阻、窒息、呼吸困难等风险",
+    "source_doc_id": "Doc_unlabel_0168",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "急性喉炎",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "呼吸困难",
+    "tail_type": "Symptom",
+    "evidence": "对于急性喉炎，急性会厌炎的病人有存在喉水肿、呼吸道梗阻、窒息、呼吸困难等风险",
+    "source_doc_id": "Doc_unlabel_0168",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "急性会厌炎",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "窒息",
+    "tail_type": "PathologicalState",
+    "evidence": "对于急性喉炎，急性会厌炎的病人有存在喉水肿、呼吸道梗阻、窒息、呼吸困难等风险",
+    "source_doc_id": "Doc_unlabel_0168",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "胃食管反流",
@@ -19930,6 +20818,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "过敏原",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "阴囊皮肤急性过敏",
+    "tail_type": "Disease",
+    "evidence": "多与接触了过敏原等因素有关",
+    "source_doc_id": "Doc_unlabel_0173",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "阴囊皮肤急性过敏",
@@ -20808,6 +21708,18 @@
     "confidence": 0.95
   },
   {
+    "head": "感染",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "不孕",
+    "tail_type": "Disease",
+    "evidence": "术后发生了感染的情况，就会导致宫腔内膜还有输卵管有炎症，这些患者以后发生不孕的概率明显增加",
+    "source_doc_id": "Doc_unlabel_0178",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "重度牙周炎",
     "head_type": "Disease",
     "relation": "causes",
@@ -21456,6 +22368,18 @@
     "confidence": 0.95
   },
   {
+    "head": "活动髋关节",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "骨折不愈合",
+    "tail_type": "PathologicalState",
+    "evidence": "否则有这些提前的动作，导致骨折不愈合或者股骨头坏死的风险更大",
+    "source_doc_id": "Doc_unlabel_0185",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "喝酒",
     "head_type": "RiskFactor",
     "relation": "causes",
@@ -21600,6 +22524,18 @@
     "confidence": 0.9
   },
   {
+    "head": "出血",
+    "head_type": "Symptom",
+    "relation": "risk_factor_for",
+    "tail": "动静脉畸形",
+    "tail_type": "Disease",
+    "evidence": "如果合并动静脉瘘的动静脉畸形，易发生出血等相关风险",
+    "source_doc_id": "Doc_unlabel_0186",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "癫痫",
     "head_type": "Symptom",
     "relation": "symptom_of",
@@ -21730,6 +22666,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.88
+  },
+  {
+    "head": "遗传背景",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "脱发",
+    "tail_type": "Disease",
+    "evidence": "除了去除除因，还要寻找更深层次的背景，如遗传背景",
+    "source_doc_id": "Doc_unlabel_0187",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "脱发",
@@ -22272,6 +23220,18 @@
     "confidence": 0.85
   },
   {
+    "head": "回奶",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "乳腺炎",
+    "tail_type": "Disease",
+    "evidence": "及时关注回奶的状态以及乳房，以免引发乳腺炎",
+    "source_doc_id": "Doc_unlabel_0192",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.82
+  },
+  {
     "head": "乳汁比较多",
     "head_type": "PathologicalState",
     "relation": "treated_by",
@@ -22752,6 +23712,30 @@
     "confidence": 0.87
   },
   {
+    "head": "高危型hpv感染",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "宫颈癌",
+    "tail_type": "Disease",
+    "evidence": "高危型hpv感染与女性的宫颈癌密切相关",
+    "source_doc_id": "Doc_unlabel_0196",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "低危型的hpv感染",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "湿疣",
+    "tail_type": "Disease",
+    "evidence": "低危型的hpv感染则与女性外阴、阴道以及肛门周围的湿疣关系较为密切",
+    "source_doc_id": "Doc_unlabel_0196",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "宫颈病变",
     "head_type": "PathologicalState",
     "relation": "diagnosed_by",
@@ -22774,6 +23758,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.88
+  },
+  {
+    "head": "hpv16型",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "宫颈癌",
+    "tail_type": "Disease",
+    "evidence": "hpv16型和18型这两种与宫颈癌高度密切相关的病毒类型",
+    "source_doc_id": "Doc_unlabel_0196",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.93
   },
   {
     "head": "湿疣",
@@ -23110,6 +24106,66 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "术中医师经验不足",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻中隔穿孔",
+    "tail_type": "Disease",
+    "evidence": "术中医师经验不足或患者鼻中隔黏膜炎症较重，黏膜薄时易形成",
+    "source_doc_id": "Doc_unlabel_0199",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "患者鼻中隔黏膜炎症较重",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻中隔穿孔",
+    "tail_type": "Disease",
+    "evidence": "术中医师经验不足或患者鼻中隔黏膜炎症较重，黏膜薄时易形成",
+    "source_doc_id": "Doc_unlabel_0199",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "黏膜薄",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻中隔穿孔",
+    "tail_type": "Disease",
+    "evidence": "术中医师经验不足或患者鼻中隔黏膜炎症较重，黏膜薄时易形成",
+    "source_doc_id": "Doc_unlabel_0199",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "两侧鼻腔黏膜没有压紧",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻中隔血肿",
+    "tail_type": "Disease",
+    "evidence": "鼻中隔术后两侧鼻腔黏膜没有压紧，或凝血机制较差时易形成",
+    "source_doc_id": "Doc_unlabel_0199",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "凝血机制较差",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鼻中隔血肿",
+    "tail_type": "Disease",
+    "evidence": "鼻中隔术后两侧鼻腔黏膜没有压紧，或凝血机制较差时易形成",
+    "source_doc_id": "Doc_unlabel_0199",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "鼻中隔穿孔",
@@ -24516,6 +25572,66 @@
     "confidence": 0.95
   },
   {
+    "head": "年龄增长",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "反复腰痛",
+    "tail_type": "Symptom",
+    "evidence": "随着年龄的增长和体质的减退，全身各个器官同步衰退，体质虚弱，就格外容易出现反复腰痛",
+    "source_doc_id": "Doc_unlabel_0210",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "体质虚弱",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "反复腰痛",
+    "tail_type": "Symptom",
+    "evidence": "加之随着年龄的增长和体质的减退，全身各个器官同步衰退，体质虚弱，就格外容易出现反复腰痛",
+    "source_doc_id": "Doc_unlabel_0210",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "久坐",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "腰痛",
+    "tail_type": "Symptom",
+    "evidence": "现代人久坐，缺乏锻炼，腰肌松弛对关节保护不力，腰部的脊椎骨活动度大，损伤的机会更多",
+    "source_doc_id": "Doc_unlabel_0210",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "缺乏锻炼",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "腰痛",
+    "tail_type": "Symptom",
+    "evidence": "现代人久坐，缺乏锻炼，腰肌松弛对关节保护不力，腰部的脊椎骨活动度大，损伤的机会更多",
+    "source_doc_id": "Doc_unlabel_0210",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "腰肌松弛",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "腰痛",
+    "tail_type": "Symptom",
+    "evidence": "现代人久坐，缺乏锻炼，腰肌松弛对关节保护不力，腰部的脊椎骨活动度大，损伤的机会更多",
+    "source_doc_id": "Doc_unlabel_0210",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
     "head": "腰痛",
     "head_type": "Symptom",
     "relation": "treated_by",
@@ -25440,6 +26556,30 @@
     "confidence": 0.95
   },
   {
+    "head": "皮肤病",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "白内障",
+    "tail_type": "Disease",
+    "evidence": "比如皮肤病、糖尿病的人容易引起白内障",
+    "source_doc_id": "Doc_unlabel_0218",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "糖尿病",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "白内障",
+    "tail_type": "Disease",
+    "evidence": "比如皮肤病、糖尿病的人容易引起白内障",
+    "source_doc_id": "Doc_unlabel_0218",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "特殊的药物",
     "head_type": "Treatment",
     "relation": "causes",
@@ -26076,6 +27216,54 @@
     "confidence": 0.9
   },
   {
+    "head": "经常熬夜",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "眼睑痉挛",
+    "tail_type": "Disease",
+    "evidence": "经常熬夜、精神紧张、压力大的年轻患者亦可发生",
+    "source_doc_id": "Doc_unlabel_0223",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "精神紧张",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "眼睑痉挛",
+    "tail_type": "Disease",
+    "evidence": "经常熬夜、精神紧张、压力大的年轻患者亦可发生",
+    "source_doc_id": "Doc_unlabel_0223",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "压力大",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "眼睑痉挛",
+    "tail_type": "Disease",
+    "evidence": "经常熬夜、精神紧张、压力大的年轻患者亦可发生",
+    "source_doc_id": "Doc_unlabel_0223",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "视疲劳",
+    "head_type": "Symptom",
+    "relation": "risk_factor_for",
+    "tail": "眼睑痉挛",
+    "tail_type": "Disease",
+    "evidence": "避免视疲劳，保持充足的睡眠，多食用营养丰富的食物，以预防眼睑痉挛",
+    "source_doc_id": "Doc_unlabel_0223",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
     "head": "眼睑痉挛",
     "head_type": "Disease",
     "relation": "treated_by",
@@ -26118,6 +27306,42 @@
     "tail": "小缺血灶",
     "tail_type": "PathologicalState",
     "evidence": "是脑动脉粥样硬化的反应",
+    "source_doc_id": "Doc_unlabel_0224",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "高脂血症",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "脑内小的缺血灶",
+    "tail_type": "PathologicalState",
+    "evidence": "患者如果年龄>50岁有高脂血症、糖尿病和高血压的病史，检查颅脑核磁时多数可能会出现脑内小的缺血灶",
+    "source_doc_id": "Doc_unlabel_0224",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "糖尿病",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "脑内小的缺血灶",
+    "tail_type": "PathologicalState",
+    "evidence": "患者如果年龄>50岁有高脂血症、糖尿病和高血压的病史，检查颅脑核磁时多数可能会出现脑内小的缺血灶",
+    "source_doc_id": "Doc_unlabel_0224",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "高血压",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "脑内小的缺血灶",
+    "tail_type": "PathologicalState",
+    "evidence": "患者如果年龄>50岁有高脂血症、糖尿病和高血压的病史，检查颅脑核磁时多数可能会出现脑内小的缺血灶",
     "source_doc_id": "Doc_unlabel_0224",
     "source_file": "unlabel",
     "source_type": "qwen",
@@ -26734,6 +27958,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "老年慢性支气管炎",
+    "tail_type": "Disease",
+    "evidence": "吸烟患者患病率比不吸烟患者高2-8倍",
+    "source_doc_id": "Doc_unlabel_0229",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
   },
   {
     "head": "慢性支气管炎",
@@ -27732,6 +28968,18 @@
     "confidence": 0.9
   },
   {
+    "head": "维生素c",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "草酸钙结晶",
+    "tail_type": "PathologicalState",
+    "evidence": "服用维生素c或者摄入大量维生素c以后，尿液草酸的排泄量也会显著增加，形成草酸钙结晶的危险程度也会相应增加",
+    "source_doc_id": "Doc_unlabel_0239",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "草酸钙结石",
     "head_type": "Disease",
     "relation": "is_a",
@@ -28266,6 +29514,30 @@
     "tail": "肾炎",
     "tail_type": "Disease",
     "evidence": "容易出现细菌、病毒等感染，从而诱发肾炎",
+    "source_doc_id": "Doc_unlabel_0245",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "免疫系统可能没有完全完备",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "肾炎",
+    "tail_type": "Disease",
+    "evidence": "年轻人的免疫系统可能没有完全完备，这时候容易出现细菌、病毒等感染，从而诱发肾炎",
+    "source_doc_id": "Doc_unlabel_0245",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "生活不规律",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肾脏的疾病",
+    "tail_type": "Disease",
+    "evidence": "年轻人生活不规律，也有可能诱发肾脏的疾病",
     "source_doc_id": "Doc_unlabel_0245",
     "source_file": "unlabel",
     "source_type": "qwen",
@@ -29004,6 +30276,30 @@
     "confidence": 0.95
   },
   {
+    "head": "高危型的hpv病毒",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "女性宫颈癌",
+    "tail_type": "Disease",
+    "evidence": "高危型的hpv病毒与女性宫颈癌的发生有关",
+    "source_doc_id": "Doc_unlabel_0252",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "低危型的hpv病毒",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "女性生殖道湿疣",
+    "tail_type": "Disease",
+    "evidence": "低危型的hpv病毒与女性生殖道湿疣有关",
+    "source_doc_id": "Doc_unlabel_0252",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
     "head": "hpv81型",
     "head_type": "Other",
     "relation": "causes",
@@ -29278,6 +30574,138 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "果糖摄入",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高尿酸血症",
+    "tail_type": "Disease",
+    "evidence": "果糖的摄入其实对高尿酸血症是非常不利的因素",
+    "source_doc_id": "Doc_unlabel_0255",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "多次足月分娩",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "产后尿失禁",
+    "tail_type": "Disease",
+    "evidence": "以下四种类型的产妇容易发生产后尿失禁:1、多次足月分娩",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "分娩巨大儿",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "产后尿失禁",
+    "tail_type": "Disease",
+    "evidence": "1、多次足月分娩，尤其是分娩巨大儿的产妇",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "阴道分娩",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "产后尿失禁",
+    "tail_type": "Disease",
+    "evidence": "2、阴道分娩，尤其是产程较长的产妇",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "产程较长",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "产后尿失禁",
+    "tail_type": "Disease",
+    "evidence": "2、阴道分娩，尤其是产程较长的产妇",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "阴道助产",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "盆底肌肉损伤",
+    "tail_type": "PathologicalState",
+    "evidence": "3、阴道助产、急产、药物引产的产妇，发生盆底肌肉损伤的几率较大",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "急产",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "盆底肌肉损伤",
+    "tail_type": "PathologicalState",
+    "evidence": "3、阴道助产、急产、药物引产的产妇，发生盆底肌肉损伤的几率较大",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "药物引产",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "盆底肌肉损伤",
+    "tail_type": "PathologicalState",
+    "evidence": "3、阴道助产、急产、药物引产的产妇，发生盆底肌肉损伤的几率较大",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "不喜欢运动",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "产后尿失禁",
+    "tail_type": "Disease",
+    "evidence": "4、不喜欢运动，全身肌肉力量薄弱，尤其是盆底肌力量较弱的产妇",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "全身肌肉力量薄弱",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "产后尿失禁",
+    "tail_type": "Disease",
+    "evidence": "4、不喜欢运动，全身肌肉力量薄弱，尤其是盆底肌力量较弱的产妇",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "盆底肌力量较弱",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "产后尿失禁",
+    "tail_type": "Disease",
+    "evidence": "4、不喜欢运动，全身肌肉力量薄弱，尤其是盆底肌力量较弱的产妇",
+    "source_doc_id": "Doc_unlabel_0256",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "盆底肌训练",
@@ -30036,6 +31464,42 @@
     "confidence": 0.95
   },
   {
+    "head": "巧克力、奶酪、油炸类的食物",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "偏头痛",
+    "tail_type": "Disease",
+    "evidence": "女生可能更爱吃一些巧克力、奶酪、油炸类的食物，会导致患者容易出现偏头痛的发作",
+    "source_doc_id": "Doc_unlabel_0263",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "精神压力较大",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "偏头痛",
+    "tail_type": "Disease",
+    "evidence": "患者精神压力较大，睡眠情况不足，会导致偏头痛的发作",
+    "source_doc_id": "Doc_unlabel_0263",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "睡眠情况不足",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "偏头痛",
+    "tail_type": "Disease",
+    "evidence": "患者精神压力较大，睡眠情况不足，会导致偏头痛的发作",
+    "source_doc_id": "Doc_unlabel_0263",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "内分泌失调",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -30648,6 +32112,42 @@
     "confidence": 0.9
   },
   {
+    "head": "机体免疫力低下",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "区域淋巴结反应性的增大",
+    "tail_type": "PathologicalState",
+    "evidence": "也有一定的诱发因素，比如机体免疫力低下，牙龈炎、口腔或者是颌面部的感染，都容易出现区域淋巴结反应性的增大",
+    "source_doc_id": "Doc_unlabel_0269",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "牙龈炎",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "区域淋巴结反应性的增大",
+    "tail_type": "PathologicalState",
+    "evidence": "也有一定的诱发因素，比如机体免疫力低下，牙龈炎、口腔或者是颌面部的感染，都容易出现区域淋巴结反应性的增大",
+    "source_doc_id": "Doc_unlabel_0269",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "口腔或者是颌面部的感染",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "区域淋巴结反应性的增大",
+    "tail_type": "PathologicalState",
+    "evidence": "也有一定的诱发因素，比如机体免疫力低下，牙龈炎、口腔或者是颌面部的感染，都容易出现区域淋巴结反应性的增大",
+    "source_doc_id": "Doc_unlabel_0269",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "腮腺炎",
     "head_type": "Disease",
     "relation": "causes",
@@ -31212,6 +32712,42 @@
     "confidence": 0.9
   },
   {
+    "head": "轻微超重",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "头痛",
+    "tail_type": "Symptom",
+    "evidence": "有轻微超重现象的女性会比身体质量指数较低的女性患头痛的危险高35%",
+    "source_doc_id": "Doc_unlabel_0275",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "严重超重",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "头痛",
+    "tail_type": "Symptom",
+    "evidence": "严重超重者的患病率达到将近80%",
+    "source_doc_id": "Doc_unlabel_0275",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "个性特别、死板、保守或者容易过于着迷于某物",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "头痛病",
+    "tail_type": "Disease",
+    "evidence": "个性特别、死板、保守或者容易过于着迷于某物会使你有患上头痛病的可能",
+    "source_doc_id": "Doc_unlabel_0275",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "性生活",
     "head_type": "Other",
     "relation": "causes",
@@ -31630,6 +33166,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "经常熬夜",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "感冒",
+    "tail_type": "Disease",
+    "evidence": "经常熬夜会造成免疫力低下，容易感冒",
+    "source_doc_id": "Doc_unlabel_0279",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "剧烈的运动",
@@ -32952,6 +34500,18 @@
     "confidence": 0.88
   },
   {
+    "head": "没有采取避孕措施",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "意外怀孕",
+    "tail_type": "PathologicalState",
+    "evidence": "如果性生活时没有采取避孕措施，就有意外怀孕的可能",
+    "source_doc_id": "Doc_unlabel_0291",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.91
+  },
+  {
     "head": "肠胃功能紊乱",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -33216,6 +34776,66 @@
     "confidence": 0.95
   },
   {
+    "head": "乙肝",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癌变",
+    "tail_type": "PathologicalState",
+    "evidence": "癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等",
+    "source_doc_id": "Doc_unlabel_0294",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "丙肝",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癌变",
+    "tail_type": "PathologicalState",
+    "evidence": "癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等",
+    "source_doc_id": "Doc_unlabel_0294",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "肝硬化",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癌变",
+    "tail_type": "PathologicalState",
+    "evidence": "癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等",
+    "source_doc_id": "Doc_unlabel_0294",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "酒精肝",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癌变",
+    "tail_type": "PathologicalState",
+    "evidence": "癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等",
+    "source_doc_id": "Doc_unlabel_0294",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "自身免疫性肝病",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癌变",
+    "tail_type": "PathologicalState",
+    "evidence": "癌变的诱因包含了乙肝、丙肝、肝硬化、酒精肝、自身免疫性肝病等",
+    "source_doc_id": "Doc_unlabel_0294",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "肝癌",
     "head_type": "Disease",
     "relation": "diagnosed_by",
@@ -33396,6 +35016,18 @@
     "confidence": 0.95
   },
   {
+    "head": "遗传",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "痤疮",
+    "tail_type": "Disease",
+    "evidence": "一、遗传，如果父母曾患痤疮或现患痤疮，其子女的患病概率会明显高",
+    "source_doc_id": "Doc_unlabel_0296",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "食管性疾病",
     "head_type": "Disease",
     "relation": "causes",
@@ -33504,6 +35136,18 @@
     "confidence": 0.95
   },
   {
+    "head": "高脂饮食",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "直肠癌",
+    "tail_type": "Disease",
+    "evidence": "通常认为与高脂饮食有密切相关性",
+    "source_doc_id": "Doc_unlabel_0298",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "绒毛状管状腺瘤",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -33514,6 +35158,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "家族易感性",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "直肠癌",
+    "tail_type": "Disease",
+    "evidence": "同时还具有一定的家族易感性",
+    "source_doc_id": "Doc_unlabel_0298",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "排便习惯和性状的改变",
@@ -33658,6 +35314,54 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "脂溢性脱发",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "心血管疾病",
+    "tail_type": "Disease",
+    "evidence": "是心血管疾病的危险因素",
+    "source_doc_id": "Doc_unlabel_0299",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "脂溢性脱发",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "脂溢性脱发还是高血压...的高发群体",
+    "source_doc_id": "Doc_unlabel_0299",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "脂溢性脱发",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "高血脂",
+    "tail_type": "Disease",
+    "evidence": "脂溢性脱发还是...高血脂...的高发群体",
+    "source_doc_id": "Doc_unlabel_0299",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "脂溢性脱发",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "糖尿病",
+    "tail_type": "Disease",
+    "evidence": "脂溢性脱发还是...糖尿病的高发群体",
+    "source_doc_id": "Doc_unlabel_0299",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "遗传和雄性激素",
@@ -33924,6 +35628,18 @@
     "confidence": 0.95
   },
   {
+    "head": "中老年女性",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "遗尿现象",
+    "tail_type": "Symptom",
+    "evidence": "多见于中老年女性",
+    "source_doc_id": "Doc_unlabel_0302",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "遗尿现象",
     "head_type": "Symptom",
     "relation": "treated_by",
@@ -34042,6 +35758,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "吃完饭之后又吃水果",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "糖尿病",
+    "tail_type": "Disease",
+    "evidence": "如果在吃完饭之后又吃水果，会进一步造成血糖过高，如果时间长，会造成发生糖尿病风险的增加",
+    "source_doc_id": "Doc_unlabel_0303",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "餐后吃水果",
@@ -34958,6 +36686,18 @@
   {
     "head": "亚硝酸盐",
     "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "胃炎",
+    "tail_type": "Disease",
+    "evidence": "所以易发生胃炎",
+    "source_doc_id": "Doc_unlabel_0312",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "亚硝酸盐",
+    "head_type": "Other",
     "relation": "causes",
     "tail": "胃癌",
     "tail_type": "Disease",
@@ -34966,6 +36706,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "长时间口服阿司匹林",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "慢性胃炎",
+    "tail_type": "Disease",
+    "evidence": "长时间口服阿司匹林的人，是慢性胃炎的高危人群",
+    "source_doc_id": "Doc_unlabel_0312",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "长时间饮酒",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "慢性胃炎",
+    "tail_type": "Disease",
+    "evidence": "长时间饮酒也是慢性胃炎的危险因素",
+    "source_doc_id": "Doc_unlabel_0312",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
   },
   {
     "head": "长时间饮酒",
@@ -35544,6 +37308,18 @@
     "confidence": 0.95
   },
   {
+    "head": "抑郁、恼怒或情绪紧张",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肝脾不和",
+    "tail_type": "PathologicalState",
+    "evidence": "多于抑郁、恼怒或情绪紧张时发生腹泻，属于肝脾不和引起",
+    "source_doc_id": "Doc_unlabel_0313",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "肝脾不和",
     "head_type": "PathologicalState",
     "relation": "treated_by",
@@ -35614,6 +37390,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "过度的劳累",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鞘膜积液",
+    "tail_type": "Disease",
+    "evidence": "导致上述情况的原因最常见的就是因为过度的劳累",
+    "source_doc_id": "Doc_unlabel_0314",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "过多的精细活动",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "鞘膜积液",
+    "tail_type": "Disease",
+    "evidence": "导致上述情况的原因最常见的就是因为过度的劳累或者过多的精细活动",
+    "source_doc_id": "Doc_unlabel_0314",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "肌腱反复摩擦",
@@ -35826,6 +37626,42 @@
     "tail": "肥胖",
     "tail_type": "Disease",
     "evidence": "久而久之就会引起肥胖",
+    "source_doc_id": "Doc_unlabel_0316",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "睡眠过多",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "糖尿病",
+    "tail_type": "Disease",
+    "evidence": "睡眠过多会引起很多的害处，如增加糖尿病、心脏病、肥胖症的风险等",
+    "source_doc_id": "Doc_unlabel_0316",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "睡眠过多",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "心脏病",
+    "tail_type": "Disease",
+    "evidence": "睡眠过多会引起很多的害处，如增加糖尿病、心脏病、肥胖症的风险等",
+    "source_doc_id": "Doc_unlabel_0316",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "睡眠过多",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "肥胖症",
+    "tail_type": "Disease",
+    "evidence": "睡眠过多会引起很多的害处，如增加糖尿病、心脏病、肥胖症的风险等",
     "source_doc_id": "Doc_unlabel_0316",
     "source_file": "unlabel",
     "source_type": "qwen",
@@ -37176,6 +39012,18 @@
     "confidence": 0.85
   },
   {
+    "head": "不注意防护",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "角膜上皮灼伤",
+    "tail_type": "PathologicalState",
+    "evidence": "如果进行电焊时不注意防护，有可能会被电焊烧灼到眼睛",
+    "source_doc_id": "Doc_unlabel_0327",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "电焊",
     "head_type": "Other",
     "relation": "causes",
@@ -38394,6 +40242,18 @@
     "tail": "前列腺炎",
     "tail_type": "Disease",
     "evidence": "男性淋病常可并发...前列腺炎",
+    "source_doc_id": "Doc_unlabel_0335",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "治疗不及时",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "副睾炎",
+    "tail_type": "Disease",
+    "evidence": "副睾炎多见于治疗不及时者",
     "source_doc_id": "Doc_unlabel_0335",
     "source_file": "unlabel",
     "source_type": "qwen",
@@ -40344,6 +42204,18 @@
     "confidence": 0.95
   },
   {
+    "head": "节育器移位",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "异位妊娠",
+    "tail_type": "Disease",
+    "evidence": "另外，节育器移位还会增加异位妊娠的风险",
+    "source_doc_id": "Doc_unlabel_0355",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "节育器下移",
     "head_type": "PathologicalState",
     "relation": "located_in",
@@ -41988,6 +43860,18 @@
     "confidence": 0.85
   },
   {
+    "head": "时间拖延",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "坏死",
+    "tail_type": "PathologicalState",
+    "evidence": "一旦误诊以后时间拖延越久，睾丸缺血、坏死的概率越大",
+    "source_doc_id": "Doc_unlabel_0370",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
     "head": "怀孕",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -42514,6 +44398,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.92
+  },
+  {
+    "head": "包茎",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "包皮感染",
+    "tail_type": "Disease",
+    "evidence": "增加包皮感染、阴茎癌发生的概率",
+    "source_doc_id": "Doc_unlabel_0377",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "包茎",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "阴茎癌",
+    "tail_type": "Disease",
+    "evidence": "增加包皮感染、阴茎癌发生的概率",
+    "source_doc_id": "Doc_unlabel_0377",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "促甲状腺激素释放激素",
@@ -43404,6 +45312,18 @@
     "confidence": 0.92
   },
   {
+    "head": "血管壁的通透性不好",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "出血",
+    "tail_type": "Symptom",
+    "evidence": "血管壁的通透性不好，容易发生出血",
+    "source_doc_id": "Doc_unlabel_0388",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
     "head": "发生在脑组织的出血",
     "head_type": "PathologicalState",
     "relation": "is_a",
@@ -43632,6 +45552,30 @@
     "confidence": 0.85
   },
   {
+    "head": "营养不良",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "体温过低",
+    "tail_type": "Symptom",
+    "evidence": "像营养不良、贫血的患者，容易出现体温过低",
+    "source_doc_id": "Doc_unlabel_0391",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "贫血",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "体温过低",
+    "tail_type": "Symptom",
+    "evidence": "像营养不良、贫血的患者，容易出现体温过低",
+    "source_doc_id": "Doc_unlabel_0391",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "产热量不足",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -43714,6 +45658,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "胃腺瘤性息肉",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "胃癌",
+    "tail_type": "Disease",
+    "evidence": "4、胃腺瘤性息肉：癌变率可达10%-20%,且息肉超过2cm,癌变率明显升高",
+    "source_doc_id": "Doc_unlabel_0393",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
   },
   {
     "head": "胃腺瘤性息肉",
@@ -48396,6 +50352,30 @@
     "confidence": 0.9
   },
   {
+    "head": "到过疫区",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "新型冠状病毒肺炎",
+    "tail_type": "Disease",
+    "evidence": "若有到过疫区或接触过确诊的患者，建议及时排除此病的可能性",
+    "source_doc_id": "Doc_unlabel_0429",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
+    "head": "接触过确诊的患者",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "新型冠状病毒肺炎",
+    "tail_type": "Disease",
+    "evidence": "若有到过疫区或接触过确诊的患者，建议及时排除此病的可能性",
+    "source_doc_id": "Doc_unlabel_0429",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
     "head": "外源性补充雌激素",
     "head_type": "Treatment",
     "relation": "causes",
@@ -50400,6 +52380,42 @@
     "confidence": 0.85
   },
   {
+    "head": "不良的生活方式",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "甘油三酯高",
+    "tail_type": "Disease",
+    "evidence": "后天性因素即不良的生活方式造成",
+    "source_doc_id": "Doc_unlabel_0446",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "基因水平",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "甘油三酯高",
+    "tail_type": "Disease",
+    "evidence": "先天性因素即基因水平方面的",
+    "source_doc_id": "Doc_unlabel_0446",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "甘油三酯高",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "急性胰腺炎",
+    "tail_type": "Disease",
+    "evidence": "有可能诱发急性胰腺炎的风险",
+    "source_doc_id": "Doc_unlabel_0446",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "甘油三酯高",
     "head_type": "Disease",
     "relation": "treated_by",
@@ -51048,6 +53064,18 @@
     "confidence": 0.9
   },
   {
+    "head": "父母双方有高度近视",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "孩子近视",
+    "tail_type": "Disease",
+    "evidence": "父母双方有高度近视的，那么孩子近视的可能性会增加",
+    "source_doc_id": "Doc_unlabel_0452",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "近视",
     "head_type": "Disease",
     "relation": "treated_by",
@@ -51586,6 +53614,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.88
+  },
+  {
+    "head": "紧张",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "白大衣高血压",
+    "tail_type": "Disease",
+    "evidence": "避免因为紧张等因素而出现假现性高血压，或呈白大衣高血压的可能性",
+    "source_doc_id": "Doc_unlabel_0457",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "病变",
@@ -52714,6 +54754,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "包茎",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "生殖系统的感染",
+    "tail_type": "Disease",
+    "evidence": "包茎不卫生容易发生生殖系统的感染",
+    "source_doc_id": "Doc_unlabel_0468",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "包茎",
@@ -55884,6 +57936,30 @@
     "confidence": 0.95
   },
   {
+    "head": "脊髓灰质炎疫苗服用的方法不当",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "小儿脊髓灰质炎",
+    "tail_type": "Disease",
+    "evidence": "可能脊髓灰质炎疫苗服用的方法不当...可以偶然出现小儿脊髓灰质炎的症状",
+    "source_doc_id": "Doc_unlabel_0495",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "运输过程中造成脊髓灰质炎疫苗的失效",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "小儿脊髓灰质炎",
+    "tail_type": "Disease",
+    "evidence": "或者是运输过程中造成脊髓灰质炎疫苗的失效，可以偶然出现小儿脊髓灰质炎的症状",
+    "source_doc_id": "Doc_unlabel_0495",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "小儿麻痹症",
     "head_type": "Disease",
     "relation": "causes",
@@ -58896,6 +60972,18 @@
     "confidence": 0.95
   },
   {
+    "head": "青壮年男性",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "精索静脉曲张",
+    "tail_type": "Disease",
+    "evidence": "好发于青壮年男性",
+    "source_doc_id": "Doc_unlabel_0520",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "精索静脉曲张",
     "head_type": "Disease",
     "relation": "located_in",
@@ -60000,6 +62088,18 @@
     "confidence": 0.9
   },
   {
+    "head": "酒精",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "酒精跟乳腺癌有一定关系。饮酒的人乳腺癌的发生明显升高",
+    "source_doc_id": "Doc_unlabel_0530",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "转氨酶升高",
     "head_type": "ClinicalSign",
     "relation": "symptom_of",
@@ -60648,6 +62748,18 @@
     "confidence": 0.88
   },
   {
+    "head": "神经系统发育不完善",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "功能紊乱",
+    "tail_type": "PathologicalState",
+    "evidence": "婴幼儿由于神经系统发育不完善，在体温上升期负责血管收缩、舒张的神经容易出现相应的功能紊乱",
+    "source_doc_id": "Doc_unlabel_0537",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "功能紊乱",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -61140,6 +63252,30 @@
     "confidence": 0.9
   },
   {
+    "head": "下台阶下不好",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "脚扭伤",
+    "tail_type": "Disease",
+    "evidence": "下台阶下不好，或者是雨天路滑都容易出现脚扭伤的问题",
+    "source_doc_id": "Doc_unlabel_0543",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "雨天路滑",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "脚扭伤",
+    "tail_type": "Disease",
+    "evidence": "下台阶下不好，或者是雨天路滑都容易出现脚扭伤的问题",
+    "source_doc_id": "Doc_unlabel_0543",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "踝关节的水肿",
     "head_type": "Symptom",
     "relation": "symptom_of",
@@ -61282,6 +63418,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "遗传因素",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "耳朵里面流水",
+    "tail_type": "Symptom",
+    "evidence": "很可能是受到遗传因素的影响",
+    "source_doc_id": "Doc_unlabel_0545",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "油耳",
@@ -61512,6 +63660,18 @@
     "confidence": 0.85
   },
   {
+    "head": "基因",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "狐臭",
+    "tail_type": "Disease",
+    "evidence": "狐臭一般有家族聚集倾向，所以跟基因有关系",
+    "source_doc_id": "Doc_unlabel_0547",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "腋下小汗腺分泌旺盛",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -61546,6 +63706,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "青春期体内激素水平",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "大汗腺分泌过多",
+    "tail_type": "PathologicalState",
+    "evidence": "腋下大汗腺分泌过多，主要跟青春期体内激素水平有关系",
+    "source_doc_id": "Doc_unlabel_0547",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "腋下多汗",
@@ -62522,6 +64694,18 @@
   {
     "head": "前列腺结石",
     "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "前列腺炎",
+    "tail_type": "Disease",
+    "evidence": "如果一旦有前列腺结石，病人出现前列腺炎的风险会增加",
+    "source_doc_id": "Doc_unlabel_0554",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "前列腺结石",
+    "head_type": "Disease",
     "relation": "causes",
     "tail": "继发感染",
     "tail_type": "Disease",
@@ -62916,6 +65100,18 @@
     "confidence": 0.95
   },
   {
+    "head": "免疫功能低下",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "血行播散型结核",
+    "tail_type": "Disease",
+    "evidence": "免疫功能低下患者结核菌还可以通过淋巴管侵入血管，引起血行播散型结核",
+    "source_doc_id": "Doc_unlabel_0557",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "血行播散型结核",
     "head_type": "Disease",
     "relation": "causes",
@@ -63058,6 +65254,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "小便量太少",
+    "head_type": "Symptom",
+    "relation": "risk_factor_for",
+    "tail": "尿路结石",
+    "tail_type": "Disease",
+    "evidence": "小便量太少不能充分稀释尿液当中的结晶，会导致结晶体析出增多，会增加患者出现尿路结石的风险",
+    "source_doc_id": "Doc_unlabel_0558",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "小便量太少",
@@ -63250,6 +65458,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "血压突然升高",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "再次出血",
+    "tail_type": "PathologicalState",
+    "evidence": "如果血压突然升高或剧烈活动，还有再次出血的风险",
+    "source_doc_id": "Doc_unlabel_0562",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "剧烈活动",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "再次出血",
+    "tail_type": "PathologicalState",
+    "evidence": "如果血压突然升高或剧烈活动，还有再次出血的风险",
+    "source_doc_id": "Doc_unlabel_0562",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "脑出血",
@@ -65496,6 +67728,18 @@
     "confidence": 0.9
   },
   {
+    "head": "从冰箱里拿出的榴莲",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "痛经",
+    "tail_type": "Disease",
+    "evidence": "从冰箱里拿出的榴莲不要马上在月经期吃，这样太寒凉，以免引起血管收缩而造成痛经的可能",
+    "source_doc_id": "Doc_unlabel_0581",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "血管收缩",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -67284,6 +69528,18 @@
     "confidence": 0.95
   },
   {
+    "head": "高血压",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "蹲下头晕",
+    "tail_type": "Symptom",
+    "evidence": "高血压患者也容易发生蹲下头晕的症状",
+    "source_doc_id": "Doc_unlabel_0597",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "颈椎病",
     "head_type": "Disease",
     "relation": "causes",
@@ -67678,6 +69934,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "免疫力低下",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "扁平疣",
+    "tail_type": "Disease",
+    "evidence": "是由于免疫力低下的人乳头瘤病毒感染所导致的",
+    "source_doc_id": "Doc_unlabel_0600",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
   },
   {
     "head": "维生素e软胶囊",
@@ -69288,6 +71556,18 @@
     "confidence": 0.9
   },
   {
+    "head": "感染",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "瘢痕",
+    "tail_type": "PathologicalState",
+    "evidence": "如果没有感染...愈合以后就一定不会留有瘢痕的",
+    "source_doc_id": "Doc_unlabel_0617",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "创伤愈合",
     "head_type": "Other",
     "relation": "causes",
@@ -70344,6 +72624,42 @@
     "confidence": 0.9
   },
   {
+    "head": "女性",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "面肌痉挛",
+    "tail_type": "Disease",
+    "evidence": "临床上女性较男性多发",
+    "source_doc_id": "Doc_unlabel_0627",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "年轻人",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "面肌痉挛",
+    "tail_type": "Disease",
+    "evidence": "若为先天性发病，好发于年轻人",
+    "source_doc_id": "Doc_unlabel_0627",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "中青年",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "面肌痉挛",
+    "tail_type": "Disease",
+    "evidence": "若为后天性发病，则好发于中青年",
+    "source_doc_id": "Doc_unlabel_0627",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "面肌痉挛",
     "head_type": "Disease",
     "relation": "is_a",
@@ -70750,6 +73066,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "短期内逐渐增大的结节",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "恶变",
+    "tail_type": "PathologicalState",
+    "evidence": "而对于短期内逐渐增大的结节就有恶变的倾向",
+    "source_doc_id": "Doc_unlabel_0630",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "不规则的结节",
@@ -72130,6 +74458,54 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "过早的同房",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "异常出血",
+    "tail_type": "Symptom",
+    "evidence": "过早的同房会造成子宫内膜的兴奋，会产生一定的破溃，引起异常出血的几率发生",
+    "source_doc_id": "Doc_unlabel_0644",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "过早的同房",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "盆腔炎症",
+    "tail_type": "Disease",
+    "evidence": "容易造成盆腔炎症和子宫内膜的炎症发生",
+    "source_doc_id": "Doc_unlabel_0644",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "过早的同房",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "子宫内膜的炎症",
+    "tail_type": "Disease",
+    "evidence": "容易造成盆腔炎症和子宫内膜的炎症发生",
+    "source_doc_id": "Doc_unlabel_0644",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "过早的同房",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "月经产生变化",
+    "tail_type": "Symptom",
+    "evidence": "甚至会影响当月的月经产生变化",
+    "source_doc_id": "Doc_unlabel_0644",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "频繁的人工流产",
@@ -74784,6 +77160,18 @@
     "confidence": 0.95
   },
   {
+    "head": "雌激素分泌增多",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "股骨头脱位",
+    "tail_type": "Disease",
+    "evidence": "妊娠后期的母亲雌激素分泌增多...所以在新生儿期比较容易发生的就是股骨头脱位",
+    "source_doc_id": "Doc_unlabel_0666",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "活动的幅度过大",
     "head_type": "RiskFactor",
     "relation": "causes",
@@ -76260,6 +78648,30 @@
     "confidence": 0.93
   },
   {
+    "head": "体内激素改变",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "心脑血管疾病",
+    "tail_type": "Disease",
+    "evidence": "体内激素改变，可能会造成潜在的远期不良影响，如女性心血管变化，会增加心脑血管疾病发生的可能",
+    "source_doc_id": "Doc_unlabel_0680",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "女性心血管变化",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "心脑血管疾病",
+    "tail_type": "Disease",
+    "evidence": "如女性心血管变化，会增加心脑血管疾病发生的可能",
+    "source_doc_id": "Doc_unlabel_0680",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "骨质疏松",
     "head_type": "Disease",
     "relation": "causes",
@@ -76426,6 +78838,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "超重和肥胖",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "糖代谢异常",
+    "tail_type": "PathologicalState",
+    "evidence": "如果患者是超重和肥胖的体型，也容易合并糖代谢异常",
+    "source_doc_id": "Doc_unlabel_0681",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "超重和肥胖",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "糖尿病",
+    "tail_type": "Disease",
+    "evidence": "甚至容易合并有糖尿病的存在",
+    "source_doc_id": "Doc_unlabel_0681",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "关节附近受到重大暴力",
@@ -76680,6 +79116,30 @@
     "confidence": 0.9
   },
   {
+    "head": "妊娠囊过小",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "漏吸",
+    "tail_type": "ClinicalSign",
+    "evidence": "如果妊娠囊过小，也就是在妊娠6周之内做人工流产，由于妊娠囊过小，可能在手术当中出现漏吸的情况",
+    "source_doc_id": "Doc_unlabel_0685",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "妊娠囊过大",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "感染",
+    "tail_type": "PathologicalState",
+    "evidence": "如果超过8周做人工流产，这个时候由于妊娠囊过大、手术时间长、出血多，术后恢复得慢，感染的情况就有可能增加",
+    "source_doc_id": "Doc_unlabel_0685",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "感染",
     "head_type": "PathologicalState",
     "relation": "treated_by",
@@ -76690,6 +79150,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.8
+  },
+  {
+    "head": "乳汁淤积",
+    "head_type": "PathologicalState",
+    "relation": "risk_factor_for",
+    "tail": "浆细胞性乳腺炎",
+    "tail_type": "Disease",
+    "evidence": "长时间的乳汁淤积，会比较容易形成此病",
+    "source_doc_id": "Doc_unlabel_0686",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "穿紧身上衣或者戴比较紧的胸罩",
@@ -76762,6 +79234,42 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "冷空气",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "支气管炎",
+    "tail_type": "Disease",
+    "evidence": "非生物因素主要是物理、化学等刺激，比如冷空气、粉尘、刺激性气体等",
+    "source_doc_id": "Doc_unlabel_0687",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "粉尘",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "支气管炎",
+    "tail_type": "Disease",
+    "evidence": "非生物因素主要是物理、化学等刺激，比如冷空气、粉尘、刺激性气体等",
+    "source_doc_id": "Doc_unlabel_0687",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "刺激性气体",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "支气管炎",
+    "tail_type": "Disease",
+    "evidence": "非生物因素主要是物理、化学等刺激，比如冷空气、粉尘、刺激性气体等",
+    "source_doc_id": "Doc_unlabel_0687",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "感染",
@@ -77760,6 +80268,18 @@
     "confidence": 0.95
   },
   {
+    "head": "盆浴",
+    "head_type": "Treatment",
+    "relation": "risk_factor_for",
+    "tail": "逆行感染",
+    "tail_type": "PathologicalState",
+    "evidence": "只能洗淋浴而不能盆浴，避免增加逆行感染的机会",
+    "source_doc_id": "Doc_unlabel_0696",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "保持良好心态、充足睡眠",
     "head_type": "Treatment",
     "relation": "causes",
@@ -78300,6 +80820,30 @@
     "confidence": 0.95
   },
   {
+    "head": "盐分摄入过多",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "如果盐分摄入过多，孕期发生高血压等疾病的风险增高",
+    "source_doc_id": "Doc_unlabel_0702",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "亚硝酸盐",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "癌症",
+    "tail_type": "Disease",
+    "evidence": "亚硝酸盐对人体有害，有致癌的风险",
+    "source_doc_id": "Doc_unlabel_0702",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
     "head": "妊娠反应",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -78538,6 +81082,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.85
+  },
+  {
+    "head": "肥胖",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "打鼾",
+    "tail_type": "Symptom",
+    "evidence": "肥胖：患者体重超标>20%为临床较危险致病因素",
+    "source_doc_id": "Doc_unlabel_0706",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
   },
   {
     "head": "气道狭窄",
@@ -78930,6 +81486,54 @@
     "tail": "心脏",
     "tail_type": "AnatomicalSite",
     "evidence": "左边心脏部位隐隐作痛",
+    "source_doc_id": "Doc_unlabel_0709",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "高血压",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "心血管病",
+    "tail_type": "MedicalCategory",
+    "evidence": "心血管病的危险因素，比如高血压",
+    "source_doc_id": "Doc_unlabel_0709",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "糖尿病",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "心血管病",
+    "tail_type": "MedicalCategory",
+    "evidence": "高血压、糖尿病",
+    "source_doc_id": "Doc_unlabel_0709",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "血脂异常",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "心血管病",
+    "tail_type": "MedicalCategory",
+    "evidence": "糖尿病、血脂异常",
+    "source_doc_id": "Doc_unlabel_0709",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "心血管病",
+    "tail_type": "MedicalCategory",
+    "evidence": "血脂异常、吸烟等",
     "source_doc_id": "Doc_unlabel_0709",
     "source_file": "unlabel",
     "source_type": "qwen",
@@ -80220,6 +82824,90 @@
     "confidence": 0.95
   },
   {
+    "head": "年龄",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "高血压的高危因素主要包括:1、年龄，尤其是60岁以上的患者，就存在高危因素",
+    "source_doc_id": "Doc_unlabel_0722",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "高血压家族史",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "2、有高血压家族史的患者，尤其是父母有高血压的患者",
+    "source_doc_id": "Doc_unlabel_0722",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "3、吸烟的患者",
+    "source_doc_id": "Doc_unlabel_0722",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "肥胖",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "4、肥胖或者体重超重的患者",
+    "source_doc_id": "Doc_unlabel_0722",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "糖尿病",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "5、经常饮酒有糖尿病的患者，还有高盐饮食的患者，缺乏体育锻炼。这些都是高血压的高危因素",
+    "source_doc_id": "Doc_unlabel_0722",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "高盐饮食",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "5、经常饮酒有糖尿病的患者，还有高盐饮食的患者，缺乏体育锻炼。这些都是高血压的高危因素",
+    "source_doc_id": "Doc_unlabel_0722",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "缺乏体育锻炼",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "高血压",
+    "tail_type": "Disease",
+    "evidence": "5、经常饮酒有糖尿病的患者，还有高盐饮食的患者，缺乏体育锻炼。这些都是高血压的高危因素",
+    "source_doc_id": "Doc_unlabel_0722",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "高血压",
     "head_type": "Disease",
     "relation": "treated_by",
@@ -80287,6 +82975,54 @@
     "tail_type": "TestResult",
     "evidence": "高血压的诊断除了依据血压的数值",
     "source_doc_id": "Doc_unlabel_0722",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "高血压",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "急性脑卒中",
+    "tail_type": "Disease",
+    "evidence": "如果病人也合并有高血压、糖尿病、年龄较大、高脂血症等危险因素，这时突然发生的手部麻木，也要警惕有无急性脑卒中的情况",
+    "source_doc_id": "Doc_unlabel_0723",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "糖尿病",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "急性脑卒中",
+    "tail_type": "Disease",
+    "evidence": "如果病人也合并有高血压、糖尿病、年龄较大、高脂血症等危险因素，这时突然发生的手部麻木，也要警惕有无急性脑卒中的情况",
+    "source_doc_id": "Doc_unlabel_0723",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "高脂血症",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "急性脑卒中",
+    "tail_type": "Disease",
+    "evidence": "如果病人也合并有高血压、糖尿病、年龄较大、高脂血症等危险因素，这时突然发生的手部麻木，也要警惕有无急性脑卒中的情况",
+    "source_doc_id": "Doc_unlabel_0723",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "年龄较大",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "急性脑卒中",
+    "tail_type": "Disease",
+    "evidence": "如果病人也合并有高血压、糖尿病、年龄较大、高脂血症等危险因素，这时突然发生的手部麻木，也要警惕有无急性脑卒中的情况",
+    "source_doc_id": "Doc_unlabel_0723",
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
@@ -81468,6 +84204,18 @@
     "confidence": 0.9
   },
   {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肺气肿",
+    "tail_type": "Disease",
+    "evidence": "吸烟不仅和肺癌相关，它和肺气肿的发病率也是正相关的",
+    "source_doc_id": "Doc_unlabel_0733",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "有毒的气体",
     "head_type": "RiskFactor",
     "relation": "causes",
@@ -81550,6 +84298,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "遗传",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肺气肿",
+    "tail_type": "Disease",
+    "evidence": "肺气肿的形成主要是两个方面的因素：第一个方面是宿主的因素，宿主因素主要考虑遗传",
+    "source_doc_id": "Doc_unlabel_0733",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "心肌梗死",
@@ -81802,6 +84562,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "慢性结膜炎",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "结膜结石",
+    "tail_type": "Disease",
+    "evidence": "好发于慢性结膜炎",
+    "source_doc_id": "Doc_unlabel_0736",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "沙眼",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "结膜结石",
+    "tail_type": "Disease",
+    "evidence": "好发于...沙眼",
+    "source_doc_id": "Doc_unlabel_0736",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "结膜结石",
@@ -82450,6 +85234,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "外阴白斑",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "外阴癌",
+    "tail_type": "Disease",
+    "evidence": "外阴白斑是外阴癌的高发人群",
+    "source_doc_id": "Doc_unlabel_0740",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "外阴白斑",
@@ -84828,6 +87624,18 @@
     "confidence": 0.95
   },
   {
+    "head": "喝酒",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "双硫仑反应",
+    "tail_type": "PathologicalState",
+    "evidence": "在使用头孢菌素类的药物前后7-10天喝酒，都有可能导致出现双硫仑反应",
+    "source_doc_id": "Doc_unlabel_0756",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "面色潮红",
     "head_type": "Symptom",
     "relation": "symptom_of",
@@ -86352,6 +89160,18 @@
     "confidence": 0.9
   },
   {
+    "head": "高盐饮食",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "心律失常",
+    "tail_type": "Disease",
+    "evidence": "避免高盐、高脂、高糖的饮食...避免过于咸的饮食，因为会加重心脏负担，造成心律失常的进一步恶化",
+    "source_doc_id": "Doc_unlabel_0769",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "血热",
     "head_type": "PathologicalState",
     "relation": "causes",
@@ -86362,6 +89182,42 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "素体阳气旺盛",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "月经提前",
+    "tail_type": "Disease",
+    "evidence": "当女性素体阳气旺盛，或者喜食辛辣、补品，都可能导致脉内之血燥动不安，血热妄行，表现为月经提前",
+    "source_doc_id": "Doc_unlabel_0770",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "喜食辛辣",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "月经提前",
+    "tail_type": "Disease",
+    "evidence": "当女性素体阳气旺盛，或者喜食辛辣、补品，都可能导致脉内之血燥动不安，血热妄行，表现为月经提前",
+    "source_doc_id": "Doc_unlabel_0770",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "补品",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "月经提前",
+    "tail_type": "Disease",
+    "evidence": "当女性素体阳气旺盛，或者喜食辛辣、补品，都可能导致脉内之血燥动不安，血热妄行，表现为月经提前",
+    "source_doc_id": "Doc_unlabel_0770",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "色泽鲜红",
@@ -86770,6 +89626,42 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "家族性腺瘤性息肉",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肠癌",
+    "tail_type": "Disease",
+    "evidence": "特别是具有肠癌高发因素的患者，如家族性腺瘤性息肉",
+    "source_doc_id": "Doc_unlabel_0773",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "非息肉性家族遗传疾病",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肠癌",
+    "tail_type": "Disease",
+    "evidence": "特别是具有肠癌高发因素的患者，如...非息肉性家族遗传疾病",
+    "source_doc_id": "Doc_unlabel_0773",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "慢性肠炎",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "肠癌",
+    "tail_type": "Disease",
+    "evidence": "特别是具有肠癌高发因素的患者，以及慢性肠炎患者",
+    "source_doc_id": "Doc_unlabel_0773",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
   },
   {
     "head": "肠癌",
@@ -89088,6 +91980,18 @@
     "confidence": 0.9
   },
   {
+    "head": "豆制品",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "子宫肌瘤",
+    "tail_type": "Disease",
+    "evidence": "如果吃太多可能会导致肌瘤生长比较快",
+    "source_doc_id": "Doc_unlabel_0790",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.88
+  },
+  {
     "head": "继发性贫血",
     "head_type": "PathologicalState",
     "relation": "treated_by",
@@ -89302,6 +92206,30 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "高危地区",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "新冠肺炎",
+    "tail_type": "Disease",
+    "evidence": "比如是否去过高危地区",
+    "source_doc_id": "Doc_unlabel_0791",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "聚集性发病",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "新冠肺炎",
+    "tail_type": "Disease",
+    "evidence": "周围有没有聚集性发病",
+    "source_doc_id": "Doc_unlabel_0791",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "病毒感染",
@@ -89626,6 +92554,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.92
+  },
+  {
+    "head": "年龄增大",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "骨关节炎",
+    "tail_type": "Disease",
+    "evidence": "年龄增大只是增加了oa发生危险",
+    "source_doc_id": "Doc_unlabel_0794",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "继发性oa",
@@ -90240,6 +93180,30 @@
     "confidence": 0.9
   },
   {
+    "head": "成长过程中遇到较多创伤",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "抑郁发作",
+    "tail_type": "PathologicalState",
+    "evidence": "成长过程中遇到较多创伤、或遇到创伤时没有很好的排解方式、或小时候受到心理或身体的虐待、忽视等，可导致抑郁发作几率远高于普通人群",
+    "source_doc_id": "Doc_unlabel_0799",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "小时候受到心理或身体的虐待、忽视",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "抑郁发作",
+    "tail_type": "PathologicalState",
+    "evidence": "成长过程中遇到较多创伤、或遇到创伤时没有很好的排解方式、或小时候受到心理或身体的虐待、忽视等，可导致抑郁发作几率远高于普通人群",
+    "source_doc_id": "Doc_unlabel_0799",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "摄入的食物",
     "head_type": "Other",
     "relation": "causes",
@@ -90696,6 +93660,30 @@
     "confidence": 0.88
   },
   {
+    "head": "子宫较大",
+    "head_type": "ClinicalSign",
+    "relation": "risk_factor_for",
+    "tail": "位置异常",
+    "tail_type": "PathologicalState",
+    "evidence": "因为这时子宫较大，上环容易位置异常甚至脱落",
+    "source_doc_id": "Doc_unlabel_0803",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
+    "head": "哺乳期",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "偶发排卵",
+    "tail_type": "ClinicalSign",
+    "evidence": "但也有偶发排卵的可能",
+    "source_doc_id": "Doc_unlabel_0803",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.8
+  },
+  {
     "head": "智齿",
     "head_type": "AnatomicalSite",
     "relation": "causes",
@@ -90862,6 +93850,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.93
+  },
+  {
+    "head": "年龄增加",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "皮肤松弛下垂",
+    "tail_type": "PathologicalState",
+    "evidence": "随着年龄增加很多人皮肤松弛下垂",
+    "source_doc_id": "Doc_unlabel_0806",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "皮肤松弛下垂",
@@ -91179,6 +94179,18 @@
     "head": "劳损",
     "head_type": "PathologicalState",
     "relation": "causes",
+    "tail": "小腿总是酸痛",
+    "tail_type": "Symptom",
+    "evidence": "小腿总是酸痛，是由于小腿部位经常处于劳损、疲劳状态，并且伴有受凉，就会导致局部产生比较多的乳酸以及炎症等代谢产物",
+    "source_doc_id": "Doc_unlabel_0809",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "受凉",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
     "tail": "小腿总是酸痛",
     "tail_type": "Symptom",
     "evidence": "小腿总是酸痛，是由于小腿部位经常处于劳损、疲劳状态，并且伴有受凉，就会导致局部产生比较多的乳酸以及炎症等代谢产物",
@@ -92194,6 +95206,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "年龄增大",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "驼背",
+    "tail_type": "Disease",
+    "evidence": "随着年龄增大，逐渐出现驼背症状",
+    "source_doc_id": "Doc_unlabel_0818",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
   },
   {
     "head": "驼背",
@@ -93768,6 +96792,54 @@
     "confidence": 0.9
   },
   {
+    "head": "饮酒",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癫痫",
+    "tail_type": "Disease",
+    "evidence": "很多有因素都有诱发癫痫的可能性...避免饮酒",
+    "source_doc_id": "Doc_unlabel_0828",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "熬夜",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癫痫",
+    "tail_type": "Disease",
+    "evidence": "不要过于剧烈的运动也不要熬夜",
+    "source_doc_id": "Doc_unlabel_0828",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "剧烈运动",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癫痫",
+    "tail_type": "Disease",
+    "evidence": "不要过于剧烈的运动也不要熬夜",
+    "source_doc_id": "Doc_unlabel_0828",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "冷、热刺激",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癫痫",
+    "tail_type": "Disease",
+    "evidence": "避免过度冷、热刺激",
+    "source_doc_id": "Doc_unlabel_0828",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "癫痫发作",
     "head_type": "Symptom",
     "relation": "causes",
@@ -94476,6 +97548,18 @@
     "confidence": 0.9
   },
   {
+    "head": "女性",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "甲状腺腺瘤",
+    "tail_type": "Disease",
+    "evidence": "甲状腺腺瘤是普外科的常见病，尤其好发于女性",
+    "source_doc_id": "Doc_unlabel_0835",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "甲状腺腺瘤",
     "head_type": "Disease",
     "relation": "located_in",
@@ -94620,6 +97704,18 @@
     "confidence": 0.9
   },
   {
+    "head": "心情不好",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "血压",
+    "tail_type": "ClinicalSign",
+    "evidence": "心情不好血压肯定会受影响",
+    "source_doc_id": "Doc_unlabel_0836",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "过度悲伤",
     "head_type": "Other",
     "relation": "causes",
@@ -94678,6 +97774,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "夏季天气炎热潮湿",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "汗疱疹",
+    "tail_type": "Disease",
+    "evidence": "往往是在夏季天气炎热潮湿的时候容易出现",
+    "source_doc_id": "Doc_unlabel_0837",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "乳腺癌",
@@ -97452,6 +100560,42 @@
     "confidence": 0.92
   },
   {
+    "head": "BRCA基因突变",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "卵巢癌",
+    "tail_type": "Disease",
+    "evidence": "基因检测提示brca基因的突变",
+    "source_doc_id": "Doc_unlabel_0859",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "家族里直系亲属有结直肠癌、乳腺癌，或卵巢癌高发",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "卵巢癌",
+    "tail_type": "Disease",
+    "evidence": "预防高危因素，如家族里直系亲属有结直肠癌、乳腺癌，或卵巢癌高发",
+    "source_doc_id": "Doc_unlabel_0859",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "遗传",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "卵巢癌",
+    "tail_type": "Disease",
+    "evidence": "卵巢癌的发病原因，有一部分是跟遗传相关的",
+    "source_doc_id": "Doc_unlabel_0859",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
+  },
+  {
     "head": "卵巢癌",
     "head_type": "Disease",
     "relation": "diagnosed_by",
@@ -97498,6 +100642,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "高胆固醇、高脂饮食",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "卵巢癌",
+    "tail_type": "Disease",
+    "evidence": "避免高胆固醇、高脂饮食，保持精神愉快，可以预防卵巢癌的发生",
+    "source_doc_id": "Doc_unlabel_0859",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "脑梗认知障碍",
@@ -98290,6 +101446,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "hla-b27基因",
+    "head_type": "TestResult",
+    "relation": "risk_factor_for",
+    "tail": "强直性脊柱炎",
+    "tail_type": "Disease",
+    "evidence": "即hla-b27基因，若存在此基因则具有发病可能",
+    "source_doc_id": "Doc_unlabel_0865",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "强直性脊柱炎",
@@ -100404,6 +103572,18 @@
     "confidence": 0.85
   },
   {
+    "head": "卵巢囊肿",
+    "head_type": "Disease",
+    "relation": "risk_factor_for",
+    "tail": "蒂扭转",
+    "tail_type": "PathologicalState",
+    "evidence": "卵巢囊肿同床的时候容易发生两个并发症，一个是蒂扭转",
+    "source_doc_id": "Doc_unlabel_0883",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "卵巢肿瘤",
     "head_type": "Disease",
     "relation": "causes",
@@ -100534,6 +103714,54 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "性生活",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "破裂",
+    "tail_type": "PathologicalState",
+    "evidence": "进行性生活...囊肿可能会出现破裂",
+    "source_doc_id": "Doc_unlabel_0883",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "腹部受压",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "破裂",
+    "tail_type": "PathologicalState",
+    "evidence": "腹部受压...囊肿可能会出现破裂",
+    "source_doc_id": "Doc_unlabel_0883",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "分娩",
+    "head_type": "Other",
+    "relation": "risk_factor_for",
+    "tail": "破裂",
+    "tail_type": "PathologicalState",
+    "evidence": "分娩...囊肿可能会出现破裂",
+    "source_doc_id": "Doc_unlabel_0883",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "妇科检查",
+    "head_type": "ExamProcedure",
+    "relation": "risk_factor_for",
+    "tail": "破裂",
+    "tail_type": "PathologicalState",
+    "evidence": "过力的妇科检查...囊肿可能会出现破裂",
+    "source_doc_id": "Doc_unlabel_0883",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "老年性黄斑变性",
@@ -100694,6 +103922,18 @@
   {
     "head": "饮食不当",
     "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "体内胆汁酸高",
+    "tail_type": "ClinicalSign",
+    "evidence": "再加上饮食不当，容易加重肝、脏方面的疾病，就会出现体内胆汁酸高",
+    "source_doc_id": "Doc_unlabel_0885",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "饮食不当",
+    "head_type": "RiskFactor",
     "relation": "causes",
     "tail": "体内胆汁酸高",
     "tail_type": "ClinicalSign",
@@ -100800,6 +104040,30 @@
     "confidence": 0.85
   },
   {
+    "head": "叶酸缺乏",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "神经管畸形",
+    "tail_type": "Disease",
+    "evidence": "如果在妊娠早期出现了叶酸缺乏的现象，可增加胎儿发生神经管畸形及早产的危险",
+    "source_doc_id": "Doc_unlabel_0886",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "叶酸缺乏",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "早产",
+    "tail_type": "Disease",
+    "evidence": "如果在妊娠早期出现了叶酸缺乏的现象，可增加胎儿发生神经管畸形及早产的危险",
+    "source_doc_id": "Doc_unlabel_0886",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "神经管缺陷病",
     "head_type": "Disease",
     "relation": "treated_by",
@@ -100819,6 +104083,18 @@
     "tail_type": "Treatment",
     "evidence": "所以一定要及时的补充叶酸",
     "source_doc_id": "Doc_unlabel_0886",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "长时间玩手机",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "胎儿畸形",
+    "tail_type": "PathologicalState",
+    "evidence": "如果长时间地玩手机，特别在怀孕前3个月时，会对胎儿造成影响，增高胎儿畸形率",
+    "source_doc_id": "Doc_unlabel_0887",
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
@@ -105792,6 +109068,18 @@
     "confidence": 0.95
   },
   {
+    "head": "高危性行为史",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "淋病",
+    "tail_type": "Disease",
+    "evidence": "淋病的患者往往都具有高危性行为史",
+    "source_doc_id": "Doc_unlabel_0927",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "尿频",
     "head_type": "Symptom",
     "relation": "symptom_of",
@@ -106500,6 +109788,114 @@
     "confidence": 0.95
   },
   {
+    "head": "初潮年龄早",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "初潮年龄越早，出现乳腺癌的风险越高",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "绝经年龄晚",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "如果绝经年龄越晚，患乳腺癌的概率可能会增加",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "激素替代疗法",
+    "head_type": "Treatment",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "与激素替代疗法有关，如患者为延缓衰老，会采取激素补充，其对乳腺癌发生有一定危险",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "直系亲属乳腺癌病史",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "母亲辈或直系亲属辈女性有乳腺癌病史，其后代女性出现乳腺癌的概率会增加",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "营养过剩",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "其它因素，如营养过剩、肥胖等，近年来小女孩出现肥胖、性早熟较多，出现乳腺癌的概率会增加",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "肥胖",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "其它因素，如营养过剩、肥胖等，近年来小女孩出现肥胖、性早熟较多，出现乳腺癌的概率会增加",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "性早熟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "近年来小女孩出现肥胖、性早熟较多，出现乳腺癌的概率会增加",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "环境压力",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "由于环境压力、心理因素，一定程度上会增加乳腺癌的发生概率",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
+    "head": "心理因素",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "乳腺癌",
+    "tail_type": "Disease",
+    "evidence": "由于环境压力、心理因素，一定程度上会增加乳腺癌的发生概率",
+    "source_doc_id": "Doc_unlabel_0935",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.95
+  },
+  {
     "head": "呕血",
     "head_type": "Symptom",
     "relation": "symptom_of",
@@ -106894,6 +110290,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "饮酒",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "癫痫发作",
+    "tail_type": "Symptom",
+    "evidence": "饮酒会加重癫痫发作的频繁",
+    "source_doc_id": "Doc_unlabel_0939",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "饮酒",
@@ -108022,6 +111430,42 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "抽烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "拔牙创出血",
+    "tail_type": "Symptom",
+    "evidence": "过早的抽烟有可能会使相应的口腔形成明确的负压环境，从而造成拔牙创压力增大，出现血凝块松脱和拔牙创出血的风险加大",
+    "source_doc_id": "Doc_unlabel_0954",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "抽烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "血凝块松脱",
+    "tail_type": "Symptom",
+    "evidence": "过早的抽烟有可能会使相应的口腔形成明确的负压环境，从而造成拔牙创压力增大，出现血凝块松脱和拔牙创出血的风险加大",
+    "source_doc_id": "Doc_unlabel_0954",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "长期抽烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "牙周炎",
+    "tail_type": "Disease",
+    "evidence": "长期抽烟会对患者的牙周造成较大的影响，引起牙周炎的高发",
+    "source_doc_id": "Doc_unlabel_0954",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
   },
   {
     "head": "普通感冒",
@@ -111048,6 +114492,30 @@
     "confidence": 0.95
   },
   {
+    "head": "含钙食物摄入比较多",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "结石",
+    "tail_type": "Disease",
+    "evidence": "饮食方面对含钙食物摄入比较多，比如豆制品、奶制品、水的问题，只是加重得结石的可能性",
+    "source_doc_id": "Doc_unlabel_0979",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
+    "head": "对钙处理能力比较低",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "结石",
+    "tail_type": "Disease",
+    "evidence": "只是结石体质的病人对钙处理能力比较低，再加上不控制饮食，相对比其他人容易得结石",
+    "source_doc_id": "Doc_unlabel_0979",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.9
+  },
+  {
     "head": "慢性尿道炎",
     "head_type": "Disease",
     "relation": "causes",
@@ -111322,6 +114790,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.95
+  },
+  {
+    "head": "危险因素",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "脑血管疾病",
+    "tail_type": "Disease",
+    "evidence": "减少一些脑血管疾病的危险因素",
+    "source_doc_id": "Doc_unlabel_0983",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "上火",
@@ -111646,6 +115126,18 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "生活不规律",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "卵巢癌抗原偏高",
+    "tail_type": "TestResult",
+    "evidence": "如果女性平时生活不规、经常熬夜、生活环境的改变、饮食不规律等，容易导致卵巢癌抗原偏高",
+    "source_doc_id": "Doc_unlabel_0985",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.85
   },
   {
     "head": "卵巢癌",
@@ -112042,6 +115534,66 @@
     "source_file": "unlabel",
     "source_type": "qwen",
     "confidence": 0.9
+  },
+  {
+    "head": "高血压",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "动脉硬化",
+    "tail_type": "Disease",
+    "evidence": "引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等",
+    "source_doc_id": "Doc_unlabel_0989",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "高血脂",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "动脉硬化",
+    "tail_type": "Disease",
+    "evidence": "引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等",
+    "source_doc_id": "Doc_unlabel_0989",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "高血糖",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "动脉硬化",
+    "tail_type": "Disease",
+    "evidence": "引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等",
+    "source_doc_id": "Doc_unlabel_0989",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "肥胖",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "动脉硬化",
+    "tail_type": "Disease",
+    "evidence": "引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等",
+    "source_doc_id": "Doc_unlabel_0989",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
+  },
+  {
+    "head": "吸烟",
+    "head_type": "RiskFactor",
+    "relation": "risk_factor_for",
+    "tail": "动脉硬化",
+    "tail_type": "Disease",
+    "evidence": "引起动脉硬化的诱因，如高血压、高血脂、高血糖、肥胖或吸烟等",
+    "source_doc_id": "Doc_unlabel_0989",
+    "source_file": "unlabel",
+    "source_type": "qwen",
+    "confidence": 0.92
   },
   {
     "head": "狭窄",

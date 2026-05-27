@@ -40,6 +40,22 @@
 - **条件约束复杂**：许多因果关系具有前置条件（如"在人工流产术三个月后发现宫腔粘连"），需要专门的 `condition_of` 关系建模。
 - **大模型在该任务中的不足**：通用 LLM 可能输出不准确或编造的医学因果知识，知识图谱可以提供可验证的证据链来约束模型输出。
 
+### 1.4 与课程任务要求的对应关系
+
+本项目围绕课程要求中的“知识图谱构建、知识推理、大模型增强、实验分析、可视化与交互系统”五个核心部分展开：
+
+| 课程要求 | 本项目实现 |
+|---|---|
+| 知识图谱构建 | 使用 CHIP2022 医疗因果实体关系抽取数据，构建 14,762 个实体、18,835 条三元组的医疗因果知识图谱 |
+| Schema 设计 | 设计 11 种实体类型、8 种关系类型，并为 `condition_of` 建模条件约束语义 |
+| 信息抽取 | 结合人工标注 Gold Seed KG 与 Qwen LLM 抽取扩展，覆盖规则解析和大模型抽取两类方法 |
+| 图谱存储 | 使用 `data/triples.csv`、`data/processed/kg.json`、实体表、关系表和因果事件表存储图谱 |
+| 图谱可视化 | 生成 `results/kg_visualization.html`，并在 Gradio 系统中展示问答相关子图 |
+| 知识推理 | 实现直接/反向因果推理、多跳路径推理、条件约束推理、上下位推理和扩展医学关系查询 |
+| 大模型增强 | 实现 GraphRAG：先检索图谱三元组、路径和条件证据，再将证据注入 Qwen Prompt |
+| 实验与分析 | 设计自动测试问题，对比 KG-only、LLM-only、KG-augmented，并分析准确性、证据可追溯性、幻觉减少和局限性 |
+| 代码可复现性 | README 中给出环境配置、数据准备、构建、推理、GraphRAG、评估和 Gradio 运行命令 |
+
 ---
 
 ## 2. 数据与知识图谱构建
@@ -189,9 +205,9 @@ Qwen 抽取的三元组示例：
 
 | 文件 | 说明 |
 |---|---|
-| `data/triples.csv` | 全部三元组（18,539 条），含 head/head_type/relation/tail/tail_type/evidence/source_doc_id/source_type/confidence |
-| `data/processed/entities.csv` | 实体列表（14,596 个），含 entity/type/frequency |
-| `data/processed/relations.csv` | 关系统计（7 种关系类型的频次） |
+| `data/triples.csv` | 全部三元组（18,835 条），含 head/head_type/relation/tail/tail_type/evidence/source_doc_id/source_type/confidence |
+| `data/processed/entities.csv` | 实体列表（14,762 个），含 entity_id/name/type/degree_count/main_source |
+| `data/processed/relations.csv` | 关系统计（8 种关系类型的频次） |
 | `data/processed/causal_events.csv` | 因果事件表（783 个 CausalEvent） |
 | `data/processed/kg.json` | 图谱 JSON（节点+边），用于可视化 |
 
@@ -203,10 +219,10 @@ Qwen 抽取的三元组示例：
 
 | 指标 | 数值 |
 |---|---|
-| 实体数量 | **14,596** |
-| 三元组数量 | **18,539** |
+| 实体数量 | **14,762** |
+| 三元组数量 | **18,835** |
 | 实体类型数量 | **11** |
-| 关系类型数量 | **7** |
+| 关系类型数量 | **8** |
 | 因果事件数量 | **783** |
 
 > 远超课程要求（实体 ≥100，三元组 ≥300，实体类型 ≥3，关系类型 ≥3）。
@@ -215,22 +231,23 @@ Qwen 抽取的三元组示例：
 
 | 关系类型 | 数量 | 占比 |
 |---|---|---|
-| `causes` | 10,709 | 57.8% |
-| `treated_by` | 2,283 | 12.3% |
-| `symptom_of` | 1,970 | 10.6% |
-| `is_a` | 1,852 | 10.0% |
+| `causes` | 10,709 | 56.9% |
+| `treated_by` | 2,283 | 12.1% |
+| `symptom_of` | 1,970 | 10.5% |
+| `is_a` | 1,852 | 9.8% |
 | `condition_of` | 584 | 3.1% |
 | `diagnosed_by` | 575 | 3.1% |
-| `located_in` | 566 | 3.1% |
+| `located_in` | 566 | 3.0% |
+| `risk_factor_for` | 296 | 1.6% |
 
-因果关系（`causes`）占据绝对主导地位（57.8%），符合医疗因果事件知识图谱的定位。`treated_by` 和 `symptom_of` 由 Qwen 抽取贡献，扩展了图谱的语义覆盖范围。
+因果关系（`causes`）占据绝对主导地位（56.9%），符合医疗因果事件知识图谱的定位。`treated_by`、`symptom_of` 和 `risk_factor_for` 由 Qwen 抽取贡献，扩展了图谱的语义覆盖范围。
 
 #### 2.5.3 来源分布
 
 | 来源 | 三元组数量 | 占比 |
 |---|---|---|
-| Gold（人工标注） | 9,126 | 49.2% |
-| Qwen（LLM 抽取） | 9,413 | 50.8% |
+| Gold（人工标注） | 9,126 | 48.5% |
+| Qwen（LLM 抽取） | 9,709 | 51.5% |
 
 Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 + 大规模扩展"的混合构建策略。
 
@@ -255,7 +272,7 @@ Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 +
 
 ### 3.1 推理任务
 
-系统支持以下十类推理任务，覆盖全部 7 种关系类型：
+系统支持以下十一类推理任务，覆盖全部 8 种关系类型：
 
 | 推理类型 | 输入示例 | 涉及关系 |
 |---|---|---|
@@ -268,6 +285,7 @@ Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 +
 | 治疗方式查询 | "血钙的异常如何治疗？" | `treated_by` |
 | 部位查询 | "脑出血发生在什么部位？" | `located_in` |
 | 诊断方式查询 | "胃食管反流如何诊断？" | `diagnosed_by` |
+| 风险因素查询 | "乳腺癌有哪些风险因素？" | `risk_factor_for` |
 | 跨关系推理 | "肝癌晚期有哪些症状？可能由什么引起？" | `symptom_of` + `causes` |
 
 ### 3.2 推理算法
@@ -295,8 +313,9 @@ Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 +
 5. **治疗推理**：当问题包含"治疗""如何治疗""用药"等关键词时，查找 `treated_by` 出边。
 6. **部位推理**：当问题包含"部位""位置""发生在"等关键词时，查找 `located_in` 出边。
 7. **诊断推理**：当问题包含"诊断""检查""确诊"等关键词时，查找 `diagnosed_by` 出边。
-8. **反向因果推理**：当问题包含"由什么""什么引起""原因"等关键词时，查找因果入边。
-9. **直接因果推理**：默认查询因果出边。
+8. **风险因素推理**：当问题包含"危险因素""风险因素""高危"等关键词时，查找 `risk_factor_for` 边。
+9. **反向因果推理**：当问题包含"由什么""什么引起""原因"等关键词时，查找因果入边。
+10. **直接因果推理**：默认查询因果出边。
 
 ### 3.3 推理样例
 
@@ -420,6 +439,25 @@ Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 +
 4. **条件证据检索**：查找相关因果关系的 condition_of 条件。
 5. **证据去重与截断**：去重后限制返回证据数量。
 
+#### 4.2.1 证据类型设计依据
+
+本项目的 GraphRAG 检索结果组织为三类结构化证据：**三元组证据、路径证据、条件证据**。这种设计与当前医疗因果图谱的 schema 是一致的，并且覆盖了问答中最常见的三种知识需求。
+
+| 证据类型 | 对应 schema | 作用 | 适用问题 |
+|---|---|---|---|
+| 三元组证据 | 所有基本关系边：`causes`、`risk_factor_for`、`is_a`、`symptom_of`、`treated_by`、`located_in`、`diagnosed_by` 等 | 提供可直接引用的事实单元，保留 head/relation/tail/source/evidence | "胃溃疡属于什么类型？""乳腺癌有哪些风险因素？""脑出血发生在什么部位？" |
+| 路径证据 | 多条 `causes` 边组成的因果链 | 支持多跳因果解释，弥补单条三元组无法表达间接关系的问题 | "为什么高血压可能和心肌梗死有关？""A 是否可能间接导致 B？" |
+| 条件证据 | `condition_of` 边及其关联的因果边 | 表达某条因果关系成立的前置条件或限定场景 | "在什么条件下宫腔粘连可能导致月经量少？" |
+
+选择这三类证据的原因如下：
+
+1. **符合图谱最小事实单元**：当前图谱以三元组为基本存储单元，所有关系最终都可以作为三元组证据返回，这是保证答案可追溯的基础。
+2. **突出医疗因果图谱特点**：本项目的核心关系是 `causes`，医学问题常要求解释因果链条，因此需要将多条因果边组合为路径证据，而不是只返回离散边。
+3. **保留 CHIP2022 的条件语义**：原始数据中的 relation=2 是条件修饰因果关系，若只返回普通三元组，会丢失"在什么条件下成立"这一重要语义，因此单独组织为条件证据。
+4. **便于约束 LLM 生成**：三元组证据回答事实，路径证据回答"为什么/是否有关"，条件证据回答"在什么情况下"，三者分别对应不同问答意图，能够减少提示词中的证据混杂和模型幻觉。
+
+需要说明的是，`matched_entities`、`source_doc_id`、`source_type`、`confidence` 和原文 `evidence` 也会参与检索与展示，但它们属于证据的元信息，而不是独立的图谱证据类型。后续如果引入原文段落检索、向量召回或文档级摘要，可以在当前三类结构化证据之外扩展"原文片段证据"或"文档证据"。
+
 ### 4.3 三种问答模式
 
 | 模式 | 说明 | 是否需要 API |
@@ -460,7 +498,7 @@ Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 +
 
 ### 4.5 对比实验设计
 
-实验在 50 个测试问题上同时运行三种问答模式，覆盖全部 7 种关系类型和 10 种推理类型。从以下角度进行对比分析：
+实验在 50 个测试问题上同时运行三种问答模式，覆盖全部 8 种关系类型和 11 种推理类型。从以下角度进行对比分析：
 
 | 评价维度 | 说明 |
 |---|---|
@@ -480,7 +518,7 @@ Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 +
 
 #### 5.1.1 测试问题
 
-系统从知识图谱中自动生成 **50 个测试问题**，覆盖全部 7 种关系类型和 11 种推理类型：
+系统从知识图谱中自动生成 **50 个测试问题**，覆盖全部 8 种关系类型和 11 种推理类型：
 
 | 问题类型 | 数量 | 涉及关系 | 示例 |
 |---|---|---|---|
@@ -620,10 +658,10 @@ Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 +
 
 ### 6.1 图谱可视化
 
-基于 pyvis 构建交互式图谱可视化（`results/kg_visualization.html`），展示知识图谱中的核心实体和关系。
+基于 pyvis/vis-network 构建交互式图谱可视化（`results/kg_visualization.html`），展示知识图谱中的核心实体和关系。当本地安装 pyvis 时使用 pyvis 写出 HTML；若环境中缺少 pyvis，则使用内置 vis-network 模板生成可打开的 HTML，可通过 CDN 或本地 `lib/vis-9.1.2/vis-network.min.js` 加载前端脚本。
 
 **设计要点**：
-- 展示图谱中覆盖全部 11 种实体类型的 568 个核心实体及其之间的 1,435 条关系（7 种关系类型全覆盖）
+- 展示图谱中覆盖全部 11 种实体类型的核心实体及其之间的 1,435 条关系（8 种关系类型全覆盖）
 - 按实体类型着色（Disease 红色、Symptom 绿色、Treatment 蓝色等）
 - 按关系类型着色（causes 红色、is_a 蓝色、symptom_of 绿色等）
 - 节点大小按度值缩放，度值越高的实体节点越大
@@ -646,10 +684,11 @@ Gold Seed KG 和 Qwen-extracted KG 各占约一半，体现了"高质量种子 +
 
 系统提供了基于 Gradio 的交互式问答界面（`src/qa_server.py`），整合了图谱可视化与问答功能：
 
-- **问题输入**：支持自由输入自然语言问题，并提供 9 个预设示例问题，覆盖因果推理、症状查询、治疗查询、部位查询、诊断查询等多种推理类型。
+- **问题输入**：支持自由输入自然语言问题，并提供 10 个预设示例问题，覆盖因果推理、条件推理、症状查询、治疗查询、部位查询、诊断查询和风险因素查询等多种推理类型。
 - **三种问答模式切换**：KG-only / KG-augmented / LLM-only 三种模式可通过单选按钮切换。
 - **证据检索**：独立按钮触发图谱证据检索，展示与问题相关的三元组、因果路径和条件证据。
-- **图谱可视化集成**：右侧内嵌交互式图谱可视化，可在问答的同时浏览知识图谱结构。
+- **图谱可视化集成**：右侧内嵌交互式图谱可视化。初始状态显示图谱概览；点击“提问”或“检索证据”后，图谱会自动更新为本次检索相关的证据子图。
+- **边证据查看**：点击或触碰图谱中的边，可在图谱下方查看对应三元组及原文证据。
 - **图谱统计展示**：展示实体数量、三元组数量、关系类型、来源分布等核心指标。
 
 启动方式：
@@ -659,6 +698,7 @@ conda activate chipkg
 pip install gradio  # 首次运行需安装
 python src/qa_server.py
 # 浏览器访问 http://localhost:7860
+# 如端口被占用：GRADIO_SERVER_PORT=7861 python src/qa_server.py
 ```
 
 ---
@@ -681,18 +721,18 @@ python src/qa_server.py
 
 本项目完成了一个完整的医疗因果事件知识图谱构建与 GraphRAG 增强问答系统：
 
-1. **图谱构建**：采用"Gold Seed + Qwen 抽取"混合策略，构建了包含 14,596 个实体、18,539 条三元组的大规模医疗因果知识图谱，覆盖 11 种实体类型和 7 种关系类型。
+1. **图谱构建**：采用"Gold Seed + Qwen 抽取"混合策略，构建了包含 14,762 个实体、18,835 条三元组的大规模医疗因果知识图谱，覆盖 11 种实体类型和 8 种关系类型。
 2. **Schema 设计**：设计了贴合医疗因果场景的本体，特别是 `condition_of` 关系建模了条件约束语义。
-3. **信息抽取**：使用 Qwen LLM 从 1000 篇无标注文本中抽取了 9,413 条三元组，扩展了图谱覆盖范围。
-4. **推理能力**：实现了 10 种推理类型，覆盖全部 7 种关系类型，在 50 个测试问题上整体命中率达 94%。
+3. **信息抽取**：使用 Qwen LLM 从 1000 篇无标注文本中抽取了 9,709 条三元组，扩展了图谱覆盖范围。
+4. **推理能力**：实现了 11 种推理类型，覆盖全部 8 种关系类型，在 50 个测试问题上整体命中率达 94%。
 5. **大模型增强**：实现了 GraphRAG 问答系统，对比了 KG-only、LLM-only、KG-augmented 三种模式，验证了知识图谱在减少幻觉、提供证据链方面的增强效果。
-6. **可视化**：基于 pyvis 构建了交互式图谱可视化。
+6. **可视化**：基于 pyvis/vis-network 构建了交互式图谱可视化和 Gradio 动态子图展示。
 
 ### 8.2 不足与改进方向
 
 1. **实体匹配**：当前使用子串匹配，未来可引入医学 NER 模型提升匹配精度。
 2. **多跳推理**：BFS 可能发现语义偏移的路径，需加入语义相关性过滤。
-3. **可视化问答**：当前仅支持命令行问答，可开发交互式 Web 界面。
+3. **可视化规模**：完整图谱规模较大，浏览器端若一次性加载全部边会出现卡顿，因此当前可视化采用抽样概览图和问答相关子图展示。
 4. **大模型增强评估**：需要更系统的人工评估和更细粒度的指标分析。
 
 ---
@@ -711,8 +751,7 @@ project/
 │   │   ├── train_0717.json
 │   │   ├── unlabel.json
 │   │   ├── testA.json
-│   │   ├── testB.json
-│   │   └── example_code.txt
+│   │   └── testB.json
 │   ├── processed/
 │   │   ├── entities.csv
 │   │   ├── relations.csv
@@ -759,18 +798,31 @@ cp .env.example .env  # 编辑 .env 填写 QWEN_API_KEY
 python src/build_kg.py                                          # Gold Seed only
 python src/build_kg.py --extract_qwen --max_qwen_docs 5         # 小规模测试
 python src/build_kg.py --extract_qwen --qwen_files unlabel.json # 完整抽取
+python src/build_kg.py --extract_qwen --qwen_files unlabel.json --visualize_max_edges 1200
 
 # 推理
 python src/reasoning.py --query "高血压是否可能间接导致心肌梗死？"
+python src/reasoning.py --query "乳腺癌有哪些风险因素？"
+python src/reasoning.py --query "肠癌如何诊断？"
 
 # GraphRAG 检索
 python src/graph_retrieval.py --question "为什么高血压可能和心肌梗死有关？"
+python src/graph_retrieval.py --question "在什么条件下宫腔粘连可能导致月经量少？"
 
 # 大模型增强问答
 python src/llm_qa.py --question "为什么高血压可能和心肌梗死有关？" --mode kg_only
 python src/llm_qa.py --question "为什么高血压可能和心肌梗死有关？" --mode kg_augmented
 python src/llm_qa.py --question "为什么高血压可能和心肌梗死有关？" --mode llm_only
 
+# 交互系统
+python src/qa_server.py
+GRADIO_SERVER_PORT=7861 python src/qa_server.py
+
+# 独立图谱 HTML
+python -m http.server 8000
+# 浏览器访问 http://localhost:8000/results/kg_visualization.html
+
 # 评估
 python src/evaluate.py
+python src/evaluate.py --max_questions 30
 ```

@@ -1,6 +1,6 @@
 {
-  "num_triples": 18539,
-  "num_entities": 14596,
+  "num_triples": 18835,
+  "num_entities": 14762,
   "relation_counts": {
     "causes": 10709,
     "condition_of": 584,
@@ -8,14 +8,12 @@
     "symptom_of": 1970,
     "treated_by": 2283,
     "located_in": 566,
+    "risk_factor_for": 296,
     "diagnosed_by": 575
   },
   "source_type_counts": {
     "gold": 9126,
-    "qwen": 9413
+    "qwen": 9709
   },
-  "num_causal_events": 783,
-  "qwen_raw_docs": 1000,
-  "qwen_clean_triples": 9446,
-  "qwen_error_docs": 0
+  "num_causal_events": 783
 }

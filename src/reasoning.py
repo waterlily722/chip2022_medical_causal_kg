@@ -8,6 +8,7 @@ Supported reasoning:
 3. Multi-hop causal path reasoning: X -> ... -> Y
 4. Condition reasoning: condition_of (condition -> cause)
 5. Hypernym reasoning: X is_a ?
+6. Risk-factor reasoning: risk_factor_for
 """
 from __future__ import annotations
 
@@ -112,6 +113,12 @@ class KGReasoner:
     def diagnosis_of(self, disease: str, limit: int = 20) -> List[Dict[str, Any]]:
         return [t for t in self.out_edges.get(disease, []) if t["relation"] == "diagnosed_by"][:limit]
 
+    def risk_factors_for(self, disease: str, limit: int = 20) -> List[Dict[str, Any]]:
+        return [t for t in self.in_edges.get(disease, []) if t["relation"] == "risk_factor_for"][:limit]
+
+    def risk_factor_targets(self, factor: str, limit: int = 20) -> List[Dict[str, Any]]:
+        return [t for t in self.out_edges.get(factor, []) if t["relation"] == "risk_factor_for"][:limit]
+
     @staticmethod
     def triple_to_text(t: Dict[str, Any]) -> str:
         return f"{t['head']} --{t['relation']}--> {t['tail']}"
@@ -192,6 +199,19 @@ class KGReasoner:
             if d:
                 evidence.extend(d)
                 answer_lines.append(f'"{ent}"可通过以下方式诊断：' + self._fmt(d, "tail"))
+                return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
+
+        # Risk-factor reasoning.
+        if ent and any(k in q for k in ["危险因素", "风险因素", "高危", "风险", "易发"]):
+            factors = self.risk_factors_for(ent)
+            if factors:
+                evidence.extend(factors)
+                answer_lines.append(f'可能增加"{ent}"风险的因素包括：' + self._fmt(factors, "head"))
+                return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
+            targets = self.risk_factor_targets(ent)
+            if targets:
+                evidence.extend(targets)
+                answer_lines.append(f'"{ent}"可能增加以下疾病或状态的风险：' + self._fmt(targets, "tail"))
                 return {"query": query, "matched_entities": ents, "answer": "\n".join(answer_lines), "evidence": evidence}
 
         # Reverse causal.

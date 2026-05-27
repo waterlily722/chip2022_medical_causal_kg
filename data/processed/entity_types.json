@@ -45,9 +45,9 @@
   "高血压": {
     "TestResult": 52,
     "MedicalCategory": 4,
-    "Disease": 58,
+    "Disease": 70,
     "Symptom": 1,
-    "RiskFactor": 1
+    "RiskFactor": 5
   },
   "主动脉粥样硬化": {
     "PathologicalState": 3
@@ -77,7 +77,8 @@
     "PathologicalState": 1
   },
   "逆行感染": {
-    "Disease": 1
+    "Disease": 1,
+    "PathologicalState": 1
   },
   "泌尿系统屏障及抵御外界细菌感染功能下降": {
     "Disease": 5
@@ -86,11 +87,12 @@
     "RiskFactor": 2
   },
   "劳累": {
-    "RiskFactor": 10,
+    "RiskFactor": 11,
     "Symptom": 1
   },
   "生活不规律": {
-    "Other": 2
+    "Other": 2,
+    "RiskFactor": 2
   },
   "机体抵抗力下降": {
     "PathologicalState": 1
@@ -111,7 +113,7 @@
     "PathologicalState": 1
   },
   "感冒": {
-    "Disease": 59
+    "Disease": 60
   },
   "鼻部症状": {
     "Disease": 1,
@@ -139,7 +141,7 @@
     "Disease": 1
   },
   "上呼吸道感染": {
-    "Disease": 34,
+    "Disease": 36,
     "Symptom": 1
   },
   "接触到这类带有病毒的飞沫、空气": {
@@ -148,7 +150,7 @@
   "感染": {
     "Disease": 57,
     "MedicalCategory": 5,
-    "PathologicalState": 28,
+    "PathologicalState": 31,
     "RiskFactor": 2
   },
   "浅部真菌": {
@@ -265,7 +267,7 @@
   },
   "精神紧张": {
     "Other": 7,
-    "RiskFactor": 4
+    "RiskFactor": 6
   },
   "生气": {
     "Other": 2
@@ -301,6 +303,7 @@
   "焦虑": {
     "Other": 19,
     "PathologicalState": 1,
+    "RiskFactor": 1,
     "Symptom": 3,
     "Disease": 3
   },
@@ -351,7 +354,7 @@
     "MedicalCategory": 4,
     "Symptom": 28,
     "RiskFactor": 1,
-    "Disease": 21
+    "Disease": 22
   },
   "心悸": {
     "AnatomicalSite": 20,
@@ -368,7 +371,7 @@
     "AnatomicalSite": 4
   },
   "脑血管疾病": {
-    "Disease": 5,
+    "Disease": 6,
     "MedicalCategory": 8
   },
   "身体的右侧疼": {
@@ -492,7 +495,7 @@
   },
   "失眠": {
     "Symptom": 21,
-    "Disease": 17
+    "Disease": 20
   },
   "多虑": {
     "Other": 1
@@ -572,14 +575,14 @@
     "Disease": 26
   },
   "出血": {
-    "Symptom": 52,
+    "Symptom": 54,
     "PathologicalState": 1,
     "RiskFactor": 1
   },
   "贫血": {
     "Other": 16,
     "MedicalCategory": 1,
-    "Disease": 23,
+    "Disease": 24,
     "Symptom": 1,
     "PathologicalState": 3
   },
@@ -591,7 +594,7 @@
   },
   "剧烈运动": {
     "Other": 13,
-    "RiskFactor": 1
+    "RiskFactor": 2
   },
   "食管炎": {
     "Disease": 4
@@ -650,7 +653,7 @@
     "MedicalCategory": 3
   },
   "肺癌": {
-    "Disease": 51,
+    "Disease": 53,
     "MedicalCategory": 5
   },
   "支气管扩张": {
@@ -741,7 +744,8 @@
     "PathologicalState": 1
   },
   "受伤": {
-    "Other": 7
+    "Other": 7,
+    "RiskFactor": 1
   },
   "智商低下": {
     "Other": 10
@@ -805,12 +809,13 @@
     "PathologicalState": 3
   },
   "女性": {
-    "Other": 4
+    "Other": 5,
+    "RiskFactor": 1
   },
   "闭经": {
     "Other": 7,
     "MedicalCategory": 1,
-    "Symptom": 2
+    "Symptom": 3
   },
   "月经延迟": {
     "Other": 1,
@@ -860,7 +865,7 @@
   },
   "痛经": {
     "Symptom": 11,
-    "Disease": 22
+    "Disease": 23
   },
   "白带增多": {
     "Symptom": 8
@@ -879,7 +884,7 @@
   "不孕": {
     "Other": 27,
     "Symptom": 3,
-    "Disease": 3
+    "Disease": 4
   },
   "长期经血流失": {
     "Other": 1
@@ -902,7 +907,7 @@
     "Disease": 1
   },
   "子宫肌瘤": {
-    "Disease": 21,
+    "Disease": 22,
     "MedicalCategory": 3
   },
   "雌激素依赖性肿瘤": {
@@ -1017,7 +1022,8 @@
     "Other": 4
   },
   "免疫功能低下": {
-    "PathologicalState": 1
+    "PathologicalState": 1,
+    "RiskFactor": 1
   },
   "病理性黄疸": {
     "Disease": 16
@@ -1287,7 +1293,7 @@
   },
   "格林巴利综合征": {
     "Other": 6,
-    "Disease": 8
+    "Disease": 14
   },
   "5-6个月就让宝宝坐学步车": {
     "Other": 1
@@ -1330,12 +1336,12 @@
     "Disease": 1
   },
   "饮酒": {
-    "RiskFactor": 21,
+    "RiskFactor": 24,
     "Other": 1,
     "Treatment": 1
   },
   "口腔癌": {
-    "Disease": 1
+    "Disease": 2
   },
   "咽癌": {
     "Disease": 1
@@ -1350,14 +1356,14 @@
     "Disease": 14
   },
   "乳腺癌": {
-    "Disease": 8,
+    "Disease": 18,
     "MedicalCategory": 2
   },
   "结肠癌": {
-    "Disease": 22
+    "Disease": 23
   },
   "直肠癌": {
-    "Disease": 44
+    "Disease": 46
   },
   "子宫腺肌症": {
     "Disease": 8
@@ -1382,7 +1388,7 @@
   },
   "流产": {
     "Other": 15,
-    "Disease": 8,
+    "Disease": 9,
     "MedicalCategory": 2,
     "PathologicalState": 3
   },
@@ -1403,14 +1409,16 @@
   },
   "乙肝": {
     "AnatomicalSite": 3,
-    "Disease": 6
+    "Disease": 6,
+    "RiskFactor": 1
   },
   "病毒性肝病": {
     "MedicalCategory": 8
   },
   "丙肝": {
     "AnatomicalSite": 1,
-    "Disease": 4
+    "Disease": 4,
+    "RiskFactor": 1
   },
   "甲肝": {
     "AnatomicalSite": 1,
@@ -1444,7 +1452,8 @@
     "Disease": 1
   },
   "自身免疫性肝病": {
-    "Disease": 3
+    "Disease": 3,
+    "RiskFactor": 1
   },
   "药物性肝病": {
     "Treatment": 1
@@ -1569,7 +1578,7 @@
     "AnatomicalSite": 3
   },
   "肥胖": {
-    "RiskFactor": 21,
+    "RiskFactor": 25,
     "Disease": 3,
     "Symptom": 3
   },
@@ -1735,8 +1744,8 @@
   },
   "视疲劳": {
     "Other": 11,
-    "Disease": 5,
-    "Symptom": 1
+    "Symptom": 2,
+    "Disease": 5
   },
   "眼睛看东西出现模糊": {
     "AnatomicalSite": 2
@@ -1906,7 +1915,7 @@
     "MedicalCategory": 3
   },
   "头痛": {
-    "Symptom": 70,
+    "Symptom": 72,
     "MedicalCategory": 1
   },
   "月经前紧张综合征": {
@@ -1943,7 +1952,7 @@
   "心律失常": {
     "AnatomicalSite": 8,
     "Symptom": 2,
-    "Disease": 3,
+    "Disease": 4,
     "MedicalCategory": 2
   },
   "心功能下降性疾病": {
@@ -2224,7 +2233,8 @@
     "Other": 1
   },
   "营养过剩": {
-    "Treatment": 2
+    "Treatment": 2,
+    "RiskFactor": 1
   },
   "加重后期妊娠期合并症": {
     "Disease": 1
@@ -2305,7 +2315,7 @@
   },
   "呼吸困难": {
     "ClinicalSign": 25,
-    "Symptom": 24
+    "Symptom": 25
   },
   "猩红热": {
     "Other": 8,
@@ -2404,7 +2414,7 @@
     "Symptom": 1
   },
   "急性胰腺炎": {
-    "Disease": 11
+    "Disease": 12
   },
   "中上腹部疼痛伴有胸前区胀痛,按压时明显": {
     "Symptom": 2
@@ -2465,7 +2475,7 @@
     "AnatomicalSite": 2
   },
   "腰痛": {
-    "Symptom": 24,
+    "Symptom": 27,
     "MedicalCategory": 4
   },
   "肾功能的损伤": {
@@ -2534,7 +2544,7 @@
     "Symptom": 4
   },
   "结膜炎": {
-    "Disease": 32
+    "Disease": 35
   },
   "口腔黏膜斑": {
     "AnatomicalSite": 1
@@ -2632,7 +2642,7 @@
   },
   "遗传因素": {
     "Other": 6,
-    "RiskFactor": 5
+    "RiskFactor": 6
   },
   "体质因素": {
     "Other": 1
@@ -2648,7 +2658,7 @@
   },
   "动脉粥样硬化": {
     "PathologicalState": 21,
-    "Disease": 7
+    "Disease": 8
   },
   "血液脂质沉积附着于血管壁": {
     "Other": 3
@@ -2678,17 +2688,19 @@
   },
   "高血脂": {
     "Other": 9,
-    "Disease": 3
+    "Disease": 4,
+    "RiskFactor": 1
   },
   "高血糖": {
-    "Other": 8
+    "Other": 8,
+    "RiskFactor": 1
   },
   "吸烟": {
-    "RiskFactor": 18
+    "RiskFactor": 37
   },
   "喝酒": {
     "Other": 8,
-    "RiskFactor": 3
+    "RiskFactor": 4
   },
   "堵塞颈动脉管腔": {
     "Other": 1
@@ -2809,7 +2821,7 @@
   },
   "结石": {
     "Other": 9,
-    "Disease": 20
+    "Disease": 22
   },
   "剧烈的疼痛": {
     "Symptom": 6
@@ -2894,7 +2906,8 @@
     "Disease": 2
   },
   "糖尿病": {
-    "Disease": 63
+    "Disease": 70,
+    "RiskFactor": 4
   },
   "中毒": {
     "Other": 5,
@@ -2912,7 +2925,8 @@
     "MedicalCategory": 6
   },
   "肝硬化": {
-    "Disease": 34
+    "Disease": 34,
+    "RiskFactor": 1
   },
   "肝功能减退": {
     "PathologicalState": 1
@@ -2937,7 +2951,7 @@
     "Other": 4
   },
   "胃肠道感染": {
-    "Disease": 1
+    "Disease": 2
   },
   "泌尿系统感染": {
     "Disease": 15,
@@ -3169,7 +3183,7 @@
   },
   "面肌痉挛": {
     "Other": 1,
-    "Disease": 20
+    "Disease": 23
   },
   "疾病后遗症": {
     "Disease": 1
@@ -3180,7 +3194,7 @@
   "恶性肿瘤": {
     "MedicalCategory": 21,
     "Disease": 10,
-    "PathologicalState": 2
+    "PathologicalState": 3
   },
   "早期乳腺癌": {
     "Disease": 1
@@ -3190,7 +3204,7 @@
   },
   "偏头痛": {
     "Symptom": 7,
-    "Disease": 28
+    "Disease": 31
   },
   "疲劳": {
     "Other": 5,
@@ -3279,7 +3293,7 @@
     "Other": 1
   },
   "前列腺炎": {
-    "Disease": 35,
+    "Disease": 36,
     "MedicalCategory": 4
   },
   "长时间生活不规律": {
@@ -3465,7 +3479,7 @@
   },
   "早产": {
     "Other": 4,
-    "Disease": 5,
+    "Disease": 6,
     "PathologicalState": 1
   },
   "影响分娩方式": {
@@ -3822,7 +3836,7 @@
   },
   "癌症": {
     "MedicalCategory": 8,
-    "Disease": 20
+    "Disease": 21
   },
   "鼻咽癌": {
     "Disease": 9
@@ -4115,7 +4129,7 @@
     "Disease": 1
   },
   "胃癌": {
-    "Disease": 36,
+    "Disease": 38,
     "MedicalCategory": 1
   },
   "胰腺癌": {
@@ -4270,7 +4284,7 @@
   },
   "面色苍白": {
     "Other": 3,
-    "Symptom": 2
+    "Symptom": 3
   },
   "缺氧非常明显": {
     "Other": 2
@@ -4287,7 +4301,7 @@
   },
   "酒精": {
     "Other": 6,
-    "RiskFactor": 7
+    "RiskFactor": 8
   },
   "人体的血液循环加快": {
     "Other": 1
@@ -4341,7 +4355,7 @@
     "MedicalCategory": 2
   },
   "宫颈癌": {
-    "Disease": 14
+    "Disease": 16
   },
   "胎盘、胎膜宫内残留": {
     "Other": 1
@@ -4397,7 +4411,7 @@
     "Symptom": 1
   },
   "支气管炎": {
-    "Disease": 41
+    "Disease": 44
   },
   "大量痰液分泌物": {
     "Other": 1
@@ -4437,7 +4451,7 @@
     "Disease": 26
   },
   "扁桃体炎": {
-    "Disease": 12
+    "Disease": 14
   },
   "皮疹": {
     "Other": 11,
@@ -4509,14 +4523,14 @@
   "白内障": {
     "Other": 6,
     "MedicalCategory": 5,
-    "Disease": 4
+    "Disease": 6
   },
   "视力下降": {
     "PathologicalState": 10,
     "Symptom": 9
   },
   "年龄": {
-    "RiskFactor": 4
+    "RiskFactor": 6
   },
   "晶状体混浊": {
     "Other": 9
@@ -4542,12 +4556,12 @@
   },
   "营养不良": {
     "Treatment": 11,
+    "RiskFactor": 4,
     "PathologicalState": 7,
-    "RiskFactor": 3,
-    "Disease": 1
+    "Disease": 2
   },
   "年龄增长": {
-    "RiskFactor": 1
+    "RiskFactor": 2
   },
   "晶状体出现自然老化": {
     "Other": 2
@@ -4594,7 +4608,8 @@
   },
   "紧张": {
     "Other": 4,
-    "Symptom": 2
+    "Symptom": 2,
+    "RiskFactor": 1
   },
   "早泄": {
     "Other": 15,
@@ -4768,7 +4783,8 @@
     "Symptom": 1
   },
   "中老年女性": {
-    "Other": 1
+    "Other": 1,
+    "RiskFactor": 1
   },
   "气管受压": {
     "PathologicalState": 1
@@ -4958,7 +4974,8 @@
     "Other": 2
   },
   "粉尘": {
-    "Other": 1
+    "Other": 1,
+    "RiskFactor": 2
   },
   "烟雾": {
     "Other": 1
@@ -4973,10 +4990,10 @@
     "Disease": 8
   },
   "急性喉炎": {
-    "Disease": 28
+    "Disease": 30
   },
   "急性会厌炎": {
-    "Disease": 5
+    "Disease": 6
   },
   "细菌和病毒感染": {
     "Disease": 1
@@ -5131,7 +5148,7 @@
   },
   "肠癌": {
     "MedicalCategory": 2,
-    "Disease": 12
+    "Disease": 16
   },
   "黏液腺癌": {
     "Disease": 1
@@ -5231,7 +5248,7 @@
     "Other": 2
   },
   "癫痫": {
-    "Disease": 52,
+    "Disease": 56,
     "Symptom": 1
   },
   "躯体疾病": {
@@ -5239,7 +5256,7 @@
     "Disease": 2
   },
   "冠心病": {
-    "Disease": 46,
+    "Disease": 48,
     "MedicalCategory": 4
   },
   "白天情绪过于紧张": {
@@ -6287,7 +6304,7 @@
   },
   "治疗不及时": {
     "Treatment": 2,
-    "RiskFactor": 2,
+    "RiskFactor": 3,
     "PathologicalState": 1
   },
   "卵巢周期性的分泌雌性激素": {
@@ -6321,7 +6338,8 @@
     "Symptom": 1
   },
   "高脂血症": {
-    "Disease": 17
+    "Disease": 18,
+    "RiskFactor": 2
   },
   "感染性休克": {
     "Disease": 3
@@ -6348,7 +6366,7 @@
     "Other": 7
   },
   "受凉": {
-    "RiskFactor": 13,
+    "RiskFactor": 15,
     "PathologicalState": 1,
     "Other": 1
   },
@@ -6360,7 +6378,7 @@
   },
   "熬夜": {
     "Other": 11,
-    "RiskFactor": 1
+    "RiskFactor": 3
   },
   "头皮出现发麻": {
     "Other": 2
@@ -6449,13 +6467,14 @@
     "Disease": 1
   },
   "性生活": {
-    "Other": 9
+    "Other": 10
   },
   "女性在经期": {
     "Other": 3
   },
   "盆浴": {
-    "Other": 4
+    "Other": 4,
+    "Treatment": 1
   },
   "游泳": {
     "Other": 2,
@@ -6576,13 +6595,14 @@
     "Symptom": 2
   },
   "胆结石": {
-    "AnatomicalSite": 3
+    "AnatomicalSite": 3,
+    "Disease": 1
   },
   "胆道感染": {
     "Disease": 2
   },
   "胃炎": {
-    "Disease": 34,
+    "Disease": 35,
     "MedicalCategory": 4
   },
   "胆汁反流": {
@@ -6622,7 +6642,7 @@
   },
   "打鼾": {
     "Other": 1,
-    "Symptom": 18
+    "Symptom": 19
   },
   "口腔的异常": {
     "PathologicalState": 1
@@ -6791,6 +6811,7 @@
   },
   "免疫力低下": {
     "Other": 4,
+    "RiskFactor": 2,
     "PathologicalState": 2
   },
   "容易羅患各种疾病": {
@@ -7224,7 +7245,8 @@
     "Symptom": 4
   },
   "心情不好": {
-    "AnatomicalSite": 3
+    "AnatomicalSite": 3,
+    "Other": 1
   },
   "神经内分泌的反应": {
     "Other": 1
@@ -7588,7 +7610,7 @@
   },
   "体质虚弱": {
     "Other": 2,
-    "RiskFactor": 1
+    "RiskFactor": 2
   },
   "真阳衰竭": {
     "Other": 2
@@ -7698,10 +7720,10 @@
   },
   "乳汁淤积": {
     "Other": 2,
-    "PathologicalState": 1
+    "PathologicalState": 2
   },
   "乳腺炎": {
-    "Disease": 9
+    "Disease": 10
   },
   "乳房内部有硬块": {
     "AnatomicalSite": 1
@@ -8023,7 +8045,7 @@
   },
   "支气管哮喘": {
     "Other": 19,
-    "Disease": 20
+    "Disease": 26
   },
   "儿童慢性或反复咳嗽": {
     "Symptom": 1
@@ -8909,7 +8931,7 @@
   },
   "结膜结石": {
     "Other": 5,
-    "Disease": 6
+    "Disease": 8
   },
   "眼皮的里面出现了黄色颗粒": {
     "AnatomicalSite": 1
@@ -8918,7 +8940,7 @@
     "Other": 1
   },
   "慢性结膜炎": {
-    "Disease": 4
+    "Disease": 5
   },
   "局部软组织伤": {
     "Other": 2
@@ -8944,10 +8966,10 @@
     "Symptom": 8
   },
   "功能紊乱": {
-    "PathologicalState": 2
+    "PathologicalState": 3
   },
   "异常出血": {
-    "Symptom": 3
+    "Symptom": 4
   },
   "女性在怀孕后": {
     "Other": 1
@@ -9025,7 +9047,7 @@
   },
   "遗传": {
     "Other": 4,
-    "RiskFactor": 2
+    "RiskFactor": 5
   },
   "甲状腺内肿块的粘连": {
     "Symptom": 2
@@ -9073,7 +9095,8 @@
     "Other": 2
   },
   "久坐": {
-    "Other": 2
+    "Other": 2,
+    "RiskFactor": 1
   },
   "憋尿": {
     "Other": 1
@@ -9221,7 +9244,7 @@
     "Symptom": 1
   },
   "妇科检查": {
-    "ExamProcedure": 6
+    "ExamProcedure": 7
   },
   "有一些炎症": {
     "Disease": 2
@@ -9442,7 +9465,7 @@
     "AnatomicalSite": 5
   },
   "分娩": {
-    "Other": 1
+    "Other": 2
   },
   "体力活动": {
     "Other": 1
@@ -9532,7 +9555,7 @@
     "PathologicalState": 1
   },
   "心脏病": {
-    "Disease": 8,
+    "Disease": 9,
     "MedicalCategory": 8
   },
   "重要的脏器损害": {
@@ -9610,7 +9633,7 @@
   "胎儿畸形": {
     "Other": 1,
     "Disease": 1,
-    "PathologicalState": 5
+    "PathologicalState": 6
   },
   "少精": {
     "Other": 1
@@ -9667,7 +9690,7 @@
   },
   "皮肤病": {
     "MedicalCategory": 3,
-    "Disease": 8
+    "Disease": 9
   },
   "春秋交际的时候机体免疫力减低": {
     "Other": 1
@@ -9784,7 +9807,7 @@
     "MedicalCategory": 6
   },
   "抗凝药物": {
-    "Treatment": 2
+    "Treatment": 3
   },
   "肾血管的畸形": {
     "AnatomicalSite": 1
@@ -10151,7 +10174,7 @@
     "Symptom": 3
   },
   "牙龈炎": {
-    "Disease": 8
+    "Disease": 9
   },
   "咽炎": {
     "Disease": 10
@@ -10160,7 +10183,7 @@
     "Symptom": 1
   },
   "牙周炎": {
-    "Disease": 12
+    "Disease": 13
   },
   "牙周袋溢脓": {
     "Other": 2
@@ -10343,7 +10366,7 @@
     "MedicalCategory": 2
   },
   "淋病": {
-    "Disease": 11
+    "Disease": 12
   },
   "非淋球菌性尿道炎": {
     "Disease": 3
@@ -10404,7 +10427,7 @@
     "Disease": 16
   },
   "慢性胃炎": {
-    "Disease": 26
+    "Disease": 28
   },
   "电解质及酸碱平衡紊乱": {
     "Other": 1
@@ -10524,7 +10547,7 @@
     "AnatomicalSite": 3
   },
   "高尿酸血症": {
-    "Disease": 7,
+    "Disease": 8,
     "PathologicalState": 1
   },
   "肾脏功能受损": {
@@ -10797,7 +10820,7 @@
   },
   "痤疮": {
     "Other": 7,
-    "Disease": 26,
+    "Disease": 27,
     "Symptom": 1
   },
   "雌激素水平比较低": {
@@ -10903,7 +10926,7 @@
     "Other": 1
   },
   "同房": {
-    "Other": 8,
+    "Other": 9,
     "RiskFactor": 1
   },
   "慢性盆腔炎的复发": {
@@ -11431,7 +11454,7 @@
     "PathologicalState": 1
   },
   "心血管疾病": {
-    "Disease": 11,
+    "Disease": 12,
     "MedicalCategory": 2
   },
   "老年患者": {
@@ -11696,7 +11719,8 @@
     "Other": 1
   },
   "酒精肝": {
-    "AnatomicalSite": 1
+    "AnatomicalSite": 1,
+    "RiskFactor": 1
   },
   "这个眼白以前没有问题,最近一段时间突然变黄,双眼对称": {
     "AnatomicalSite": 3
@@ -11756,7 +11780,7 @@
     "Other": 1
   },
   "年轻人": {
-    "Other": 3
+    "Other": 4
   },
   "血管先天狭窄": {
     "PathologicalState": 1
@@ -12034,7 +12058,7 @@
   },
   "汗疱疹": {
     "Other": 1,
-    "Disease": 1
+    "Disease": 2
   },
   "眉毛红,可看到红色的丘疹": {
     "Other": 1
@@ -12393,7 +12417,7 @@
     "Other": 1
   },
   "心脑血管疾病": {
-    "Disease": 4,
+    "Disease": 6,
     "MedicalCategory": 4
   },
   "减少肌肉含量": {
@@ -13198,7 +13222,7 @@
     "Disease": 1
   },
   "肾脏的疾病": {
-    "Disease": 1,
+    "Disease": 2,
     "MedicalCategory": 3
   },
   "一侧腰部肌肉的慢性损伤": {
@@ -13278,7 +13302,7 @@
   },
   "瘢痕": {
     "Other": 2,
-    "PathologicalState": 7,
+    "PathologicalState": 8,
     "Symptom": 1
   },
   "脑动脉粥样硬化": {
@@ -13298,7 +13322,7 @@
   },
   "抽烟": {
     "Other": 4,
-    "RiskFactor": 6
+    "RiskFactor": 8
   },
   "非心源性": {
     "AnatomicalSite": 1
@@ -13909,7 +13933,7 @@
   },
   "精索静脉曲张": {
     "Other": 3,
-    "Disease": 7
+    "Disease": 8
   },
   "睾丸隐隐作痛": {
     "Symptom": 3
@@ -14252,7 +14276,7 @@
   },
   "动脉硬化": {
     "PathologicalState": 7,
-    "Disease": 6
+    "Disease": 11
   },
   "取环": {
     "Other": 1
@@ -14585,7 +14609,7 @@
     "Symptom": 1
   },
   "坏死": {
-    "PathologicalState": 3
+    "PathologicalState": 4
   },
   "血性脓臭样异常排液": {
     "PathologicalState": 1
@@ -15053,7 +15077,7 @@
     "Other": 7
   },
   "饮食不当": {
-    "RiskFactor": 5
+    "RiskFactor": 6
   },
   "交感神经系统的异常兴奋": {
     "PathologicalState": 1
@@ -15447,7 +15471,7 @@
   },
   "经常熬夜": {
     "Other": 4,
-    "RiskFactor": 2
+    "RiskFactor": 4
   },
   "精神压力太大": {
     "Other": 1
@@ -15831,7 +15855,7 @@
   },
   "癌变": {
     "Disease": 1,
-    "PathologicalState": 7
+    "PathologicalState": 12
   },
   "误穿动脉,静脉压迫不充分": {
     "Other": 1
@@ -16476,7 +16500,7 @@
     "Other": 1
   },
   "新冠肺炎": {
-    "Disease": 16
+    "Disease": 18
   },
   "轻度的新冠肺炎": {
     "Disease": 1
@@ -17232,7 +17256,7 @@
   },
   "不良的生活方式": {
     "Other": 2,
-    "RiskFactor": 1
+    "RiskFactor": 2
   },
   "总是出现头晕": {
     "Symptom": 1
@@ -17418,7 +17442,7 @@
     "Symptom": 3
   },
   "盆腔炎症": {
-    "Disease": 7
+    "Disease": 8
   },
   "子宫内膜炎": {
     "Disease": 6
@@ -17642,7 +17666,7 @@
   },
   "血压": {
     "TestResult": 1,
-    "ClinicalSign": 1
+    "ClinicalSign": 2
   },
   "血管比较脆": {
     "Other": 2
@@ -17848,7 +17872,7 @@
   },
   "肺气肿": {
     "Symptom": 5,
-    "Disease": 14
+    "Disease": 16
   },
   "腹压增高": {
     "PathologicalState": 11
@@ -18551,10 +18575,10 @@
     "Disease": 3
   },
   "骨关节炎": {
-    "Disease": 29
+    "Disease": 30
   },
   "强直性脊柱炎": {
-    "Disease": 13
+    "Disease": 14
   },
   "反应性关节炎": {
     "Disease": 1
@@ -19222,7 +19246,7 @@
     "Symptom": 1
   },
   "肾炎": {
-    "Disease": 23
+    "Disease": 24
   },
   "大量蛋白尿": {
     "Other": 3
@@ -20150,7 +20174,7 @@
   },
   "癫痫发作": {
     "Disease": 1,
-    "Symptom": 4
+    "Symptom": 5
   },
   "尿液当中细菌和黏液丝增高": {
     "PathologicalState": 2
@@ -20670,7 +20694,7 @@
     "Disease": 1
   },
   "膀胱癌": {
-    "Disease": 3
+    "Disease": 4
   },
   "泌尿系统疾病": {
     "MedicalCategory": 2,
@@ -21569,7 +21593,7 @@
     "Other": 2
   },
   "过敏原": {
-    "RiskFactor": 3
+    "RiskFactor": 4
   },
   "泌尿系统有结石、肿瘤": {
     "Disease": 3
@@ -21828,7 +21852,7 @@
     "Other": 1
   },
   "新型冠状病毒肺炎": {
-    "Disease": 26
+    "Disease": 28
   },
   "血常规白细胞正常或者偏低": {
     "Other": 1
@@ -21963,7 +21987,7 @@
   },
   "压力大": {
     "Other": 1,
-    "RiskFactor": 1
+    "RiskFactor": 3
   },
   "用眼过多": {
     "AnatomicalSite": 1
@@ -22280,7 +22304,8 @@
     "Other": 1
   },
   "空气污染": {
-    "Other": 1
+    "Other": 1,
+    "RiskFactor": 1
   },
   "烟雾刺激": {
     "Other": 1
@@ -22487,7 +22512,8 @@
     "AnatomicalSite": 4
   },
   "孕妇": {
-    "Other": 1
+    "Other": 1,
+    "RiskFactor": 1
   },
   "交叉感染给男性": {
     "Disease": 1
@@ -23067,7 +23093,7 @@
   "脱发": {
     "Other": 1,
     "Symptom": 2,
-    "Disease": 5
+    "Disease": 6
   },
   "遗尿": {
     "Other": 2
@@ -24292,7 +24318,7 @@
   },
   "恶变": {
     "Other": 1,
-    "PathologicalState": 11
+    "PathologicalState": 12
   },
   "交叉韧带损伤严重": {
     "Other": 8
@@ -24925,7 +24951,8 @@
     "Other": 1
   },
   "儿童": {
-    "Other": 1
+    "Other": 1,
+    "RiskFactor": 1
   },
   "影响内分泌": {
     "Other": 1
@@ -25047,6 +25074,9 @@
   },
   "便意": {
     "Symptom": 1
+  },
+  "高危人群": {
+    "RiskFactor": 1
   },
   "纤维结直肠镜": {
     "ExamProcedure": 1
@@ -25207,6 +25237,12 @@
   },
   "o型腿": {
     "Symptom": 3
+  },
+  "缺少钙和维生素d的补充": {
+    "RiskFactor": 1
+  },
+  "骨骼发育异常": {
+    "PathologicalState": 1
   },
   "药物治疗": {
     "Treatment": 24
@@ -25426,7 +25462,7 @@
     "PathologicalState": 2
   },
   "骨折不愈合": {
-    "PathologicalState": 2
+    "PathologicalState": 3
   },
   "辛辣的食物": {
     "RiskFactor": 1
@@ -25875,7 +25911,7 @@
     "Other": 1
   },
   "神经管畸形": {
-    "Disease": 1
+    "Disease": 2
   },
   "叶酸": {
     "Treatment": 2
@@ -25906,6 +25942,12 @@
   },
   "减轻痛苦的药物": {
     "Treatment": 1
+  },
+  "鼻腔鼻窦癌": {
+    "Disease": 7
+  },
+  "pm2.5": {
+    "RiskFactor": 1
   },
   "炎性刺激": {
     "PathologicalState": 1
@@ -26013,15 +26055,15 @@
     "PathologicalState": 1
   },
   "姿势不当": {
-    "RiskFactor": 1,
+    "RiskFactor": 2,
     "Other": 1
+  },
+  "驼背": {
+    "Symptom": 9,
+    "Disease": 9
   },
   "胸椎过度后凸": {
     "PathologicalState": 2
-  },
-  "驼背": {
-    "Symptom": 7,
-    "Disease": 8
   },
   "端正坐姿": {
     "Treatment": 1
@@ -26046,6 +26088,9 @@
   },
   "支具矫形": {
     "Treatment": 1
+  },
+  "日常不良生活习惯和学习习惯": {
+    "RiskFactor": 1
   },
   "肺衰竭": {
     "Disease": 2
@@ -26320,7 +26365,7 @@
     "PathologicalState": 1
   },
   "中暑": {
-    "Disease": 3
+    "Disease": 6
   },
   "细胞功能损伤": {
     "PathologicalState": 1
@@ -26330,6 +26375,12 @@
   },
   "散热功能障碍": {
     "PathologicalState": 1
+  },
+  "高温高热": {
+    "RiskFactor": 1
+  },
+  "夏季": {
+    "RiskFactor": 1
   },
   "红斑狼疮": {
     "Disease": 8
@@ -26493,6 +26544,9 @@
   "献400ml的血量": {
     "Other": 3
   },
+  "体重过轻": {
+    "RiskFactor": 1
+  },
   "不能活动": {
     "Symptom": 1
   },
@@ -26547,6 +26601,15 @@
   },
   "孕妇心血管系统或心脏疾病": {
     "Disease": 1
+  },
+  "血糖>5.3mmol/l": {
+    "TestResult": 1
+  },
+  "高危妊娠": {
+    "MedicalCategory": 1
+  },
+  "局部用眼不卫生": {
+    "RiskFactor": 1
   },
   "眼红": {
     "Symptom": 1
@@ -26701,6 +26764,21 @@
   "雾化吸入盐酸氨溴索": {
     "Treatment": 1
   },
+  "低体重儿": {
+    "RiskFactor": 1
+  },
+  "高敏体质": {
+    "RiskFactor": 1
+  },
+  "男性吸烟": {
+    "RiskFactor": 1
+  },
+  "装修行业": {
+    "Other": 1
+  },
+  "尘螨": {
+    "RiskFactor": 1
+  },
   "猫、狗毛发": {
     "RiskFactor": 1
   },
@@ -26851,8 +26929,11 @@
   "口腔起泡": {
     "Symptom": 1
   },
+  "油炸、辛辣、刺激食物": {
+    "RiskFactor": 1
+  },
   "过度内热": {
-    "PathologicalState": 3
+    "PathologicalState": 4
   },
   "多喝水": {
     "Treatment": 2
@@ -26924,7 +27005,7 @@
     "Treatment": 1
   },
   "单纯性肥胖症": {
-    "Disease": 10
+    "Disease": 16
   },
   "非病理性肥胖": {
     "MedicalCategory": 1
@@ -26933,6 +27014,11 @@
     "Disease": 2
   },
   "单纯性肥胖": {
+    "Disease": 1
+  },
+  "不育": {
+    "Symptom": 1,
+    "PathologicalState": 1,
     "Disease": 1
   },
   "体力活动过少": {
@@ -26945,7 +27031,7 @@
     "Symptom": 1
   },
   "肥胖症": {
-    "Disease": 4
+    "Disease": 5
   },
   "减重手术": {
     "Treatment": 1
@@ -27025,6 +27111,21 @@
   "慢性阻塞性肺部疾病": {
     "Disease": 1
   },
+  "鳞状上皮细胞癌": {
+    "Disease": 1
+  },
+  "小细胞未分化癌": {
+    "Disease": 1
+  },
+  "唇癌": {
+    "Disease": 1
+  },
+  "舌癌": {
+    "Disease": 3
+  },
+  "食道癌": {
+    "Disease": 1
+  },
   "复方尿囊素片": {
     "Treatment": 7
   },
@@ -27074,8 +27175,11 @@
     "RiskFactor": 1
   },
   "乳腺疾病": {
-    "Disease": 3,
+    "Disease": 4,
     "MedicalCategory": 6
+  },
+  "乳腺疾病家族史": {
+    "RiskFactor": 1
   },
   "工作压力增大": {
     "RiskFactor": 1
@@ -27354,12 +27458,6 @@
   "恶性胶质瘤": {
     "Disease": 2
   },
-  "鼻腔鼻窦癌": {
-    "Disease": 2
-  },
-  "舌癌": {
-    "Disease": 2
-  },
   "腮腺癌": {
     "Disease": 2
   },
@@ -27528,7 +27626,7 @@
     "Symptom": 1
   },
   "窒息": {
-    "PathologicalState": 1,
+    "PathologicalState": 2,
     "Symptom": 1
   },
   "脑电图": {
@@ -27539,6 +27637,9 @@
   },
   "人流": {
     "Treatment": 1
+  },
+  "宫内感染": {
+    "Disease": 1
   },
   "子宫内膜感染": {
     "PathologicalState": 2
@@ -27634,7 +27735,7 @@
     "ExamProcedure": 1
   },
   "包茎": {
-    "Disease": 14
+    "Disease": 17
   },
   "阴茎臭": {
     "Symptom": 4
@@ -27650,10 +27751,13 @@
     "Treatment": 1
   },
   "胃肠道反应": {
-    "Symptom": 2
+    "Symptom": 4
   },
   "恶心、呕吐、腹痛": {
     "Symptom": 1
+  },
+  "空腹服用": {
+    "RiskFactor": 1
   },
   "罗红霉素服用的胃肠道症状": {
     "Symptom": 2
@@ -27773,6 +27877,9 @@
   "水": {
     "Treatment": 1
   },
+  "油炸食品": {
+    "Other": 1
+  },
   "花生仁": {
     "Other": 1
   },
@@ -27790,6 +27897,12 @@
   },
   "神经衰弱": {
     "Disease": 1
+  },
+  "夜尿增多": {
+    "Symptom": 3
+  },
+  "睡眠浅": {
+    "Symptom": 1
   },
   "睡前喝浓茶": {
     "RiskFactor": 1
@@ -28026,7 +28139,13 @@
     "PathologicalState": 1
   },
   "脂溢性脱发": {
-    "Disease": 3
+    "Disease": 7
+  },
+  "遗传倾向": {
+    "RiskFactor": 1
+  },
+  "雄激素相关的脱发": {
+    "Disease": 1
   },
   "男性雄激素相关的脱发": {
     "Disease": 1
@@ -28141,6 +28260,12 @@
   "呼吸道干燥": {
     "Symptom": 1
   },
+  "抵抗能力不是很强": {
+    "RiskFactor": 1
+  },
+  "季节交替变换": {
+    "Other": 1
+  },
   "开喉剑喷雾剂": {
     "Treatment": 1
   },
@@ -28199,7 +28324,7 @@
     "ExamProcedure": 1
   },
   "斑秃": {
-    "Disease": 25
+    "Disease": 27
   },
   "解除精神负担": {
     "Treatment": 1
@@ -28499,7 +28624,7 @@
   },
   "维生素c": {
     "Treatment": 2,
-    "Other": 3
+    "Other": 4
   },
   "维生素k": {
     "Treatment": 1
@@ -28583,14 +28708,23 @@
   "脑子": {
     "AnatomicalSite": 1
   },
+  "大肠息肉术后出血": {
+    "PathologicalState": 8
+  },
+  "透析": {
+    "ExamProcedure": 1
+  },
+  "广基的息肉": {
+    "Disease": 1
+  },
   "电凝过度": {
     "Other": 1
   },
-  "大肠息肉术后出血": {
-    "PathologicalState": 2
-  },
   "电凝不足": {
     "Other": 1
+  },
+  "息肉蒂比较粗": {
+    "ClinicalSign": 1
   },
   "芹菜": {
     "Other": 1
@@ -28689,10 +28823,13 @@
     "Other": 2
   },
   "单纯疱疹病毒的感染": {
-    "Disease": 1
+    "Disease": 2
   },
   "口腔的疱疹": {
     "Disease": 1
+  },
+  "抗体消失": {
+    "Other": 1
   },
   "咽喉的肿痛": {
     "Symptom": 1
@@ -28812,6 +28949,9 @@
   "嗓子": {
     "AnatomicalSite": 1
   },
+  "喉水肿": {
+    "PathologicalState": 1
+  },
   "反流性咽喉炎": {
     "Disease": 4
   },
@@ -28930,7 +29070,7 @@
     "Symptom": 6
   },
   "阴囊皮肤急性过敏": {
-    "Disease": 4
+    "Disease": 5
   },
   "局部高于皮面皮疹": {
     "ClinicalSign": 1
@@ -28980,7 +29120,7 @@
   },
   "月经提前": {
     "Symptom": 1,
-    "Disease": 6
+    "Disease": 9
   },
   "撤退性的出血": {
     "Symptom": 1
@@ -29216,6 +29356,9 @@
   "股骨头": {
     "AnatomicalSite": 1
   },
+  "活动髋关节": {
+    "RiskFactor": 1
+  },
   "使用激素类药物": {
     "Treatment": 1
   },
@@ -29223,7 +29366,7 @@
     "Treatment": 3
   },
   "动静脉畸形": {
-    "Disease": 9
+    "Disease": 10
   },
   "介入办法": {
     "Treatment": 1
@@ -29261,6 +29404,9 @@
   "激素": {
     "RiskFactor": 2,
     "Treatment": 4
+  },
+  "遗传背景": {
+    "RiskFactor": 1
   },
   "子宫收缩不良": {
     "PathologicalState": 3
@@ -29363,7 +29509,7 @@
     "Symptom": 1
   },
   "回奶": {
-    "Other": 1,
+    "Other": 2,
     "PathologicalState": 1
   },
   "乳汁比较多": {
@@ -29468,6 +29614,15 @@
   "阴道超声": {
     "ExamProcedure": 1
   },
+  "高危型hpv感染": {
+    "RiskFactor": 1
+  },
+  "低危型的hpv感染": {
+    "RiskFactor": 1
+  },
+  "湿疣": {
+    "Disease": 2
+  },
   "宫颈病变": {
     "PathologicalState": 7
   },
@@ -29477,8 +29632,8 @@
   "活检": {
     "ExamProcedure": 2
   },
-  "湿疣": {
-    "Disease": 1
+  "hpv16型": {
+    "RiskFactor": 1
   },
   "女性外阴、阴道以及肛门周围": {
     "AnatomicalSite": 1
@@ -29523,13 +29678,28 @@
     "Treatment": 3
   },
   "鼻中隔穿孔": {
-    "Disease": 2
+    "Disease": 5
   },
   "鼻中隔血肿": {
-    "Disease": 3
+    "Disease": 5
   },
   "鼻中隔脓肿": {
     "Disease": 2
+  },
+  "术中医师经验不足": {
+    "RiskFactor": 1
+  },
+  "患者鼻中隔黏膜炎症较重": {
+    "RiskFactor": 1
+  },
+  "黏膜薄": {
+    "RiskFactor": 1
+  },
+  "两侧鼻腔黏膜没有压紧": {
+    "RiskFactor": 1
+  },
+  "凝血机制较差": {
+    "RiskFactor": 1
   },
   "呼吸时有吹哨声": {
     "Symptom": 1
@@ -29786,6 +29956,15 @@
   "腰椎管狭窄征": {
     "Disease": 1
   },
+  "反复腰痛": {
+    "Symptom": 2
+  },
+  "缺乏锻炼": {
+    "RiskFactor": 1
+  },
+  "腰肌松弛": {
+    "PathologicalState": 1
+  },
   "悬钟": {
     "Treatment": 1
   },
@@ -29974,7 +30153,7 @@
     "Disease": 1
   },
   "异位妊娠": {
-    "Disease": 1
+    "Disease": 2
   },
   "早发性卵巢功能不全": {
     "Disease": 1
@@ -30099,7 +30278,7 @@
     "AnatomicalSite": 4
   },
   "眼睑痉挛": {
-    "Disease": 7
+    "Disease": 11
   },
   "局限性肌张力障碍": {
     "MedicalCategory": 1
@@ -30117,7 +30296,7 @@
     "Treatment": 1
   },
   "脑内小的缺血灶": {
-    "PathologicalState": 1
+    "PathologicalState": 4
   },
   "颅脑核磁": {
     "ExamProcedure": 1
@@ -30170,9 +30349,6 @@
   },
   "中医中药治疗": {
     "Treatment": 1
-  },
-  "夜尿增多": {
-    "Symptom": 2
   },
   "睡眠质量变差": {
     "Symptom": 2
@@ -30244,6 +30420,9 @@
   },
   "牙龈肿胀": {
     "Symptom": 2
+  },
+  "老年慢性支气管炎": {
+    "Disease": 1
   },
   "阻塞性肺疾病": {
     "Disease": 1
@@ -30404,6 +30583,9 @@
   "尿液草酸的排泄量": {
     "TestResult": 1
   },
+  "草酸钙结晶": {
+    "PathologicalState": 1
+  },
   "草酸钙结石": {
     "Disease": 1
   },
@@ -30506,6 +30688,9 @@
   },
   "细菌、病毒等感染": {
     "RiskFactor": 1
+  },
+  "免疫系统可能没有完全完备": {
+    "PathologicalState": 1
   },
   "高盐、高脂、高嘌呤的饮食": {
     "RiskFactor": 1
@@ -30637,7 +30822,17 @@
     "Other": 2
   },
   "低危型的hpv病毒": {
-    "MedicalCategory": 1
+    "MedicalCategory": 1,
+    "RiskFactor": 1
+  },
+  "高危型的hpv病毒": {
+    "RiskFactor": 1
+  },
+  "女性宫颈癌": {
+    "Disease": 1
+  },
+  "女性生殖道湿疣": {
+    "Disease": 1
   },
   "女性生殖道的湿疣": {
     "Disease": 1
@@ -30690,11 +30885,47 @@
   "胰岛素抵抗": {
     "PathologicalState": 3
   },
-  "盆底肌训练": {
-    "Treatment": 1
+  "果糖摄入": {
+    "RiskFactor": 1
+  },
+  "多次足月分娩": {
+    "RiskFactor": 1
   },
   "产后尿失禁": {
-    "Disease": 2
+    "Disease": 9
+  },
+  "分娩巨大儿": {
+    "RiskFactor": 1
+  },
+  "阴道分娩": {
+    "RiskFactor": 1
+  },
+  "产程较长": {
+    "RiskFactor": 1
+  },
+  "阴道助产": {
+    "RiskFactor": 1
+  },
+  "盆底肌肉损伤": {
+    "PathologicalState": 3
+  },
+  "急产": {
+    "RiskFactor": 1
+  },
+  "药物引产": {
+    "RiskFactor": 1
+  },
+  "不喜欢运动": {
+    "RiskFactor": 1
+  },
+  "全身肌肉力量薄弱": {
+    "RiskFactor": 1
+  },
+  "盆底肌力量较弱": {
+    "RiskFactor": 1
+  },
+  "盆底肌训练": {
+    "Treatment": 1
   },
   "全身肌肉的训练": {
     "Treatment": 1
@@ -30847,6 +31078,15 @@
   "功能性的头痛": {
     "MedicalCategory": 1
   },
+  "巧克力、奶酪、油炸类的食物": {
+    "RiskFactor": 1
+  },
+  "精神压力较大": {
+    "RiskFactor": 1
+  },
+  "睡眠情况不足": {
+    "RiskFactor": 1
+  },
   "胸腔镜外科治疗重症肌无力": {
     "Treatment": 1
   },
@@ -30946,14 +31186,20 @@
   "颌下淋巴结增大": {
     "PathologicalState": 1
   },
+  "机体免疫力低下": {
+    "RiskFactor": 1
+  },
+  "区域淋巴结反应性的增大": {
+    "PathologicalState": 5
+  },
+  "口腔或者是颌面部的感染": {
+    "Disease": 1
+  },
   "邻近的淋巴结增大": {
     "PathologicalState": 2
   },
   "腮腺的肿瘤": {
     "Disease": 1
-  },
-  "区域淋巴结反应性的增大": {
-    "PathologicalState": 2
   },
   "血常规的化验": {
     "ExamProcedure": 1
@@ -31056,6 +31302,18 @@
   },
   "呼吸堵塞": {
     "Symptom": 1
+  },
+  "轻微超重": {
+    "RiskFactor": 1
+  },
+  "严重超重": {
+    "RiskFactor": 1
+  },
+  "个性特别、死板、保守或者容易过于着迷于某物": {
+    "RiskFactor": 1
+  },
+  "头痛病": {
+    "Disease": 1
   },
   "用力过度": {
     "Other": 1
@@ -31389,6 +31647,12 @@
     "Treatment": 4,
     "MedicalCategory": 1
   },
+  "没有采取避孕措施": {
+    "RiskFactor": 1
+  },
+  "意外怀孕": {
+    "PathologicalState": 1
+  },
   "便秘症状": {
     "Symptom": 7
   },
@@ -31513,8 +31777,14 @@
   "鼻咽部": {
     "AnatomicalSite": 1
   },
+  "高脂饮食": {
+    "RiskFactor": 1
+  },
   "绒毛状管状腺瘤": {
     "PathologicalState": 1
+  },
+  "家族易感性": {
+    "RiskFactor": 1
   },
   "排便习惯和性状的改变": {
     "Symptom": 1
@@ -31607,7 +31877,7 @@
     "PathologicalState": 2
   },
   "遗尿现象": {
-    "Symptom": 10
+    "Symptom": 11
   },
   "尿道周围肌群松弛": {
     "PathologicalState": 1
@@ -31634,6 +31904,9 @@
     "Other": 1
   },
   "大笑": {
+    "Other": 1
+  },
+  "吃完饭之后又吃水果": {
     "Other": 1
   },
   "餐后吃水果": {
@@ -31799,10 +32072,13 @@
     "Disease": 2
   },
   "亚硝酸盐": {
-    "Other": 2
+    "Other": 4
+  },
+  "长时间口服阿司匹林": {
+    "RiskFactor": 1
   },
   "长时间饮酒": {
-    "RiskFactor": 4
+    "RiskFactor": 5
   },
   "泄泻病": {
     "Disease": 4
@@ -31901,10 +32177,13 @@
     "Symptom": 1
   },
   "肝脾不和": {
-    "PathologicalState": 5
+    "PathologicalState": 6
   },
   "食少": {
     "Symptom": 1
+  },
+  "抑郁、恼怒或情绪紧张": {
+    "RiskFactor": 1
   },
   "痛泻宁颗粒": {
     "Treatment": 1
@@ -31913,10 +32192,16 @@
     "Disease": 1
   },
   "鞘膜积液": {
-    "Disease": 13
+    "Disease": 15
   },
   "炎性渗出": {
     "PathologicalState": 1
+  },
+  "过度的劳累": {
+    "RiskFactor": 1
+  },
+  "过多的精细活动": {
+    "RiskFactor": 1
   },
   "肌腱反复摩擦": {
     "RiskFactor": 1
@@ -31964,7 +32249,7 @@
     "Treatment": 1
   },
   "睡眠过多": {
-    "Other": 4
+    "Other": 7
   },
   "容易疲劳": {
     "Symptom": 2
@@ -32240,11 +32525,14 @@
   "进食不洁的食物": {
     "RiskFactor": 2
   },
-  "电焊": {
-    "Other": 1
+  "不注意防护": {
+    "RiskFactor": 1
   },
   "角膜上皮灼伤": {
-    "PathologicalState": 9
+    "PathologicalState": 10
+  },
+  "电焊": {
+    "Other": 1
   },
   "贝复舒": {
     "Treatment": 1
@@ -32459,17 +32747,13 @@
     "Symptom": 1
   },
   "副睾炎": {
-    "Disease": 3
+    "Disease": 4
   },
   "男性淋病": {
     "Disease": 2
   },
   "附睾管及输精管闭塞": {
     "PathologicalState": 2
-  },
-  "不育": {
-    "PathologicalState": 1,
-    "Disease": 1
   },
   "两侧附睾炎": {
     "PathologicalState": 1
@@ -32819,7 +33103,7 @@
     "Treatment": 1
   },
   "节育器移位": {
-    "PathologicalState": 1
+    "PathologicalState": 2
   },
   "下腹隐隐疼痛": {
     "Symptom": 1
@@ -33115,6 +33399,9 @@
   "阴囊急性疼痛": {
     "Symptom": 2
   },
+  "时间拖延": {
+    "Other": 1
+  },
   "月经不来": {
     "Symptom": 2
   },
@@ -33213,6 +33500,12 @@
   },
   "勃起时疼痛": {
     "Symptom": 1
+  },
+  "包皮感染": {
+    "Disease": 1
+  },
+  "阴茎癌": {
+    "Disease": 1
   },
   "促甲状腺激素释放激素": {
     "Other": 1
@@ -33415,6 +33708,9 @@
   "毛细血管网受到损伤": {
     "PathologicalState": 1
   },
+  "血管壁的通透性不好": {
+    "PathologicalState": 1
+  },
   "发生在脑组织的出血": {
     "PathologicalState": 1
   },
@@ -33481,6 +33777,9 @@
   "手术切除疝囊": {
     "Treatment": 1
   },
+  "体温过低": {
+    "Symptom": 2
+  },
   "产热量不足": {
     "PathologicalState": 1
   },
@@ -33506,7 +33805,7 @@
     "Disease": 1
   },
   "胃腺瘤性息肉": {
-    "Disease": 2
+    "Disease": 3
   },
   "息肉超过2cm": {
     "ClinicalSign": 1
@@ -33793,7 +34092,7 @@
     "Disease": 5
   },
   "卵巢癌": {
-    "Disease": 9
+    "Disease": 13
   },
   "ca-125": {
     "TestResult": 1
@@ -34351,6 +34650,12 @@
   "查体": {
     "ExamProcedure": 3
   },
+  "到过疫区": {
+    "RiskFactor": 1
+  },
+  "接触过确诊的患者": {
+    "RiskFactor": 1
+  },
   "外源性补充雌激素": {
     "Treatment": 1
   },
@@ -34675,7 +34980,10 @@
     "Treatment": 1
   },
   "甘油三酯高": {
-    "Disease": 2
+    "Disease": 5
+  },
+  "基因水平": {
+    "RiskFactor": 1
   },
   "家族性高甘油三酯": {
     "Disease": 1
@@ -34758,6 +35066,12 @@
   "单基因": {
     "Other": 1
   },
+  "父母双方有高度近视": {
+    "Other": 1
+  },
+  "孩子近视": {
+    "Disease": 1
+  },
   "户外活动": {
     "Treatment": 1
   },
@@ -34832,6 +35146,9 @@
   },
   "24小时动态血压监测": {
     "ExamProcedure": 1
+  },
+  "白大衣高血压": {
+    "Disease": 1
   },
   "肾上腺": {
     "AnatomicalSite": 2
@@ -34912,7 +35229,7 @@
     "ClinicalSign": 3
   },
   "尿路结石": {
-    "Disease": 1
+    "Disease": 2
   },
   "尿路的肿瘤": {
     "Disease": 1
@@ -35076,11 +35393,11 @@
   "蓝光照美白剂": {
     "Treatment": 1
   },
+  "生殖系统的感染": {
+    "Disease": 2
+  },
   "包皮环切术": {
     "Treatment": 2
-  },
-  "生殖系统的感染": {
-    "Disease": 1
   },
   "生殖系统": {
     "AnatomicalSite": 3
@@ -35185,7 +35502,8 @@
     "Symptom": 3
   },
   "子宫内膜的炎症": {
-    "PathologicalState": 2
+    "PathologicalState": 2,
+    "Disease": 1
   },
   "子宫内膜的息肉": {
     "PathologicalState": 2
@@ -35604,7 +35922,7 @@
     "Disease": 15
   },
   "小儿脊髓灰质炎": {
-    "Disease": 1
+    "Disease": 3
   },
   "肌肉的酸痛": {
     "Symptom": 1
@@ -35617,6 +35935,12 @@
   },
   "预防性的治疗": {
     "Treatment": 1
+  },
+  "脊髓灰质炎疫苗服用的方法不当": {
+    "RiskFactor": 1
+  },
+  "运输过程中造成脊髓灰质炎疫苗的失效": {
+    "RiskFactor": 1
   },
   "永久性麻痹症的后遗症": {
     "PathologicalState": 1
@@ -36144,6 +36468,9 @@
   "精索静脉高位结扎术": {
     "Treatment": 1
   },
+  "青壮年男性": {
+    "RiskFactor": 1
+  },
   "左侧": {
     "AnatomicalSite": 1
   },
@@ -36411,6 +36738,9 @@
   "发高烧": {
     "Symptom": 1
   },
+  "神经系统发育不完善": {
+    "RiskFactor": 1
+  },
   "四肢末梢的小血管处于痉挛、收缩的状态": {
     "PathologicalState": 1
   },
@@ -36475,11 +36805,17 @@
   "氨氯地平": {
     "Treatment": 1
   },
-  "踝关节的水肿": {
-    "Symptom": 1
+  "下台阶下不好": {
+    "RiskFactor": 1
   },
   "脚扭伤": {
-    "Disease": 5
+    "Disease": 7
+  },
+  "雨天路滑": {
+    "RiskFactor": 1
+  },
+  "踝关节的水肿": {
+    "Symptom": 1
   },
   "关节软组织的损伤": {
     "PathologicalState": 1
@@ -36511,11 +36847,11 @@
   "先天性的因素": {
     "RiskFactor": 1
   },
+  "耳朵里面流水": {
+    "Symptom": 6
+  },
   "油耳": {
     "Disease": 1
-  },
-  "耳朵里面流水": {
-    "Symptom": 5
   },
   "头部受到严重的损伤": {
     "RiskFactor": 1
@@ -36550,14 +36886,20 @@
   "ppd试验": {
     "ExamProcedure": 2
   },
+  "基因": {
+    "RiskFactor": 1
+  },
+  "狐臭": {
+    "Disease": 15
+  },
   "腋下小汗腺分泌旺盛": {
     "PathologicalState": 1
   },
-  "狐臭": {
-    "Disease": 14
-  },
   "大汗腺分泌过多": {
-    "PathologicalState": 1
+    "PathologicalState": 2
+  },
+  "青春期体内激素水平": {
+    "RiskFactor": 1
   },
   "腋下多汗": {
     "Symptom": 1
@@ -36694,7 +37036,7 @@
     "Treatment": 1
   },
   "前列腺结石": {
-    "Disease": 5
+    "Disease": 6
   },
   "尿路梗阻": {
     "Disease": 1
@@ -36730,7 +37072,7 @@
     "Symptom": 1
   },
   "血行播散型结核": {
-    "Disease": 2
+    "Disease": 3
   },
   "干酪样坏死": {
     "PathologicalState": 1
@@ -36748,7 +37090,7 @@
     "Disease": 3
   },
   "小便量太少": {
-    "Symptom": 1
+    "Symptom": 2
   },
   "结晶体析出增多": {
     "PathologicalState": 1
@@ -36776,6 +37118,15 @@
   },
   "流行性脑脊髓膜炎": {
     "Disease": 1
+  },
+  "血压突然升高": {
+    "RiskFactor": 1
+  },
+  "再次出血": {
+    "PathologicalState": 2
+  },
+  "剧烈活动": {
+    "RiskFactor": 1
   },
   "危险疾病": {
     "MedicalCategory": 1
@@ -37077,6 +37428,9 @@
   },
   "抵抗力增加": {
     "ClinicalSign": 1
+  },
+  "从冰箱里拿出的榴莲": {
+    "RiskFactor": 1
   },
   "早早孕试纸检测": {
     "ExamProcedure": 1
@@ -37403,6 +37757,9 @@
   "颈椎骨疾病": {
     "Disease": 1
   },
+  "蹲下头晕": {
+    "Symptom": 1
+  },
   "颅脑病变": {
     "Disease": 1
   },
@@ -37463,7 +37820,7 @@
     "ExamProcedure": 2
   },
   "扁平疣": {
-    "Disease": 6
+    "Disease": 7
   },
   "脖子": {
     "AnatomicalSite": 3
@@ -37937,6 +38294,9 @@
   "颈部": {
     "AnatomicalSite": 4
   },
+  "中青年": {
+    "Other": 1
+  },
   "自身免疫性肠病": {
     "Disease": 3
   },
@@ -37947,7 +38307,8 @@
     "Disease": 5
   },
   "慢性肠炎": {
-    "Disease": 3
+    "Disease": 3,
+    "RiskFactor": 1
   },
   "肠黏膜增生破坏": {
     "PathologicalState": 1
@@ -38015,6 +38376,9 @@
   },
   "实质性脏器": {
     "AnatomicalSite": 1
+  },
+  "短期内逐渐增大的结节": {
+    "PathologicalState": 1
   },
   "不规则的结节": {
     "PathologicalState": 1
@@ -38252,6 +38616,12 @@
   },
   "头部按摩": {
     "Treatment": 1
+  },
+  "过早的同房": {
+    "RiskFactor": 4
+  },
+  "月经产生变化": {
+    "Symptom": 1
   },
   "频繁的人工流产": {
     "RiskFactor": 2
@@ -38524,7 +38894,8 @@
     "Treatment": 1
   },
   "豆制品": {
-    "Treatment": 1
+    "Treatment": 1,
+    "Other": 1
   },
   "乙状结肠和直肠的肿瘤": {
     "Disease": 5
@@ -38548,7 +38919,7 @@
     "Disease": 7
   },
   "卵巢囊肿": {
-    "Disease": 7
+    "Disease": 8
   },
   "左下腹部": {
     "AnatomicalSite": 2
@@ -38648,6 +39019,12 @@
     "RiskFactor": 1
   },
   "股骨头的后脱位": {
+    "Disease": 1
+  },
+  "雌激素分泌增多": {
+    "RiskFactor": 1
+  },
+  "股骨头脱位": {
     "Disease": 1
   },
   "活动的幅度过大": {
@@ -38953,11 +39330,18 @@
   "脾气比较暴躁": {
     "Symptom": 1
   },
+  "体内激素改变": {
+    "Other": 1
+  },
+  "女性心血管变化": {
+    "PathologicalState": 1
+  },
   "女性雌孕激素水平下降": {
     "Other": 2
   },
   "血脂异常": {
-    "Disease": 1
+    "Disease": 1,
+    "RiskFactor": 1
   },
   "彻底停经": {
     "Symptom": 1
@@ -38982,6 +39366,12 @@
   },
   "减少糖分的摄入": {
     "Treatment": 1
+  },
+  "超重和肥胖": {
+    "RiskFactor": 2
+  },
+  "糖代谢异常": {
+    "PathologicalState": 1
   },
   "关节附近受到重大暴力": {
     "RiskFactor": 1
@@ -39055,6 +39445,18 @@
   "宫内妊娠": {
     "PathologicalState": 1
   },
+  "妊娠囊过小": {
+    "RiskFactor": 1
+  },
+  "漏吸": {
+    "ClinicalSign": 1
+  },
+  "妊娠囊过大": {
+    "RiskFactor": 1
+  },
+  "浆细胞性乳腺炎": {
+    "Disease": 2
+  },
   "穿紧身上衣或者戴比较紧的胸罩": {
     "RiskFactor": 1
   },
@@ -39069,6 +39471,12 @@
   },
   "气道黏膜炎症": {
     "PathologicalState": 1
+  },
+  "冷空气": {
+    "RiskFactor": 1
+  },
+  "刺激性气体": {
+    "RiskFactor": 1
   },
   "严重的心肺基础疾病": {
     "Disease": 1
@@ -39203,7 +39611,7 @@
     "Treatment": 5
   },
   "年龄较大": {
-    "RiskFactor": 1
+    "RiskFactor": 2
   },
   "较严重不良反应": {
     "Symptom": 1
@@ -39346,6 +39754,9 @@
   "腹膜": {
     "AnatomicalSite": 1
   },
+  "盐分摄入过多": {
+    "RiskFactor": 1
+  },
   "妊娠反应": {
     "PathologicalState": 2
   },
@@ -39451,6 +39862,9 @@
   },
   "左边心脏部位隐隐作痛": {
     "Symptom": 3
+  },
+  "心血管病": {
+    "MedicalCategory": 4
   },
   "冠脉血管狭窄": {
     "PathologicalState": 1
@@ -39662,6 +40076,15 @@
   "植物神经系统功能紊乱": {
     "PathologicalState": 1
   },
+  "高血压家族史": {
+    "RiskFactor": 1
+  },
+  "高盐饮食": {
+    "RiskFactor": 2
+  },
+  "缺乏体育锻炼": {
+    "RiskFactor": 1
+  },
   "降血压的药物": {
     "Treatment": 1
   },
@@ -39676,6 +40099,9 @@
   },
   "血压的数值": {
     "TestResult": 1
+  },
+  "急性脑卒中": {
+    "Disease": 4
   },
   "大脑皮层出现小的梗塞": {
     "PathologicalState": 1
@@ -39920,6 +40346,9 @@
   "球结膜组织变性疾病": {
     "MedicalCategory": 1
   },
+  "沙眼": {
+    "Disease": 3
+  },
   "睑结膜": {
     "AnatomicalSite": 1
   },
@@ -39928,9 +40357,6 @@
   },
   "突出睑结膜表面": {
     "PathologicalState": 1
-  },
-  "沙眼": {
-    "Disease": 2
   },
   "普拉洛芬滴眼液": {
     "Treatment": 2
@@ -39999,10 +40425,13 @@
     "PathologicalState": 1
   },
   "外阴白斑": {
-    "Disease": 2
+    "Disease": 3
   },
   "外阴营养不良": {
     "PathologicalState": 1
+  },
+  "外阴癌": {
+    "Disease": 2
   },
   "阴道放药": {
     "Treatment": 1
@@ -40074,7 +40503,7 @@
     "TestResult": 1
   },
   "双硫仑反应": {
-    "PathologicalState": 19
+    "PathologicalState": 20
   },
   "心率升高": {
     "ClinicalSign": 1
@@ -40659,6 +41088,15 @@
   "经期提前": {
     "Disease": 1
   },
+  "素体阳气旺盛": {
+    "RiskFactor": 1
+  },
+  "喜食辛辣": {
+    "RiskFactor": 1
+  },
+  "补品": {
+    "RiskFactor": 1
+  },
   "色泽鲜红": {
     "Symptom": 1
   },
@@ -40733,6 +41171,12 @@
   },
   "大便潜血": {
     "ClinicalSign": 1
+  },
+  "家族性腺瘤性息肉": {
+    "RiskFactor": 1
+  },
+  "非息肉性家族遗传疾病": {
+    "RiskFactor": 1
   },
   "肠镜": {
     "ExamProcedure": 3
@@ -40928,9 +41372,6 @@
   },
   "化脓性乳腺炎": {
     "Disease": 2
-  },
-  "浆细胞性乳腺炎": {
-    "Disease": 1
   },
   "肉芽肿性乳腺炎": {
     "Disease": 1
@@ -41167,6 +41608,12 @@
   "胸部影像": {
     "ExamProcedure": 1
   },
+  "高危地区": {
+    "RiskFactor": 1
+  },
+  "聚集性发病": {
+    "RiskFactor": 1
+  },
   "疣": {
     "Disease": 3
   },
@@ -41232,6 +41679,9 @@
   },
   "功能受限": {
     "Symptom": 1
+  },
+  "年龄增大": {
+    "RiskFactor": 2
   },
   "继发性oa": {
     "Disease": 1
@@ -41338,6 +41788,15 @@
   "抑郁障碍": {
     "Disease": 1
   },
+  "成长过程中遇到较多创伤": {
+    "RiskFactor": 1
+  },
+  "抑郁发作": {
+    "PathologicalState": 2
+  },
+  "小时候受到心理或身体的虐待、忽视": {
+    "RiskFactor": 1
+  },
   "摄入的食物": {
     "Other": 1
   },
@@ -41426,13 +41885,22 @@
     "PathologicalState": 1
   },
   "子宫较大": {
-    "ClinicalSign": 2
+    "ClinicalSign": 3
   },
   "上环容易位置异常甚至脱落": {
     "PathologicalState": 1
   },
   "顺产之后哺乳期": {
     "Other": 1
+  },
+  "位置异常": {
+    "PathologicalState": 1
+  },
+  "哺乳期": {
+    "Other": 1
+  },
+  "偶发排卵": {
+    "ClinicalSign": 1
   },
   "邻牙的损害": {
     "PathologicalState": 1
@@ -41476,8 +41944,11 @@
   "剖腹探查": {
     "Treatment": 1
   },
+  "年龄增加": {
+    "RiskFactor": 1
+  },
   "皮肤松弛下垂": {
-    "PathologicalState": 1
+    "PathologicalState": 2
   },
   "皮肤下面支持结构薄弱": {
     "PathologicalState": 1
@@ -41549,7 +42020,7 @@
     "ExamProcedure": 2
   },
   "小腿总是酸痛": {
-    "Symptom": 3
+    "Symptom": 4
   },
   "痛的症状": {
     "Symptom": 1
@@ -41808,7 +42279,7 @@
     "Disease": 8
   },
   "破裂": {
-    "PathologicalState": 7
+    "PathologicalState": 11
   },
   "巧克力囊肿达到一定的尺寸或者是痛经症状特别严重": {
     "Other": 1
@@ -41918,6 +42389,9 @@
   "苯巴比妥": {
     "Treatment": 1
   },
+  "冷、热刺激": {
+    "RiskFactor": 1
+  },
   "呼吸道窒息": {
     "Symptom": 1
   },
@@ -42012,7 +42486,7 @@
     "Symptom": 1
   },
   "甲状腺腺瘤": {
-    "Disease": 2
+    "Disease": 3
   },
   "普外科的常见病": {
     "MedicalCategory": 1
@@ -42046,6 +42520,9 @@
   },
   "血压高出正常范围": {
     "PathologicalState": 1
+  },
+  "夏季天气炎热潮湿": {
+    "RiskFactor": 1
   },
   "放射性皮炎": {
     "PathologicalState": 1
@@ -42488,11 +42965,20 @@
   "减轻水肿药物": {
     "Treatment": 1
   },
+  "BRCA基因突变": {
+    "RiskFactor": 1
+  },
+  "家族里直系亲属有结直肠癌、乳腺癌，或卵巢癌高发": {
+    "RiskFactor": 1
+  },
   "口服避孕药": {
     "Treatment": 1
   },
   "预防性切除": {
     "Treatment": 1
+  },
+  "高胆固醇、高脂饮食": {
+    "RiskFactor": 1
   },
   "脑梗认知障碍": {
     "Disease": 7
@@ -42635,6 +43121,9 @@
   },
   "基因检测": {
     "ExamProcedure": 1
+  },
+  "hla-b27基因": {
+    "TestResult": 1
   },
   "炎症介质检测": {
     "ExamProcedure": 1
@@ -42970,13 +43459,16 @@
     "PathologicalState": 1
   },
   "蒂扭转": {
-    "PathologicalState": 4
+    "PathologicalState": 5
   },
   "缺血坏死": {
     "PathologicalState": 1
   },
   "继发性腹膜炎": {
     "PathologicalState": 1
+  },
+  "腹部受压": {
+    "Other": 1
   },
   "老年性黄斑变性": {
     "Disease": 2
@@ -43024,7 +43516,7 @@
     "ClinicalSign": 1
   },
   "体内胆汁酸高": {
-    "ClinicalSign": 1
+    "ClinicalSign": 2
   },
   "怀孕后身体抵抗力低下": {
     "PathologicalState": 1
@@ -43044,20 +43536,21 @@
   "总胆汁酸高": {
     "ClinicalSign": 1
   },
+  "叶酸缺乏": {
+    "RiskFactor": 2,
+    "PathologicalState": 1
+  },
   "神经管缺陷病": {
     "Disease": 1
   },
   "口服叶酸": {
     "Treatment": 1
   },
-  "叶酸缺乏": {
-    "PathologicalState": 1
-  },
   "补充叶酸": {
     "Treatment": 1
   },
   "长时间玩手机": {
-    "RiskFactor": 2
+    "RiskFactor": 3
   },
   "手机": {
     "Other": 1
@@ -43805,6 +44298,9 @@
   "颈前、前胸部": {
     "AnatomicalSite": 1
   },
+  "高危性行为史": {
+    "RiskFactor": 1
+  },
   "尿道口有明显脓性分泌物": {
     "Symptom": 1
   },
@@ -43930,6 +44426,27 @@
   },
   "阴道不规则的点滴出血": {
     "Symptom": 1
+  },
+  "初潮年龄早": {
+    "RiskFactor": 1
+  },
+  "绝经年龄晚": {
+    "RiskFactor": 1
+  },
+  "激素替代疗法": {
+    "Treatment": 1
+  },
+  "直系亲属乳腺癌病史": {
+    "RiskFactor": 1
+  },
+  "性早熟": {
+    "RiskFactor": 1
+  },
+  "环境压力": {
+    "RiskFactor": 1
+  },
+  "心理因素": {
+    "RiskFactor": 1
   },
   "胃肠道出血": {
     "Disease": 6
@@ -44162,6 +44679,15 @@
   "兴趣狭窄": {
     "Symptom": 1
   },
+  "拔牙创出血": {
+    "Symptom": 1
+  },
+  "血凝块松脱": {
+    "Symptom": 1
+  },
+  "长期抽烟": {
+    "RiskFactor": 1
+  },
   "黏膜充血、肿胀、刺激": {
     "PathologicalState": 1
   },
@@ -44182,9 +44708,6 @@
   },
   "止咳嗽、消肿的治疗": {
     "Treatment": 1
-  },
-  "外阴癌": {
-    "Disease": 1
   },
   "宫颈癌的筛查": {
     "ExamProcedure": 1
@@ -44645,6 +45168,12 @@
   "结石体质": {
     "PathologicalState": 1
   },
+  "含钙食物摄入比较多": {
+    "RiskFactor": 1
+  },
+  "对钙处理能力比较低": {
+    "RiskFactor": 1
+  },
   "尿余沥": {
     "Symptom": 6
   },
@@ -44681,6 +45210,9 @@
   "步态的训练": {
     "Treatment": 1
   },
+  "危险因素": {
+    "RiskFactor": 1
+  },
   "口舌生疮": {
     "Disease": 1
   },
@@ -44712,7 +45244,7 @@
     "TestResult": 1
   },
   "卵巢癌抗原偏高": {
-    "TestResult": 1
+    "TestResult": 2
   },
   "卵巢抗癌增高": {
     "TestResult": 1

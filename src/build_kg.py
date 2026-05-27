@@ -49,7 +49,7 @@ except Exception:  # pragma: no cover
 from config import load_qwen_settings
 
 
-# CHIP2022 relation ids in example_code.txt
+# CHIP2022 relation ids in train labels.
 CAUSAL_RELATION = 1
 CONDITIONAL_RELATION = 2
 HYPERNYM_RELATION = 3
@@ -476,7 +476,15 @@ def clean_qwen_outputs(raw_outputs: List[Dict[str, Any]], min_confidence: float 
                 continue
             ev = norm_text(item.get("evidence")) or text[:160]
 
-            if relation in {"causes", "is_a", "symptom_of", "treated_by", "located_in", "diagnosed_by"}:
+            if relation in {
+                "causes",
+                "risk_factor_for",
+                "is_a",
+                "symptom_of",
+                "treated_by",
+                "located_in",
+                "diagnosed_by",
+            }:
                 head = norm_text(item.get("head"))
                 tail = norm_text(item.get("tail"))
                 if not head or not tail:
@@ -519,6 +527,31 @@ def clean_qwen_outputs(raw_outputs: List[Dict[str, Any]], min_confidence: float 
                     }
                 )
     return triples, events
+
+
+def load_clean_qwen_triples(path: Path) -> List[Triple]:
+    if not path.exists():
+        return []
+    triples = []
+    for item in read_json(path):
+        try:
+            triples.append(
+                Triple(
+                    head=norm_text(item.get("head")),
+                    head_type=normalize_entity_type(item.get("head_type"), item.get("head"), item.get("relation"), "head"),
+                    relation=normalize_relation(item.get("relation")),
+                    tail=norm_text(item.get("tail")),
+                    tail_type=normalize_entity_type(item.get("tail_type"), item.get("tail"), item.get("relation"), "tail"),
+                    evidence=str(item.get("evidence", "")),
+                    source_doc_id=str(item.get("source_doc_id", "")),
+                    source_file=str(item.get("source_file", "qwen")),
+                    source_type=str(item.get("source_type", "qwen")),
+                    confidence=safe_float(item.get("confidence"), default=0.75),
+                )
+            )
+        except Exception:
+            continue
+    return [t for t in triples if t.head and t.tail and t.relation in CORE_RELATIONS]
 
 
 def deduplicate_triples(triples: List[Triple]) -> List[Triple]:
@@ -625,34 +658,166 @@ def write_kg_json(path: Path, triples: List[Triple]) -> None:
 
 def visualize(triples: List[Triple], out_path: Path, max_edges: int = 800) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    sample = [t for t in triples if t.relation != "mentioned_in"][:max_edges]
-    if Network is None:
-        html = "<html><body><h1>KG Visualization</h1><p>Install pyvis to view interactive graph.</p><ul>"
-        for t in sample[:200]:
-            html += f"<li>{t.head} --{t.relation}--&gt; {t.tail}</li>"
-        html += "</ul></body></html>"
-        out_path.write_text(html, encoding="utf-8")
-        return
-    net = Network(height="800px", width="100%", directed=True, bgcolor="#ffffff", font_color="#222222")
+    candidates = [t for t in triples if t.relation != "mentioned_in"]
+    by_relation: Dict[str, List[Triple]] = defaultdict(list)
+    for t in candidates:
+        by_relation[t.relation].append(t)
+    per_relation = max(1, max_edges // max(1, len(by_relation)))
+    sample: List[Triple] = []
+    used = set()
+    for rel in sorted(by_relation):
+        for t in by_relation[rel][:per_relation]:
+            key = (t.head, t.relation, t.tail, t.source_doc_id)
+            sample.append(t)
+            used.add(key)
+    for t in candidates:
+        if len(sample) >= max_edges:
+            break
+        key = (t.head, t.relation, t.tail, t.source_doc_id)
+        if key not in used:
+            sample.append(t)
+            used.add(key)
     type_colors = {
         "Disease": "#ffb3ba",
         "Symptom": "#bae1ff",
+        "ClinicalSign": "#b5ead7",
         "PathologicalState": "#baffc9",
         "RiskFactor": "#ffffba",
         "TestResult": "#e2c2ff",
-        "TreatmentOrOperation": "#ffd6a5",
+        "ExamProcedure": "#c7ceea",
+        "Treatment": "#ffd6a5",
+        "AnatomicalSite": "#ffdac1",
         "MedicalCategory": "#caffbf",
         "CausalEvent": "#d0d0d0",
         "Document": "#eeeeee",
         "Other": "#f2f2f2",
     }
+    relation_colors = {
+        "causes": "#e74c3c",
+        "risk_factor_for": "#e67e22",
+        "condition_of": "#9b59b6",
+        "is_a": "#3498db",
+        "symptom_of": "#2ecc71",
+        "treated_by": "#1abc9c",
+        "located_in": "#f39c12",
+        "diagnosed_by": "#34495e",
+    }
+    degrees = Counter()
+    for t in sample:
+        degrees[t.head] += 1
+        degrees[t.tail] += 1
+    if Network is None:
+        nodes = {}
+        edges = []
+        for t in sample:
+            for name, typ in [(t.head, t.head_type), (t.tail, t.tail_type)]:
+                nodes.setdefault(
+                    name,
+                    {
+                        "id": name,
+                        "label": name[:30],
+                        "title": f"{name} [{typ}]",
+                        "color": type_colors.get(typ, "#f2f2f2"),
+                        "size": min(28, 8 + degrees[name]),
+                    },
+                )
+            edges.append(
+                {
+                    "from": t.head,
+                    "to": t.tail,
+                    "label": t.relation,
+                    "title": f"{t.head} --{t.relation}--> {t.tail}\n{t.evidence[:120]}",
+                    "evidence": t.evidence,
+                    "arrows": "to",
+                    "color": relation_colors.get(t.relation, "#999999"),
+                }
+            )
+        html = f"""<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>KG Visualization</title>
+  <style>
+    html, body {{ width: 100%; height: 100%; margin: 0; font-family: sans-serif; }}
+    #mynetwork {{ width: 100%; height: calc(100% - 92px); min-height: 720px; border: 1px solid #ddd; }}
+    #edgeEvidence {{
+      box-sizing: border-box;
+      height: 92px;
+      border-top: 1px solid #e5e7eb;
+      padding: 10px 12px;
+      color: #374151;
+      font-size: 13px;
+      line-height: 1.5;
+      overflow: auto;
+      background: #fafafa;
+    }}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js"></script>
+  <script>
+    if (typeof vis === "undefined") {{
+      document.write('<script src="../lib/vis-9.1.2/vis-network.min.js"><\\/script>');
+    }}
+  </script>
+</head>
+<body>
+  <div id="mynetwork"></div>
+  <div id="edgeEvidence">点击或触碰一条边查看原文证据。</div>
+  <script>
+    const nodes = new vis.DataSet({json.dumps(list(nodes.values()), ensure_ascii=False)});
+    const edges = new vis.DataSet({json.dumps(edges, ensure_ascii=False)});
+    const options = {{
+      interaction: {{ hover: true, navigationButtons: true }},
+      edges: {{ smooth: {{ enabled: true, type: "dynamic" }}, font: {{ size: 10 }} }},
+      nodes: {{ shape: "dot", font: {{ size: 13 }} }},
+      physics: {{
+        timestep: 0.25,
+        adaptiveTimestep: false,
+        minVelocity: 0.4,
+        stabilization: {{ iterations: 500, updateInterval: 80 }},
+        barnesHut: {{
+          gravitationalConstant: -24000,
+          springLength: 190,
+          springConstant: 0.0012,
+          damping: 0.50,
+          avoidOverlap: 0.15
+        }}
+      }}
+    }};
+    const network = new vis.Network(document.getElementById("mynetwork"), {{ nodes, edges }}, options);
+    network.on("selectEdge", function(params) {{
+      const edge = edges.get(params.edges[0]);
+      if (!edge) return;
+      document.getElementById("edgeEvidence").innerText =
+        `${{edge.from}} --${{edge.label}}--> ${{edge.to}}\\n证据：${{edge.evidence || edge.title || "无"}}`;
+    }});
+  </script>
+</body>
+</html>
+"""
+        out_path.write_text(html, encoding="utf-8")
+        return
+    net = Network(
+        height="800px",
+        width="100%",
+        directed=True,
+        bgcolor="#ffffff",
+        font_color="#222222",
+        cdn_resources="in_line",
+    )
     added = set()
     for t in sample:
         for name, typ in [(t.head, t.head_type), (t.tail, t.tail_type)]:
             if name not in added:
-                net.add_node(name, label=name[:30], title=f"{name}\n{typ}", color=type_colors.get(typ, "#f2f2f2"))
+                size = min(28, 8 + degrees[name])
+                net.add_node(name, label=name[:30], title=f"{name}\n{typ}", color=type_colors.get(typ, "#f2f2f2"), size=size)
                 added.add(name)
-        net.add_edge(t.head, t.tail, label=t.relation, title=t.evidence[:120])
+        net.add_edge(
+            t.head,
+            t.tail,
+            label=t.relation,
+            title=t.evidence[:120],
+            color=relation_colors.get(t.relation, "#999999"),
+        )
     net.write_html(str(out_path), notebook=False)
 
 
@@ -674,7 +839,22 @@ def build_project(args: argparse.Namespace) -> None:
 
     qwen_triples: List[Triple] = []
     qwen_events: List[Dict[str, Any]] = []
-    if args.extract_qwen:
+    if args.reuse_qwen_outputs:
+        raw_path = processed_dir / "qwen_extracted_raw.json"
+        clean_path = processed_dir / "qwen_extracted_clean.json"
+        if raw_path.exists():
+            raw_outputs = read_json(raw_path)
+            qwen_triples, qwen_events = clean_qwen_outputs(raw_outputs, min_confidence=args.min_confidence)
+            write_json(clean_path, [asdict(t) for t in qwen_triples])
+            print(f"[INFO] Reused Qwen raw outputs: {raw_path}")
+            print(f"[INFO] Qwen triples parsed: {len(qwen_triples)}")
+        elif clean_path.exists():
+            qwen_triples = load_clean_qwen_triples(clean_path)
+            print(f"[WARN] Missing {raw_path}; reused clean triples without Qwen condition events.")
+            print(f"[INFO] Qwen triples loaded: {len(qwen_triples)}")
+        else:
+            print(f"[WARN] No existing Qwen outputs found in {processed_dir}. Building Gold Seed KG only.")
+    elif args.extract_qwen:
         raw_outputs = qwen_extract_from_files(
             raw_dir=raw_dir,
             prompt_path=Path(args.extraction_prompt),
@@ -687,10 +867,8 @@ def build_project(args: argparse.Namespace) -> None:
         write_json(processed_dir / "qwen_extracted_clean.json", [asdict(t) for t in qwen_triples])
         print(f"[INFO] Qwen triples parsed: {len(qwen_triples)}")
     else:
-        # Keep empty files so downstream scripts have stable paths.
-        write_json(processed_dir / "qwen_extracted_raw.json", [])
-        write_json(processed_dir / "qwen_extracted_clean.json", [])
-        print("[INFO] Qwen extraction disabled. Use --extract_qwen to enable.")
+        print("[INFO] Qwen extraction disabled. Building Gold Seed KG only.")
+        print("[INFO] Use --reuse_qwen_outputs to merge existing Qwen results without calling the API.")
 
     all_triples = deduplicate_triples(gold_triples + qwen_triples)
     all_events = gold_events + qwen_events
@@ -721,6 +899,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--triples_path", default="data/triples.csv")
     p.add_argument("--extraction_prompt", default="prompts/qwen_extraction_prompt.txt")
     p.add_argument("--extract_qwen", action="store_true", help="Enable Qwen extraction for unlabel/testA/testB")
+    p.add_argument("--reuse_qwen_outputs", action="store_true", help="Reuse data/processed/qwen_extracted_raw.json or qwen_extracted_clean.json without calling Qwen")
     p.add_argument("--qwen_files", default="unlabel.json,testA.json,testB.json")
     p.add_argument("--max_qwen_docs", type=int, default=None, help="Limit Qwen extraction docs per file for quick tests")
     p.add_argument("--sleep_seconds", type=float, default=0.0)

@@ -646,7 +646,7 @@
   },
   {
     "id": "Q046",
-    "question": "图谱中有没有证据说明大便像果冻会导致慢性咽喉炎反复急性发作？",
+    "question": "有没有证据说明大便像果冻会导致慢性咽喉炎反复急性发作？",
     "type": "negative_check",
     "tested_relations": [
       "causes"
@@ -661,7 +661,7 @@
   },
   {
     "id": "Q047",
-    "question": "图谱中有没有证据说明鼻部症状会导致双下肢无力？",
+    "question": "有没有证据说明鼻部症状会导致双下肢无力？",
     "type": "negative_check",
     "tested_relations": [
       "causes"
@@ -676,7 +676,7 @@
   },
   {
     "id": "Q048",
-    "question": "图谱中有没有证据说明只能说几个简单的词汇会导致食管癌？",
+    "question": "有没有证据说明只能说几个简单的词汇会导致食管癌？",
     "type": "negative_check",
     "tested_relations": [
       "causes"

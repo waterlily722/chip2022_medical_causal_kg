@@ -61,6 +61,24 @@ CHIP2022 原始标签和本项目关系的对应：
 ## 3. 项目结构
 
 ```text
+data/
+├── raw/
+│   ├── train_0717.json
+│   ├── unlabel.json
+│   ├── testA.json
+│   └── testB.json
+├── processed/
+│   ├── build_stats.json
+│   ├── gold_triples.csv
+│   ├── qwen_extracted_raw.json
+│   ├── qwen_extracted_clean.json
+│   ├── entities.csv
+│   ├── relations.csv
+│   ├── causal_events.csv
+│   ├── kg.json
+│   └── test_questions.json
+└── triples.csv
+
 src/
 ├── build_kg.py           # 构建知识图谱
 ├── config.py             # 读取 Qwen API 配置
@@ -80,8 +98,11 @@ results/
 ├── kg_visualization.html
 ├── metrics.json
 ├── cases.md
+├── error_cases.json
 ├── reasoning_results.json
-└── llm_qa_comparison.json
+├── llm_qa_comparison.json
+├── manual_eval_scores.csv
+└── relation_discovery.jsonl
 ```
 
 整体流程：
@@ -288,9 +309,9 @@ python src/evaluate.py --max_questions 50
 | 输出文件 | 说明 |
 |---|---|
 | `results/metrics.json` | 总评估指标，包括图谱规模、检索命中率、证据非空率和抽取 exact-match 指标 |
-| `results/extraction_metrics.json` | Qwen 抽取与 Gold 三元组的精确匹配结果 |
 | `results/cases.md` | GraphRAG 案例，包括问题、标准答案和检索证据 |
 | `results/error_cases.json` | 错误 case 的结构化 JSON |
+| `results/manual_eval_scores.csv` | 10 个代表性问题的人工评分结果，对比 KG-only、LLM-only 和 KG-augmented |
 | `data/processed/test_questions.json` | 自动生成的测试问题 |
 
 ## 12. 主要结果
@@ -320,6 +341,16 @@ python src/evaluate.py --max_questions 50
 | 错误 case 数量 | 6 |
 
 50 case 覆盖直接因果、反向因果、多跳因果、条件推理、上下位、症状、治疗、部位、诊断、负例检查和跨关系问题，结果见 `results/metrics.json`、`results/reasoning_results.json`、`results/llm_qa_comparison.json` 和 `results/error_cases.json`。
+
+10 case 人工评分结果：
+
+| 方法 | 准确性 | 证据可追溯性 | 幻觉控制 | 完整性 | 安全性 | 平均分 |
+|---|---:|---:|---:|---:|---:|---:|
+| KG-only | 4.30 | 4.90 | 5.00 | 3.90 | 5.00 | 4.62 |
+| LLM-only | 3.90 | 1.00 | 3.20 | 4.80 | 4.20 | 3.42 |
+| KG-augmented | 4.60 | 5.00 | 4.90 | 4.60 | 4.90 | 4.80 |
+
+人工评分文件见 `results/manual_eval_scores.csv`。
 
 关系分布：
 

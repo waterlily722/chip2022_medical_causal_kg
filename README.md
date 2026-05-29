@@ -1,80 +1,101 @@
 # CHIP2022 Medical Causal Event KG
 
-基于 CHIP2022 医疗因果实体关系抽取数据的医疗因果事件知识图谱、推理与 GraphRAG 增强问答系统。
+本项目基于 CHIP2022 医疗因果实体关系抽取数据构建医疗因果知识图谱，并实现图谱推理、GraphRAG 证据检索和知识图谱增强问答。系统主要包含四部分：知识图谱构建、规则/路径推理、图谱增强问答、实验评估与可视化。
 
-本项目面向知识图谱课程作业要求，包含：
+## 1. 课程要求对应关系
 
-- 知识图谱构建：Gold Seed KG + Qwen 抽取扩展。
-- 知识推理：直接因果、反向因果、多跳路径、条件约束、上下位、症状、治疗、部位、诊断和风险因素查询。
-- 大模型增强：GraphRAG 检索三元组、路径和条件证据，再注入 Qwen Prompt。
-- 可视化系统：独立 HTML 图谱和 Gradio 问答界面中的动态图谱子图。
-- 实验评估：图谱规模、检索命中、问答对比和案例分析。
+| 课程要求 | 本项目实现 | 对应文件 |
+|---|---|---|
+| 知识图谱构建 | 从 CHIP2022 标注数据构建 Gold Seed KG，并使用 Qwen 从无标注医学文本中扩展三元组 | `src/build_kg.py`、`data/triples.csv` |
+| 数据来源 | 使用 CHIP2022 原始数据，包括人工标注文本和无标注文本 | `data/raw/` |
+| Schema 设计 | 设计 11 类实体和 8 类关系，覆盖疾病、症状、检查、治疗、部位、风险因素和因果条件 | README 第 2 节 |
+| 信息抽取 | 解析人工标注关系，并可选调用 Qwen 进行三元组抽取 | `src/build_kg.py`、`prompts/qwen_extraction_prompt.txt` |
+| 图谱存储 | 使用 CSV 和 JSON 保存完整图谱 | `data/triples.csv`、`data/processed/kg.json` |
+| 图谱可视化 | 生成 HTML 抽样可视化，并在 Gradio 页面中展示问答证据子图 | `results/kg_visualization.html`、`src/qa_server.py` |
+| 知识推理 | 支持直接因果、反向因果、多跳因果、条件约束、上下位、症状、治疗、部位、诊断和风险因素查询 | `src/reasoning.py` |
+| 大模型增强 | 先从图谱中检索三元组、路径和条件证据，再注入 Prompt 生成回答 | `src/graph_retrieval.py`、`src/llm_qa.py` |
+| 实验与分析 | 生成测试问题，输出评估指标和 GraphRAG 案例 | `src/evaluate.py`、`results/metrics.json`、`results/cases.md` |
 
-> 本系统仅用于知识图谱课程实验和医学知识学习，不构成医疗诊断或用药建议。
+## 2. 数据与 Schema
 
-## 1. 数据与 Schema
-
-### 1.1 数据文件
-
-当前实际使用的原始数据：
+原始数据位于：
 
 ```text
 data/raw/
 ├── train_0717.json   # 人工标注数据，用于构建 Gold Seed KG
 ├── unlabel.json      # 无标注文本，用于 Qwen 抽取扩展
-├── testA.json        # 可选扩展抽取数据
-└── testB.json        # 可选扩展抽取数据
+├── testA.json        # 可选扩展数据
+└── testB.json        # 可选扩展数据
 ```
 
-当前最终图谱主要由 `train_0717.json` 和 `unlabel.json` 构建。`testA.json`、`testB.json` 保留为可选扩展数据，不是复现当前结果的必需输入。
-
-### 1.2 关系类型
-
-CHIP2022 原始标注关系：
-
-| 原始标签 | 项目关系 | 说明 |
-|---:|---|---|
-| 1 | `causes` | 因果关系 |
-| 2 | `condition_of` | 条件修饰因果关系 |
-| 3 | `is_a` | 上下位关系 |
-
-项目最终 schema 扩展为 8 种关系：
+实体类型：
 
 ```text
-causes
-risk_factor_for
-condition_of
-is_a
-symptom_of
-treated_by
-located_in
-diagnosed_by
+Disease, Symptom, ClinicalSign, PathologicalState, RiskFactor,
+TestResult, ExamProcedure, Treatment, AnatomicalSite,
+MedicalCategory, Other
 ```
 
-其中 `condition_of` 的处理方式是保留因果边，并把条件连接到原因实体：
+关系类型：
+
+```text
+causes, risk_factor_for, condition_of, is_a,
+symptom_of, treated_by, located_in, diagnosed_by
+```
+
+CHIP2022 原始标签和本项目关系的对应：
+
+| 原始标签 | 项目关系 | 含义 |
+|---:|---|---|
+| 1 | `causes` | 因果关系 |
+| 2 | `condition_of` | 条件修饰关系 |
+| 3 | `is_a` | 上下位关系 |
+
+`condition_of` 保存为“条件 -> 原因实体”。例如：
 
 ```text
 宫腔粘连 --causes--> 月经量少
 女性激素非常好 --condition_of--> 宫腔粘连
 ```
 
-### 1.3 实体类型
+## 3. 项目结构
 
 ```text
-Disease
-Symptom
-ClinicalSign
-PathologicalState
-RiskFactor
-TestResult
-ExamProcedure
-Treatment
-AnatomicalSite
-MedicalCategory
-Other
+src/
+├── build_kg.py           # 构建知识图谱
+├── config.py             # 读取 Qwen API 配置
+├── reasoning.py          # 图谱推理
+├── graph_retrieval.py    # GraphRAG 证据检索
+├── llm_qa.py             # LLM-only / KG-only / KG-augmented 问答
+├── qa_server.py          # Gradio 交互界面
+├── evaluate.py           # 实验评估
+└── relation_discovery.py # 关系发现探索脚本，主流程不依赖
+
+prompts/
+├── qwen_extraction_prompt.txt
+├── kg_augmented_prompt.txt
+└── relation_discovery_prompt.txt
+
+results/
+├── kg_visualization.html
+├── metrics.json
+├── cases.md
+├── reasoning_results.json
+└── llm_qa_comparison.json
 ```
 
-## 2. 环境配置
+整体流程：
+
+```text
+data/raw/*.json
+  -> src/build_kg.py
+  -> data/triples.csv + data/processed/kg.json
+  -> src/reasoning.py / src/graph_retrieval.py / src/llm_qa.py
+  -> src/evaluate.py
+  -> results/metrics.json + results/cases.md
+```
+
+## 4. 环境配置
 
 ```bash
 conda create -n chipkg python=3.10
@@ -82,7 +103,7 @@ conda activate chipkg
 pip install -r requirements.txt
 ```
 
-Qwen API 只在运行 Qwen 抽取、LLM-only 或 KG-augmented 生成式回答时需要。KG-only、推理、GraphRAG 检索、评估和 Gradio 界面可以先不配置 API。
+Qwen API 只在重新抽取三元组、运行 `llm_only` 或真实 `kg_augmented` 生成式回答时需要。图谱构建、KG-only、推理、检索、评估和界面可以在没有 API 的情况下运行。
 
 如需调用 Qwen：
 
@@ -95,104 +116,50 @@ cp .env.example .env
 ```env
 QWEN_API_KEY=your_api_key_here
 QWEN_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-QWEN_MODEL=qwen-plus
+QWEN_MODEL=qwen3.5-flash
 QWEN_TEMPERATURE=0
-QWEN_MAX_TOKENS=2048
+QWEN_MAX_TOKENS=32k
 ```
 
-## 3. 直接使用已有结果
+## 5. 构建知识图谱
 
-仓库已经包含当前实验使用的最终图谱和结果文件，可以直接运行推理、检索、评估和交互系统。
-
-```bash
-# 查看图谱规模
-cat data/processed/build_stats.json
-
-# 查看评估结果
-cat results/metrics.json
-
-# 查看前几条三元组
-head -n 5 data/triples.csv
-```
-
-浏览独立图谱 HTML：
-
-```bash
-python -m http.server 8000
-# 浏览器访问 http://localhost:8000/results/kg_visualization.html
-```
-
-## 4. 构建图谱
-
-### 4.1 构建 Gold Seed KG
-
-不需要 API，只使用 `train_0717.json`，适合快速验证构建流程：
+只使用人工标注数据构建 Gold Seed KG：
 
 ```bash
 python src/build_kg.py
 ```
 
-注意：该命令只会构建 Gold Seed KG，不合并已有 Qwen 抽取结果，会覆盖 `data/triples.csv`、`data/processed/` 和 `results/kg_visualization.html` 中的部分结果。课程最终结果不建议只运行这一条。
-
-### 4.2 复用已有 Qwen 抽取结果重建混合图谱
-
-当前仓库已经有提取后的 Qwen 结果：
-
-```text
-data/processed/qwen_extracted_raw.json
-data/processed/qwen_extracted_clean.json
-```
-
-如果只是想重建 Gold + Qwen 的最终混合图谱，不需要重新调用 API，直接运行：
+使用已有 Qwen 抽取结果构建 Gold + Qwen 混合图谱：
 
 ```bash
 python src/build_kg.py --reuse_qwen_outputs
 ```
 
-这会重新解析 `train_0717.json`，并复用 `data/processed/qwen_extracted_raw.json` 生成 Qwen 三元组和条件因果事件，输出当前最终规模的混合图谱。
-
-### 4.3 重新调用 Qwen 抽取扩展 KG
-
-只有当你想重新从原文调用 Qwen 抽取时，才使用 `--extract_qwen`。该模式需要配置 API Key，并会覆盖已有的 `qwen_extracted_raw.json` 和 `qwen_extracted_clean.json`。
-
-小规模测试：
-
-```bash
-python src/build_kg.py --extract_qwen --max_qwen_docs 5 --sleep_seconds 0.2
-```
-
-重新抽取 `unlabel.json` 的命令：
+重新调用 Qwen 从无标注文本抽取三元组：
 
 ```bash
 python src/build_kg.py --extract_qwen --qwen_files unlabel.json --sleep_seconds 0.2
 ```
 
-常用参数：
+小规模调试：
 
-| 参数 | 说明 |
-|---|---|
-| `--qwen_files` | 指定抽取文件，多个文件用逗号分隔 |
-| `--max_qwen_docs` | 限制每个文件抽取篇数，调试时使用 |
-| `--sleep_seconds` | API 调用间隔 |
-| `--min_confidence` | Qwen 抽取三元组最低置信度，默认 0.65 |
-| `--visualize_max_edges` | 可视化 HTML 中最多写入的边数 |
-| `--reuse_qwen_outputs` | 复用已有 Qwen 抽取结果，不调用 API |
-
-输出核心文件：
-
-```text
-data/triples.csv
-data/processed/entities.csv
-data/processed/relations.csv
-data/processed/causal_events.csv
-data/processed/kg.json
-data/processed/build_stats.json
-results/kg_visualization.html
+```bash
+python src/build_kg.py --extract_qwen --max_qwen_docs 5 --sleep_seconds 0.2
 ```
 
-## 5. 运行推理与问答
+构建输出：
 
-### 5.1 知识图谱推理
+| 输出文件 | 说明 |
+|---|---|
+| `data/triples.csv` | 完整三元组表，是完整图谱的主要文件 |
+| `data/processed/kg.json` | JSON 格式完整图谱，供程序读取 |
+| `data/processed/entities.csv` | 实体列表和实体类型 |
+| `data/processed/relations.csv` | 关系类型和数量 |
+| `data/processed/causal_events.csv` | 条件因果事件 |
+| `data/processed/build_stats.json` | 图谱规模统计 |
+| `results/kg_visualization.html` | 抽样图谱可视化，默认最多 800 条边 |
+
+## 6. 运行推理
 
 ```bash
 python src/reasoning.py --query "高血压是否可能间接导致心肌梗死？"
@@ -203,30 +170,27 @@ python src/reasoning.py --query "肠癌如何诊断？"
 python src/reasoning.py --query "瘫痪如何治疗？"
 ```
 
-如需 JSON 输出：
+JSON 输出：
 
 ```bash
 python src/reasoning.py --query "乳腺癌有哪些风险因素？" --json
 ```
 
-### 5.2 GraphRAG 证据检索
+## 7. 运行 GraphRAG 检索
 
 ```bash
 python src/graph_retrieval.py --question "为什么高血压可能和心肌梗死有关？"
 python src/graph_retrieval.py --question "在什么条件下宫腔粘连可能导致月经量少？"
 ```
 
-GraphRAG 返回三类结构化证据：
+检索结果包含：
 
-| 证据类型 | 对应 schema | 用途 |
-|---|---|---|
-| 三元组证据 | `causes`、`risk_factor_for`、`is_a`、`symptom_of`、`treated_by`、`located_in`、`diagnosed_by` 等基本边 | 回答直接事实问题 |
-| 路径证据 | 多条 `causes` 边组成的因果链 | 回答“为什么/是否间接导致/是否有关”问题 |
-| 条件证据 | `condition_of` 边 | 回答“在什么条件下”问题 |
+- `triples`：相关三元组证据
+- `paths`：多跳因果路径
+- `conditional_events`：条件证据
+- `matched_entities`：问题命中的图谱实体
 
-`matched_entities`、`source_doc_id`、`source_type`、`confidence` 和原文 `evidence` 属于证据元信息，不作为单独证据类型。
-
-### 5.3 大模型增强问答
+## 8. 运行问答
 
 KG-only，不需要 API：
 
@@ -234,7 +198,7 @@ KG-only，不需要 API：
 python src/llm_qa.py --question "为什么高血压可能和心肌梗死有关？" --mode kg_only
 ```
 
-KG-augmented，优先调用 Qwen；未配置 API 时会退化为 KG-only：
+KG-augmented，优先调用 Qwen；未配置 API 时退化为 KG-only：
 
 ```bash
 python src/llm_qa.py --question "为什么高血压可能和心肌梗死有关？" --mode kg_augmented
@@ -252,67 +216,110 @@ JSON 输出：
 python src/llm_qa.py --question "宫腔粘连可能导致什么？" --mode kg_augmented --json
 ```
 
-## 6. Gradio 交互系统
-
-启动：
+## 9. 运行交互界面
 
 ```bash
 python src/qa_server.py
 ```
 
-浏览器访问：
+浏览器打开：
 
 ```text
 http://localhost:7860
 ```
 
-如果端口被占用：
+如果端口被占用，可以换一个空闲端口：
 
 ```bash
 GRADIO_SERVER_PORT=7861 python src/qa_server.py
 ```
 
-交互系统功能：
+如果环境设置了 SOCKS 代理，Gradio 导入 `httpx` 时可能需要 `socksio`。依赖已写入 `requirements.txt`，可重新安装：
 
-- 左侧输入问题，支持 KG-only、KG-augmented、LLM-only 三种问答模式。
-- “提问”按钮下方提供示例问题，点击后自动填入输入框。
-- “检索证据”按钮单独返回 GraphRAG 三类证据。
-- 右侧初始显示图谱概览；提问或检索后自动更新为本次相关证据子图。
-- 点击或触碰图谱边，可查看对应三元组和原文证据。
-- 图谱统计显示实体数、三元组数、实体类型数、关系类型数和来源分布。
+```bash
+pip install -r requirements.txt
+```
 
-## 7. 运行评估
+## 10. 图谱可视化
+
+启动本地静态服务：
+
+```bash
+python -m http.server 8000
+```
+
+浏览器打开：
+
+```text
+http://localhost:8000/results/kg_visualization.html
+```
+
+`results/kg_visualization.html` 是抽样可视化，不是完整图谱。完整图谱有 18,835 条三元组，全部写入 HTML 会影响浏览器加载和交互，因此 `src/build_kg.py` 默认通过 `--visualize_max_edges 800` 最多写入 800 条边。
+
+抽样逻辑是先按关系类型分组，每种关系取一部分边，保证 `causes`、`is_a`、`symptom_of`、`treated_by` 等关系都能被看到；如果还没达到上限，再继续补充其他三元组。
+
+完整图谱以以下文件为准：
+
+```text
+data/triples.csv
+data/processed/kg.json
+```
+
+如需生成包含更多边的 HTML：
+
+```bash
+python src/build_kg.py --reuse_qwen_outputs --visualize_max_edges 2000
+```
+
+## 11. 运行评估
 
 ```bash
 python src/evaluate.py
 ```
 
-可限制测试问题数量：
+限制测试问题数量：
 
 ```bash
-python src/evaluate.py --max_questions 30
+python src/evaluate.py --max_questions 50
 ```
 
-输出：
+评估输出：
 
-```text
-results/metrics.json
-results/extraction_metrics.json
-results/cases.md
-data/processed/test_questions.json
-```
+| 输出文件 | 说明 |
+|---|---|
+| `results/metrics.json` | 总评估指标，包括图谱规模、检索命中率、证据非空率和抽取 exact-match 指标 |
+| `results/extraction_metrics.json` | Qwen 抽取与 Gold 三元组的精确匹配结果 |
+| `results/cases.md` | GraphRAG 案例，包括问题、标准答案和检索证据 |
+| `results/error_cases.json` | 错误 case 的结构化 JSON |
+| `data/processed/test_questions.json` | 自动生成的测试问题 |
 
-## 8. 当前主要结果
+## 12. 主要结果
 
-| 指标 | 数值 | 课程最低要求 |
-|---|---:|---:|
-| 实体数量 | 14,762 | 100 |
-| 三元组数量 | 18,835 | 300 |
-| 实体类型数量 | 11 | 3 |
-| 关系类型数量 | 8 | 3 |
-| Gold Seed 三元组 | 9,126 | - |
-| Qwen 抽取三元组 | 9,709 | - |
-| CausalEvent 数量 | 783 | - |
+当前图谱规模：
+
+| 指标 | 数值 |
+|---|---:|
+| 实体数量 | 14,762 |
+| 三元组数量 | 18,835 |
+| 实体类型数量 | 11 |
+| 关系类型数量 | 8 |
+| Gold Seed 三元组 | 9,126 |
+| Qwen 抽取三元组 | 9,709 |
+| CausalEvent 数量 | 783 |
+
+50 case 评估结果：
+
+| 指标 | 数值 |
+|---|---:|
+| 测试问题数 | 50 |
+| GraphRAG 检索命中率 | 0.88 |
+| 证据非空率 | 1.00 |
+| Gold 证据召回率 | 0.92 |
+| 推理证据覆盖率 | 0.94 |
+| 平均证据数 | 2.80 |
+| 错误 case 数量 | 6 |
+
+50 case 覆盖直接因果、反向因果、多跳因果、条件推理、上下位、症状、治疗、部位、诊断、负例检查和跨关系问题，结果见 `results/metrics.json`、`results/reasoning_results.json`、`results/llm_qa_comparison.json` 和 `results/error_cases.json`。
 
 关系分布：
 
@@ -326,49 +333,3 @@ data/processed/test_questions.json
 | `diagnosed_by` | 575 |
 | `located_in` | 566 |
 | `risk_factor_for` | 296 |
-
-评估结果见 `results/metrics.json`，案例分析见 `results/cases.md`。
-
-## 9. 项目结构
-
-
-```text
-project/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── course.txt
-├── report.md
-├── data/
-│   ├── raw/
-│   │   ├── train_0717.json
-│   │   ├── unlabel.json
-│   │   ├── testA.json
-│   │   └── testB.json
-│   ├── processed/
-│   │   ├── build_stats.json
-│   │   ├── gold_triples.csv
-│   │   ├── qwen_extracted_raw.json
-│   │   ├── qwen_extracted_clean.json
-│   │   ├── entities.csv
-│   │   ├── relations.csv
-│   │   ├── causal_events.csv
-│   │   ├── kg.json
-│   │   └── test_questions.json
-│   └── triples.csv
-├── src/
-│   ├── build_kg.py
-│   ├── config.py
-│   ├── reasoning.py
-│   ├── graph_retrieval.py
-│   ├── llm_qa.py
-│   ├── qa_server.py
-│   └── evaluate.py
-├── prompts/
-│   ├── qwen_extraction_prompt.txt
-│   └── kg_augmented_prompt.txt
-└── results/
-    ├── kg_visualization.html
-    ├── metrics.json
-    └── cases.md
-```

@@ -20,9 +20,448 @@
     }
   },
   "retrieval_eval": {
-    "num_questions": 30,
-    "retrieval_hit_rate": 1.0,
-    "evidence_nonempty_rate": 1.0
+    "num_questions": 50,
+    "retrieval_hit_rate": 0.88,
+    "evidence_nonempty_rate": 1.0,
+    "gold_evidence_recall": 0.9193548387096774,
+    "per_type": {
+      "direct_causal": {
+        "total": 5,
+        "hit": 5,
+        "hit_rate": 1.0,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 1.0
+      },
+      "reverse_causal": {
+        "total": 5,
+        "hit": 3,
+        "hit_rate": 0.6,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 0.6
+      },
+      "multi_hop_causal": {
+        "total": 5,
+        "hit": 5,
+        "hit_rate": 1.0,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 1.0
+      },
+      "condition_reasoning": {
+        "total": 5,
+        "hit": 5,
+        "hit_rate": 1.0,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 1.0
+      },
+      "is_a": {
+        "total": 5,
+        "hit": 5,
+        "hit_rate": 1.0,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 1.0
+      },
+      "symptom_query": {
+        "total": 5,
+        "hit": 4,
+        "hit_rate": 0.8,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 0.8888888888888888
+      },
+      "treatment_query": {
+        "total": 5,
+        "hit": 5,
+        "hit_rate": 1.0,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 1.0
+      },
+      "location_query": {
+        "total": 5,
+        "hit": 5,
+        "hit_rate": 1.0,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 1.0
+      },
+      "diagnosis_query": {
+        "total": 5,
+        "hit": 3,
+        "hit_rate": 0.6,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": 0.6
+      },
+      "negative_check": {
+        "total": 3,
+        "hit": 3,
+        "hit_rate": 1.0,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": null
+      },
+      "cross_relation": {
+        "total": 2,
+        "hit": 1,
+        "hit_rate": 0.5,
+        "evidence_nonempty_rate": 1.0,
+        "gold_evidence_recall": null
+      }
+    },
+    "num_error_cases": 6,
+    "error_cases": [
+      {
+        "id": "Q008",
+        "type": "reverse_causal",
+        "question": "腹胀可能由什么引起？",
+        "gold_answer": "腹胀可能由胃肠道方面的疾病引起。",
+        "gold_evidence": [
+          [
+            "胃肠道方面的疾病",
+            "causes",
+            "腹胀"
+          ]
+        ],
+        "matched_entities": [
+          "腹胀"
+        ],
+        "retrieved_triples": [
+          [
+            "腹胀",
+            "causes",
+            "新生儿更喜欢含奶睡"
+          ],
+          [
+            "腹胀",
+            "is_a",
+            "消化道的症状"
+          ],
+          [
+            "腹胀",
+            "is_a",
+            "胃肠道症状"
+          ],
+          [
+            "腹胀",
+            "is_a",
+            "腹部症状"
+          ],
+          [
+            "腹胀",
+            "is_a",
+            "胃肠道症状"
+          ],
+          [
+            "腹胀",
+            "symptom_of",
+            "胃溃疡"
+          ],
+          [
+            "腹胀",
+            "symptom_of",
+            "病情加重"
+          ],
+          [
+            "腹胀",
+            "symptom_of",
+            "腺瘤"
+          ]
+        ],
+        "retrieved_paths": [],
+        "reason": "gold evidence not found in retrieved evidence"
+      },
+      {
+        "id": "Q009",
+        "type": "reverse_causal",
+        "question": "咳嗽可能由什么引起？",
+        "gold_answer": "咳嗽可能由气道敏感性增高引起。",
+        "gold_evidence": [
+          [
+            "气道敏感性增高",
+            "causes",
+            "咳嗽"
+          ]
+        ],
+        "matched_entities": [
+          "咳嗽"
+        ],
+        "retrieved_triples": [
+          [
+            "咳嗽",
+            "is_a",
+            "呼吸道症状"
+          ],
+          [
+            "咳嗽",
+            "condition_of",
+            "神经根型颈椎病"
+          ],
+          [
+            "咳嗽",
+            "is_a",
+            "呼吸道症状"
+          ],
+          [
+            "咳嗽",
+            "symptom_of",
+            "病毒性感冒"
+          ],
+          [
+            "咳嗽",
+            "symptom_of",
+            "细菌性感冒"
+          ],
+          [
+            "咳嗽",
+            "symptom_of",
+            "肺癌"
+          ],
+          [
+            "咳嗽",
+            "symptom_of",
+            "支气管哮喘"
+          ],
+          [
+            "咳嗽",
+            "symptom_of",
+            "肺炎"
+          ]
+        ],
+        "retrieved_paths": [],
+        "reason": "gold evidence not found in retrieved evidence"
+      },
+      {
+        "id": "Q029",
+        "type": "symptom_query",
+        "question": "肾脏疾病有哪些症状？",
+        "gold_answer": "肾脏疾病的症状包括：胆碱酯酶增高。",
+        "gold_evidence": [
+          [
+            "胆碱酯酶增高",
+            "symptom_of",
+            "肾脏疾病"
+          ]
+        ],
+        "matched_entities": [
+          "肾脏疾病",
+          "症状"
+        ],
+        "retrieved_triples": [
+          [
+            "肾脏疾病",
+            "causes",
+            "老年人肚子大"
+          ],
+          [
+            "肾脏疾病",
+            "causes",
+            "尿毒症"
+          ],
+          [
+            "肾脏疾病",
+            "causes",
+            "肾小球硬化"
+          ],
+          [
+            "肾脏疾病",
+            "causes",
+            "全身性的瘙痒"
+          ],
+          [
+            "肾脏疾病",
+            "causes",
+            "尿中有大量泡沫"
+          ],
+          [
+            "肾脏疾病",
+            "causes",
+            "尿液中蛋白质含量增多"
+          ],
+          [
+            "肾脏疾病",
+            "condition_of",
+            "喝水过多"
+          ],
+          [
+            "肾脏疾病",
+            "causes",
+            "腰椎的空痛"
+          ]
+        ],
+        "retrieved_paths": [],
+        "reason": "gold evidence not found in retrieved evidence"
+      },
+      {
+        "id": "Q041",
+        "type": "diagnosis_query",
+        "question": "胃食管反流如何诊断？",
+        "gold_answer": "胃食管反流可通过胃镜诊断。",
+        "gold_evidence": [
+          [
+            "胃食管反流",
+            "diagnosed_by",
+            "胃镜"
+          ]
+        ],
+        "matched_entities": [
+          "胃食管反流"
+        ],
+        "retrieved_triples": [
+          [
+            "胃食管反流",
+            "causes",
+            "反流性咽喉炎"
+          ],
+          [
+            "胃食管反流",
+            "causes",
+            "咳嗽"
+          ],
+          [
+            "胃食管反流",
+            "causes",
+            "食管黏膜损害"
+          ],
+          [
+            "胃食管反流",
+            "causes",
+            "反流性食管炎"
+          ],
+          [
+            "胃食管反流",
+            "causes",
+            "食管溃疡"
+          ],
+          [
+            "胃食管反流",
+            "causes",
+            "食管狭窄"
+          ],
+          [
+            "胃食管反流",
+            "causes",
+            "反流性咽喉炎"
+          ],
+          [
+            "胃食管反流",
+            "causes",
+            "反流性支气管炎"
+          ]
+        ],
+        "retrieved_paths": [],
+        "reason": "gold evidence not found in retrieved evidence"
+      },
+      {
+        "id": "Q042",
+        "type": "diagnosis_query",
+        "question": "前列腺炎如何诊断？",
+        "gold_answer": "前列腺炎可通过泌尿系统b超诊断。",
+        "gold_evidence": [
+          [
+            "前列腺炎",
+            "diagnosed_by",
+            "泌尿系统b超"
+          ]
+        ],
+        "matched_entities": [
+          "前列腺炎"
+        ],
+        "retrieved_triples": [
+          [
+            "前列腺炎",
+            "is_a",
+            "慢性疾病"
+          ],
+          [
+            "前列腺炎",
+            "causes",
+            "尿液里面有少量的蛋白或者是少量的红血球"
+          ],
+          [
+            "前列腺炎",
+            "is_a",
+            "感染性疾病"
+          ],
+          [
+            "前列腺炎",
+            "is_a",
+            "泌尿系统感染"
+          ],
+          [
+            "前列腺炎",
+            "causes",
+            "睾丸隐隐作痛"
+          ],
+          [
+            "前列腺炎",
+            "causes",
+            "睾丸疼痛不适"
+          ],
+          [
+            "前列腺炎",
+            "causes",
+            "疼痛可以放射到体表部位"
+          ],
+          [
+            "前列腺炎",
+            "causes",
+            "尿液当中细菌和黏液丝增高"
+          ]
+        ],
+        "retrieved_paths": [],
+        "reason": "gold evidence not found in retrieved evidence"
+      },
+      {
+        "id": "Q050",
+        "type": "cross_relation",
+        "question": "上呼吸道感染有哪些症状？可能由什么引起？",
+        "gold_answer": "上呼吸道感染的症状包括：发烧。可能由病毒主要通过患者的喷嚏或者含有病毒的飞沫经过空气传播,或经过污染的手和用具接触传播、上呼吸道的细菌或者病毒、病原体入侵引起。",
+        "gold_evidence": [],
+        "matched_entities": [
+          "上呼吸道感染",
+          "症状"
+        ],
+        "retrieved_triples": [
+          [
+            "上呼吸道感染",
+            "causes",
+            "咳嗽"
+          ],
+          [
+            "上呼吸道感染",
+            "causes",
+            "小儿出现了头痛、头晕、恶心、想吐"
+          ],
+          [
+            "上呼吸道感染",
+            "causes",
+            "体温持续升高37°c以上"
+          ],
+          [
+            "上呼吸道感染",
+            "causes",
+            "孩子总是长叹气"
+          ],
+          [
+            "上呼吸道感染",
+            "causes",
+            "长深吸气、长深出气"
+          ],
+          [
+            "上呼吸道感染",
+            "causes",
+            "流鼻涕"
+          ],
+          [
+            "上呼吸道感染",
+            "causes",
+            "鼻塞"
+          ],
+          [
+            "上呼吸道感染",
+            "causes",
+            "哭闹不止"
+          ]
+        ],
+        "retrieved_paths": [],
+        "reason": "missing relation types: symptom_of"
+      }
+    ]
   },
   "extraction_eval": {
     "note": "Exact-match metrics. Meaningful only if Qwen extraction was run on comparable train texts.",
@@ -57,6 +496,51 @@
         "pred": 765,
         "tp": 22
       }
+    }
+  },
+  "reasoning_eval": {
+    "num_questions": 50,
+    "type_counts": {
+      "direct_causal": 5,
+      "reverse_causal": 5,
+      "multi_hop_causal": 5,
+      "condition_reasoning": 5,
+      "is_a": 5,
+      "symptom_query": 5,
+      "treatment_query": 5,
+      "location_query": 5,
+      "diagnosis_query": 5,
+      "negative_check": 3,
+      "cross_relation": 2
+    },
+    "has_evidence_count": 47,
+    "evidence_coverage": 0.94,
+    "avg_evidence_count": 2.8
+  },
+  "llm_qa_comparison_eval": {
+    "num_questions": 50,
+    "modes": [
+      "kg_only",
+      "llm_only",
+      "kg_augmented"
+    ],
+    "nonempty_answer_counts": {
+      "kg_only": 50,
+      "llm_only": 50,
+      "kg_augmented": 50
+    },
+    "type_counts": {
+      "direct_causal": 5,
+      "reverse_causal": 5,
+      "multi_hop_causal": 5,
+      "condition_reasoning": 5,
+      "is_a": 5,
+      "symptom_query": 5,
+      "treatment_query": 5,
+      "location_query": 5,
+      "diagnosis_query": 5,
+      "negative_check": 3,
+      "cross_relation": 2
     }
   }
 }

@@ -94,6 +94,11 @@ prompts/
 ├── kg_augmented_prompt.txt
 └── relation_discovery_prompt.txt
 
+lib/
+├── vis-9.1.2/            # 图谱可视化前端依赖
+├── tom-select/           # HTML 可视化依赖
+└── bindings/
+
 results/
 ├── kg_visualization.html
 ├── metrics.json
